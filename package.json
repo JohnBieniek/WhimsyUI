@@ -1,0 +1,49 @@
+{
+  "name": "whimsy-ui",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "lighthouse": "lighthouse http://127.0.0.1:3000 --output=html --output-path=./reports/lighthouse.html"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.101.4",
+    "next": "16.3.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "react-hook-form": "^7.84.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@storybook/addon-a11y": "^10.5.7",
+    "@storybook/addon-docs": "^10.5.7",
+    "@storybook/react-vite": "^10.5.7",
+    "@tailwindcss/postcss": "^4",
+    "@testing-library/jest-dom": "^7.0.0",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.3",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^6.0.5",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.0",
+    "eslint-plugin-storybook": "^10.5.7",
+    "jsdom": "^29.1.1",
+    "lighthouse": "^13.4.1",
+    "storybook": "^10.5.7",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vite": "^8.2.1",
+    "vitest": "^4.1.10"
+  }
+}
