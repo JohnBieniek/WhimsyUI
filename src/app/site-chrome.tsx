@@ -10,7 +10,6 @@ const links = [["/", "Home"], ["/about", "About"], ["/work", "Work"], ["/service
 export function SiteHeader() {
   const path = usePathname();
   return <header className="site-header shell">
-    <Link href="/" className="brand"><Image src="/logo.png" alt="Whimsy Consulting, Media, Marketing" width={5000} height={5000} priority /></Link>
     <nav aria-label="Main navigation">{links.map(([href, label]) => <Link key={href} href={href} className={path === href ? "active" : ""}>{label}</Link>)}</nav>
   </header>;
 }

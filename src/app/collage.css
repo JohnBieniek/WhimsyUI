@@ -29,3 +29,7 @@
 .home-collage .bubble {
   z-index: 1;
 }
+
+.site-header nav {
+  margin-inline: auto;
+}
