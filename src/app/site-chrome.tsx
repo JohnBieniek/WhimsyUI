@@ -29,6 +29,6 @@ export function Partners() {
   </section>;
 }
 
-export function Collage({ images, labels = [] }: { images: string[]; labels?: string[] }) {
-  return <div className="collage" aria-label="Whimsy community work collage">{images.map((src, index) => <figure key={src} className={`bubble bubble-${index + 1}`}><Image src={src} alt="" fill sizes="(max-width: 700px) 45vw, 24vw" />{labels[index] && <figcaption>{labels[index]}</figcaption>}</figure>)}</div>;
+export function Collage({ images, labels = [], className = "" }: { images: string[]; labels?: string[]; className?: string }) {
+  return <div className={`collage ${className}`.trim()} aria-label="Whimsy community work collage">{images.map((src, index) => <figure key={src} className={`bubble bubble-${index + 1}`}><Image src={src} alt="" fill sizes="(max-width: 700px) 45vw, 24vw" />{labels[index] && <figcaption>{labels[index]}</figcaption>}</figure>)}</div>;
 }

@@ -2,3 +2,30 @@
   aspect-ratio: 1 / 1;
   height: auto;
 }
+
+.home-collage::before,
+.home-collage::after {
+  content: "";
+  position: absolute;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.home-collage::before {
+  width: 58%;
+  left: 25%;
+  top: 0;
+  background: #eee3f7;
+}
+
+.home-collage::after {
+  width: 52%;
+  right: 3%;
+  bottom: 0;
+  background: #dff2ed;
+}
+
+.home-collage .bubble {
+  z-index: 1;
+}
