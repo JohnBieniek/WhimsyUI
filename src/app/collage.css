@@ -39,6 +39,15 @@
   border-bottom: 0;
 }
 
+.site-header::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 66.666%;
+  border-bottom: 2px solid #4b0c83;
+}
+
 .home-copy {
   position: static;
   z-index: 21;
@@ -59,6 +68,10 @@
 }
 
 @media (max-width: 700px) {
+  .site-header::after {
+    width: 100%;
+  }
+
   .home-logo {
     position: relative;
     width: 340px;
