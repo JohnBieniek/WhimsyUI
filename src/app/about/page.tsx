@@ -1,0 +1,8 @@
+import Link from "next/link";
+import { Collage, Partners } from "../site-chrome";
+
+export default function AboutPage() { return <main className="inner-page shell">
+  <section className="page-hero"><div><p className="kicker">About Whimsy <span>2 of 5</span></p><h1>Local knowledge.<br/>Useful creative work.</h1><p className="intro">Whimsy provides consulting, media, marketing, advertising, community-event promotion, and website help for local businesses and organizations.</p></div><Collage images={["/work/1426596552827958.jpg","/work/1478820320938914.jpg","/work/1275042854649996.jpg","/work/1233972312090384.jpg"]} labels={["Ribbon cutting","Community event","Jackson Crossing","Local art"]}/></section>
+  <section className="approach panel"><p className="kicker">Our approach</p><div>{[["Listen","We listen first. Your goals, audience, and community insights shape everything."],["Plan","We build a smart, practical plan that connects your message with the right people."],["Create","We create useful, on-brand content, campaigns, and experiences."],["Measure","We track results, learn what works, and refine for better impact."]].map(([t,c],i)=><article key={t}><b>0{i+1}</b><h2>{t}</h2><p>{c}</p></article>)}</div></section>
+  <div className="about-lower"><Partners/><aside className="panel price-list"><p className="kicker">Services & pricing</p><p>Strategy Session <b>$300</b></p><p>Brand & Advertising Plan <b>$1,250</b></p><p>Business Consulting <b>$300</b></p><p>Website Support <b>$150/hour</b></p><Link className="button" href="/contact">Work with Whimsy →</Link></aside></div>
+</main> }
