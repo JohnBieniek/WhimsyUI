@@ -37,3 +37,22 @@
 .site-header {
   border-bottom: 0;
 }
+
+.home-copy {
+  position: relative;
+  z-index: 21;
+}
+
+.home-logo {
+  width: 560px;
+  height: 190px;
+  margin-top: -92px;
+}
+
+@media (max-width: 700px) {
+  .home-logo {
+    width: 340px;
+    height: 118px;
+    margin-top: -42px;
+  }
+}
