@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Archivo, Archivo_Black } from "next/font/google";
 import "./globals.css";
+import "./collage.css";
 import { SiteFooter, SiteHeader } from "./site-chrome";
 
 const body = Archivo({ variable: "--font-body", subsets: ["latin"] });
