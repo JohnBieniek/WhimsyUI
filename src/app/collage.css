@@ -33,3 +33,7 @@
 .site-header nav {
   margin-inline: auto;
 }
+
+.site-header {
+  border-bottom: 0;
+}
