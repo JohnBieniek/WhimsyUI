@@ -22,10 +22,10 @@ export function SiteFooter() {
 export function Partners() {
   return <section className="partners shell" aria-labelledby="partners-title">
     <h2 id="partners-title">Featured<br/>partners</h2>
-    <div className="partner jackson"><strong>Jackson<br/><i>CROSSING</i></strong><span>Jackson Crossing</span></div>
-    <div className="partner fetch"><strong>FETCH</strong><em>Marketplace & Deli</em><span>Fetch Marketplace & Deli</span></div>
-    <div className="partner serenity"><strong>Serenity</strong><em>SOBER LIVING HOUSE</em><span>Serenity Sober Living House</span></div>
-    <div className="partner reinhart"><strong>DAWN PARKER<br/><i>Reinhart</i></strong><span>Dawn Parker Realtors</span></div>
+    <div className="partner jackson" aria-label="Jackson Crossing"><strong>Jackson<br/><i>CROSSING</i></strong></div>
+    <div className="partner fetch" aria-label="Fetch Marketplace and Deli"><strong>FETCH</strong><em>Marketplace & Deli</em></div>
+    <div className="partner serenity" aria-label="Serenity Sober Living House"><strong>Serenity</strong><em>SOBER LIVING HOUSE</em></div>
+    <div className="partner reinhart" aria-label="Dawn Parker Realtors"><strong>DAWN PARKER<br/><i>Reinhart</i></strong></div>
   </section>;
 }
 
