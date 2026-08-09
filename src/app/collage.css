@@ -31,7 +31,8 @@
 }
 
 .site-header nav {
-  margin-inline: auto;
+  margin-left: auto;
+  margin-right: 0;
 }
 
 .site-header {
@@ -39,20 +40,36 @@
 }
 
 .home-copy {
-  position: relative;
+  position: static;
   z-index: 21;
+  padding-top: 360px;
 }
 
 .home-logo {
-  width: 560px;
-  height: 190px;
-  margin-top: -92px;
+  position: absolute;
+  width: 570px;
+  height: 570px;
+  left: 0;
+  top: -56px;
+  margin: 0;
+}
+
+.home-hero {
+  position: relative;
 }
 
 @media (max-width: 700px) {
   .home-logo {
+    position: relative;
     width: 340px;
     height: 118px;
+    left: auto;
+    top: auto;
     margin-top: -42px;
+  }
+
+  .home-copy {
+    position: relative;
+    padding-top: 0;
   }
 }
