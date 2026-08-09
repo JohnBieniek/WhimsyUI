@@ -6,4 +6,4 @@ The Worker should reject a populated `website` field, validate required values, 
 
 ## Site deployment
 
-This Next.js site uses Cloudflare's current OpenNext adapter. In Workers Builds, use `npm run cf:build` as the build command and `npx wrangler deploy` as the deploy command. Do not use the retired `@cloudflare/next-on-pages` adapter.
+This Next.js site is exported as static files and deployed with Cloudflare Pages. Use `npm run build` as the build command and `out` as the build output directory. The contact endpoint remains a separate Worker configured through `NEXT_PUBLIC_CONTACT_WORKER_URL`.
