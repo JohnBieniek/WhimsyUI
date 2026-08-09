@@ -12,10 +12,12 @@ vi.mock("next/image", () => ({
 }));
 
 describe("Home", () => {
-  it("renders the starter page with an accessible heading", () => {
+  it("renders the Whimsy site with accessible navigation", () => {
     render(<Home />);
 
     expect(screen.getByRole("heading", { level: 1 })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "Documentation" })).toBeVisible();
+    expect(screen.getByRole("link", { name: "Services & Pricing" })).toBeVisible();
+    expect(screen.getByRole("heading", { name: /campaigns built/i })).toBeVisible();
+    expect(screen.getByRole("heading", { name: /tell us what/i })).toBeVisible();
   });
 });
