@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ContactForm from "./contact-form";
+import { appVersion } from "./generated-version";
 
 const featured = [
   { title: "Back-to-School Bash", client: "Jackson Crossing", image: "/work/1478820320938914.jpg", tag: "Community campaign", copy: "A calm, low-stimulation school-year kickoff pairing a loaded-backpack giveaway with photos, local partners, and family activities." },
@@ -89,6 +90,6 @@ export default function Home() {
         <ContactForm />
       </div></section>
     </main>
-    <footer><div className="shell"><a className="logo inverse" href="#home"><strong>WHIMSY</strong><span>Consulting · Media · Marketing</span></a><p>Useful creative for local business and community.</p><a href="#home">Back to top ↑</a></div></footer>
+    <footer><div className="shell"><a className="logo inverse" href="#home"><strong>WHIMSY</strong><span>Consulting · Media · Marketing</span></a><p>Useful creative for local business and community. <small>v{appVersion}</small></p><a href="#home">Back to top ↑</a></div></footer>
   </>;
 }
