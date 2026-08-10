@@ -70,6 +70,10 @@
   line-height: 1;
 }
 
+.home-tagline {
+  font-weight: 800;
+}
+
 .home-copy {
   position: static;
   z-index: 21;
