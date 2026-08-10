@@ -57,9 +57,9 @@
 .home-logo {
   position: absolute;
   width: 570px;
-  height: 570px;
+  height: 264px;
   left: 0;
-  top: -188px;
+  top: -92px;
   margin: 0;
 }
 
@@ -75,7 +75,7 @@
   .home-logo {
     position: relative;
     width: 340px;
-    height: 118px;
+    height: 158px;
     left: auto;
     top: auto;
     margin-top: -42px;
