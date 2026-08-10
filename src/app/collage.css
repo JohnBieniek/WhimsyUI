@@ -52,6 +52,18 @@
   display: none;
 }
 
+.nav-logo {
+  display: block;
+  width: 220px;
+  flex: 0 0 auto;
+}
+
+.nav-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .pathways-title {
   padding-bottom: 7px;
   border-bottom: 2px solid #4b0c83;
@@ -151,6 +163,11 @@
 }
 
 @media (max-width: 700px) {
+  .nav-logo {
+    width: 150px;
+    margin-inline: auto;
+  }
+
   .site-header::after {
     width: 100%;
   }
