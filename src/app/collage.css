@@ -59,12 +59,12 @@
   width: 570px;
   height: 570px;
   left: 0;
-  top: 20px;
+  top: -188px;
   margin: 0;
 }
 
 .home-hero {
-  position: static;
+  position: relative;
 }
 
 @media (max-width: 700px) {
