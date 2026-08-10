@@ -70,6 +70,35 @@
   line-height: 1;
 }
 
+.pathways .pathway-icon svg {
+  width: 25px;
+  height: 25px;
+  stroke-width: 2;
+}
+
+.highlight article::before {
+  display: none;
+}
+
+.highlight .highlight-icon {
+  position: absolute;
+  left: 12px;
+  top: 15px;
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 50%;
+  background: #4b0c83;
+  color: #fff;
+}
+
+.highlight .highlight-icon svg {
+  width: 21px;
+  height: 21px;
+  stroke-width: 2;
+}
+
 .home-tagline {
   font-weight: 800;
 }
