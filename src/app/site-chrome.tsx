@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import partnerLogoSource from "../../mock up/home.png";
 import { appVersion } from "./generated-version";
 
 const links = [["/", "Home"], ["/about", "About"], ["/work", "Work"], ["/services", "Services & Pricing"], ["/contact", "Contact"]];
@@ -21,10 +22,10 @@ export function SiteFooter() {
 export function Partners() {
   return <section className="partners shell" aria-labelledby="partners-title">
     <h2 id="partners-title">Featured<br/>partners</h2>
-    <div className="partner jackson" aria-label="Jackson Crossing"><strong>Jackson<br/><i>CROSSING</i></strong></div>
-    <div className="partner fetch" aria-label="Fetch Marketplace and Deli"><strong>FETCH</strong><em>Marketplace & Deli</em></div>
-    <div className="partner serenity" aria-label="Serenity Sober Living House"><strong>Serenity</strong><em>SOBER LIVING HOUSE</em></div>
-    <div className="partner reinhart" aria-label="Dawn Parker Realtors"><strong>DAWN PARKER<br/><i>Reinhart</i></strong></div>
+    <div className="partner" aria-label="Jackson Crossing"><span className="partner-logo jackson-logo" style={{ backgroundImage: `url(${partnerLogoSource.src})` }}/></div>
+    <div className="partner" aria-label="Fetch Marketplace and Deli"><span className="partner-logo fetch-logo" style={{ backgroundImage: `url(${partnerLogoSource.src})` }}/></div>
+    <div className="partner" aria-label="Serenity Sober Living House"><span className="partner-logo serenity-logo" style={{ backgroundImage: `url(${partnerLogoSource.src})` }}/></div>
+    <div className="partner" aria-label="Dawn Parker Realtors"><span className="partner-logo reinhart-logo" style={{ backgroundImage: `url(${partnerLogoSource.src})` }}/></div>
   </section>;
 }
 

@@ -74,6 +74,33 @@
   font-weight: 800;
 }
 
+.partner-logo {
+  display: block;
+  height: 82px;
+  background-repeat: no-repeat;
+  background-size: 1536px 1024px;
+}
+
+.jackson-logo {
+  width: 245px;
+  background-position: -70px -672px;
+}
+
+.fetch-logo {
+  width: 265px;
+  background-position: -414px -674px;
+}
+
+.serenity-logo {
+  width: 255px;
+  background-position: -775px -671px;
+}
+
+.reinhart-logo {
+  width: 240px;
+  background-position: -1165px -672px;
+}
+
 .home-copy {
   position: static;
   z-index: 21;
