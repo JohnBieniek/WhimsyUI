@@ -9,7 +9,7 @@ const links = [["/", "Home"], ["/about", "About"], ["/work", "Work"], ["/service
 
 export function SiteHeader() {
   const path = usePathname();
-  return <header className="site-header shell">
+  return <header className={`site-header shell${path === "/" ? " home-header" : ""}`}>
     <nav aria-label="Main navigation">{links.map(([href, label]) => <Link key={href} href={href} className={path === href ? "active" : ""}>{label}</Link>)}</nav>
   </header>;
 }
