@@ -115,6 +115,12 @@
   font-weight: 800;
 }
 
+.actions .button svg {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+}
+
 .partner-logo {
   display: block;
   height: 82px;
