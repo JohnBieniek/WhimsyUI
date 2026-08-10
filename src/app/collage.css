@@ -121,6 +121,16 @@
   flex: 0 0 auto;
 }
 
+.home-logo-dots {
+  position: absolute;
+  left: 450px;
+  top: -67px;
+  width: 68px;
+  height: 68px;
+  background-image: radial-gradient(circle, #72bfae 3px, transparent 4px);
+  background-size: 16px 16px;
+}
+
 .partner-logo {
   display: block;
   height: 82px;
@@ -185,6 +195,14 @@
     left: auto;
     top: auto;
     margin-top: -42px;
+  }
+
+  .home-logo-dots {
+    left: 270px;
+    top: 4px;
+    width: 52px;
+    height: 52px;
+    background-size: 13px 13px;
   }
 
   .home-copy {
