@@ -104,13 +104,13 @@
 .home-copy {
   position: static;
   z-index: 21;
-  padding-top: 192px;
+  padding-top: 126px;
 }
 
 .home-logo {
   position: absolute;
-  width: 570px;
-  height: 264px;
+  width: 428px;
+  height: 198px;
   left: 0;
   top: -92px;
   margin: 0;
@@ -128,8 +128,8 @@
 
   .home-logo {
     position: relative;
-    width: 340px;
-    height: 158px;
+    width: 255px;
+    height: 119px;
     left: auto;
     top: auto;
     margin-top: -42px;
