@@ -13,17 +13,17 @@
 }
 
 .home-collage::before {
-  width: 58%;
-  left: 25%;
-  top: 0;
-  background: #eee3f7;
+  width: 74%;
+  left: -3%;
+  top: 8%;
+  background: #49196B;
 }
 
 .home-collage::after {
-  width: 52%;
-  right: 3%;
-  bottom: 0;
-  background: #dff2ed;
+  width: 60%;
+  right: 4%;
+  bottom: 2%;
+  background: #eee3f7;
 }
 
 .home-collage .bubble {

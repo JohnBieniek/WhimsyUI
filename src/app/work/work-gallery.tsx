@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { caseStudies } from "../content";
+import { caseStudies } from "../work-data";
 
 const categories = ["All work","Community events","Advertising","Media","Brand support","Websites"];
 export default function WorkGallery(){
