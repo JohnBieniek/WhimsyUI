@@ -13,17 +13,18 @@
 }
 
 .home-collage::before {
-  width: 74%;
-  left: -3%;
-  top: 8%;
+  width: 68%;
+  left: -4%;
+  top: 10%;
   background: #49196B;
 }
 
 .home-collage::after {
-  width: 60%;
-  right: 4%;
-  bottom: 2%;
+  width: 62%;
+  right: 9%;
+  bottom: 8%;
   background: #eee3f7;
+  box-shadow: 115px 62px 0 #dff2ed;
 }
 
 .home-collage .bubble {
@@ -123,8 +124,8 @@
 
 .home-logo-dots {
   position: absolute;
-  left: 450px;
-  top: -67px;
+  left: -82px;
+  top: 151px;
   width: 68px;
   height: 68px;
   background-image: radial-gradient(circle, #72bfae 3px, transparent 4px);
@@ -161,7 +162,7 @@
 .home-copy {
   position: static;
   z-index: 21;
-  padding-top: 126px;
+  padding-top: 168px;
 }
 
 .home-logo {
@@ -169,7 +170,7 @@
   width: 428px;
   height: 198px;
   left: 0;
-  top: -92px;
+  top: -48px;
   margin: 0;
 }
 
@@ -198,8 +199,8 @@
   }
 
   .home-logo-dots {
-    left: 270px;
-    top: 4px;
+    left: -42px;
+    top: 166px;
     width: 52px;
     height: 52px;
     background-size: 13px 13px;
@@ -207,7 +208,39 @@
 
   .home-copy {
     position: relative;
-    padding-top: 0;
+    padding-top: 28px;
+  }
+}
+
+/* Keep both homepage dot accents: mint at the logo and purple at the tagline. */
+.home-logo-dots {
+  left: 450px;
+  top: -8px;
+}
+
+.home-logo-dots::after {
+  content: "";
+  position: absolute;
+  left: -532px;
+  top: 159px;
+  width: 68px;
+  height: 68px;
+  background-image: radial-gradient(circle, #6c3794 3px, transparent 4px);
+  background-size: 16px 16px;
+}
+
+@media (max-width: 700px) {
+  .home-logo-dots {
+    left: 270px;
+    top: 48px;
+  }
+
+  .home-logo-dots::after {
+    left: -312px;
+    top: 118px;
+    width: 52px;
+    height: 52px;
+    background-size: 13px 13px;
   }
 }
 
