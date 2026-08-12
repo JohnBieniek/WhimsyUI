@@ -53,6 +53,10 @@
   display: none;
 }
 
+.site-header.home-header {
+  background: transparent;
+}
+
 .nav-logo {
   display: block;
   width: 220px;
