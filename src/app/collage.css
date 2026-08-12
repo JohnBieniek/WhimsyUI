@@ -231,16 +231,16 @@
 
 @media (min-width: 701px) {
   .home-logo {
-    top: -92px;
+    top: 18px;
     z-index: 22;
   }
 
   .home-copy {
-    padding-top: 126px;
+    padding-top: 228px;
   }
 
   .home-logo-dots {
-    top: -67px;
+    top: 68px;
   }
 }
 
