@@ -215,18 +215,28 @@
 /* Keep both homepage dot accents: mint at the logo and purple at the tagline. */
 .home-logo-dots {
   left: 450px;
-  top: -8px;
+  top: 68px;
 }
 
 .home-logo-dots::after {
   content: "";
   position: absolute;
   left: -532px;
-  top: 159px;
+  top: 151px;
   width: 68px;
   height: 68px;
   background-image: radial-gradient(circle, #6c3794 3px, transparent 4px);
   background-size: 16px 16px;
+}
+
+@media (min-width: 701px) {
+  .home-logo {
+    top: 18px;
+  }
+
+  .home-copy {
+    padding-top: 228px;
+  }
 }
 
 @media (max-width: 700px) {
