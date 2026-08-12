@@ -10,7 +10,7 @@ const display = Archivo_Black({ variable: "--font-display", weight: "400", subse
 export const metadata: Metadata = {
   title: "Whimsy | Consulting · Media · Marketing",
   description: "Creative consulting, advertising, media, marketing, and website support for local businesses and organizations.",
-  icons: { icon: [{ url: "/whimsy-favicon.svg", type: "image/svg+xml" }] },
+  icons: { icon: [{ url: "/whimsy-favicon.ico", type: "image/x-icon" }] },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
