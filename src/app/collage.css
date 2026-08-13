@@ -158,6 +158,16 @@
   object-fit: contain;
 }
 
+.article-image:has(img[alt^="Lakeland Cabaret"]) {
+  height: auto;
+  aspect-ratio: 1600 / 959;
+  border-radius: 8px;
+}
+
+.article-image:has(img[alt^="Lakeland Cabaret"]) img {
+  object-fit: contain;
+}
+
 .jackson-logo {
   width: 245px;
   background-position: -70px -672px;
@@ -235,6 +245,13 @@
 
   .case-page {
     padding-top: 0;
+  }
+
+  .article-image:has(img[alt^="Lakeland Cabaret"]) {
+    width: 100vw;
+    max-width: none;
+    margin-left: calc(50% - 50vw);
+    border-radius: 0;
   }
 
   .nav-logo {
