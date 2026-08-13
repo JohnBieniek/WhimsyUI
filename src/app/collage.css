@@ -69,6 +69,10 @@
   height: auto;
 }
 
+.home-header .nav-logo {
+  display: none;
+}
+
 .pathways-title {
   padding-bottom: 7px;
   border-bottom: 2px solid #4b0c83;
@@ -143,6 +147,17 @@
   background-size: 1536px 1024px;
 }
 
+.partner-image {
+  overflow: hidden;
+}
+
+.partner-image img {
+  display: block;
+  width: min(100%, 230px);
+  height: 76px;
+  object-fit: contain;
+}
+
 .jackson-logo {
   width: 245px;
   background-position: -70px -672px;
@@ -187,6 +202,20 @@
   .nav-logo {
     width: 150px;
     margin-inline: auto;
+  }
+
+  .home-header .nav-logo {
+    display: block;
+  }
+
+  .home-copy .home-logo,
+  .home-logo-dots {
+    display: none;
+  }
+
+  .partner-image img {
+    width: min(100%, 280px);
+    height: 110px;
   }
 
   .site-header::after {
