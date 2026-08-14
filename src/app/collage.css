@@ -168,6 +168,26 @@
   object-fit: contain;
 }
 
+.article-cta .shell {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 28px;
+}
+
+.article-cta .kicker {
+  flex: 0 0 100%;
+  margin-bottom: -12px;
+}
+
+.article-cta h2 {
+  flex: 1;
+}
+
+.article-cta .button {
+  flex: 0 0 auto;
+}
+
 .jackson-logo {
   width: 245px;
   background-position: -70px -672px;
@@ -252,6 +272,14 @@
     max-width: none;
     margin-left: calc(50% - 50vw);
     border-radius: 0;
+  }
+
+  .article-cta .shell {
+    display: block;
+  }
+
+  .article-cta .kicker {
+    margin-bottom: 12px;
   }
 
   .nav-logo {
