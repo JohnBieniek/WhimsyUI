@@ -1,0 +1,274 @@
+⚠ [next]/internal/font/google/archivo_black_54fc8325.module.css
+Warning: Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Archivo+Black:wght@400&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/archivo_black_54fc8325.module.css
+    [next]/internal/font/google/archivo_black_54fc8325.js
+    ./src/app/layout.tsx
+
+
+⚠ [next]/internal/font/google/archivo_f4c3cfb3.module.css
+Warning: Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Archivo:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/archivo_f4c3cfb3.module.css
+    [next]/internal/font/google/archivo_f4c3cfb3.js
+    ./src/app/layout.tsx
+
+
+⚠ [next]/internal/font/google/archivo_black_54fc8325.module.css
+Warning: next/font: warning:
+Failed to download Archivo Black from Google Fonts. Using a fallback font instead.
+If you are offline or behind a proxy, self-host the font with next/font/local, or set HTTP_PROXY/HTTPS_PROXY so Next.js can reach fonts.googleapis.com.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/archivo_black_54fc8325.module.css
+    [next]/internal/font/google/archivo_black_54fc8325.js
+    ./src/app/layout.tsx
+
+
+⚠ [next]/internal/font/google/archivo_f4c3cfb3.module.css
+Warning: next/font: warning:
+Failed to download Archivo from Google Fonts. Using a fallback font instead.
+If you are offline or behind a proxy, self-host the font with next/font/local, or set HTTP_PROXY/HTTPS_PROXY so Next.js can reach fonts.googleapis.com.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/archivo_f4c3cfb3.module.css
+    [next]/internal/font/google/archivo_f4c3cfb3.js
+    ./src/app/layout.tsx
+
+
+⚠ Blocked cross-origin request to Next.js dev resource /_next/static/chunks/node_modules_next_1de51ag._.js from "127.0.0.1".
+Cross-origin access to Next.js dev resources is blocked by default for safety.
+
+To allow this host in development, add it to "allowedDevOrigins" in next.config.js and restart the dev server:
+
+// next.config.js
+module.exports = {
+  allowedDevOrigins: ['127.0.0.1'],
+}
+
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+⚠ Blocked cross-origin request to Next.js dev resource /_next/static/chunks/src_app_1rb39f5._.js from "127.0.0.1".
+Cross-origin access to Next.js dev resources is blocked by default for safety.
+
+To allow this host in development, add it to "allowedDevOrigins" in next.config.js and restart the dev server:
+
+// next.config.js
+module.exports = {
+  allowedDevOrigins: ['127.0.0.1'],
+}
+
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+⚠ Blocked cross-origin request to Next.js dev resource /_next/static/chunks/node_modules_lucide-react_dist_esm_0jek9kj._.js from "127.0.0.1".
+Cross-origin access to Next.js dev resources is blocked by default for safety.
+
+To allow this host in development, add it to "allowedDevOrigins" in next.config.js and restart the dev server:
+
+// next.config.js
+module.exports = {
+  allowedDevOrigins: ['127.0.0.1'],
+}
+
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+⚠ Blocked cross-origin request to Next.js dev resource /_next/hmr from "127.0.0.1".
+Cross-origin access to Next.js dev resources is blocked by default for safety.
+
+To allow this host in development, add it to "allowedDevOrigins" in next.config.js and restart the dev server:
+
+// next.config.js
+module.exports = {
+  allowedDevOrigins: ['127.0.0.1'],
+}
+
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+⚠ [next]/internal/font/google/archivo_black_54fc8325.module.css
+Warning: Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Archivo+Black:wght@400&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/archivo_black_54fc8325.module.css
+    [next]/internal/font/google/archivo_black_54fc8325.js
+    ./src/app/layout.tsx
+
+
+⚠ [next]/internal/font/google/archivo_f4c3cfb3.module.css
+Warning: Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Archivo:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/archivo_f4c3cfb3.module.css
+    [next]/internal/font/google/archivo_f4c3cfb3.js
+    ./src/app/layout.tsx
+
+
+⚠ [next]/internal/font/google/archivo_black_54fc8325.module.css
+Warning: next/font: warning:
+Failed to download Archivo Black from Google Fonts. Using a fallback font instead.
+If you are offline or behind a proxy, self-host the font with next/font/local, or set HTTP_PROXY/HTTPS_PROXY so Next.js can reach fonts.googleapis.com.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/archivo_black_54fc8325.module.css
+    [next]/internal/font/google/archivo_black_54fc8325.js
+    ./src/app/layout.tsx
+
+
+⚠ [next]/internal/font/google/archivo_f4c3cfb3.module.css
+Warning: next/font: warning:
+Failed to download Archivo from Google Fonts. Using a fallback font instead.
+If you are offline or behind a proxy, self-host the font with next/font/local, or set HTTP_PROXY/HTTPS_PROXY so Next.js can reach fonts.googleapis.com.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/archivo_f4c3cfb3.module.css
+    [next]/internal/font/google/archivo_f4c3cfb3.js
+    ./src/app/layout.tsx
+
+
+⚠ [next]/internal/font/google/archivo_black_54fc8325.module.css
+Warning: Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Archivo+Black:wght@400&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/archivo_black_54fc8325.module.css
+    [next]/internal/font/google/archivo_black_54fc8325.js
+    ./src/app/layout.tsx
+
+
+⚠ [next]/internal/font/google/archivo_f4c3cfb3.module.css
+Warning: Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Archivo:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/archivo_f4c3cfb3.module.css
+    [next]/internal/font/google/archivo_f4c3cfb3.js
+    ./src/app/layout.tsx
+
+
+⚠ [next]/internal/font/google/archivo_black_54fc8325.module.css
+Warning: next/font: warning:
+Failed to download Archivo Black from Google Fonts. Using a fallback font instead.
+If you are offline or behind a proxy, self-host the font with next/font/local, or set HTTP_PROXY/HTTPS_PROXY so Next.js can reach fonts.googleapis.com.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/archivo_black_54fc8325.module.css
+    [next]/internal/font/google/archivo_black_54fc8325.js
+    ./src/app/layout.tsx
+
+
+⚠ [next]/internal/font/google/archivo_f4c3cfb3.module.css
+Warning: next/font: warning:
+Failed to download Archivo from Google Fonts. Using a fallback font instead.
+If you are offline or behind a proxy, self-host the font with next/font/local, or set HTTP_PROXY/HTTPS_PROXY so Next.js can reach fonts.googleapis.com.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/archivo_f4c3cfb3.module.css
+    [next]/internal/font/google/archivo_f4c3cfb3.js
+    ./src/app/layout.tsx
+
+
+⚠ [next]/internal/font/google/archivo_black_54fc8325.module.css
+Warning: Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Archivo+Black:wght@400&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/archivo_black_54fc8325.module.css
+    [next]/internal/font/google/archivo_black_54fc8325.js
+    ./src/app/layout.tsx
+
+
+⚠ [next]/internal/font/google/archivo_f4c3cfb3.module.css
+Warning: Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Archivo:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/archivo_f4c3cfb3.module.css
+    [next]/internal/font/google/archivo_f4c3cfb3.js
+    ./src/app/layout.tsx
+
+
+⚠ [next]/internal/font/google/archivo_black_54fc8325.module.css
+Warning: next/font: warning:
+Failed to download Archivo Black from Google Fonts. Using a fallback font instead.
+If you are offline or behind a proxy, self-host the font with next/font/local, or set HTTP_PROXY/HTTPS_PROXY so Next.js can reach fonts.googleapis.com.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/archivo_black_54fc8325.module.css
+    [next]/internal/font/google/archivo_black_54fc8325.js
+    ./src/app/layout.tsx
+
+
+⚠ [next]/internal/font/google/archivo_f4c3cfb3.module.css
+Warning: next/font: warning:
+Failed to download Archivo from Google Fonts. Using a fallback font instead.
+If you are offline or behind a proxy, self-host the font with next/font/local, or set HTTP_PROXY/HTTPS_PROXY so Next.js can reach fonts.googleapis.com.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/archivo_f4c3cfb3.module.css
+    [next]/internal/font/google/archivo_f4c3cfb3.js
+    ./src/app/layout.tsx
+
+
+⚠ [next]/internal/font/google/archivo_black_54fc8325.module.css
+Warning: Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Archivo+Black:wght@400&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/archivo_black_54fc8325.module.css
+    [next]/internal/font/google/archivo_black_54fc8325.js
+    ./src/app/layout.tsx
+
+
+⚠ [next]/internal/font/google/archivo_f4c3cfb3.module.css
+Warning: Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Archivo:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/archivo_f4c3cfb3.module.css
+    [next]/internal/font/google/archivo_f4c3cfb3.js
+    ./src/app/layout.tsx
+
+
+⚠ [next]/internal/font/google/archivo_black_54fc8325.module.css
+Warning: next/font: warning:
+Failed to download Archivo Black from Google Fonts. Using a fallback font instead.
+If you are offline or behind a proxy, self-host the font with next/font/local, or set HTTP_PROXY/HTTPS_PROXY so Next.js can reach fonts.googleapis.com.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/archivo_black_54fc8325.module.css
+    [next]/internal/font/google/archivo_black_54fc8325.js
+    ./src/app/layout.tsx
+
+
+⚠ [next]/internal/font/google/archivo_f4c3cfb3.module.css
+Warning: next/font: warning:
+Failed to download Archivo from Google Fonts. Using a fallback font instead.
+If you are offline or behind a proxy, self-host the font with next/font/local, or set HTTP_PROXY/HTTPS_PROXY so Next.js can reach fonts.googleapis.com.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/archivo_f4c3cfb3.module.css
+    [next]/internal/font/google/archivo_f4c3cfb3.js
+    ./src/app/layout.tsx
+
+

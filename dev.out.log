@@ -1,0 +1,29 @@
+
+> whimsy-ui@0.1.0 predev
+> npm run generate-version
+
+
+> whimsy-ui@0.1.0 generate-version
+> node scripts/generate-version.mjs
+
+Generated app version 0.1.46
+
+> whimsy-ui@0.1.0 dev
+> next dev
+
+▲ Next.js 16.3.0 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://10.5.0.2:3000
+✓ Ready in 5.5s
+✓ Running next.config.ts took 316ms
+Creating turbopack project {
+  dir: 'C:\\Users\\JohnB\\Documents\\workspace\\WhimsyUI',
+  testMode: true
+}
+
+○ Compiling / ...
+ GET / 200 in 7.1s (next.js: 6.9s, application-code: 216ms)
+ GET / 200 in 62ms (next.js: 8ms, application-code: 54ms)
+ GET / 200 in 57ms (next.js: 8ms, application-code: 49ms)
+ GET / 200 in 62ms (next.js: 8ms, application-code: 55ms)
+ GET / 200 in 65ms (next.js: 9ms, application-code: 56ms)
