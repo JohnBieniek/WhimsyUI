@@ -230,6 +230,9 @@
 
 @media (max-width: 700px) {
   .site-header nav {
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-x: visible;
     scrollbar-width: none;
   }
 
@@ -261,6 +264,26 @@
   .inner-page > .page-hero.compact,
   .article-hero {
     padding-top: 0;
+  }
+
+  .work-page .page-hero.compact {
+    min-height: 0;
+    align-content: start;
+    gap: 0;
+  }
+
+  .work-page .page-hero .intro {
+    margin-bottom: 0;
+  }
+
+  .contact-card {
+    padding: 28px 20px;
+  }
+
+  .contact-email {
+    max-width: 100%;
+    font-size: clamp(16px, 5vw, 20px);
+    overflow-wrap: anywhere;
   }
 
   .case-page {
