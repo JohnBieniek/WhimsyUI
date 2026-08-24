@@ -158,6 +158,27 @@
   object-fit: contain;
 }
 
+.partner-image.fetch-partner {
+  background: var(--mint);
+}
+
+.partner-image .fetch-logo {
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: multiply;
+  transform: scale(1.85);
+}
+
+.partner-image .lakeland-logo {
+  width: 82px;
+  height: 82px;
+}
+
+.jackson-mark .carousel-logo {
+  width: 68px;
+  height: 88px;
+}
+
 .article-image:has(img[alt^="Lakeland Cabaret"]) {
   height: auto;
   aspect-ratio: 1600 / 959;
@@ -326,6 +347,16 @@
   .partner-image img {
     width: min(100%, 280px);
     height: 110px;
+  }
+
+  .partner-image .lakeland-logo {
+    width: 110px;
+    height: 110px;
+  }
+
+  .partner-image .fetch-logo {
+    width: 100%;
+    height: 100%;
   }
 
   .site-header::after {
