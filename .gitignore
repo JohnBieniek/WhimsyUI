@@ -24,6 +24,11 @@
 # production
 /build
 
+# Local source archives (not needed by the deployed site)
+/archive/*.zip
+/archive/Whimsy_Context_Catalog.z0?
+/Whimsy_Context_Catalog.z0?
+
 # misc
 .DS_Store
 *.pem
