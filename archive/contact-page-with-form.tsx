@@ -1,0 +1,41 @@
+import ContactForm from "../src/app/contact-form";
+import { Collage, Partners } from "../src/app/site-chrome";
+
+export default function ContactPage() {
+  return (
+    <main className="inner-page shell">
+      <section className="page-hero compact">
+        <div>
+          <p className="kicker">Contact</p>
+          <h1>Tell us what you are<br />trying to accomplish.</h1>
+          <p className="intro">We’re here to help local businesses and organizations show up, connect, and grow with purpose.</p>
+        </div>
+        <Collage images={["/work/1426596552827958.jpg", "/work/1233619748792307.jpg", "/work/837501851737434.jpg", "/work/1233972312090384.jpg"]} />
+      </section>
+      <section className="contact-layout">
+        <ContactForm />
+        <aside>
+          <div className="panel checklist">
+            <p className="kicker">Before you send</p>
+            <p>To help us give you the best response, please include:</p>
+            <ul>
+              <li>What you’re trying to accomplish</li>
+              <li>Who you’re trying to reach</li>
+              <li>Your timeline</li>
+              <li>Any must-haves or nice-to-haves</li>
+              <li>Your budget range</li>
+            </ul>
+          </div>
+          <div className="panel price-list">
+            <p className="kicker">Fixed-price services</p>
+            <p>Strategy Session <b>$300</b></p>
+            <p>Brand &amp; Advertising Plan <b>$1,250</b></p>
+            <p>Website Support <b>$150/hour</b></p>
+            <p>Five-Page Website <b>$3,000</b></p>
+          </div>
+        </aside>
+      </section>
+      <Partners />
+    </main>
+  );
+}
