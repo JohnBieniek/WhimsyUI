@@ -26,6 +26,10 @@
 .service-cards>article .service-icon{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:var(--purple);color:#fff;margin:0 auto 12px}
 .service-icon svg{width:25px;height:25px;stroke-width:1.8}
 .service-cards>article .service-icon+h2{margin:0 0 12px}
+.services-page .service-cards{align-items:start}
+.services-page .service-cards>article{min-height:0}
+.services-page .service-cards>article ul{margin-bottom:0}
+@media(min-width:1051px){.services-page .service-cards>article strong{margin-top:50px}}
 @media(min-width:701px){.home-logo{top:-56px;z-index:22}.home-copy{padding-top:154px}.home-logo-dots{top:-6px}}
 .featured-site{display:grid;grid-template-columns:1.15fr .85fr;gap:65px;background:#f1f8f6;border-radius:12px;padding:42px;margin-block:10px 30px}.featured-site h2{font-family:var(--font-display);font-size:clamp(38px,5vw,64px);margin:0 0 16px}.featured-site p{line-height:1.65;max-width:720px}.featured-site .button{margin-top:12px}.featured-site ul{list-style:none;padding:0;margin:0}.featured-site li{display:flex;flex-direction:column;gap:5px;padding:18px 0;border-bottom:1px solid #b9d8d1}.featured-site li:last-child{border-bottom:0}.featured-site li b{color:#49196B;text-transform:uppercase}.featured-site li span{font-size:13px;line-height:1.5}
 @media(max-width:700px){.featured-site{grid-template-columns:1fr;gap:20px;padding:25px}}
