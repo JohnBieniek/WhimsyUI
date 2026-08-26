@@ -3,10 +3,10 @@ import {
   ArrowRightLeft,
   BriefcaseBusiness,
   FileChartColumnIncreasing,
+  Files,
   LayoutTemplate,
   MessagesSquare,
   MonitorCog,
-  PanelsTopLeft,
 } from "lucide-react";
 import { services } from "../content";
 import { Collage } from "../site-chrome";
@@ -18,7 +18,7 @@ const serviceIcons = {
   "website-support": MonitorCog,
   "website-transfer": ArrowRightLeft,
   "single-page-website": LayoutTemplate,
-  "five-page-website": PanelsTopLeft,
+  "five-page-website": Files,
 } as const;
 
 export default function ServicesPage() {
