@@ -31,10 +31,9 @@ export default function ServicesPage() {
           <p className="kicker">Services &amp; Pricing</p>
           <h1>Professional work.<br />Clear cost.</h1>
           <p className="intro">
-            Whimsy offers everything you need to elevate your brand. We&apos;re
-            here to meet you where you&apos;re at and ready to take you to where
-            you need to be. Whether you&apos;re just starting your journey or
-            you&apos;re striving for greater success, we have the knowledge and
+            Whimsy offers everything you need to elevate your brand. Whether
+            you&apos;re just starting your journey or you&apos;re striving for
+            greater success, we have the knowledge and
             skills to get you there. From branding to ad creation to website
             publishing, our team will work with you every step of the way as you
             grow and polish your organization. Don&apos;t know what you need? We
