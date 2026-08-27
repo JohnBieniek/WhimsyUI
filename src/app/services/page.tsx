@@ -29,7 +29,7 @@ export default function ServicesPage() {
       <section className="page-hero compact">
         <div>
           <p className="kicker">Services &amp; Pricing</p>
-          <h1>Clear services.<br />Fixed prices.</h1>
+          <h1>Professional work.<br />Clear cost.</h1>
           <p className="intro">
             Straightforward support helps local businesses and organizations move
             forward with confidence. You get clear pricing, practical guidance,
