@@ -22,8 +22,8 @@
 .contact-page>.partners>h2{color:var(--purple)}
 .field-label{display:flex;align-items:baseline;justify-content:space-between;width:100%}
 @media(min-width:1051px){.contact-layout .price-list{display:flex;flex-direction:column}.contact-layout .price-list>p:not(.kicker){flex:1;align-items:center}}
-.partners .partner{min-height:0;height:78px}
-@media(min-width:1051px){.partners{height:95px;min-height:95px}}
+.partners .partner{min-height:0;height:88px}
+@media(min-width:1051px){.partners{height:105px;min-height:105px}}
 @media(max-width:700px){.partners .partner{height:110px}}
 @media(min-width:701px){.contact-form textarea[name="details"]{min-height:112px}}
 @media(max-width:1050px){.partners{grid-template-columns:repeat(4,1fr)}.contact-hero{grid-template-columns:1fr}.contact-headshot{justify-self:end}}
