@@ -4,7 +4,7 @@ import { Partners } from "../site-chrome";
 
 export default function ContactPage() {
   return (
-    <main className="inner-page shell">
+    <main className="inner-page shell contact-page">
       <section className="page-hero compact contact-hero">
         <div>
           <p className="kicker">Contact</p>
