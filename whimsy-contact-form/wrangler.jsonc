@@ -1,0 +1,26 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "whimsy-contact-form",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-08-27",
+  "compatibility_flags": ["nodejs_compat"],
+  "send_email": [
+    {
+      "name": "CONTACT_EMAIL",
+      "destination_address": "johnbieniekgt@gmail.com",
+      "allowed_sender_addresses": [
+        "contact-form@experiencewhimsy.com"
+      ]
+    }
+  ],
+  "vars": {
+    "ALLOWED_ORIGINS": "https://experiencewhimsy.com,https://www.experiencewhimsy.com,https://whimsyui-beta.pages.dev",
+    "FROM_ADDRESS": "contact-form@experiencewhimsy.com",
+    "TO_ADDRESS": "johnbieniekgt@gmail.com"
+  },
+  "observability": {
+    "enabled": true,
+    "logs": { "head_sampling_rate": 1 },
+    "traces": { "enabled": true, "head_sampling_rate": 0.01 }
+  }
+}

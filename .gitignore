@@ -29,9 +29,6 @@
 /archive/Whimsy_Context_Catalog.z0?
 /Whimsy_Context_Catalog.z0?
 
-# Separate local project; not part of this deployment
-/whimsy-contact-form/
-
 # misc
 .DS_Store
 *.pem
