@@ -32,11 +32,12 @@ export default function ContactPage() {
             <p className="kicker">Before you send</p>
             <p>To help us give you the best response, please include:</p>
             <ul>
-              <li>What you&apos;re trying to accomplish</li>
-              <li>Who you&apos;re trying to reach</li>
-              <li>Your timeline</li>
+              <li>
+                What you&apos;re trying to accomplish and who you&apos;re trying
+                to reach.
+              </li>
+              <li>Your timeline and budget</li>
               <li>Any must-haves or nice-to-haves</li>
-              <li>Your budget range</li>
               <li>
                 What you already have to work with, such as a website,
                 branding, content, photos, or existing materials
