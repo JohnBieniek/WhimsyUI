@@ -49,7 +49,7 @@ export default function ServicesPage() {
               <h2>{service.name}</h2>
               <strong>{service.price}</strong>
               <ul>
-                {service.deliverables.slice(0, 2).map((point) => (
+                {service.deliverables.map((point) => (
                   <li key={point}>{point}</li>
                 ))}
               </ul>
