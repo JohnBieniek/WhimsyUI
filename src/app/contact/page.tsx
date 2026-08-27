@@ -36,6 +36,10 @@ export default function ContactPage() {
               <li>Your timeline</li>
               <li>Any must-haves or nice-to-haves</li>
               <li>Your budget range</li>
+              <li>
+                What you already have to work with, such as a website,
+                branding, content, photos, or existing materials
+              </li>
             </ul>
           </div>
           <div className="panel price-list">
