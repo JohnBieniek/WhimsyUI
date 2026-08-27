@@ -163,10 +163,9 @@
 }
 
 .partner-image .fetch-logo {
-  width: 100%;
-  height: 100%;
+  width: min(100%, 230px);
+  height: 76px;
   mix-blend-mode: multiply;
-  transform: scale(1.85);
 }
 
 .partner-image .lakeland-logo {
@@ -355,8 +354,8 @@
   }
 
   .partner-image .fetch-logo {
-    width: 100%;
-    height: 100%;
+    width: min(100%, 280px);
+    height: 110px;
   }
 
   .site-header::after {
