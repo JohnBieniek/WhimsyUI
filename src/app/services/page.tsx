@@ -34,7 +34,7 @@ export default function ServicesPage() {
             Whimsy offers everything you need to elevate your brand. Whether
             you&apos;re just starting your journey or you&apos;re striving for
             greater success, we have the knowledge and
-            skills to get you there. From branding to ad creation to website
+            skills to help you succeed. From branding to ad creation to website
             publishing, our team will work with you every step of the way as you
             grow and polish your organization. Don&apos;t know what you need? We
             offer free consultations that can help you decide what package is
