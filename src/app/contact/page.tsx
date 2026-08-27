@@ -1,5 +1,6 @@
+import Image from "next/image";
 import ContactForm from "../contact-form";
-import { Collage, Partners } from "../site-chrome";
+import { Partners } from "../site-chrome";
 
 export default function ContactPage() {
   return (
@@ -13,7 +14,15 @@ export default function ContactPage() {
             connect, and grow with purpose.
           </p>
         </div>
-        <Collage images={["/work/1426596552827958.jpg", "/work/1233619748792307.jpg", "/work/837501851737434.jpg", "/work/1233972312090384.jpg"]} />
+        <Image
+          className="contact-headshot"
+          src="/headshot.jpg"
+          alt="Whimsy consultant"
+          width={856}
+          height={961}
+          priority
+          sizes="(max-width: 1050px) 100vw, 40vw"
+        />
       </section>
       <section className="contact-layout">
         <ContactForm />
