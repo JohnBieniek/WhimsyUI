@@ -1,4 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
+import offsetSquareCollage from "../../../collage/offset square collage.png";
+import offsetSquareCollageDesktop from "../../../collage/offset square collage desktop.png";
 import {
   ArrowRightLeft,
   BriefcaseBusiness,
@@ -9,7 +12,6 @@ import {
   MonitorCog,
 } from "lucide-react";
 import { services } from "../content";
-import { Collage } from "../site-chrome";
 
 const serviceIcons = {
   "strategy-session": MessagesSquare,
@@ -35,7 +37,20 @@ export default function ServicesPage() {
             strategy, useful creativity, and reliable execution.
           </p>
         </div>
-        <Collage images={["/work/906381761516109.jpg", "/work/837501851737434.jpg", "/work/985893490231602.jpg", "/work/1426596552827958.jpg"]} />
+        <Image
+          className="offset-square-collage offset-square-collage-mobile"
+          src={offsetSquareCollage}
+          alt="A collage of selected Whimsy campaign work"
+          priority
+          sizes="100vw"
+        />
+        <Image
+          className="offset-square-collage offset-square-collage-desktop"
+          src={offsetSquareCollageDesktop}
+          alt="A collage of selected Whimsy campaign work"
+          priority
+          sizes="55vw"
+        />
       </section>
       <section className="service-cards">
         {services.map((service) => {
