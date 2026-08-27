@@ -352,17 +352,18 @@
   }
 
   .partner-image .lakeland-logo {
-    width: 100px;
-    height: 96px;
+    width: 88px;
+    height: 88px;
   }
 
   .lakeland-partner {
-    padding: 5px 0 4px;
+    padding: 8px 0;
+    overflow: visible;
   }
 
   .partner-image .fetch-logo {
-    width: min(100%, 280px);
-    height: 110px;
+    width: min(90%, 252px);
+    height: 99px;
     object-fit: contain;
   }
 
