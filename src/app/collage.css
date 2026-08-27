@@ -354,6 +354,7 @@
   .partner-image .lakeland-logo {
     width: 88px;
     height: 88px;
+    object-fit: contain;
   }
 
   .lakeland-partner {
