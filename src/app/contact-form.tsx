@@ -2,13 +2,13 @@
 
 import { FormEvent, useState } from "react";
 
-const endpoint = process.env.NEXT_PUBLIC_CONTACT_WORKER_URL;
+const endpoint = process.env.NEXT_PUBLIC_CONTACT_WORKER_URL ??
+  "https://whimsy-contact-form.johnbieniekgt.workers.dev";
 
 export default function ContactForm() {
   const [status, setStatus] = useState<"idle"|"sending"|"sent"|"error">("idle");
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (!endpoint) { setStatus("error"); return; }
     setStatus("sending");
     const form = event.currentTarget;
     const payload = Object.fromEntries(new FormData(form));
@@ -26,6 +26,6 @@ export default function ContactForm() {
     <label>Project details *<textarea required name="details" rows={5} placeholder="Tell us about your goals, audience, timeline, and budget."/></label>
     <input name="website" className="honeypot" tabIndex={-1} autoComplete="off" aria-hidden="true"/>
     <button className="button" disabled={status==="sending"}>{status==="sending"?"Sending…":"Send inquiry ↗"}</button>
-    <p className={`form-status ${status}`} role="status">{status==="sent"?"Thanks—your inquiry is on its way.":status==="error"?"The form endpoint isn’t connected yet. Add NEXT_PUBLIC_CONTACT_WORKER_URL to enable sending.":"Your information is used only to respond to your inquiry."}</p>
+    <p className={`form-status ${status}`} role="status">{status==="sent"?"Thanks—your inquiry is on its way.":status==="error"?"We couldn’t send your inquiry. Please try again, or email us directly.":"Your information is used only to respond to your inquiry."}</p>
   </form>;
 }
