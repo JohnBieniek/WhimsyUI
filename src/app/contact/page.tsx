@@ -5,34 +5,35 @@ import { Partners } from "../site-chrome";
 export default function ContactPage() {
   return (
     <main className="inner-page shell contact-page">
-      <section className="page-hero compact contact-hero">
-        <div>
-          <p className="kicker">Contact</p>
-          <h1>Tell us what you are trying to accomplish.</h1>
-          <p className="intro">
-            Tell us what you&apos;re working on and where you&apos;d like some
-            help. We&apos;ll figure out the next step together.
-          </p>
+      <section className="contact-page-grid">
+        <div className="contact-primary">
+          <div className="contact-intro">
+            <p className="kicker">Contact</p>
+            <h1>Tell us what you are trying to accomplish.</h1>
+            <p className="intro">
+              Tell us what you&apos;re working on and where you&apos;d like some
+              help. We&apos;ll figure out the next step together.
+            </p>
+          </div>
+          <ContactForm />
         </div>
-        <Image
-          className="contact-headshot"
-          src="/headshot-tight.png"
-          alt="Whimsy consultant"
-          width={778}
-          height={508}
-          priority
-          sizes="(max-width: 1050px) 100vw, 40vw"
-        />
-      </section>
-      <section className="contact-layout">
-        <ContactForm />
-        <aside>
+
+        <aside className="contact-sidebar">
+          <Image
+            className="contact-headshot"
+            src="/headshot-tight.png"
+            alt="Whimsy consultant"
+            width={778}
+            height={508}
+            priority
+            sizes="(max-width: 1050px) 100vw, 40vw"
+          />
           <div className="panel checklist">
             <p className="kicker">Before you send</p>
             <p>To help us give you the best response, please include:</p>
             <ul>
-              <li>What you’re trying to accomplish</li>
-              <li>Who you’re trying to reach</li>
+              <li>What you&apos;re trying to accomplish</li>
+              <li>Who you&apos;re trying to reach</li>
               <li>Your timeline</li>
               <li>Any must-haves or nice-to-haves</li>
               <li>Your budget range</li>
