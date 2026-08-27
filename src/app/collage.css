@@ -164,9 +164,9 @@
 }
 
 .partner-image .fetch-logo {
-  width: 100%;
-  height: 78px;
-  object-fit: cover;
+  width: min(100%, 230px);
+  height: 76px;
+  object-fit: contain;
   mix-blend-mode: multiply;
 }
 
@@ -357,9 +357,9 @@
   }
 
   .partner-image .fetch-logo {
-    width: 100%;
+    width: min(100%, 280px);
     height: 110px;
-    object-fit: cover;
+    object-fit: contain;
   }
 
   .site-header::after {
