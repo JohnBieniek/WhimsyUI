@@ -25,6 +25,8 @@
 .contact-intro .intro{max-width:860px}
 .contact-primary>.contact-form{margin-top:24px}
 .contact-sidebar{display:grid;gap:16px;align-content:start;min-width:0}
+.contact-sidebar>.panel{padding-top:10px}
+.contact-sidebar>.panel>.kicker{margin-bottom:6px}
 .contact-sidebar .contact-headshot{width:100%;max-width:none}
 @media(max-width:1050px){.contact-page-grid{grid-template-columns:1fr}.contact-sidebar .contact-headshot{width:min(100%,520px)}}
 @media(max-width:700px){.contact-intro h1{font-size:46px}.contact-primary>.contact-form{margin-top:18px}}
