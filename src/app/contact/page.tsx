@@ -16,10 +16,10 @@ export default function ContactPage() {
         </div>
         <Image
           className="contact-headshot"
-          src="/headshot.jpg"
+          src="/headshot-tight.png"
           alt="Whimsy consultant"
-          width={856}
-          height={961}
+          width={778}
+          height={508}
           priority
           sizes="(max-width: 1050px) 100vw, 40vw"
         />
