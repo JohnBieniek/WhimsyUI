@@ -44,20 +44,22 @@ export default function ServicesPage() {
             custom software to meet your needs. Just let us know how we can help!
           </p>
         </div>
-        <Image
-          className="offset-square-collage offset-square-collage-mobile"
-          src={offsetSquareCollage}
-          alt="A collage of selected Whimsy campaign work"
-          priority
-          sizes="100vw"
-        />
-        <Image
-          className="offset-square-collage offset-square-collage-desktop"
-          src={offsetSquareCollageDesktop}
-          alt="A collage of selected Whimsy campaign work"
-          priority
-          sizes="55vw"
-        />
+        <div className="services-collage">
+          <Image
+            className="offset-square-collage offset-square-collage-mobile"
+            src={offsetSquareCollage}
+            alt="A collage of selected Whimsy campaign work"
+            priority
+            sizes="100vw"
+          />
+          <Image
+            className="offset-square-collage offset-square-collage-desktop"
+            src={offsetSquareCollageDesktop}
+            alt="A collage of selected Whimsy campaign work"
+            priority
+            sizes="55vw"
+          />
+        </div>
       </section>
       <section className="service-cards">
         {services.map((service) => {
