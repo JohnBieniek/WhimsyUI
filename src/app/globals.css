@@ -20,6 +20,7 @@
 .contact-headshot{justify-self:end}
 .contact-page>.partners{background:transparent}
 .contact-page>.partners>h2{color:var(--purple)}
+.jackson-crossing-logo{transform:scale(1.2)}
 .field-label{display:flex;align-items:baseline;justify-content:space-between;width:100%}
 @media(min-width:1051px){.contact-layout .price-list{display:flex;flex-direction:column}.contact-layout .price-list>p:not(.kicker){flex:1;align-items:center}}
 .partners .partner{min-height:0;height:88px}
