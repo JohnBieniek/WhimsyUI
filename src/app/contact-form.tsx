@@ -19,7 +19,7 @@ export default function ContactForm() {
     } catch { setStatus("error"); }
   }
   return <form className="contact-form" onSubmit={submit}>
-    <div className="form-heading"><span>✦</span><div><h3>Let’s make a plan.</h3><p>Fields marked * are required.</p></div></div>
+    <div className="form-heading"><div><h3>Let’s make a plan.</h3><p>Fields marked * are required.</p></div></div>
     <div className="form-row"><label>Name *<input required name="name" autoComplete="name" placeholder="Your full name"/></label><label>Business or organization *<input required name="organization" autoComplete="organization" placeholder="Organization name"/></label></div>
     <div className="form-row"><label>Email *<input required type="email" name="email" autoComplete="email" placeholder="you@example.com"/></label><label><span className="field-label"><span>Phone</span><small>(optional)</small></span><input name="phone" autoComplete="tel" placeholder="(517) 555-0123"/></label></div>
     <label>What do you need help with? *<select required name="service" defaultValue=""><option value="" disabled>Choose a service</option><option>Strategy session</option><option>Brand & advertising plan</option><option>Business consulting</option><option>Website support</option><option>Domain change & transfer</option><option>Single-page website</option><option>Five-page website</option><option>Not sure yet</option></select></label>
