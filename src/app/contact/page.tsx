@@ -5,10 +5,10 @@ import { Partners } from "../site-chrome";
 export default function ContactPage() {
   return (
     <main className="inner-page shell">
-      <section className="page-hero compact">
+      <section className="page-hero compact contact-hero">
         <div>
           <p className="kicker">Contact</p>
-          <h1>Tell us what you are<br />trying to accomplish.</h1>
+          <h1>Tell us what you are trying to accomplish.</h1>
           <p className="intro">
             We’re here to help local businesses and organizations show up,
             connect, and grow with purpose.
