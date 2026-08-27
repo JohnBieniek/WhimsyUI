@@ -10,8 +10,8 @@ export default function ContactPage() {
           <p className="kicker">Contact</p>
           <h1>Tell us what you are trying to accomplish.</h1>
           <p className="intro">
-            We’re here to help local businesses and organizations show up,
-            connect, and grow with purpose.
+            Tell us what you&apos;re working on and where you&apos;d like some
+            help. We&apos;ll figure out the next step together.
           </p>
         </div>
         <Image
