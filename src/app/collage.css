@@ -159,7 +159,7 @@
 }
 
 .partner-image.fetch-partner {
-  background: var(--mint);
+  background: #fff;
   padding: 0;
 }
 
@@ -167,7 +167,7 @@
   width: min(100%, 230px);
   height: 76px;
   object-fit: contain;
-  mix-blend-mode: multiply;
+  mix-blend-mode: normal;
 }
 
 .partner-image .lakeland-logo {
