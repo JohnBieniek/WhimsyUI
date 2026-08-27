@@ -31,10 +31,17 @@ export default function ServicesPage() {
           <p className="kicker">Services &amp; Pricing</p>
           <h1>Professional work.<br />Clear cost.</h1>
           <p className="intro">
-            Straightforward support helps local businesses and organizations move
-            forward with confidence. You get clear pricing, practical guidance,
-            and no surprises along the way. Every service combines thoughtful
-            strategy, useful creativity, and reliable execution.
+            Whimsy offers everything you need to elevate your brand. We&apos;re
+            here to meet you where you&apos;re at and ready to take you to where
+            you need to be. Whether you&apos;re just starting your journey or
+            you&apos;re striving for greater success, we have the knowledge and
+            skills to get you there. From branding to ad creation to website
+            publishing, our team will work with you every step of the way as you
+            grow and polish your organization. Don&apos;t know what you need? We
+            offer free consultations that can help you decide what package is
+            best for you! Need something beyond what&apos;s listed here? We&apos;d
+            be glad to work with you on larger ad campaigns, bigger websites, or
+            custom software to meet your needs. Just let us know how we can help!
           </p>
         </div>
         <Image
