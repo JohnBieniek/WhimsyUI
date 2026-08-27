@@ -5,8 +5,16 @@ interface ContactPayload {
 
 const limits = { name: 100, organization: 150, email: 254, phone: 50, service: 100, details: 5000 } as const;
 
-function allowedOrigins(env: Env): Set<string> {
-  return new Set(env.ALLOWED_ORIGINS.split(",").map((origin) => origin.trim()));
+function isAllowedOrigin(origin: string, env: Env): boolean {
+  const configuredOrigins = new Set(env.ALLOWED_ORIGINS.split(",").map((value) => value.trim()));
+  if (configuredOrigins.has(origin)) return true;
+
+  try {
+    const url = new URL(origin);
+    return url.protocol === "https:" && url.hostname.endsWith(".whimsyui-beta.pages.dev");
+  } catch {
+    return false;
+  }
 }
 
 function corsHeaders(origin: string): HeadersInit {
@@ -35,7 +43,7 @@ function textField(value: unknown): string | null {
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const origin = request.headers.get("Origin") ?? "";
-    if (!allowedOrigins(env).has(origin)) {
+    if (!isAllowedOrigin(origin, env)) {
       return Response.json({ ok: false, error: "Origin not allowed" }, { status: 403 });
     }
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: corsHeaders(origin) });
