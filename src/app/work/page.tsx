@@ -1,5 +1,6 @@
 import Image from "next/image";
 import offsetSquareCollage from "../../../collage/offset square collage.png";
+import offsetSquareCollageDesktop from "../../../collage/offset square collage desktop.png";
 import WorkGallery from "./work-gallery";
 
 export default function WorkPage() {
@@ -15,11 +16,18 @@ export default function WorkPage() {
           </p>
         </div>
         <Image
-          className="offset-square-collage"
+          className="offset-square-collage offset-square-collage-mobile"
           src={offsetSquareCollage}
           alt="A collage of selected Whimsy campaign work"
           priority
-          sizes="(max-width: 1050px) 100vw, 55vw"
+          sizes="100vw"
+        />
+        <Image
+          className="offset-square-collage offset-square-collage-desktop"
+          src={offsetSquareCollageDesktop}
+          alt="A collage of selected Whimsy campaign work"
+          priority
+          sizes="55vw"
         />
       </section>
       <WorkGallery />
