@@ -7,12 +7,6 @@ export function generateStaticParams() {
   return caseStudies.map(({ slug }) => ({ slug }));
 }
 
-const lakelandFacts = [
-  "Developed the Lakeland Cabaret logo and visual direction.",
-  "Designed and built the responsive Lakeland Cabaret website.",
-  "Booked performances and handled event photography.",
-];
-
 const teamHopeEducation = [
   ["894468282707457.jpg", "Understanding the disease"],
   ["894468319374120.jpg", "Recognizing symptoms"],
@@ -29,7 +23,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
   const isLakeland = study.slug === "lakeland-cabaret";
   const isHoliday = study.slug === "holiday-local";
   const isTeamHope = study.slug === "team-hope-walk";
-  const facts = isLakeland ? lakelandFacts : study.facts;
+  const facts = study.facts;
 
   return <main className="case-page shell">
     <Link className="back-link" href={isLakeland || isHoliday ? "/" : "/work"}>{isLakeland || isHoliday ? "← Home" : "← All work"}</Link>
@@ -64,7 +58,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
           <p className="kicker">The experience</p>
           <h2>The work continued beyond launch day.</h2>
           <p>Whimsy booked performances and helped turn the brand promise into real audience experiences. Photography documented the artists, atmosphere, and memorable details behind those events.</p>
-          <ul className="lakeland-contributions">{facts.map((fact) => <li key={fact}>{fact}</li>)}</ul>
+          <p>Our work with Lakeland Cabaret is representative of the broad spectrum of help we provide at Whimsy. The holistic elevation of a brand with logo work, website design, marketing, and photography can take any company’s offerings to the next level. We’d love a chance to work with you on any or all of these things. Reach out for a free consultation to find out how you can take the next step of your journey today!</p>
         </div>
         <div className="lakeland-photo-grid">
           {study.images.slice(1).map((file, index) => <figure className={file.endsWith("performer.webp") ? "lakeland-dj-photo" : undefined} key={file}><Image src={`/work/${file}`} alt={`Lakeland Cabaret performance and event photography ${index + 1}`} fill sizes="(max-width: 800px) 50vw, 25vw" /></figure>)}
