@@ -28,7 +28,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
       {!isLakeland && <p className="kicker">{study.category} · Case study</p>}
       <h1>{study.title}</h1>
       <p className="intro">{study.summary}</p>
-      <div className="case-meta"><span>Partner</span><b>{study.client}</b>{!isLakeland && <><span>Project</span><b>{study.event}</b></>}</div>
+      <div className="case-meta"><span>Partner</span><b>{study.client}</b>{!isLakeland && !isHoliday && <><span>Project</span><b>{study.event}</b></>}</div>
       {isLakeland && <a className="button case-website" href="https://lakelandcabaret.com/" target="_blank" rel="noopener noreferrer">Visit Lakeland Cabaret ↗</a>}
     </header>
     {isLakeland ? <section className="lakeland-project-sections">
