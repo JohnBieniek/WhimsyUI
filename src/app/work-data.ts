@@ -42,7 +42,7 @@ const projects: Record<Category, Array<[string,string,string,string,string]>> = 
     ["grazing-thyme-brand","837501851737434.jpg","Grazing Thyme Brand Story","Grazing Thyme","Warm opening content highlighting the character, menu, and atmosphere of a new local space."],
   ],
   "Websites": [
-    ["local-business-landing","985893490231602.jpg","Local Business Landing Page","Local business client","A focused single-page experience turning a clear offer into calls, visits, and inquiries."],
+    ["lakeland-cabaret","lakeland cabaret/site.png","Lakeland Cabaret Website","Lakeland Cabaret","A new brand and website bringing the collective's performance booking, photography, and event services into one vivid online home."],
     ["community-event-hub","974588071362144.jpg","Community Event Hub","Community organization","A mobile-friendly information hub bringing schedules, partners, and event details into one place."],
     ["campaign-destination","906381761516109.jpg","Campaign Destination Page","Advertising client","A conversion-focused destination extending an ad campaign beyond the social post."],
     ["organization-refresh","944490221038596.jpg","Organization Website Refresh","Local nonprofit","A clearer structure and updated content system helping visitors find services and next steps."],
@@ -58,5 +58,5 @@ export const caseStudies = (Object.entries(projects) as Array<[Category, typeof 
   event:title,
   summary,
   facts:[`A distinct ${category.toLowerCase()} engagement shaped around the partner’s audience.`,"Strategy, creative execution, and practical rollout support.","Reusable campaign assets and a clear path for follow-up."],
-  images:[file,file],
+  images:slug==="lakeland-cabaret"?["lakeland cabaret/LAKELAND CABARET clean.png","lakeland cabaret/performer.webp","lakeland cabaret/bouncy house dj close.jpg","lakeland cabaret/mcordy wand.jpg"]:[file,file],
 })));
