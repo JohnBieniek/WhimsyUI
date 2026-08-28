@@ -23,7 +23,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
   const facts = isLakeland ? lakelandFacts : study.facts;
 
   return <main className="case-page shell">
-    <Link className="back-link" href={isLakeland ? "/" : "/work"}>{isLakeland ? "← Home" : "← All work"}</Link>
+    <Link className="back-link" href={isLakeland || isHoliday ? "/" : "/work"}>{isLakeland || isHoliday ? "← Home" : "← All work"}</Link>
     <header className={`case-header ${isLakeland ? "lakeland-case-header" : isHoliday ? "holiday-case-header" : ""}`.trim()}>
       {!isLakeland && <p className="kicker">{study.category} · Case study</p>}
       <h1>{study.title}</h1>
