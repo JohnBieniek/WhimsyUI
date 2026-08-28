@@ -30,22 +30,50 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
       <div className="case-meta"><span>Partner</span><b>{study.client}</b><span>Project</span><b>{study.event}</b></div>
       {isLakeland && <a className="button case-website" href="https://lakelandcabaret.com/" target="_blank" rel="noopener noreferrer">Visit Lakeland Cabaret ↗</a>}
     </header>
-    <figure className="case-feature"><Image src={`/work/${study.file}`} alt={isLakeland ? "Lakeland Cabaret website homepage" : `Full ${study.title} advertisement`} fill priority sizes="100vw" /></figure>
-    <section className="case-story">
-      <article>
-        <p className="kicker">The assignment</p>
-        <h2>{isLakeland ? "Build one identity for every part of the performance." : "Make the invitation clear—and worth showing up for."}</h2>
-        {isLakeland ? <>
-          <p>Whimsy helped shape Lakeland Cabaret from the brand outward, developing the logo and building a website that gives its music, fire performance, photography, videography, and ceremony services one cohesive home.</p>
-          <p>The partnership also extends beyond the screen. Whimsy booked performances and handled photography, connecting the public-facing site with the real events, artists, and images behind the collective.</p>
-        </> : <>
+    {isLakeland ? <section className="lakeland-project-sections">
+      <article className="lakeland-project-card">
+        <div className="lakeland-card-copy">
+          <p className="kicker">01 · The identity</p>
+          <h2>A logo built to hold the whole show.</h2>
+          <p>Whimsy developed a recognizable identity for an entertainment collective spanning live music, fire performance, photography, videography, and wedding ceremonies.</p>
+          <p>The finished mark gives those different offerings one shared name and a confident visual anchor across the website, event materials, and public appearances.</p>
+        </div>
+        <figure className="lakeland-card-image lakeland-logo-card"><Image src="/work/lakeland%20cabaret/LAKELAND%20CABARET%20clean.png" alt="Lakeland Cabaret logo" fill priority sizes="(max-width: 800px) 100vw, 50vw" /></figure>
+      </article>
+      <article className="lakeland-project-card image-first">
+        <figure className="lakeland-card-image lakeland-site-card"><Image src="/work/lakeland%20cabaret/site.png" alt="Lakeland Cabaret website homepage" fill sizes="(max-width: 800px) 100vw, 55vw" /></figure>
+        <div className="lakeland-card-copy">
+          <p className="kicker">02 · The website</p>
+          <h2>A clear path from curiosity to booking.</h2>
+          <p>Whimsy designed and built a responsive website that organizes the collective’s services, pricing, story, and inquiry flow without losing the energy of the performances.</p>
+          <p>The site pairs bold editorial type with real event imagery, helping visitors understand what Lakeland Cabaret offers and confidently plan an event.</p>
+          <a className="button" href="https://lakelandcabaret.com/" target="_blank" rel="noopener noreferrer">Explore the live site ↗</a>
+        </div>
+      </article>
+      <article className="lakeland-project-card">
+        <div className="lakeland-card-copy">
+          <p className="kicker">03 · The experience</p>
+          <h2>The work continued beyond launch day.</h2>
+          <p>Whimsy booked performances and helped turn the brand promise into real audience experiences. Photography documented the artists, atmosphere, and memorable details behind those events.</p>
+          <ul className="lakeland-contributions">{facts.map((fact) => <li key={fact}>{fact}</li>)}</ul>
+        </div>
+        <div className="lakeland-photo-grid">
+          {study.images.slice(1).map((file, index) => <figure key={file}><Image src={`/work/${file}`} alt={`Lakeland Cabaret performance and event photography ${index + 1}`} fill sizes="(max-width: 800px) 50vw, 25vw" /></figure>)}
+        </div>
+      </article>
+    </section> : <>
+      <figure className="case-feature"><Image src={`/work/${study.file}`} alt={`Full ${study.title} advertisement`} fill priority sizes="100vw" /></figure>
+      <section className="case-story">
+        <article>
+          <p className="kicker">The assignment</p>
+          <h2>Make the invitation clear—and worth showing up for.</h2>
           <p>Whimsy connected the visual campaign, the event story, and the community context so each piece could do more than announce a date. It could explain why the moment mattered and give people a reason to participate.</p>
           <p>The work was designed for real-world use across social feeds, partner sharing, and repeated event promotion.</p>
-        </>}
-      </article>
-      <aside><p className="kicker">Project details</p><ul>{facts.map((fact) => <li key={fact}>{fact}</li>)}</ul></aside>
-    </section>
-    <section className="case-gallery">{study.images.map((file, index) => <figure key={file}><Image src={`/work/${file}`} alt={`${study.title} supporting creative ${index + 1}`} fill sizes="(max-width:700px) 100vw, 50vw" /></figure>)}</section>
+        </article>
+        <aside><p className="kicker">Project details</p><ul>{facts.map((fact) => <li key={fact}>{fact}</li>)}</ul></aside>
+      </section>
+      <section className="case-gallery">{study.images.map((file, index) => <figure key={file}><Image src={`/work/${file}`} alt={`${study.title} supporting creative ${index + 1}`} fill sizes="(max-width:700px) 100vw, 50vw" /></figure>)}</section>
+    </>}
     <section className="ready"><h2>Have a campaign in mind?</h2><p>Let’s build something useful for your audience and your community.</p><Link className="button" href="/contact">Start a conversation →</Link></section>
   </main>;
 }
