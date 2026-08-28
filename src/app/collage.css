@@ -253,10 +253,17 @@
 .home-square-collage {
   display: block;
   align-self: center;
-  width: calc(100% + 40px);
+  width: calc(100% + 56px);
   max-width: none;
   height: auto;
-  margin-left: -28px;
+  margin-left: 0;
+}
+
+@media (min-width: 1051px) {
+  .home-hero {
+    grid-template-columns: 42% 58%;
+    gap: 0;
+  }
 }
 
 @media (max-width: 1050px) {
