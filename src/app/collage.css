@@ -250,6 +250,23 @@
   align-items: start;
 }
 
+.home-square-collage {
+  display: block;
+  align-self: center;
+  width: calc(100% + 40px);
+  max-width: none;
+  height: auto;
+  margin-left: -28px;
+}
+
+@media (max-width: 1050px) {
+  .home-square-collage {
+    width: 100%;
+    max-width: 100%;
+    margin: 12px 0 0;
+  }
+}
+
 @media (max-width: 700px) {
   .site-header nav {
     justify-content: center;
