@@ -120,6 +120,10 @@
   stroke-width: 2;
 }
 
+.highlight .lakeland-feature-image {
+  object-position: center calc(50% + 30px);
+}
+
 .home-tagline {
   font-weight: 800;
 }
