@@ -58,5 +58,5 @@ export const caseStudies = (Object.entries(projects) as Array<[Category, typeof 
   event:title,
   summary,
   facts:[`A distinct ${category.toLowerCase()} engagement shaped around the partner’s audience.`,"Strategy, creative execution, and practical rollout support.","Reusable campaign assets and a clear path for follow-up."],
-  images:slug==="lakeland-cabaret"?["lakeland cabaret/LAKELAND CABARET clean.png","lakeland cabaret/performer.webp","lakeland cabaret/bouncy house dj close.jpg","lakeland cabaret/mcordy wand.jpg"]:[file,file],
+  images:slug==="lakeland-cabaret"?["lakeland cabaret/LAKELAND CABARET clean.png","lakeland cabaret/performer.webp","lakeland cabaret/mall christmas backdrop.jpg","lakeland cabaret/mcordy wand.jpg"]:[file,file],
 })));
