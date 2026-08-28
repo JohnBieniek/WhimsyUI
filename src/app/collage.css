@@ -253,10 +253,13 @@
 .home-square-collage {
   display: block;
   align-self: center;
-  width: calc(100% + 56px);
+  width: calc(100% + 86px);
   max-width: none;
   height: auto;
-  margin-left: 0;
+  margin-left: -20px;
+  position: relative;
+  z-index: 21;
+  transform: scaleY(1.035);
 }
 
 @media (min-width: 1051px) {
@@ -271,6 +274,7 @@
     width: 100%;
     max-width: 100%;
     margin: 12px 0 0;
+    transform: none;
   }
 }
 
