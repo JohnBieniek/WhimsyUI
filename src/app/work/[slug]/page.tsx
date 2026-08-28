@@ -13,6 +13,14 @@ const lakelandFacts = [
   "Booked performances and handled event photography.",
 ];
 
+const teamHopeEducation = [
+  ["894468282707457.jpg", "Understanding the disease"],
+  ["894468319374120.jpg", "Recognizing symptoms"],
+  ["894468362707449.jpg", "Making symptoms approachable"],
+  ["894468402707445.jpg", "Supporting personal care"],
+  ["894468439374108.jpg", "Thanking the support network"],
+];
+
 export default async function CaseStudy({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const study = caseStudies.find((item) => item.slug === slug);
@@ -20,11 +28,12 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
 
   const isLakeland = study.slug === "lakeland-cabaret";
   const isHoliday = study.slug === "holiday-local";
+  const isTeamHope = study.slug === "team-hope-walk";
   const facts = isLakeland ? lakelandFacts : study.facts;
 
   return <main className="case-page shell">
     <Link className="back-link" href={isLakeland || isHoliday ? "/" : "/work"}>{isLakeland || isHoliday ? "← Home" : "← All work"}</Link>
-    <header className={`case-header ${isLakeland ? "lakeland-case-header" : isHoliday ? "holiday-case-header" : ""}`.trim()}>
+    <header className={`case-header ${isLakeland ? "lakeland-case-header" : isHoliday ? "holiday-case-header" : isTeamHope ? "team-hope-case-header" : ""}`.trim()}>
       {!isLakeland && <p className="kicker">{study.category} · Case study</p>}
       <h1>{study.title}</h1>
       <p className="intro">{study.summary}</p>
@@ -94,6 +103,32 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
         <article><span>02</span><h3>Across the campaign</h3><p>Flexible formats kept partners, activities, and seasonal atmosphere visible.</p></article>
         <article><span>03</span><h3>After doors opened</h3><p>Live photography connected the promotional promise to the experience people attended.</p></article>
       </div>
+    </section> : isTeamHope ? <section className="team-hope-case-study">
+      <div className="team-hope-opening">
+        <figure><Image src="/work/team%20hope%20core.jpg" alt="Central Michigan Team Hope Walk campaign announcement" fill priority sizes="(max-width: 800px) 100vw, 48vw" /></figure>
+        <div>
+          <p className="kicker">Awareness with a destination</p>
+          <h2>One visual system carried the invitation and the cause.</h2>
+          <p>Whimsy created a coordinated campaign for the August 17, 2024 Central Michigan Team Hope Walk at the Michigan Theatre in downtown Jackson.</p>
+          <p>The work brought HDSA, Jackson Crossing, Neurocrine Biosciences, Teva, and Whimsy into one recognizable visual system—making the walk details clear while keeping Huntington’s disease awareness at the center.</p>
+          <dl><div><dt>Registration</dt><dd>10:00 AM</dd></div><div><dt>Walk</dt><dd>11:00 AM</dd></div><div><dt>Location</dt><dd>Michigan Theatre</dd></div></dl>
+        </div>
+      </div>
+
+      <div className="team-hope-action">
+        <header><p className="kicker">The campaign sequence</p><h2>Invite. Inform. Give people a way to help.</h2><p>The core announcement introduced the experience, while supporting pieces repeated the date, linked people to HDSA information, and made donation opportunities visible.</p></header>
+        <div className="team-hope-action-grid">
+          <figure className="team-hope-reminder"><Image src="/work/team-hope/894457912708494.jpg" alt="Team Hope Walk event reminder and HDSA information graphic" fill sizes="(max-width: 800px) 100vw, 58vw" /></figure>
+          <figure><Image src="/work/team-hope/894457969375155.jpg" alt="Team Hope Walk donation campaign graphic" fill sizes="(max-width: 800px) 100vw, 30vw" /></figure>
+        </div>
+      </div>
+
+      <div className="team-hope-education">
+        <header><p className="kicker">Beyond event promotion</p><h2>An education series gave the campaign depth.</h2><p>Five companion graphics moved beyond the event invitation to explain Huntington’s disease, identify common symptoms, encourage personal care, and recognize the importance of family and community support.</p></header>
+        <div className="team-hope-education-grid">{teamHopeEducation.map(([file, label], index) => <figure className={index === 0 || index === 4 ? "team-hope-wide" : undefined} key={file}><Image src={`/work/team-hope/${file}`} alt={`Team Hope campaign graphic: ${label}`} fill sizes="(max-width: 700px) 100vw, 33vw" /><figcaption>{label}</figcaption></figure>)}</div>
+      </div>
+
+      <aside className="team-hope-close"><p className="kicker">The documented connection</p><h2>Creative built to support awareness before the first step.</h2><p>The archived campaign connects the public invitation, HDSA resources, donation messaging, and educational content to one community walk. It demonstrates how a local event campaign can carry both practical details and a larger public-service purpose without making unsupported attendance claims.</p></aside>
     </section> : <>
       <figure className="case-feature"><Image src={`/work/${study.file}`} alt={`Full ${study.title} advertisement`} fill priority sizes="100vw" /></figure>
       <section className="case-story">
