@@ -20,7 +20,7 @@
 .contact-headshot{justify-self:end;height:auto;object-fit:contain}
 .campaigns .highlight{border:2px solid #cdb5dc}
 .campaigns .highlight>div.team-hope-feature-frame{height:140px}.campaigns .team-hope-feature-image{object-position:center 29%}
-.lakeland-mobile-break{display:none}@media(max-width:800px){.lakeland-mobile-break{display:block}.lakeland-project-card:nth-child(3) .lakeland-card-copy h2{font-size:clamp(20px,6.4vw,24px);white-space:nowrap}}
+.lakeland-closing-heading span+span:before{content:" "}@media(max-width:800px){.lakeland-closing-heading{font-size:clamp(20px,6.4vw,24px)!important}.lakeland-closing-heading span{display:block;white-space:nowrap}.lakeland-closing-heading span+span:before{content:none}}
 .team-hope-education-grid .team-hope-wide img{object-fit:contain}
 @media(max-width:800px){.team-hope-education-grid{grid-template-columns:repeat(2,1fr)}.team-hope-education-grid .team-hope-wide{grid-column:1/-1;aspect-ratio:2.04/1}}
 .team-hope-mobile-break{display:none}@media(max-width:800px){.team-hope-mobile-break{display:block}.team-hope-action h2{font-size:27px}}

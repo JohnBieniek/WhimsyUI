@@ -57,7 +57,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
       <article className="lakeland-project-card">
         <div className="lakeland-card-copy">
           <p className="kicker">The experience</p>
-          <h2>The work continued<br className="lakeland-mobile-break" /> beyond launch day.</h2>
+          <h2 className="lakeland-closing-heading"><span>The work continued</span><span>beyond launch day.</span></h2>
           <p>Whimsy booked performances and helped turn the brand promise into real audience experiences. Photography documented the artists, atmosphere, and memorable details behind those events.</p>
           <p>Our work with Lakeland Cabaret is representative of the broad spectrum of help we provide at Whimsy. The holistic elevation of a brand with logo work, website design, marketing, and photography can take any company’s offerings to the next level. We’d love a chance to work with you on any or all of these things. Reach out for a free consultation to find out how you can take the next step of your journey today!</p>
         </div>
