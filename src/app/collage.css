@@ -121,7 +121,7 @@
 }
 
 .highlight .lakeland-feature-image {
-  object-position: center calc(50% + 30px);
+  object-position: center 40%;
 }
 
 .home-tagline {
