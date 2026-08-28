@@ -42,7 +42,7 @@ const projects: Record<Category, Array<[string,string,string,string,string]>> = 
     ["grazing-thyme-brand","837501851737434.jpg","Grazing Thyme Brand Story","Grazing Thyme","Warm opening content highlighting the character, menu, and atmosphere of a new local space."],
   ],
   "Websites": [
-    ["lakeland-cabaret","lakeland cabaret/site.png","Lakeland Cabaret Website","Lakeland Cabaret","A new brand and website bringing the collective's performance booking, photography, and event services into one vivid online home."],
+    ["lakeland-cabaret","lakeland cabaret/site.png","Lakeland Cabaret","Lakeland Cabaret","A new brand and website bringing the collective's performance booking, photography, and event services into one vivid online home."],
     ["community-event-hub","974588071362144.jpg","Community Event Hub","Community organization","A mobile-friendly information hub bringing schedules, partners, and event details into one place."],
     ["campaign-destination","906381761516109.jpg","Campaign Destination Page","Advertising client","A conversion-focused destination extending an ad campaign beyond the social post."],
     ["organization-refresh","944490221038596.jpg","Organization Website Refresh","Local nonprofit","A clearer structure and updated content system helping visitors find services and next steps."],
