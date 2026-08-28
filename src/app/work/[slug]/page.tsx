@@ -44,9 +44,8 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
       <article className="lakeland-project-card lakeland-logo-layout">
         <div className="lakeland-card-copy">
           <p className="kicker">The identity</p>
-          <h2>A logo built to hold the whole show.</h2>
-          <p>Whimsy developed a recognizable identity for an entertainment collective spanning live music, fire performance, photography, videography, and wedding ceremonies.</p>
-          <p>The finished mark gives those different offerings one shared name and a confident visual anchor across the website, event materials, and public appearances.</p>
+          <p>We designed the Lakeland Cabaret logo to bring the different sides of their identity together in one mark. The DJ at the center reflects their roots in live music and event entertainment, while the flame in his hand ties back to their fire performance work. The lake and sunset root the design in Michigan, where the water and summer atmosphere are part of the brand’s character.</p>
+          <p>We wrapped those elements in a classic circular badge to give the logo a classic and versatile feel that works across signage, apparel, social media, and event materials. The bold type and mix of deep navy, lake blue, gold, and red keep it recognizable while still carrying the energy of a live performance.</p>
         </div>
         <figure className="lakeland-card-image lakeland-logo-card"><Image src="/work/lakeland%20cabaret/LAKELAND%20CABARET%20clean.png" alt="Lakeland Cabaret logo" fill priority sizes="(max-width: 800px) 100vw, 50vw" /></figure>
       </article>
