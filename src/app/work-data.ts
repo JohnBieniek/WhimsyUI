@@ -13,7 +13,7 @@ const projects: Record<Category, Array<[string,string,string,string,string]>> = 
   ],
   "Advertising": [
     ["social-growth","797501532404133.jpg","Jackson Crossing Social Growth","Jackson Crossing","A six-month advertising rhythm that grew awareness through consistent events, tenants, and community stories."],
-    ["holiday-local","944490204371931.jpg","Holiday Local Campaign","Jackson Crossing","A coordinated seasonal campaign spanning social promotion, broadcast, and in-mall messaging."],
+    ["holiday-local","1000952755392342.jpg","Holiday in the Halls","Jackson Crossing","A coordinated holiday campaign that moved from clear promotional creative to a festive live event with Santa, local vendors, music, treats, and family activities."],
     ["back-to-school-ads","1478820320938914.jpg","Back to School Advertising Series","Jackson Crossing","A family-first series making every activity, giveaway, and accessibility detail easy to understand."],
     ["shop-small-saturday","1000952755392342.jpg","Shop Small Saturday","Local businesses","A bold campaign encouraging Jackson-area shoppers to discover and support independent businesses."],
     ["jackson-county-fair","894472109373741.jpg","Jackson County Fair Campaign","Community campaign","Bright promotional creative built around fair dates, attractions, and repeat social sharing."],

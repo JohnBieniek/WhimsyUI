@@ -19,6 +19,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
   if (!study) notFound();
 
   const isLakeland = study.slug === "lakeland-cabaret";
+  const isHoliday = study.slug === "holiday-local";
   const facts = isLakeland ? lakelandFacts : study.facts;
 
   return <main className="case-page shell">
@@ -61,6 +62,38 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
           {study.images.slice(1).map((file, index) => <figure className={file.endsWith("performer.webp") ? "lakeland-dj-photo" : undefined} key={file}><Image src={`/work/${file}`} alt={`Lakeland Cabaret performance and event photography ${index + 1}`} fill sizes="(max-width: 800px) 50vw, 25vw" /></figure>)}
         </div>
       </article>
+    </section> : isHoliday ? <section className="holiday-case-study">
+      <div className="holiday-opening">
+        <div className="holiday-opening-copy">
+          <p className="kicker">From campaign to community experience</p>
+          <h2>A holiday invitation with a real event waiting behind it.</h2>
+          <p>Whimsy built a campaign that made the date, activities, partners, and reasons to attend easy to understand—then carried that visual story into coverage of the day itself.</p>
+          <div className="holiday-pill-row"><span>Seasonal campaign</span><span>Partner promotion</span><span>Event photography</span></div>
+        </div>
+        <figure className="holiday-opening-art"><Image src="/work/1000952755392342.jpg" alt="Holiday in the Halls campaign recap" fill priority sizes="(max-width: 800px) 100vw, 48vw" /></figure>
+      </div>
+
+      <div className="holiday-campaign-block">
+        <header><p className="kicker">The campaign system</p><h2>Several ads. One unmistakable invitation.</h2><p>The creative evolved across placements while keeping the event name, date, festive palette, and community focus recognizable. Each piece could lead with a different reason to attend without losing the larger campaign.</p></header>
+        <div className="holiday-ad-mosaic">
+          <figure className="holiday-ad-primary"><Image src="/work/994558686031749.jpg" alt="Square Holiday in the Halls event advertisement" fill sizes="(max-width: 800px) 100vw, 44vw" /></figure>
+          <figure className="holiday-ad-tall"><Image src="/work/985893490231602.jpg" alt="Tall Holiday in the Halls event advertisement" fill sizes="(max-width: 800px) 100vw, 26vw" /></figure>
+          <aside><strong>Campaign details</strong><p>Santa visits, holiday vendors, sweet treats, live music, and family photo opportunities were organized into clear promotional messages for repeated sharing.</p></aside>
+        </div>
+      </div>
+
+      <div className="holiday-live-block">
+        <div className="holiday-live-heading"><p className="kicker">The live event</p><h2>The campaign became a place people could step into.</h2></div>
+        <figure className="holiday-live-photo"><Image src="/work/lakeland%20cabaret/mall%20christmas%20backdrop.jpg" alt="DJ performing at the Holiday in the Halls Christmas event" fill sizes="(max-width: 800px) 100vw, 68vw" /></figure>
+        <div className="holiday-live-copy"><p>The finished event brought the advertised experience into the mall with a decorated photo setting, Santa, local shopping, treats, and a live DJ.</p><p>Event-day photography gave the campaign a useful final chapter: proof of the atmosphere, partner participation, and people gathering in the space.</p></div>
+        <figure className="holiday-recap-art"><Image src="/work/1000952755392342.jpg" alt="Holiday in the Halls event recap featuring live photographs" fill sizes="(max-width: 800px) 100vw, 30vw" /></figure>
+      </div>
+
+      <div className="holiday-outcomes">
+        <article><span>01</span><h3>Before the event</h3><p>Clear creative gave families the essential details and multiple reasons to save the date.</p></article>
+        <article><span>02</span><h3>Across the campaign</h3><p>Flexible formats kept partners, activities, and seasonal atmosphere visible.</p></article>
+        <article><span>03</span><h3>After doors opened</h3><p>Live photography connected the promotional promise to the experience people attended.</p></article>
+      </div>
     </section> : <>
       <figure className="case-feature"><Image src={`/work/${study.file}`} alt={`Full ${study.title} advertisement`} fill priority sizes="100vw" /></figure>
       <section className="case-story">
