@@ -160,9 +160,9 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
       </div>
 
       <div className="back-school-resources">
-        <article><span>01</span><h3>Ready for class</h3><p>Loaded backpacks included a lunch box, travel cup, meal voucher, Michigan Theatre tickets, and a Jackson Crossing sticker while supplies lasted.</p></article>
-        <article><span>02</span><h3>Useful for the whole family</h3><p>Children could get school photos while adults had access to professional headshots in a relaxed, low-pressure setting.</p></article>
-        <article><span>03</span><h3>Reasons to stay</h3><p>Library sign-up, coloring, specialty drinks, a mascot visit, and live music turned a supply pickup into a community event.</p></article>
+        <article><h3>Ready for class</h3><p>Loaded backpacks included a lunch box, travel cup, meal voucher, Michigan Theatre tickets, and a Jackson Crossing sticker while supplies lasted.</p></article>
+        <article><h3>Useful for the whole family</h3><p>Children could get school photos while adults had access to professional headshots in a relaxed, low-pressure setting.</p></article>
+        <article><h3>Reasons to stay</h3><p>Library sign-up, coloring, specialty drinks, a mascot visit, and live music turned a supply pickup into a community event.</p></article>
       </div>
 
       <div className="back-school-live">
