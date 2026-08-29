@@ -119,3 +119,4 @@
 @media(max-width:520px){.back-school-ad-grid{grid-template-columns:1fr}.back-school-live-grid{grid-template-columns:1fr 1fr}.back-school-ad-grid figcaption{font-size:10px}}
 @media(min-width:801px){.back-school-campaign-title{font-size:clamp(34px,3.25vw,50px)!important}.back-school-campaign-title span{display:block;white-space:nowrap}}
 @media(min-width:801px){.back-school-live-grid{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,400px);grid-auto-rows:400px}.back-school-live-grid figure:nth-child(n){grid-column:auto;grid-row:auto}}
+.back-school-resources article>span{display:none!important}
