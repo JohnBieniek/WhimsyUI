@@ -20,7 +20,6 @@ const backToSchoolAds = [
   ["1478820410938905.jpg", "Free Michigan Theatre tickets"],
   ["1478820450938901.jpg", "Jackson District Library pop-up"],
   ["1478820494272230.jpg", "Stitch mascot appearance"],
-  ["1478820534272226.jpg", "Back-to-school coloring station"],
   ["1478820577605555.jpg", "Specialty drinks from Sipster of Jackson"],
 ];
 
