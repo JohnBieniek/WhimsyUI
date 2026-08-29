@@ -128,4 +128,5 @@
 .back-school-outcome-copy p{margin:0;font-size:17px;line-height:1.6}
 .back-school-outcome-copy p+p{margin-top:8px}
 .back-school-outcome-copy strong{font-family:var(--font-body);font-size:20px;line-height:1.35;color:var(--purple)}
+.back-school-live-grid figure:nth-child(2) img{object-position:center 20%}
 @media(max-width:800px){.back-school-outcome{grid-template-columns:1fr;gap:8px;padding:28px 22px}.back-school-outcome-copy strong{font-size:18px}}
