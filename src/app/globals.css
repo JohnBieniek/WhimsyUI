@@ -130,3 +130,8 @@
 .back-school-outcome-copy strong{font-family:var(--font-body);font-size:20px;line-height:1.35;color:var(--purple)}
 .back-school-live-grid figure:nth-child(2) img{object-position:center 20%}
 @media(max-width:800px){.back-school-outcome{grid-template-columns:1fr;gap:8px;padding:28px 22px}.back-school-outcome-copy strong{font-size:18px}}
+.form-status{margin:12px 0 0;padding:10px 12px;border-radius:5px;line-height:1.45}
+.form-status.sending{background:#eee8f5;color:#3c1260}
+.form-status.sent{background:#dff4eb;color:#155c42}
+.form-status.warning{background:#fff1c9;color:#664b00}
+.form-status.error{background:#f9dddd;color:#7c1818;font-weight:700}

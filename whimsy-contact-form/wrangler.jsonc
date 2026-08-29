@@ -13,6 +13,30 @@
       ]
     }
   ],
+  "d1_databases": [
+    {
+      "binding": "CONTACT_DB",
+      "database_name": "whimsy-contact-inquiries",
+      "database_id": "ea50b7f8-1627-4cef-a3b5-ef311bb62bf0",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "queues": {
+    "producers": [
+      { "binding": "CONTACT_QUEUE", "queue": "whimsy-contact-email" },
+      { "binding": "CONTACT_DLQ", "queue": "whimsy-contact-email-dlq" }
+    ],
+    "consumers": [
+      {
+        "queue": "whimsy-contact-email",
+        "max_batch_size": 1,
+        "max_batch_timeout": 5,
+        "max_retries": 5,
+        "dead_letter_queue": "whimsy-contact-email-dlq"
+      }
+    ]
+  },
+  "triggers": { "crons": ["*/5 * * * *"] },
   "vars": {
     "ALLOWED_ORIGINS": "https://experiencewhimsy.com,https://www.experiencewhimsy.com,https://whimsyui-beta.pages.dev",
     "FROM_ADDRESS": "contact-form@experiencewhimsy.com",

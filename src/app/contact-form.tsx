@@ -1,22 +1,37 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useRef, useState } from "react";
 
 const endpoint = process.env.NEXT_PUBLIC_CONTACT_WORKER_URL ??
   "https://whimsy-contact-form.johnbieniekgt.workers.dev";
 
 export default function ContactForm() {
-  const [status, setStatus] = useState<"idle"|"sending"|"sent"|"error">("idle");
+  const [status, setStatus] = useState<"idle"|"sending"|"sent"|"warning"|"error">("idle");
+  const [message, setMessage] = useState("Your information is used only to respond to your inquiry.");
+  const submissionId = useRef<string | null>(null);
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setStatus("sending");
+    setMessage("Safely saving your inquiry…");
     const form = event.currentTarget;
-    const payload = Object.fromEntries(new FormData(form));
+    submissionId.current ??= crypto.randomUUID();
+    const payload = { ...Object.fromEntries(new FormData(form)), submissionId: submissionId.current };
     try {
       const response = await fetch(endpoint, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
-      if (!response.ok) throw new Error("Request failed");
-      form.reset(); setStatus("sent");
-    } catch { setStatus("error"); }
+      const result = await response.json().catch(() => null) as { ok?: boolean; saved?: boolean; queued?: boolean; message?: string } | null;
+      if (!response.ok || !result?.ok) {
+        setStatus("error");
+        setMessage(result?.message ?? "We could not safely save your inquiry. Please try again or email johnbieniekgt@gmail.com directly.");
+        return;
+      }
+      form.reset();
+      submissionId.current = null;
+      setStatus(result.queued === false ? "warning" : "sent");
+      setMessage(result.message ?? "Thanks—your inquiry is safely saved.");
+    } catch {
+      setStatus("error");
+      setMessage("We could not confirm that your inquiry was saved. Please try again; the same submission will not be duplicated. You can also email johnbieniekgt@gmail.com directly.");
+    }
   }
   return <form className="contact-form" onSubmit={submit}>
     <div className="form-heading"><div><h3>Let’s make a plan.</h3><p>Fields marked * are required.</p></div></div>
@@ -26,6 +41,6 @@ export default function ContactForm() {
     <label>Project details *<textarea required name="details" rows={5} placeholder="Tell us about your goals, audience, timeline, and budget."/></label>
     <input name="website" className="honeypot" tabIndex={-1} autoComplete="off" aria-hidden="true"/>
     <button className="button" disabled={status==="sending"}>{status==="sending"?"Sending…":"Send inquiry ↗"}</button>
-    <p className={`form-status ${status}`} role="status">{status==="sent"?"Thanks—your inquiry is on its way.":status==="error"?"We couldn’t send your inquiry. Please try again, or email us directly.":"Your information is used only to respond to your inquiry."}</p>
+    <p className={`form-status ${status}`} role="status" aria-live="polite">{message}</p>
   </form>;
 }

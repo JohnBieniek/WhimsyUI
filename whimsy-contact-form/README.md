@@ -1,7 +1,17 @@
 # whimsy-contact-form
 
-A Cloudflare Worker that accepts contact-form submissions and emails them
-to a fixed inbox using the Cloudflare **Email Service** `send_email` binding.
+A Cloudflare Worker that stores contact-form submissions in D1, queues email
+delivery, retries temporary failures, and retains terminal failures in a
+dead-letter queue.
+
+## Reliability model
+
+1. A valid submission is written to D1 before the browser receives success.
+2. Email delivery runs asynchronously through `whimsy-contact-email`.
+3. Temporary Email Service errors retry after 1, 5, 15, and 60 minutes.
+4. A scheduled recovery job republishes inquiries stranded before queueing.
+5. Terminal failures remain in D1 and are copied to `whimsy-contact-email-dlq`.
+6. Client-generated submission IDs make browser retries idempotent.
 
 ## Prerequisites
 
@@ -26,6 +36,7 @@ spoof arbitrary senders.
 ```bash
 npm install
 npx wrangler types   # generate worker-configuration.d.ts (includes binding types)
+npx wrangler d1 migrations apply whimsy-contact-inquiries --local
 npx wrangler dev
 ```
 
@@ -45,6 +56,7 @@ curl -X POST http://localhost:8787/ \
 ## Deploy
 
 ```bash
+npx wrangler d1 migrations apply whimsy-contact-inquiries --remote
 npx wrangler deploy
 ```
 
