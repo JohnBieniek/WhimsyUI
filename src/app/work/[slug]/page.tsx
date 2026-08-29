@@ -15,6 +15,25 @@ const teamHopeEducation = [
   ["894468439374108.jpg", "Thanking the support network"],
 ];
 
+const backToSchoolAds = [
+  ["1478820370938909.jpg", "Free school photos and professional headshots"],
+  ["1478820410938905.jpg", "Free Michigan Theatre tickets"],
+  ["1478820450938901.jpg", "Jackson District Library pop-up"],
+  ["1478820494272230.jpg", "Stitch mascot appearance"],
+  ["1478820534272226.jpg", "Back-to-school coloring station"],
+  ["1478820577605555.jpg", "Specialty drinks from Sipster of Jackson"],
+];
+
+const backToSchoolPhotos = [
+  ["1479071537580459.jpg", "The Back to School Bash welcome display at Jackson Crossing"],
+  ["1479071577580455.jpg", "Loaded backpacks ready for families"],
+  ["1479071617580451.jpg", "Children meeting Stitch beside the carousel"],
+  ["1479071647580448.jpg", "The school photo station during the event"],
+  ["1479071704247109.jpg", "Live music at the Back to School Bash"],
+  ["1479071790913767.jpg", "Jackson District Library resources at the event"],
+  ["1479071827580430.jpg", "Families gathering for the Back to School Bash"],
+];
+
 export default async function CaseStudy({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const study = caseStudies.find((item) => item.slug === slug);
@@ -23,12 +42,13 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
   const isLakeland = study.slug === "lakeland-cabaret";
   const isHoliday = study.slug === "holiday-local";
   const isTeamHope = study.slug === "team-hope-walk";
-  const linksHome = ["social-growth", "holiday-local", "team-hope-walk", "lakeland-cabaret"].includes(study.slug);
+  const isBackToSchool = study.slug === "back-to-school-bash";
+  const linksHome = ["social-growth", "back-to-school-bash", "holiday-local", "team-hope-walk", "lakeland-cabaret"].includes(study.slug);
   const facts = study.facts;
 
   return <main className="case-page shell">
     <Link className="back-link" href={linksHome ? "/" : "/work"}>{linksHome ? "← Home" : "← All work"}</Link>
-    <header className={`case-header ${isLakeland ? "lakeland-case-header" : isHoliday ? "holiday-case-header" : isTeamHope ? "team-hope-case-header" : ""}`.trim()}>
+    <header className={`case-header ${isLakeland ? "lakeland-case-header" : isHoliday ? "holiday-case-header" : isTeamHope ? "team-hope-case-header" : isBackToSchool ? "back-school-case-header" : ""}`.trim()}>
       {!isLakeland && <p className="kicker">{study.category} · Case study</p>}
       <h1>{study.title}</h1>
       <p className="intro">{study.summary}</p>
@@ -123,6 +143,34 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
       </div>
 
       <aside className="team-hope-close"><p className="kicker">The documented connection</p><h2>Built to support awareness</h2><p>The archived campaign connects the public invitation, HDSA resources, donation messaging, and educational content to one community walk. It demonstrates how a local event campaign can carry both practical details and a larger public-service purpose without making unsupported attendance claims.</p></aside>
+    </section> : isBackToSchool ? <section className="back-school-case-study">
+      <div className="back-school-opening">
+        <figure className="back-school-opening-art"><Image src="/work/back-to-school/1478820320938914.jpg" alt="Back to School Bash campaign overview" fill priority sizes="(max-width: 800px) 100vw, 48vw" /></figure>
+        <div className="back-school-opening-copy">
+          <p className="kicker">A calmer start to the school year</p>
+          <h2>Practical help, without the overwhelming atmosphere.</h2>
+          <p>Jackson Crossing wanted families to have an easier way to get ready for school. The Back to School Bash brought useful resources together in a calm, low-stimulation event designed to feel welcoming from the first invitation through the day itself.</p>
+          <dl><div><dt>Date</dt><dd>August 1</dd></div><div><dt>Time</dt><dd>Noon–4 PM</dd></div><div><dt>Location</dt><dd>Jackson Crossing</dd></div></dl>
+        </div>
+      </div>
+
+      <div className="back-school-campaign">
+        <header><p className="kicker">The campaign</p><h2>Every reason to attend got its own clear invitation.</h2><p>A coordinated family of ads introduced the event, then gave each partner and activity room to be understood. Families could quickly see what was available and decide which parts would help them most.</p></header>
+        <div className="back-school-ad-grid">{backToSchoolAds.map(([file, label], index) => <figure className={`back-school-ad-${index + 1}`} key={file}><Image src={`/work/back-to-school/${file}`} alt={`Back to School Bash advertisement: ${label}`} fill sizes="(max-width: 700px) 100vw, 33vw" /><figcaption>{label}</figcaption></figure>)}</div>
+      </div>
+
+      <div className="back-school-resources">
+        <article><span>01</span><h3>Ready for class</h3><p>Loaded backpacks included a lunch box, travel cup, meal voucher, Michigan Theatre tickets, and a Jackson Crossing sticker while supplies lasted.</p></article>
+        <article><span>02</span><h3>Useful for the whole family</h3><p>Children could get school photos while adults had access to professional headshots in a relaxed, low-pressure setting.</p></article>
+        <article><span>03</span><h3>Reasons to stay</h3><p>Library sign-up, coloring, specialty drinks, a mascot visit, and live music turned a supply pickup into a community event.</p></article>
+      </div>
+
+      <div className="back-school-live">
+        <header><p className="kicker">The live event</p><h2>The promise in the ads became a day families could enjoy.</h2><p>The event photography documented the practical support and the atmosphere around it: backpacks being distributed, portraits being made, community resources, music, and kids meeting Stitch by the carousel.</p></header>
+        <div className="back-school-live-grid">{backToSchoolPhotos.map(([file, label], index) => <figure className={`back-school-live-${index + 1}`} key={file}><Image src={`/work/back-to-school/${file}`} alt={label} fill sizes="(max-width: 700px) 100vw, 40vw" /></figure>)}</div>
+      </div>
+
+      <aside className="back-school-outcome"><p className="kicker">The result</p><strong>More than 3×</strong><div><h2>the previous year’s attendance.</h2><p>A clear campaign, meaningful resources, and a comfortable experience helped the Back to School Bash reach substantially more local families.</p></div></aside>
     </section> : <>
       <figure className="case-feature"><Image src={`/work/${study.file}`} alt={`Full ${study.title} advertisement`} fill priority sizes="100vw" /></figure>
       <section className="case-story">
