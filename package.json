@@ -11,6 +11,8 @@
     "dev": "next dev",
     "prebuild": "npm run generate-version",
     "build": "next build",
+    "cf:build": "npm run build",
+    "pages:build": "npm run build",
     "start": "next start",
     "lint": "eslint",
     "storybook": "storybook dev -p 6006",
