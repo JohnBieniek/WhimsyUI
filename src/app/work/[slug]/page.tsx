@@ -118,7 +118,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
       </div>
 
       <div className="team-hope-education">
-        <header><p className="kicker">Beyond event promotion</p><h2>An education series gave<br className="team-hope-mobile-break" /> the campaign depth.</h2><p>Five companion graphics moved beyond the event invitation to explain Huntington’s disease, identify common symptoms, encourage personal care, and recognize the importance of family and community support.</p></header>
+        <header><p className="kicker">Beyond event promotion</p><h2>An education series gave<br /> the campaign depth.</h2><p>Five companion graphics moved beyond the event invitation to explain Huntington’s disease, identify common symptoms, encourage personal care, and recognize the importance of family and community support.</p></header>
         <div className="team-hope-education-grid">{teamHopeEducation.map(([file, label], index) => <figure className={index === 0 ? "team-hope-wide" : undefined} key={file}><Image src={`/work/team-hope/${file}`} alt={`Team Hope campaign graphic: ${label}`} fill sizes="(max-width: 700px) 100vw, 33vw" /><figcaption>{label}</figcaption></figure>)}</div>
       </div>
 
