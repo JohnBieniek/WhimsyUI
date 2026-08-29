@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRightLeft, Backpack, CalendarDays, ClipboardList, Images, Megaphone, Monitor, Mountain, UsersRound, Wrench } from "lucide-react";
-import squareCollage from "../../collage/square collage.png";
+import squareCollage from "../../collage/square collage mobile.png";
 import { Partners } from "./site-chrome";
 const highlights=[{image:"/work/back%20to%20school%20homepage.jpg",title:"Back to School",copy:"Campaigns supporting local families.",slug:"social-growth",Icon:Backpack},{image:"/work/1000952755392342.jpg",title:"Holiday in the Halls",copy:"A festive campaign brought to life as a community event.",slug:"holiday-local",Icon:Megaphone},{image:"/work/team%20hope%20core.jpg",title:"Team Hope Walk",copy:"An awareness campaign supporting families affected by Huntington’s disease.",slug:"team-hope-walk",Icon:UsersRound},{image:"/work/lakeland%20cabaret/site.png",title:"Lakeland Cabaret",copy:"A new brand and website for memorable performances.",slug:"lakeland-cabaret",Icon:Monitor}];
 const pathways=[{title:"Plan",copy:"Clarify goals and build a practical strategy.",Icon:ClipboardList},{title:"Create",copy:"Content and design that tell your story.",Icon:Images},{title:"Promote",copy:"Campaigns that reach the right audience.",Icon:Megaphone},{title:"Maintain",copy:"Reliable support that keeps your website current.",Icon:Wrench},{title:"Transfer",copy:"Move your domain and website with confidence.",Icon:ArrowRightLeft},{title:"Build online",copy:"Websites and updates that work.",Icon:Monitor}];
