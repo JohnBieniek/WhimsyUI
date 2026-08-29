@@ -121,3 +121,4 @@
 @media(min-width:801px){.back-school-live-title{font-size:clamp(30px,2.7vw,42px)!important}.back-school-live-title span{display:block;white-space:nowrap}}
 @media(min-width:801px){.back-school-live-grid{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,400px);grid-auto-rows:400px}.back-school-live-grid figure:nth-child(n){grid-column:auto;grid-row:auto}}
 .back-school-resources article>span{display:none!important}
+.back-school-case-header .intro{margin-inline:auto}
