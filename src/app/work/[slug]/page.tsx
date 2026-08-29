@@ -165,7 +165,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
       </div>
 
       <div className="back-school-live">
-        <header><p className="kicker">The live event</p><h2>The promise in the ads became a day families could enjoy.</h2><p>The event photography documented the practical support and the atmosphere around it: backpacks being distributed, portraits being made, community resources, music, and kids meeting Stitch by the carousel.</p></header>
+        <header><p className="kicker">The live event</p><h2 className="back-school-live-title"><span>The promise in the ads became</span> <span>a day families could enjoy.</span></h2><p>The event photography documented the practical support and the atmosphere around it: backpacks being distributed, portraits being made, community resources, music, and kids meeting Stitch by the carousel.</p></header>
         <div className="back-school-live-grid">{backToSchoolPhotos.map(([file, label], index) => <figure className={`back-school-live-${index + 1}`} key={file}><Image src={`/work/back-to-school/${file}`} alt={label} fill sizes="(max-width: 700px) 100vw, 40vw" /></figure>)}</div>
       </div>
 
