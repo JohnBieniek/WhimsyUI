@@ -110,7 +110,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
       </div>
 
       <div className="team-hope-action">
-        <header><p className="kicker">The campaign sequence</p><h2>Invite. Inform. Give<br className="team-hope-mobile-break" /> people a way to help.</h2><p>The core announcement introduced the experience, while supporting pieces repeated the date, linked people to HDSA information, and made donation opportunities visible.</p></header>
+        <header><p className="kicker">The campaign sequence</p><h2>Invite. Inform. Give<br /> people a way to help.</h2><p>The core announcement introduced the experience, while supporting pieces repeated the date, linked people to HDSA information, and made donation opportunities visible.</p></header>
         <div className="team-hope-action-grid">
           <figure className="team-hope-reminder"><Image src="/work/team-hope/894457912708494.jpg" alt="Team Hope Walk event reminder and HDSA information graphic" fill sizes="(max-width: 800px) 100vw, 58vw" /></figure>
           <figure><Image src="/work/team-hope/894457969375155.jpg" alt="Team Hope Walk donation campaign graphic" fill sizes="(max-width: 800px) 100vw, 30vw" /></figure>
