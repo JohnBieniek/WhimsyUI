@@ -168,7 +168,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
         <div className="back-school-live-grid">{backToSchoolPhotos.map(([file, label], index) => <figure className={`back-school-live-${index + 1}`} key={file}><Image src={`/work/back-to-school/${file}`} alt={label} fill sizes="(max-width: 700px) 100vw, 40vw" /></figure>)}</div>
       </div>
 
-      <aside className="back-school-outcome"><p className="kicker">The result</p><strong>More than 3×</strong><div><h2>the previous year’s attendance.</h2><p>A clear campaign, meaningful resources, and a comfortable experience helped the Back to School Bash reach substantially more local families.</p></div></aside>
+      <aside className="back-school-outcome"><p className="kicker">The result</p><div className="back-school-outcome-copy"><p><strong>More than 3× the previous year’s attendance.</strong></p><p>A clear campaign, meaningful resources, and a comfortable experience helped the Back to School Bash reach substantially more local families.</p></div></aside>
     </section> : <>
       <figure className="case-feature"><Image src={`/work/${study.file}`} alt={`Full ${study.title} advertisement`} fill priority sizes="100vw" /></figure>
       <section className="case-story">
