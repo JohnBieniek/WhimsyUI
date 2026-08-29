@@ -266,6 +266,10 @@
   transform: scaleY(1.035);
 }
 
+.home-square-collage-mobile {
+  display: none;
+}
+
 @media (min-width: 1051px) {
   .home-hero {
     grid-template-columns: 42% 58%;
@@ -274,6 +278,14 @@
 }
 
 @media (max-width: 1050px) {
+  .home-square-collage-desktop {
+    display: none;
+  }
+
+  .home-square-collage-mobile {
+    display: block;
+  }
+
   .home-square-collage {
     width: 100%;
     max-width: 100%;
