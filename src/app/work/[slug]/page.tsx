@@ -27,7 +27,6 @@ const backToSchoolAds = [
 const backToSchoolPhotos = [
   ["1479071537580459.jpg", "The Back to School Bash welcome display at Jackson Crossing"],
   ["1479071577580455.jpg", "Loaded backpacks ready for families"],
-  ["1479071617580451.jpg", "Children meeting Stitch beside the carousel"],
   ["1479071647580448.jpg", "The school photo station during the event"],
   ["1479071704247109.jpg", "Live music at the Back to School Bash"],
   ["1479071790913767.jpg", "Jackson District Library resources at the event"],
