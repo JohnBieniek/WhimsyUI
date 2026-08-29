@@ -47,10 +47,10 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
   return <main className="case-page shell">
     <Link className="back-link" href={linksHome ? "/" : "/work"}>{linksHome ? "← Home" : "← All work"}</Link>
     <header className={`case-header ${isLakeland ? "lakeland-case-header" : isHoliday ? "holiday-case-header" : isTeamHope ? "team-hope-case-header" : isBackToSchool ? "back-school-case-header" : ""}`.trim()}>
-      {!isLakeland && !isTeamHope && <p className="kicker">{study.category} · Case study</p>}
+      {!isLakeland && !isTeamHope && !isBackToSchool && <p className="kicker">{study.category} · Case study</p>}
       <h1>{study.title}</h1>
       <p className="intro">{study.summary}</p>
-      <div className="case-meta"><span>Partner</span><b>{study.client}</b>{!isLakeland && !isHoliday && !isTeamHope && <><span>Project</span><b>{study.event}</b></>}</div>
+      <div className="case-meta"><span>Partner</span><b>{study.client}</b>{!isLakeland && !isHoliday && !isTeamHope && !isBackToSchool && <><span>Project</span><b>{study.event}</b></>}</div>
       {isLakeland && <a className="button case-website" href="https://lakelandcabaret.com/" target="_blank" rel="noopener noreferrer">Visit Lakeland Cabaret ↗</a>}
     </header>
     {isLakeland ? <section className="lakeland-project-sections">
