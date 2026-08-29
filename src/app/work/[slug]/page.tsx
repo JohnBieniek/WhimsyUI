@@ -102,7 +102,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
         <figure><Image src="/work/team%20hope%20core.jpg" alt="Central Michigan Team Hope Walk campaign announcement" fill priority sizes="(max-width: 800px) 100vw, 48vw" /></figure>
         <div>
           <p className="kicker">Awareness with a destination</p>
-          <h2>One visual system carried<br className="team-hope-opening-break" /> the invitation and the cause.</h2>
+          <h2>One visual system carried<br /> the invitation and the cause.</h2>
           <p>Whimsy created a coordinated campaign for the August 17, 2024 Central Michigan Team Hope Walk at the Michigan Theatre in downtown Jackson.</p>
           <p>The work brought HDSA, Jackson Crossing, Neurocrine Biosciences, Teva, and Whimsy into one recognizable visual system—making the walk details clear while keeping Huntington’s disease awareness at the center.</p>
           <dl><div><dt>Date</dt><dd>August 17, 2024</dd></div><div><dt>Registration</dt><dd>10:00 AM</dd></div><div><dt>Walk</dt><dd>11:00 AM</dd></div><div><dt>Location</dt><dd>Michigan Theatre</dd></div></dl>
