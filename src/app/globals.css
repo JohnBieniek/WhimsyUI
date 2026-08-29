@@ -26,7 +26,7 @@
 .team-hope-mobile-break{display:none}@media(max-width:800px){.team-hope-mobile-break{display:block}.team-hope-action h2{font-size:27px}}
 .team-hope-opening-break{display:none}@media(max-width:800px){.team-hope-opening-break{display:block}.team-hope-opening h2{font-size:24px}}
 .team-hope-opening dl{grid-template-columns:repeat(4,1fr)}@media(max-width:800px){.team-hope-opening dl{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(min-width:801px){.team-hope-opening dl>div:nth-child(2),.team-hope-opening dl>div:nth-child(3){display:none}.team-hope-opening dl{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:801px){.team-hope-opening dl>div:nth-child(2),.team-hope-opening dl>div:nth-child(3){display:none}.team-hope-opening dl{grid-template-columns:repeat(2,minmax(0,1fr));text-align:center}.team-hope-opening dl>div{padding:16px 0 0}}
 @media(min-width:801px){.team-hope-case-study .team-hope-close{grid-template-columns:1.1fr .8fr;grid-template-rows:auto auto}.team-hope-close .kicker{grid-column:1;grid-row:1;margin-bottom:4px}.team-hope-close h2{grid-column:1;grid-row:2}.team-hope-close>p:last-child{grid-column:2;grid-row:1/3}}
 @media(max-width:700px){.home-page{display:flex;flex-direction:column}.home-page>.home-hero{order:1}.home-page>.campaigns{order:2}.home-page>.home-bottom{order:3}.home-page>.partners{order:4}}
 @media(max-width:800px){.case-page>.ready{align-items:center;text-align:center}.case-page>.ready .button{align-self:center}.lakeland-dj-photo img{object-position:38% center}.lakeland-photo-grid figure:nth-child(2) img{object-position:18% center}.lakeland-photo-grid figure:nth-child(3) img{object-position:42% center}}
