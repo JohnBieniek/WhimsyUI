@@ -300,7 +300,7 @@
   }
 
   .home-square-collage-mobile {
-    margin-top: calc(-43vw + 6px);
+    margin-top: calc(-43vw + 11px);
     z-index: 20;
     pointer-events: none;
   }
