@@ -165,6 +165,7 @@
 .holiday-story-intro{background:var(--mint);color:var(--ink)}.holiday-story-intro .kicker{color:#b51f32}
 .holiday-story-intro dl{background:#b51f32}.holiday-story-intro dl div{background:var(--mint-strong);color:var(--ink)}.holiday-story-intro dt{color:#b51f32}
 .holiday-partners>header>.kicker{color:#b51f32}
+.holiday-partner-ad figcaption{background:#b51f32;color:#fff}
 .team-hope-opening{border-color:var(--purple);background:#f4eef8}.team-hope-opening dl{border-top-color:var(--purple)}.team-hope-opening dt{color:var(--purple)}
 .back-school-outcome{background:var(--mint)}
 .back-school-opening{background:var(--purple)}.back-school-opening-copy .kicker,.back-school-opening dt{color:var(--mint-strong)}.back-school-opening dl{background:var(--mint-strong)}.back-school-opening dl div{background:var(--purple)}
