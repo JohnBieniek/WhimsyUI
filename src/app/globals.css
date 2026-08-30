@@ -149,3 +149,5 @@
 @media(max-width:800px){.holiday-thanks{grid-template-columns:1fr}.holiday-thanks .holiday-two-line-title{font-size:clamp(29px,8.5vw,40px)}}
 .holiday-invitation header{min-height:0}.holiday-invitation>figure{height:auto;min-height:0;aspect-ratio:1080/1398}.holiday-invitation>figure img{object-fit:cover}.holiday-invitation .holiday-two-line-title{font-size:clamp(27px,2.75vw,40px)}.holiday-live-one-line{font-size:clamp(30px,3.2vw,46px)!important;white-space:nowrap}.holiday-event-recap img{object-position:center}
 @media(max-width:800px){.holiday-invitation>figure{aspect-ratio:1080/1398}.holiday-live-one-line{font-size:clamp(27px,8vw,39px)!important;white-space:normal}}
+@media(min-width:801px){.back-school-ad-grid{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,auto);grid-auto-rows:auto}.back-school-ad-grid figure,.back-school-ad-grid figure:nth-child(n){grid-column:auto;grid-row:auto;aspect-ratio:1}}
+.back-school-outcome{align-items:start}.back-school-outcome-copy p{max-width:920px}.back-school-outcome-copy p+p{margin-top:13px}

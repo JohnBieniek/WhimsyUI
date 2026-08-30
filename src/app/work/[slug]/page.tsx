@@ -20,12 +20,14 @@ const backToSchoolAds = [
   ["1478820410938905.jpg", "Free Michigan Theatre tickets"],
   ["1478820450938901.jpg", "Jackson District Library pop-up"],
   ["1478820494272230.jpg", "Stitch mascot appearance"],
+  ["1478820534272226.jpg", "Coloring pages and bookmarks"],
   ["1478820577605555.jpg", "Specialty drinks from Sipster of Jackson"],
 ];
 
 const backToSchoolPhotos = [
   ["1479071537580459.jpg", "The Back to School Bash welcome display at Jackson Crossing"],
-  ["1479071577580455.jpg", "Loaded backpacks ready for families"],
+  ["1479071577580455.jpg", "A child enjoying the coloring station"],
+  ["1479071617580451.jpg", "Kids meeting Stitch beside the carousel"],
   ["1479071647580448.jpg", "The school photo station during the event"],
   ["1479071704247109.jpg", "Live music at the Back to School Bash"],
   ["1479071790913767.jpg", "Jackson District Library resources at the event"],
@@ -184,7 +186,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
         <div className="back-school-live-grid">{backToSchoolPhotos.map(([file, label], index) => <figure className={`back-school-live-${index + 1}`} key={file}><Image src={`/work/back-to-school/${file}`} alt={label} fill sizes="(max-width: 700px) 100vw, 40vw" /></figure>)}</div>
       </div>
 
-      <aside className="back-school-outcome"><p className="kicker">The result</p><div className="back-school-outcome-copy"><p><strong>More than 3× the previous year’s attendance.</strong></p><p>A clear campaign, meaningful resources, and a comfortable experience helped the Back to School Bash reach substantially more local families.</p></div></aside>
+      <aside className="back-school-outcome"><p className="kicker">The result</p><div className="back-school-outcome-copy"><p><strong>More than 3× the previous year’s attendance—and a day that worked for kids, parents, and the mall.</strong></p><p>Kids danced to live music, met Stitch beside the carousel, colored pages and bookmarks, and had school portraits made. Those playful moments gave them reasons to explore and enjoy the event instead of treating it as a quick supply pickup.</p><p>Parents left with practical help for the school year: loaded backpacks, hot-meal vouchers, Michigan Theatre tickets, affordable school-photo options, professional headshots, and direct access to Jackson District Library cards and resources.</p><p>For Jackson Crossing and its businesses, more than triple the prior attendance meant substantially more families moving through the mall. Activities placed near the carousel and tenants—including Sipster’s drinks in front of Dunham’s—extended the visit, created useful foot traffic, and gave participating businesses more opportunities to meet local customers.</p></div></aside>
     </section> : <>
       <figure className="case-feature"><Image src={`/work/${study.file}`} alt={`Full ${study.title} advertisement`} fill priority sizes="100vw" /></figure>
       <section className="case-story">
