@@ -142,7 +142,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
           <p>The mix of savings, entertainment, and memorable photos gave adults practical reasons to visit while keeping the day exciting for kids. This allowed families to make more of one holiday trip. They could browse seasonal offers, meet Santa, enjoy the music, discover local makers, and pick up treats together.</p>
           <p>Those reasons to explore and stay longer brought valuable foot traffic throughout Jackson Crossing. Every additional stop created another opportunity for stores and participating vendors to be discovered, build customer relationships, and turn the event energy into sales.</p>
           <p>The final piece thanked the broad group of small businesses and entrepreneurs who filled Jackson Crossing. It gave every participant another moment of visibility and left the campaign with a clear sense of shared ownership.</p>
-          <p className="holiday-thanks-cta"><Link href="/contact">Talk to Whimsy</Link> about planning and advertising a similarly connected campaign for your company, venue, or community event.</p>
+          <p className="holiday-thanks-cta"><Link href="/contact">Talk to Whimsy</Link> about planning and advertising a similarly connected campaign for your company, venue, or community event today!</p>
         </div>
       </div>
     </section> : isTeamHope ? <section className="team-hope-case-study">
