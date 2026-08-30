@@ -100,7 +100,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
         <figure className="holiday-story-hero"><Image src="/work/1000952755392342.jpg" alt="Holiday in the Halls campaign and event overview" fill priority sizes="(max-width: 800px) 100vw, 49vw" /></figure>
         <div className="holiday-story-intro">
           <p className="kicker">One event, many reasons to visit</p>
-          <h2 className="holiday-two-line-title"><span>We gave the whole day</span><span>a clear invitation.</span></h2>
+          <h2 className="holiday-two-line-title"><span>We gave the whole day</span>{" "}<span>a clear invitation.</span></h2>
           <p>Whimsy promoted and hosted Holiday in the Halls for Jackson Crossing on December 21. The campaign brought Santa, music, free face painting, holiday treats, and local shopping into one recognizable event story.</p>
           <dl><div><dt>Date</dt><dd>December 21, 2024</dd></div><div><dt>Time</dt><dd>Noon–5 PM</dd></div><div><dt>Location</dt><dd>Jackson Crossing</dd></div></dl>
         </div>
