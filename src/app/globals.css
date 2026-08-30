@@ -163,7 +163,7 @@
 @media(max-width:800px){.holiday-invitation{grid-template-columns:1fr}}
 .holiday-invitation header{background:#f6dfe3}.holiday-invitation header>.kicker{color:var(--mint-strong)}
 .holiday-story-intro{background:var(--mint);color:var(--ink)}.holiday-story-intro .kicker{color:#b51f32}
-.holiday-story-intro dl{background:#b51f32}.holiday-story-intro dl div{background:var(--mint-strong);color:var(--ink)}.holiday-story-intro dt{color:#b51f32}
+.holiday-story-intro dl{background:#b51f32}.holiday-story-intro dl div{background:var(--mint-strong);color:var(--ink)}.holiday-story-intro dt{color:#b51f32;font-size:13px;font-weight:900;letter-spacing:.02em}.holiday-story-intro dd{font-weight:900}
 .holiday-partners>header>.kicker{color:#b51f32}
 .holiday-partner-ad figcaption{background:#b51f32;color:#fff}
 .holiday-live-story>header>.kicker{color:var(--mint-strong)}
