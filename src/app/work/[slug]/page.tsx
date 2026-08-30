@@ -58,7 +58,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
   return <main className="case-page shell">
     <Link className="back-link" href={linksHome ? "/" : "/work"}>{linksHome ? "← Home" : "← All work"}</Link>
     <header className={`case-header ${isLakeland ? "lakeland-case-header" : isHoliday ? "holiday-case-header" : isTeamHope ? "team-hope-case-header" : isBackToSchool ? "back-school-case-header" : ""}`.trim()}>
-      {!isLakeland && !isTeamHope && !isBackToSchool && study.category !== "Community events" && <p className="kicker">{study.category} · Case study</p>}
+      {!isLakeland && !isHoliday && !isTeamHope && !isBackToSchool && study.category !== "Community events" && <p className="kicker">{study.category} · Case study</p>}
       <h1>{study.title}</h1>
       <p className="intro">{study.summary}</p>
       <div className="case-meta"><span>Partner</span><b>{study.client}</b>{!isLakeland && !isHoliday && !isTeamHope && !isBackToSchool && <><span>Project</span><b>{study.event}</b></>}</div>
@@ -96,26 +96,25 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
       </article>
     </section> : isHoliday ? <section className="holiday-story">
       <div className="holiday-story-opening">
-        <figure className="holiday-story-hero"><Image src="/work/994558686031749.jpg" alt="Holiday in the Halls campaign invitation" fill priority sizes="(max-width: 800px) 100vw, 49vw" /></figure>
+        <figure className="holiday-story-hero"><Image src="/work/1000952755392342.jpg" alt="Holiday in the Halls campaign and event overview" fill priority sizes="(max-width: 800px) 100vw, 49vw" /></figure>
         <div className="holiday-story-intro">
           <p className="kicker">One event, many reasons to visit</p>
-          <h2>We gave the whole day a clear invitation.</h2>
+          <h2 className="holiday-two-line-title"><span>We gave the whole day</span><span>a clear invitation.</span></h2>
           <p>Whimsy promoted and hosted Holiday in the Halls for Jackson Crossing on December 21. The campaign brought Santa, music, free face painting, holiday treats, and local shopping into one recognizable event story.</p>
-          <dl><div><dt>Date</dt><dd>December 21</dd></div><div><dt>Time</dt><dd>Noon–5 PM</dd></div><div><dt>Location</dt><dd>Jackson Crossing</dd></div></dl>
+          <dl><div><dt>Date</dt><dd>December 21, 2024</dd></div><div><dt>Time</dt><dd>Noon–5 PM</dd></div><div><dt>Location</dt><dd>Jackson Crossing</dd></div></dl>
         </div>
       </div>
 
       <div className="holiday-invitation">
-        <header><p className="kicker">The main invitation</p><h2>A flexible campaign made the whole experience easy to picture.</h2><p>Long and square formats carried the essential details across placements. The festive system stayed consistent while photography previewed the mix of entertainment, shopping, food, and family activities waiting inside.</p></header>
+        <header><p className="kicker">The main invitation</p><h2 className="holiday-two-line-title"><span>A flexible campaign made</span><span>the whole experience easy to picture.</span></h2><p>Long and square formats carried the essential details across placements. The festive system stayed consistent while photography previewed the mix of entertainment, shopping, food, and family activities waiting inside.</p></header>
         <figure><Image src="/work/985893490231602.jpg" alt="Vertical Holiday in the Halls event advertisement" fill sizes="(max-width: 800px) 100vw, 38vw" /></figure>
-        <aside><strong>Santa photos</strong><strong>Local vendors</strong><strong>Holiday treats</strong><strong>Live DJ</strong></aside>
       </div>
 
       <div className="holiday-partners">
-        <header><p className="kicker">A campaign for the participants, too</p><h2>Each store and performer got a moment of their own.</h2><p>Instead of asking one general ad to do every job, Whimsy created focused invitations for the businesses, performers, and activities families could discover. Together, the pieces made the event feel active before the doors even opened.</p></header>
+        <header><p className="kicker">A campaign for the participants, too</p><h2 className="holiday-two-line-title"><span>Each store and performer</span><span>got a moment of their own.</span></h2><p>Instead of asking one general ad to do every job, Whimsy created focused invitations for the businesses, performers, and activities families could discover. Together, the pieces made the event feel active before the doors even opened.</p></header>
         <div className="holiday-partner-wall">
-          {holidayPartnerAds.map(([file, label], index) => <figure className={`holiday-partner-ad holiday-partner-ad-${index + 1}`} key={file}>
-            <Image src={`/work/holiday-in-the-halls/${file}`} alt={`Holiday in the Halls promotion for ${label}`} fill sizes="(max-width: 650px) 100vw, (max-width: 1000px) 50vw, 30vw" />
+          {holidayPartnerAds.map(([file, label]) => <figure className="holiday-partner-ad" key={file}>
+            <div><Image src={`/work/holiday-in-the-halls/${file}`} alt={`Holiday in the Halls promotion for ${label}`} fill sizes="(max-width: 800px) 50vw, 25vw" /></div>
             <figcaption>{label}</figcaption>
           </figure>)}
         </div>
@@ -130,7 +129,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
 
       <div className="holiday-thanks">
         <figure><Image src="/work/holiday-in-the-halls/1000952532059031.jpg" alt="Holiday in the Halls thank-you to the participating vendors" fill sizes="(max-width: 800px) 100vw, 45vw" /></figure>
-        <div><p className="kicker">After the event</p><h2>The campaign ended by recognizing the community that made it possible.</h2><p>The final piece thanked the broad group of small businesses and entrepreneurs who filled Jackson Crossing. It gave every participant another moment of visibility and left the campaign with a clear sense of shared ownership.</p></div>
+        <div><p className="kicker">After the event</p><h2 className="holiday-two-line-title"><span>The campaign ended by recognizing</span><span>the community that made it possible.</span></h2><p>The final piece thanked the broad group of small businesses and entrepreneurs who filled Jackson Crossing. It gave every participant another moment of visibility and left the campaign with a clear sense of shared ownership.</p></div>
       </div>
     </section> : isTeamHope ? <section className="team-hope-case-study">
       <div className="team-hope-opening">
