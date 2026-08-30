@@ -180,3 +180,4 @@
 .back-school-outcome-copy strong{color:#270b2a}
 .lakeland-dj-photo img{object-position:calc(23% + 30px) center}
 @media(max-width:800px){.back-school-opening-copy{min-width:0}.back-school-opening-title{width:100%;max-width:100%;font-size:clamp(18px,6vw,23px)!important;letter-spacing:-.03em}.back-school-opening-title span{width:100%}}
+@media(max-width:800px){.back-school-live-title{width:100%;max-width:100%;font-size:clamp(20px,6.4vw,25px)!important;letter-spacing:-.03em}.back-school-live-title span{display:block;white-space:nowrap}}
