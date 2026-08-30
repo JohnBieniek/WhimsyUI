@@ -158,3 +158,4 @@
 .back-school-opening-title{font-size:clamp(34px,4vw,56px)!important}.back-school-opening-title span{display:block;white-space:nowrap}
 @media(max-width:800px){.back-school-opening-title{font-size:clamp(27px,7.7vw,37px)!important}}
 .holiday-lakeland-tag{left:0;bottom:0;padding:11px 15px;border-radius:0 7px 0 0;font-size:13px}
+.holiday-invitation{width:min(100%,1040px);margin-inline:auto}.holiday-invitation header{align-items:flex-start;text-align:left}.holiday-invitation header>p:last-child{margin-inline:0}
