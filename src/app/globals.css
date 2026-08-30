@@ -151,3 +151,4 @@
 @media(max-width:800px){.holiday-invitation>figure{aspect-ratio:1080/1398}.holiday-live-one-line{font-size:clamp(27px,8vw,39px)!important;white-space:normal}}
 @media(min-width:801px){.back-school-ad-grid{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,auto);grid-auto-rows:auto}.back-school-ad-grid figure,.back-school-ad-grid figure:nth-child(n){grid-column:auto;grid-row:auto;aspect-ratio:1}}
 .back-school-outcome{align-items:start}.back-school-outcome-copy p{max-width:920px}.back-school-outcome-copy p+p{margin-top:13px}
+.holiday-invitation header{align-items:center;text-align:center}.holiday-invitation header>p:last-child{max-width:720px;margin-inline:auto}.holiday-invitation>figure img{object-position:center}
