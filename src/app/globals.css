@@ -154,3 +154,4 @@
 .holiday-invitation header{align-items:center;text-align:center}.holiday-invitation header>p:last-child{max-width:720px;margin-inline:auto}.holiday-invitation>figure img{object-position:center}
 .holiday-thanks{background:var(--mint);color:var(--ink)}.holiday-thanks .kicker{color:#b51f32}
 .holiday-lakeland-tag{position:absolute;z-index:2;left:14px;bottom:14px;width:max-content;padding:8px 11px;border-radius:5px;background:var(--purple);color:#fff;font-size:11px;font-weight:800;line-height:1;text-decoration:none;text-transform:uppercase;box-shadow:0 3px 12px #1b082866}.holiday-lakeland-tag:hover{background:#5f2582;color:#fff}
+.back-school-outcome{grid-template-columns:1fr}.back-school-outcome-copy{width:100%;max-width:none}.back-school-outcome-copy p{max-width:none}.back-school-outcome-copy strong{color:#3f0b63}
