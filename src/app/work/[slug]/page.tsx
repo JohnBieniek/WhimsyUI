@@ -107,7 +107,12 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
       </div>
 
       <div className="holiday-invitation">
-        <header><p className="kicker">The main invitation</p><h2 className="holiday-two-line-title"><span>A flexible campaign made</span>{" "}<span>the whole experience easy to picture.</span></h2><p>Long and square formats carried the essential details across placements. The festive system stayed consistent while photography previewed the mix of entertainment, shopping, food, and family activities waiting inside.</p></header>
+        <header>
+          <p className="kicker">The main invitation</p>
+          <h2 className="holiday-two-line-title"><span>We turned a full day of Christmas</span><span>into one clear reason to visit.</span></h2>
+          <p>The hero ad brought Santa photos, local vendors, home decor, gifts, sweet treats, and a live DJ into one easy-to-scan invitation. Real event photography made every promise feel tangible instead of generic.</p>
+          <p className="holiday-invitation-proof"><strong>Whimsy brought it together:</strong> campaign strategy, graphic design, event promotion, and photography working as one connected story.</p>
+        </header>
         <figure><Image src="/work/985893490231602.jpg" alt="Vertical Holiday in the Halls event advertisement" fill sizes="(max-width: 800px) 100vw, 38vw" /></figure>
       </div>
 
