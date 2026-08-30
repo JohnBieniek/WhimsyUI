@@ -295,6 +295,14 @@
 }
 
 @media (max-width: 700px) {
+  .home-hero {
+    gap: 0;
+  }
+
+  .home-square-collage-mobile {
+    margin-top: 0;
+  }
+
   .site-header nav {
     justify-content: center;
     flex-wrap: wrap;
