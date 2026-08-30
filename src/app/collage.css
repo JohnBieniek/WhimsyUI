@@ -300,7 +300,9 @@
   }
 
   .home-square-collage-mobile {
-    margin-top: 0;
+    margin-top: -43vw;
+    z-index: 20;
+    pointer-events: none;
   }
 
   .site-header nav {
