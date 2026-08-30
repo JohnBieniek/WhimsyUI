@@ -257,7 +257,7 @@
 .home-square-collage {
   display: block;
   align-self: center;
-  width: calc(100% + 20px);
+  width: calc(100% + 86px);
   max-width: none;
   height: auto;
   margin-left: -20px;
@@ -458,7 +458,7 @@
 .home-logo-dots::after {
   content: "";
   position: absolute;
-  left: -450px;
+  left: -532px;
   top: 151px;
   width: 68px;
   height: 100px;
