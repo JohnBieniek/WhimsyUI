@@ -32,6 +32,17 @@ const backToSchoolPhotos = [
   ["1479071827580430.jpg", "Families gathering for the Back to School Bash"],
 ];
 
+const holidayPartnerAds = [
+  ["1000952505392367.jpg", "Lakeland Cabaret DJ Services"],
+  ["1000952588725692.jpg", "Santa and free face painting"],
+  ["1000952525392365.jpg", "Heavenly Bakes & Cakes"],
+  ["1000952685392349.jpg", "The Christmas Tree Kiosk"],
+  ["1000952718725679.jpg", "Peggy's Custom Floral Designs"],
+  ["1000952628725688.jpg", "Spoons, Rings & Other Bling"],
+  ["1000952598725691.jpg", "DT's Dance Center"],
+  ["1000952675392350.jpg", "Ashley Sweet Creations"],
+];
+
 export default async function CaseStudy({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const study = caseStudies.find((item) => item.slug === slug);
@@ -83,37 +94,43 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
           {study.images.slice(1).map((file, index) => <figure className={file.endsWith("performer.webp") ? "lakeland-dj-photo" : undefined} key={file}><Image src={`/work/${file}`} alt={`Lakeland Cabaret performance and event photography ${index + 1}`} fill sizes="(max-width: 800px) 50vw, 25vw" /></figure>)}
         </div>
       </article>
-    </section> : isHoliday ? <section className="holiday-case-study">
-      <div className="holiday-opening">
-        <div className="holiday-opening-copy">
-          <p className="kicker">From campaign to community experience</p>
-          <h2>A holiday invitation with a real event waiting behind it.</h2>
-          <p>Whimsy built a campaign that made the date, activities, partners, and reasons to attend easy to understand—then carried that visual story into coverage of the day itself.</p>
-          <div className="holiday-pill-row"><span>Seasonal campaign</span><span>Partner promotion</span><span>Event photography</span></div>
-        </div>
-        <figure className="holiday-opening-art"><Image src="/work/1000952755392342.jpg" alt="Holiday in the Halls campaign recap" fill priority sizes="(max-width: 800px) 100vw, 48vw" /></figure>
-      </div>
-
-      <div className="holiday-campaign-block">
-        <header><p className="kicker">The campaign system</p><h2>Several ads. One unmistakable invitation.</h2><p>The creative evolved across placements while keeping the event name, date, festive palette, and community focus recognizable. Each piece could lead with a different reason to attend without losing the larger campaign.</p></header>
-        <div className="holiday-ad-mosaic">
-          <figure className="holiday-ad-primary"><Image src="/work/994558686031749.jpg" alt="Square Holiday in the Halls event advertisement" fill sizes="(max-width: 800px) 100vw, 44vw" /></figure>
-          <figure className="holiday-ad-tall"><Image src="/work/985893490231602.jpg" alt="Tall Holiday in the Halls event advertisement" fill sizes="(max-width: 800px) 100vw, 26vw" /></figure>
-          <aside><strong>Campaign details</strong><p>Santa visits, holiday vendors, sweet treats, live music, and family photo opportunities were organized into clear promotional messages for repeated sharing.</p></aside>
+    </section> : isHoliday ? <section className="holiday-story">
+      <div className="holiday-story-opening">
+        <figure className="holiday-story-hero"><Image src="/work/994558686031749.jpg" alt="Holiday in the Halls campaign invitation" fill priority sizes="(max-width: 800px) 100vw, 49vw" /></figure>
+        <div className="holiday-story-intro">
+          <p className="kicker">One event, many reasons to visit</p>
+          <h2>We gave the whole day a clear invitation.</h2>
+          <p>Whimsy promoted and hosted Holiday in the Halls for Jackson Crossing on December 21. The campaign brought Santa, music, free face painting, holiday treats, and local shopping into one recognizable event story.</p>
+          <dl><div><dt>Date</dt><dd>December 21</dd></div><div><dt>Time</dt><dd>Noon–5 PM</dd></div><div><dt>Location</dt><dd>Jackson Crossing</dd></div></dl>
         </div>
       </div>
 
-      <div className="holiday-live-block">
-        <div className="holiday-live-heading"><p className="kicker">The live event</p><h2>The campaign became a place people could step into.</h2></div>
-        <figure className="holiday-live-photo"><Image src="/work/lakeland%20cabaret/mall%20christmas%20backdrop.jpg" alt="DJ performing at the Holiday in the Halls Christmas event" fill sizes="(max-width: 800px) 100vw, 68vw" /></figure>
-        <div className="holiday-live-copy"><p>The finished event brought the advertised experience into the mall with a decorated photo setting, Santa, local shopping, treats, and a live DJ.</p><p>Event-day photography gave the campaign a useful final chapter: proof of the atmosphere, partner participation, and people gathering in the space.</p></div>
-        <figure className="holiday-recap-art"><Image src="/work/1000952755392342.jpg" alt="Holiday in the Halls event recap featuring live photographs" fill sizes="(max-width: 800px) 100vw, 30vw" /></figure>
+      <div className="holiday-invitation">
+        <header><p className="kicker">The main invitation</p><h2>A flexible campaign made the whole experience easy to picture.</h2><p>Long and square formats carried the essential details across placements. The festive system stayed consistent while photography previewed the mix of entertainment, shopping, food, and family activities waiting inside.</p></header>
+        <figure><Image src="/work/985893490231602.jpg" alt="Vertical Holiday in the Halls event advertisement" fill sizes="(max-width: 800px) 100vw, 38vw" /></figure>
+        <aside><strong>Santa photos</strong><strong>Local vendors</strong><strong>Holiday treats</strong><strong>Live DJ</strong></aside>
       </div>
 
-      <div className="holiday-outcomes">
-        <article><span>01</span><h3>Before the event</h3><p>Clear creative gave families the essential details and multiple reasons to save the date.</p></article>
-        <article><span>02</span><h3>Across the campaign</h3><p>Flexible formats kept partners, activities, and seasonal atmosphere visible.</p></article>
-        <article><span>03</span><h3>After doors opened</h3><p>Live photography connected the promotional promise to the experience people attended.</p></article>
+      <div className="holiday-partners">
+        <header><p className="kicker">A campaign for the participants, too</p><h2>Each store and performer got a moment of their own.</h2><p>Instead of asking one general ad to do every job, Whimsy created focused invitations for the businesses, performers, and activities families could discover. Together, the pieces made the event feel active before the doors even opened.</p></header>
+        <div className="holiday-partner-wall">
+          {holidayPartnerAds.map(([file, label], index) => <figure className={`holiday-partner-ad holiday-partner-ad-${index + 1}`} key={file}>
+            <Image src={`/work/holiday-in-the-halls/${file}`} alt={`Holiday in the Halls promotion for ${label}`} fill sizes="(max-width: 650px) 100vw, (max-width: 1000px) 50vw, 30vw" />
+            <figcaption>{label}</figcaption>
+          </figure>)}
+        </div>
+      </div>
+
+      <div className="holiday-live-story">
+        <header><p className="kicker">The day in the halls</p><h2>The invitation became a festive place to gather.</h2></header>
+        <figure className="holiday-live-dj"><Image src="/work/lakeland%20cabaret/mall%20christmas%20backdrop.jpg" alt="The DJ performing beneath the Merry Christmas arch at Holiday in the Halls" fill sizes="(max-width: 800px) 100vw, 64vw" /></figure>
+        <div className="holiday-live-note"><p>The live event carried the same promise into the mall: Santa greeted families, vendors filled the halls, and a DJ performed beneath the illuminated Merry Christmas arch.</p><p>The photography closes the loop between promotion and experience, showing the people and seasonal setting behind the campaign.</p></div>
+        <figure className="holiday-event-recap"><Image src="/work/1000952755392342.jpg" alt="Holiday in the Halls event recap with Santa, vendors, music, and mall photography" fill sizes="(max-width: 800px) 100vw, 46vw" /></figure>
+      </div>
+
+      <div className="holiday-thanks">
+        <figure><Image src="/work/holiday-in-the-halls/1000952532059031.jpg" alt="Holiday in the Halls thank-you to the participating vendors" fill sizes="(max-width: 800px) 100vw, 45vw" /></figure>
+        <div><p className="kicker">After the event</p><h2>The campaign ended by recognizing the community that made it possible.</h2><p>The final piece thanked the broad group of small businesses and entrepreneurs who filled Jackson Crossing. It gave every participant another moment of visibility and left the campaign with a clear sense of shared ownership.</p></div>
       </div>
     </section> : isTeamHope ? <section className="team-hope-case-study">
       <div className="team-hope-opening">
