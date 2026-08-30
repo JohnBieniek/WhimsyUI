@@ -153,6 +153,7 @@
 .back-school-outcome{align-items:start}.back-school-outcome-copy p{max-width:920px}.back-school-outcome-copy p+p{margin-top:13px}
 .holiday-invitation header{align-items:center;text-align:center}.holiday-invitation header>p:last-child{max-width:720px;margin-inline:auto}.holiday-invitation>figure img{object-position:center}
 .holiday-thanks{background:var(--mint);color:var(--ink)}.holiday-thanks .kicker{color:#b51f32}
+.holiday-thanks>div>p:not(.kicker){font-size:16px;line-height:1.65}.holiday-thanks .holiday-thanks-cta{margin-top:20px;padding-top:18px;border-top:2px solid #b51f32;font-weight:800}.holiday-thanks-cta a{color:var(--purple);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px}
 .holiday-lakeland-tag{position:absolute;z-index:2;left:14px;bottom:14px;width:max-content;padding:8px 11px;border-radius:5px;background:var(--purple);color:#fff;font-size:11px;font-weight:800;line-height:1;text-decoration:none;text-transform:uppercase;box-shadow:0 3px 12px #1b082866}.holiday-lakeland-tag:hover{background:#5f2582;color:#fff}
 .back-school-outcome{grid-template-columns:1fr}.back-school-outcome-copy{width:100%;max-width:none}.back-school-outcome-copy p{max-width:none}.back-school-outcome-copy strong{color:#3f0b63}
 .back-school-opening-title{font-size:clamp(34px,4vw,56px)!important}.back-school-opening-title span{display:block;white-space:nowrap}
