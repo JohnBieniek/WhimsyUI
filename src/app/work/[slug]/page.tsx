@@ -29,7 +29,6 @@ const backToSchoolPhotos = [
   ["1479071577580455.jpg", "A child enjoying the coloring station"],
   ["1479071617580451.jpg", "Kids meeting Stitch beside the carousel"],
   ["1479071647580448.jpg", "The school photo station during the event"],
-  ["1479071704247109.jpg", "Live music at the Back to School Bash"],
   ["1479071790913767.jpg", "Jackson District Library resources at the event"],
   ["1479071827580430.jpg", "Families gathering for the Back to School Bash"],
 ];
