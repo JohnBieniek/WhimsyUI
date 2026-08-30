@@ -50,10 +50,10 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
   if (!study) notFound();
 
   const isLakeland = study.slug === "lakeland-cabaret";
-  const isHoliday = study.slug === "holiday-local";
+  const isHoliday = study.slug === "holiday-in-the-halls";
   const isTeamHope = study.slug === "team-hope-walk";
   const isBackToSchool = study.slug === "back-to-school-bash";
-  const linksHome = ["social-growth", "back-to-school-bash", "holiday-local", "team-hope-walk", "lakeland-cabaret"].includes(study.slug);
+  const linksHome = ["social-growth", "back-to-school-bash", "holiday-in-the-halls", "team-hope-walk", "lakeland-cabaret"].includes(study.slug);
   const facts = study.facts;
 
   return <main className="case-page shell">
