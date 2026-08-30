@@ -124,7 +124,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
 
       <div className="holiday-live-story">
         <header><p className="kicker">The day in the halls</p><h2 className="holiday-live-one-line">The invitation became a festive place to gather.</h2></header>
-        <figure className="holiday-live-dj"><Image src="/work/lakeland%20cabaret/mall%20christmas%20backdrop.jpg" alt="The DJ performing beneath the Merry Christmas arch at Holiday in the Halls" fill sizes="(max-width: 800px) 100vw, 64vw" /></figure>
+        <figure className="holiday-live-dj"><Image src="/work/lakeland%20cabaret/mall%20christmas%20backdrop.jpg" alt="The DJ performing beneath the Merry Christmas arch at Holiday in the Halls" fill sizes="(max-width: 800px) 100vw, 64vw" /><a className="holiday-lakeland-tag" href="https://lakelandcabaret.com/" target="_blank" rel="noopener noreferrer">Lakeland Cabaret ↗</a></figure>
         <div className="holiday-live-note"><p>The live event carried the same promise into the mall: Santa greeted families, vendors filled the halls, and a DJ performed beneath the illuminated Merry Christmas arch.</p><p>The photography closes the loop between promotion and experience, showing the people and seasonal setting behind the campaign.</p></div>
         <figure className="holiday-event-recap"><Image src="/work/holiday-in-the-halls/santa-at-jackson-crossing.jpg" alt="Santa waving beside the holiday carousel at Jackson Crossing" fill sizes="(max-width: 800px) 100vw, 46vw" /></figure>
       </div>
