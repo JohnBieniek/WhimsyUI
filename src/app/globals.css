@@ -194,3 +194,5 @@
 @media(max-width:800px){.back-school-campaign-title{width:100%;max-width:100%;font-size:clamp(17px,5.7vw,23px)!important;letter-spacing:-.03em}.back-school-campaign-title span{display:block;white-space:nowrap}}
 .back-school-opening dl,.back-school-opening dl div{text-align:center}
 @media(min-width:701px) and (max-width:1600px){.shell{width:min(1320px,calc(100% - 80px))}.home-copy>p{max-width:500px;font-size:15.5px}.home-tagline{font-size:23px}.services-page .page-hero>div:first-child{width:48%}.services-page .page-hero h1{font-size:clamp(48px,4.5vw,68px)}.services-page .offset-square-collage-desktop{width:calc(51% + 200px)}.services-page .service-cards>article{min-width:0;padding-inline:12px}.services-page .service-cards h2{font-size:17px}.services-page .service-cards strong{font-size:22px}.services-page .extras h3{font-size:13.5px}}
+.back-school-opening-art img{object-fit:contain}
+@media(min-width:801px){.back-school-opening{grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr)}.back-school-opening-copy{min-width:0}.back-school-opening-title{font-size:clamp(27px,2vw,30px)!important}}
