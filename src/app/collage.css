@@ -504,6 +504,12 @@
 .ad-collage.home-collage::before{width:280px;height:280px;left:-35px;top:55px;background:#49196B}.ad-collage.home-collage::after{width:310px;height:310px;right:30px;bottom:auto;top:15px;background:#e3d6ee;box-shadow:125px 75px 0 #dff2ed}
 
 @media (max-width: 700px) {
+  .home-tagline,
+  .home-copy > p {
+    text-align: center;
+    margin-inline: auto;
+  }
+
   .home-logo {
     margin-top: 0;
     transform: translateY(18px);
