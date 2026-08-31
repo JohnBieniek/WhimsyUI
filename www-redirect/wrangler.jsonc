@@ -1,0 +1,19 @@
+{
+  "$schema": "../whimsy-contact-form/node_modules/wrangler/config-schema.json",
+  "name": "whimsy-www-redirect",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-08-30",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [
+    {
+      "pattern": "www.experiencewhimsy.com",
+      "custom_domain": true
+    }
+  ],
+  "observability": {
+    "enabled": true,
+    "logs": { "head_sampling_rate": 1 }
+  }
+}
