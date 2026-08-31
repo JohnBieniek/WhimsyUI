@@ -3,6 +3,16 @@ interface ContactPayload {
   phone?: unknown; service?: unknown; details?: unknown; website?: unknown;
 }
 interface DeliveryMessage { inquiryId: string }
+interface EmailDeliveryEvent {
+  type: string;
+  payload?: {
+    messageId?: string;
+    terminal?: boolean;
+    delivery?: { status?: string; smtpStatusCode?: string; smtpResponse?: string };
+    bounce?: { type?: string; classification?: string; reason?: string };
+  };
+  metadata?: { eventTimestamp?: string };
+}
 interface InquiryRow {
   id: string; reference: string; name: string; organization: string; email: string;
   phone: string; service: string; details: string; status: string;
@@ -46,7 +56,7 @@ async function findInquiry(env: Env, id: string): Promise<InquiryRow | null> {
     "SELECT id, reference, name, organization, email, phone, service, details, status FROM inquiries WHERE id = ?",
   ).bind(id).first<InquiryRow>();
 }
-async function sendInquiry(env: Env, inquiry: InquiryRow): Promise<void> {
+async function sendInquiry(env: Env, inquiry: InquiryRow): Promise<string> {
   const phoneDisplay = inquiry.phone || "Not provided";
   const subject = `Whimsy inquiry: ${inquiry.service} [${inquiry.reference}]`;
   const text = [`Reference: ${inquiry.reference}`, `Name: ${inquiry.name}`, `Organization: ${inquiry.organization}`,
@@ -59,8 +69,9 @@ async function sendInquiry(env: Env, inquiry: InquiryRow): Promise<void> {
     <p><strong>Phone:</strong> ${escapeHtml(phoneDisplay)}</p>
     <p><strong>Service:</strong> ${escapeHtml(inquiry.service)}</p>
     <p><strong>Project details:</strong></p><p>${escapeHtml(inquiry.details).replace(/\n/g, "<br>")}</p>`;
-  await env.CONTACT_EMAIL.send({ to: env.TO_ADDRESS, from: { email: env.FROM_ADDRESS, name: "Whimsy Website" },
+  const result = await env.CONTACT_EMAIL.send({ to: env.TO_ADDRESS, from: { email: env.FROM_ADDRESS, name: "Whimsy Website" },
     replyTo: inquiry.email, subject, text, html });
+  return result.messageId;
 }
 async function markQueued(env: Env, id: string): Promise<void> {
   const now = new Date().toISOString();
@@ -129,17 +140,20 @@ async function acceptInquiry(request: Request, env: Env, origin: string): Promis
 
 async function deliverMessage(message: Message<DeliveryMessage>, env: Env): Promise<void> {
   const inquiry = await findInquiry(env, message.body.inquiryId);
-  if (!inquiry || inquiry.status === "sent") { message.ack(); return; }
+  if (!inquiry || ["accepted", "delivered", "deferred", "bounced", "failed", "rejected", "complained", "sent"]
+    .includes(inquiry.status)) { message.ack(); return; }
   const now = new Date().toISOString();
   await env.CONTACT_DB.prepare(
     "UPDATE inquiries SET status = 'sending', delivery_attempts = delivery_attempts + 1, updated_at = ? WHERE id = ?",
   ).bind(now, inquiry.id).run();
   try {
-    await sendInquiry(env, inquiry);
+    const messageId = await sendInquiry(env, inquiry);
     await env.CONTACT_DB.prepare(
-      "UPDATE inquiries SET status = 'sent', sent_at = ?, updated_at = ?, last_error_code = NULL, last_error_message = NULL WHERE id = ?",
-    ).bind(now, now, inquiry.id).run();
-    console.log(JSON.stringify({ message: "contact email sent", inquiryId: inquiry.id, reference: inquiry.reference, attempt: message.attempts }));
+      `UPDATE inquiries SET status = 'accepted', message_id = ?, accepted_at = ?, updated_at = ?,
+       last_error_code = NULL, last_error_message = NULL WHERE id = ?`,
+    ).bind(messageId, now, now, inquiry.id).run();
+    console.log(JSON.stringify({ message: "contact email accepted", inquiryId: inquiry.id, reference: inquiry.reference,
+      messageId, attempt: message.attempts }));
     message.ack();
   } catch (error) {
     const failure = errorDetails(error); const retryable = retryableCodes.has(failure.code) || failure.code === "UNKNOWN";
@@ -152,6 +166,36 @@ async function deliverMessage(message: Message<DeliveryMessage>, env: Env): Prom
     if (canRetry) message.retry({ delaySeconds: retryDelays[Math.min(message.attempts - 1, retryDelays.length - 1)] });
     else { await env.CONTACT_DLQ.send({ inquiryId: inquiry.id } satisfies DeliveryMessage); message.ack(); }
   }
+}
+function deliveryEventStatus(event: EmailDeliveryEvent): string {
+  const eventName = event.type.split(".").at(-1) ?? "unknown";
+  if (eventName === "delivered") return "delivered";
+  if (eventName === "deferred") return "deferred";
+  if (["bounced", "failed", "rejected", "complained"].includes(eventName)) return eventName;
+  return "delivery_unknown";
+}
+async function recordDeliveryEvent(message: Message<EmailDeliveryEvent>, env: Env): Promise<void> {
+  const event = message.body;
+  const messageId = event.payload?.messageId;
+  if (!messageId) {
+    console.error(JSON.stringify({ message: "email delivery event missing message id", eventType: event.type }));
+    message.ack();
+    return;
+  }
+  const status = deliveryEventStatus(event);
+  const occurredAt = event.metadata?.eventTimestamp ?? new Date().toISOString();
+  const smtpStatusCode = event.payload?.delivery?.smtpStatusCode ?? null;
+  const smtpResponse = event.payload?.delivery?.smtpResponse ?? event.payload?.bounce?.reason ?? null;
+  const errorCode = ["bounced", "failed", "rejected", "complained"].includes(status) ? status.toUpperCase() : null;
+  const result = await env.CONTACT_DB.prepare(
+    `UPDATE inquiries SET status = ?, delivery_event = ?, delivered_at = CASE WHEN ? = 'delivered' THEN ? ELSE delivered_at END,
+     sent_at = CASE WHEN ? = 'delivered' THEN ? ELSE sent_at END, updated_at = ?, smtp_status_code = ?, smtp_response = ?,
+     last_error_code = ?, last_error_message = ? WHERE message_id = ?`,
+  ).bind(status, event.type, status, occurredAt, status, occurredAt, occurredAt, smtpStatusCode, smtpResponse,
+    errorCode, errorCode ? smtpResponse : null, messageId).run();
+  console.log(JSON.stringify({ message: "contact delivery event recorded", messageId, status,
+    matched: result.meta.changes, smtpStatusCode }));
+  message.ack();
 }
 async function recoverStalledInquiries(env: Env): Promise<void> {
   const cutoff = new Date(Date.now() - 15 * 60_000).toISOString();
@@ -177,10 +221,14 @@ export default {
     if (request.method !== "POST") return json(origin, { ok: false, message: "Method not allowed." }, 405);
     return acceptInquiry(request, env, origin);
   },
-  async queue(batch: MessageBatch<DeliveryMessage>, env: Env): Promise<void> {
-    for (const message of batch.messages) await deliverMessage(message, env);
+  async queue(batch: MessageBatch<DeliveryMessage | EmailDeliveryEvent>, env: Env): Promise<void> {
+    if (batch.queue === "whimsy-contact-email-events") {
+      for (const message of batch.messages) await recordDeliveryEvent(message as Message<EmailDeliveryEvent>, env);
+      return;
+    }
+    for (const message of batch.messages) await deliverMessage(message as Message<DeliveryMessage>, env);
   },
   async scheduled(_controller: ScheduledController, env: Env, ctx: ExecutionContext): Promise<void> {
     ctx.waitUntil(recoverStalledInquiries(env));
   },
-} satisfies ExportedHandler<Env, DeliveryMessage>;
+} satisfies ExportedHandler<Env, DeliveryMessage | EmailDeliveryEvent>;
