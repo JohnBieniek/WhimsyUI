@@ -175,7 +175,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
       <div className="back-school-opening">
         <figure className="back-school-opening-art"><Image src="/work/back-to-school/1478820320938914.jpg" alt="Back to School Bash campaign overview" fill priority sizes="(max-width: 800px) 100vw, 48vw" /></figure>
         <div className="back-school-opening-copy">
-          <p className="kicker">A calmer start to the school year</p>
+          <p className="kicker">An excelent start to the school year</p>
           <h2 className="back-school-opening-title"><span>Practical help, without</span><span>the overwhelming atmosphere.</span></h2>
           <p>Jackson Crossing wanted families to have an easier way to get ready for school. The Back to School Bash brought useful resources together in a calm, low-stimulation event designed to feel welcoming from the first invitation through the day itself.</p>
           <dl><div><dt>Date</dt><dd>August 1</dd></div><div><dt>Time</dt><dd>Noon–4 PM</dd></div><div><dt>Location</dt><dd>Jackson Crossing</dd></div></dl>
