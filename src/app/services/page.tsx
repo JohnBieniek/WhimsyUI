@@ -76,6 +76,7 @@ export default function ServicesPage() {
                   <li key={point}>{point}</li>
                 ))}
               </ul>
+              <Link href={`/services/${service.slug}`}>Learn more →</Link>
             </article>
           );
         })}
