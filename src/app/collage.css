@@ -348,7 +348,7 @@
 
 .multiverse-service .article-image {
   height: auto;
-  aspect-ratio: 3807 / 3561;
+  aspect-ratio: 3838 / 1960;
   border-radius: 8px;
   background: #f7f1d8;
 }
@@ -617,6 +617,10 @@
 
   .multiverse-service .article-hero .back-link {
     margin-top: 0;
+  }
+
+  .multiverse-service .article-image {
+    margin-top: 5px;
   }
 }
 
