@@ -237,6 +237,10 @@
   background: #f7f6f2;
 }
 
+.single-page-service .kicker {
+  color: #0b3b6f;
+}
+
 .single-page-service .article-hero {
   color: #fff;
   background: #0b3b6f;
@@ -254,7 +258,7 @@
 }
 
 .single-page-service .article-hero h1::after {
-  border-color: #e88f9e;
+  border-color: #ffbf00;
 }
 
 .single-page-service .article-image:has(img[alt^="Lakeland Cabaret"]) {
@@ -293,7 +297,7 @@
 .single-page-service .featured-site {
   border: 1px solid #5b8fd655;
   background: #fff;
-  box-shadow: 12px 12px 0 #e88f9e;
+  box-shadow: 12px 12px 0 #5b8fd6;
 }
 
 .single-page-service .featured-site .kicker,
@@ -324,7 +328,7 @@
 }
 
 .single-page-service .article-cta .kicker {
-  color: #e88f9e;
+  color: #ffbf00;
 }
 
 .single-page-service .article-cta .button {
