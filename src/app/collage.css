@@ -381,6 +381,12 @@
     margin-bottom: 12px;
   }
 
+  .article-cta h2 {
+    font-size: clamp(15px, 5vw, 24px);
+    letter-spacing: -0.03em;
+    white-space: nowrap;
+  }
+
   .nav-logo {
     width: 150px;
     margin-inline: auto;
