@@ -242,15 +242,15 @@
 }
 
 .single-page-service .article-hero {
-  color: #fff;
-  background: #0b3b6f;
-  box-shadow: 0 0 0 100vmax #0b3b6f;
+  color: #0b2f4a;
+  background: #fff;
+  box-shadow: 0 0 0 100vmax #fff;
   clip-path: inset(0 -100vmax);
 }
 
 .single-page-service .article-hero .back-link,
 .single-page-service .article-hero .kicker {
-  color: #ffbf00;
+  color: #0b3b6f;
 }
 
 .single-page-service .article-hero .back-link {
@@ -258,7 +258,7 @@
 }
 
 .single-page-service .article-hero .intro {
-  color: #e3e8f7;
+  color: #0b2f4a;
 }
 
 .single-page-service .article-hero h1::after {
