@@ -219,6 +219,17 @@
   white-space: nowrap;
 }
 
+@media (min-width: 701px) {
+  .single-page-service .article-hero {
+    align-items: start;
+    padding-top: 0;
+  }
+
+  .single-page-service .article-hero .back-link {
+    margin-top: 0;
+  }
+}
+
 .jackson-logo {
   width: 245px;
   background-position: -70px -672px;
