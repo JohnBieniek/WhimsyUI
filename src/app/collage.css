@@ -219,6 +219,11 @@
   white-space: nowrap;
 }
 
+.article-body > .featured-site {
+  grid-column: 1 / -1;
+  width: 100%;
+}
+
 @media (min-width: 701px) {
   .single-page-service .article-hero {
     align-items: start;
