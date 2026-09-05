@@ -214,6 +214,14 @@
   flex: 0 0 auto;
 }
 
+.article-page > .article-hero {
+  padding-bottom: clamp(12px, 2vw, 20px);
+}
+
+.article-page > .article-body {
+  padding-top: clamp(18px, 2vw, 24px);
+}
+
 .single-page-service .article-hero h1 {
   font-size: clamp(34px, 3.5vw, 56px);
   white-space: nowrap;
