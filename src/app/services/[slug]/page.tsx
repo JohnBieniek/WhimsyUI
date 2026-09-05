@@ -14,7 +14,7 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
   const isLakeland = slug === "single-page-website";
   const isMultiverse = slug === "five-page-website";
 
-  return <main className={`article-page${isLakeland ? " single-page-service" : ""}${isMultiverse ? " multiverse-service" : ""}${slug === "website-support" ? " website-support-service" : ""}`}>
+  return <main data-service={slug} className={`article-page${isLakeland ? " single-page-service" : ""}${isMultiverse ? " multiverse-service" : ""}${slug === "website-support" ? " website-support-service" : ""}`}>
     <header className="article-hero shell">
       <div><Link className="back-link" href="/services">← All services</Link><p className="kicker">Service guide · {service.price}</p><h1 className={slug === "website-transfer" ? "website-transfer-title" : slug === "strategy-session" ? "strategy-session-title" : slug === "business-consulting" ? "business-consulting-title" : undefined}>{slug === "website-transfer" ? <><span>Domain Change &amp;</span>{" "}<span>Website Transfer</span></> : service.name}</h1><p className="intro">{service.intro}</p></div>
       <div className="article-image"><Image src={service.image} alt={isLakeland ? "Lakeland Cabaret website homepage" : isMultiverse ? "The Multiverse Adventurers Guild home page" : "Whimsy campaign work"} fill priority sizes="(max-width: 700px) 100vw, 45vw"/></div>
