@@ -524,13 +524,6 @@
   background: #f1d98e;
 }
 
-.mag-proof {
-  display: grid;
-  grid-template-columns: 1.55fr .85fr;
-  gap: 20px;
-  align-items: start;
-}
-
 .mag-responsive {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) repeat(2, minmax(0, 1fr));
@@ -934,7 +927,6 @@
   }
 
   .mag-capabilities,
-  .mag-proof,
   .mag-responsive {
     grid-template-columns: minmax(0, 1fr);
   }
