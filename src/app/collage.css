@@ -321,8 +321,6 @@
 }
 
 .single-page-service .article-image:has(img[alt^="Lakeland Cabaret"]) {
-  margin-top: 10px;
-  border: 3px solid #ffbf00;
   background: #fff;
 }
 
@@ -678,9 +676,6 @@
     margin-top: 0;
   }
 
-  .multiverse-service .article-image {
-    margin-top: 5px;
-  }
 }
 
 .jackson-logo {
