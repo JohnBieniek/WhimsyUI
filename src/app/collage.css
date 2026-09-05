@@ -231,7 +231,13 @@
 }
 
 .article-page[data-service="brand-advertising-plan"] .article-image {
-  border-radius: 100px 100px 16px 16px;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  border-radius: 5% 5% 1% 1%;
+}
+
+.article-page[data-service="brand-advertising-plan"] .article-image img {
+  object-fit: contain;
 }
 
 .article-page[data-service="business-consulting"] .article-image {
