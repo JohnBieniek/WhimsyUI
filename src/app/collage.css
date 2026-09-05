@@ -571,10 +571,6 @@
   color: #4b0c83;
 }
 
-.multiverse-service .article-image {
-  border: 3px solid #1f5f8c;
-}
-
 .multiverse-service .article-body > article:first-child {
   padding-top: 24px;
   border-top: 5px solid #b3352d;
