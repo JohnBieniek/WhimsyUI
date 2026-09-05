@@ -542,6 +542,10 @@
   background: #102f20;
 }
 
+.mag-responsive > div {
+  align-self: start;
+}
+
 .mag-responsive > img {
   display: block;
   width: 100%;
