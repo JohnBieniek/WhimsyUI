@@ -578,7 +578,7 @@
   color: #4b0c83;
 }
 
-.multiverse-service .article-body > article:first-child {
+.multiverse-service .article-body > article:first-of-type {
   container-type: inline-size;
   padding-top: 24px;
   border-top: 5px solid #b3352d;
@@ -611,6 +611,11 @@
 
 .multiverse-service .process-block li {
   border-color: #ffffff55;
+}
+
+.multiverse-service .process-block li:last-child {
+  border-right: 0;
+  border-bottom: 0;
 }
 
 .multiverse-service .mag-showcase {
