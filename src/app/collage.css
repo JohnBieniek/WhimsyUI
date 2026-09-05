@@ -253,7 +253,7 @@
 }
 
 .article-page[data-service="five-page-website"] .article-image {
-  border-radius: 24px 24px 0 0;
+  border-radius: 0;
 }
 
 .single-page-service .article-hero h1 {
@@ -414,7 +414,6 @@
 .multiverse-service .article-image {
   height: auto;
   aspect-ratio: 3838 / 1960;
-  border-radius: 8px;
   background: #f7f1d8;
 }
 
