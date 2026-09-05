@@ -579,8 +579,19 @@
 }
 
 .multiverse-service .article-body > article:first-child {
+  container-type: inline-size;
   padding-top: 24px;
   border-top: 5px solid #b3352d;
+}
+
+.multiverse-service .useful-work-title {
+  font-size: min(44px, 5.5cqi);
+  letter-spacing: -0.03em;
+}
+
+.multiverse-service .useful-work-title span {
+  display: block;
+  white-space: nowrap;
 }
 
 .multiverse-service .article-callout {
