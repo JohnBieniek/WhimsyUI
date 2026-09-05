@@ -230,6 +230,7 @@
   }
 
   .website-support-service .article-hero h1,
+  .article-hero h1.strategy-session-title,
   .multiverse-service .article-hero h1 {
     font-size: clamp(34px, 3.5vw, 56px);
     white-space: nowrap;
