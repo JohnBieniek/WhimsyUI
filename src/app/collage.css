@@ -252,7 +252,8 @@
 }
 
 @media (min-width: 1051px) {
-  .article-hero h1.business-consulting-title {
+  .article-hero h1.business-consulting-title,
+  .article-hero h1.brand-advertising-title {
     font-size: clamp(24px, 2.4vw, 38px);
     white-space: nowrap;
   }
