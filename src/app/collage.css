@@ -648,28 +648,17 @@
 }
 
 @media (min-width: 701px) {
-  .multiverse-service .article-hero {
+  .article-page > .article-hero {
     align-items: start;
     padding-top: 0;
   }
 
-  .multiverse-service .article-hero .back-link {
+  .article-page > .article-hero .back-link {
     margin-top: 0;
   }
 
   .multiverse-service .article-image {
     margin-top: 5px;
-  }
-}
-
-@media (min-width: 701px) {
-  .single-page-service .article-hero {
-    align-items: start;
-    padding-top: 0;
-  }
-
-  .single-page-service .article-hero .back-link {
-    margin-top: 0;
   }
 }
 
