@@ -218,6 +218,10 @@
   padding-bottom: clamp(12px, 2vw, 20px);
 }
 
+.article-page > .article-hero > .article-image {
+  margin-top: 10px;
+}
+
 .article-page > .article-body {
   padding-top: clamp(18px, 2vw, 24px);
 }
