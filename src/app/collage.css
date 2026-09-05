@@ -228,6 +228,11 @@
 }
 
 @media (min-width: 1051px) {
+  .article-hero h1.business-consulting-title {
+    font-size: clamp(24px, 2.4vw, 38px);
+    white-space: nowrap;
+  }
+
   .article-hero h1.website-transfer-title {
     font-size: clamp(34px, 3.5vw, 56px);
   }
