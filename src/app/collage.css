@@ -861,6 +861,24 @@
   font-weight: 900;
 }
 
+.article-page[data-service="strategy-session"] .website-deliverables {
+  color: var(--ink);
+}
+
+.article-page[data-service="strategy-session"] .website-deliverables-intro,
+.article-page[data-service="strategy-session"] .website-deliverables-grid li {
+  background: #eee3f7;
+}
+
+.article-page[data-service="strategy-session"] .website-deliverables-intro {
+  border-left-color: var(--purple);
+}
+
+.article-page[data-service="strategy-session"] .website-deliverables-intro h2,
+.article-page[data-service="strategy-session"] .website-deliverables-grid h3 {
+  color: var(--purple);
+}
+
 .website-deliverables-note {
   display: flex;
   grid-column: 1 / -1;
