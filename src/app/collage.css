@@ -537,7 +537,7 @@
 
 .mag-responsive > div {
   container-type: inline-size;
-  align-self: start;
+  align-self: center;
 }
 
 .mag-responsive h3 {
