@@ -37,7 +37,7 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
         <strong className="website-deliverables-badge">5 pages</strong>
       </header>
       <ul className="website-deliverables-grid" role="list">
-        <li><h3>Five finished pages</h3><p>Custom layouts built for phones, tablets, and desktops.</p></li>
+        <li><h3>Cross platform publication</h3><p>Custom layouts built for phones, tablets, and desktops.</p></li>
         <li><h3>Launch setup</h3><p>Domain, security, business email, analytics, and final testing.</p></li>
         <li><h3>Structure and strategy</h3><p>Clear content, visitor paths, calls to action, and feature planning.</p></li>
         <li><h3>Handoff and support</h3><p>Launch help, a site walkthrough, and follow-up email support.</p></li>
