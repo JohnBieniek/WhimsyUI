@@ -540,6 +540,20 @@
   align-self: center;
 }
 
+.command-caption-mobile {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .command-caption-desktop {
+    display: none;
+  }
+
+  .command-caption-mobile {
+    display: inline;
+  }
+}
+
 @media (min-width: 701px) {
   .mag-responsive > div > p:not(.kicker) {
     padding-bottom: 2lh;
