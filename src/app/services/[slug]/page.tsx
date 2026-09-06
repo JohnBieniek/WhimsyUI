@@ -36,12 +36,12 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
         <p>We plan, design, build, and launch the site with the essentials already connected.</p>
         <strong className="website-deliverables-badge">5 pages</strong>
       </header>
-      <ol className="website-deliverables-grid">
-        <li><span className="website-deliverables-number" aria-hidden="true">01</span><h3>Five finished pages</h3><p>Custom layouts built for phones, tablets, and desktops.</p></li>
-        <li><span className="website-deliverables-number" aria-hidden="true">02</span><h3>Launch setup</h3><p>Domain, security, business email, analytics, and final testing.</p></li>
-        <li><span className="website-deliverables-number" aria-hidden="true">03</span><h3>Structure and strategy</h3><p>Clear content, visitor paths, calls to action, and feature planning.</p></li>
-        <li><span className="website-deliverables-number" aria-hidden="true">04</span><h3>Handoff and support</h3><p>Launch help, a site walkthrough, and follow-up email support.</p></li>
-      </ol>
+      <ul className="website-deliverables-grid" role="list">
+        <li><h3>Five finished pages</h3><p>Custom layouts built for phones, tablets, and desktops.</p></li>
+        <li><h3>Launch setup</h3><p>Domain, security, business email, analytics, and final testing.</p></li>
+        <li><h3>Structure and strategy</h3><p>Clear content, visitor paths, calls to action, and feature planning.</p></li>
+        <li><h3>Handoff and support</h3><p>Launch help, a site walkthrough, and follow-up email support.</p></li>
+      </ul>
       <div className="website-deliverables-note"><strong>Need something more interactive?</strong><p>We’ll scope custom tools before work begins.</p></div>
     </section> : <article><p className="kicker">Deliverables</p><h2 className="momentum-title">You leave with momentum.</h2><ul className="deliverables">{service.deliverables.map((item) => <li key={item}>{item}</li>)}</ul></article>}</section>
     <section className="article-cta"><div className="shell"><p className="kicker">Ready when you are</p><h2>Let’s make the next step clear.</h2><Link className="button" href="/contact">Book a consultation →</Link></div></section>

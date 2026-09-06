@@ -753,16 +753,6 @@
   background: #f7f1d8;
 }
 
-.website-deliverables-number {
-  display: block;
-  margin-bottom: 8px;
-  color: #b3352d;
-  font-family: var(--font-display);
-  font-size: clamp(54px, 5.5vw, 84px);
-  line-height: 1;
-  font-weight: 900;
-}
-
 .website-deliverables-grid h3 {
   margin: 0 0 8px;
   color: #1f5f8c;
