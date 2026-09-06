@@ -256,10 +256,6 @@
   border-radius: 0;
 }
 
-.article-page[data-service="strategy-session"] .article-body > article:first-of-type {
-  grid-column: 1 / -1;
-}
-
 .strategy-help {
   grid-column: 1 / -1;
   min-width: 0;
