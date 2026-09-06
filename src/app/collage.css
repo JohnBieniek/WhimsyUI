@@ -624,6 +624,8 @@
 }
 
 .multiverse-service .process-block li {
+  justify-content: center;
+  text-align: center;
   border-color: #ffffff55;
 }
 
