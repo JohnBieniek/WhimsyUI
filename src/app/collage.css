@@ -615,6 +615,7 @@
 
 .multiverse-service .process-block {
   padding-block: 18px;
+  padding-inline: 12px;
   color: #fff;
   background: #33612f;
 }
@@ -630,6 +631,8 @@
 
 .multiverse-service .process-block li {
   padding-block: 8px;
+  padding-inline: 4px;
+  gap: 8px;
   justify-content: center;
   text-align: center;
   border-color: #ffffff55;
