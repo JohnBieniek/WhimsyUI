@@ -59,7 +59,7 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
     </section> : slug === "strategy-session" ? <section className="website-deliverables" aria-labelledby="strategy-deliverables-title">
       <header className="website-deliverables-intro">
         <p className="kicker">What’s included</p>
-        <h2 id="strategy-deliverables-title">Clear decisions, captured in a practical plan.</h2>
+        <h2 id="strategy-deliverables-title"><span>Clear decisions, captured</span>{" "}<span>in a practical plan.</span></h2>
         <p>We prepare, lead the working session, and document the direction so you can put it into action.</p>
       </header>
       <ul className="website-deliverables-grid" role="list">

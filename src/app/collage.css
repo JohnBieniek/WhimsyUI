@@ -879,6 +879,26 @@
   color: var(--purple);
 }
 
+.article-page[data-service="strategy-session"] .website-deliverables-intro h2 {
+  font-size: min(32px, 5.7cqi);
+}
+
+.article-page[data-service="strategy-session"] .website-deliverables-grid {
+  gap: 16px;
+}
+
+.article-page[data-service="strategy-session"] .website-deliverables-grid li {
+  padding: 20px;
+}
+
+.article-page[data-service="strategy-session"] .website-deliverables-grid h3 {
+  font-size: 18px;
+}
+
+.article-page[data-service="strategy-session"] .website-deliverables-grid p {
+  font-size: 16px;
+}
+
 .website-deliverables-note {
   display: flex;
   grid-column: 1 / -1;
