@@ -863,6 +863,8 @@
 
 .article-page[data-service="strategy-session"] .website-deliverables {
   color: var(--ink);
+  border-top: 6px solid var(--mint-strong);
+  padding-top: 30px;
 }
 
 .article-page[data-service="strategy-session"] .website-deliverables-intro,
