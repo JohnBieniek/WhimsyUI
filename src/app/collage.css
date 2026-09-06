@@ -640,6 +640,13 @@
   border-bottom: 0;
 }
 
+@media (max-width: 700px) {
+  .multiverse-service .process-block li {
+    justify-content: flex-start;
+    text-align: left;
+  }
+}
+
 .multiverse-service .mag-showcase {
   color: #fff;
   background: #1f5f8c;
