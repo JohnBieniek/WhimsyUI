@@ -1095,8 +1095,12 @@
     white-space: nowrap;
   }
 
+  .mag-showcase > header {
+    container-type: inline-size;
+  }
+
   .mag-showcase > header > .kicker {
-    font-size: clamp(10px, 3.2vw, 14px);
+    font-size: 5.8cqi;
     letter-spacing: 0;
     white-space: nowrap;
   }
