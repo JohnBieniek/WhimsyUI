@@ -32,9 +32,9 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
     </section>}{isMultiverse ? <section className="website-deliverables" aria-labelledby="website-deliverables-title">
       <header className="website-deliverables-intro">
         <p className="kicker">What’s included</p>
-        <strong className="website-deliverables-badge">5 pages</strong>
         <h2 id="website-deliverables-title"><span>A finished website,</span>{" "}<span>ready for business.</span></h2>
         <p>We plan, design, build, and launch the site with the essentials already connected.</p>
+        <strong className="website-deliverables-badge">5 pages</strong>
       </header>
       <ul className="website-deliverables-grid" role="list">
         <li><h3>A Cross platform site</h3><p>Custom layouts built for phones, tablets, and desktops.</p></li>
