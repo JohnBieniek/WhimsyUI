@@ -818,7 +818,12 @@
   }
 }
 
+.multiverse-service > .article-body {
+  padding-bottom: 20px;
+}
+
 .multiverse-service .article-cta {
+  margin-top: 0;
   color: #fff;
   background: #1f5f8c;
 }
