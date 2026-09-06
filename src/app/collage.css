@@ -614,8 +614,13 @@
 }
 
 .multiverse-service .process-block {
+  padding-block: 18px;
   color: #fff;
   background: #33612f;
+}
+
+.multiverse-service .process-block .kicker {
+  margin: 0 0 8px;
 }
 
 .multiverse-service .process-block .kicker,
@@ -624,6 +629,7 @@
 }
 
 .multiverse-service .process-block li {
+  padding-block: 8px;
   justify-content: center;
   text-align: center;
   border-color: #ffffff55;
