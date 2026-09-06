@@ -38,8 +38,8 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
       </header>
       <ul className="website-deliverables-grid" role="list">
         <li><h3>Cross platform publication</h3><p>Custom layouts built for phones, tablets, and desktops.</p></li>
-        <li><h3>Launch setup</h3><p>Domain, security, business email, analytics, and final testing.</p></li>
         <li><h3>Structure and strategy</h3><p>Clear content, visitor paths, calls to action, and feature planning.</p></li>
+        <li><h3>Launch setup</h3><p>Domain, security, business email, analytics, and final testing.</p></li>
         <li><h3>Handoff and support</h3><p>Launch help, a site walkthrough, and follow-up email support.</p></li>
       </ul>
       <div className="website-deliverables-note"><strong>Need something more interactive?</strong><p>We’ll scope custom tools before work begins.</p></div>
