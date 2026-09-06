@@ -56,6 +56,18 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
         <li><h3>Handoff and support</h3><p>Launch help, a site walkthrough, and follow-up email support.</p></li>
       </ul>
       <div className="website-deliverables-note"><strong>Need something more interactive?</strong><p>We’ll scope custom tools before work begins.</p></div>
+    </section> : slug === "strategy-session" ? <section className="website-deliverables" aria-labelledby="strategy-deliverables-title">
+      <header className="website-deliverables-intro">
+        <p className="kicker">What’s included</p>
+        <h2 id="strategy-deliverables-title">Clear decisions, captured in a practical plan.</h2>
+        <p>We prepare, lead the working session, and document the direction so you can put it into action.</p>
+      </header>
+      <ul className="website-deliverables-grid" role="list">
+        <li><h3>Pre-session review</h3><p>A short intake followed by our review of your goals, links, materials, and current situation.</p></li>
+        <li><h3>90-minute working session</h3><p>A focused discussion that identifies the strongest opportunity and resolves the decisions holding you back.</p></li>
+        <li><h3>Strategy Brief</h3><p>A written summary of the recommended direction, priorities, next steps, timing, responsibilities, and measures of success.</p></li>
+        <li><h3>Follow-up support</h3><p>Delivery within three business days, plus one round of clarification questions by email within seven days.</p></li>
+      </ul>
     </section> : <article><p className="kicker">Deliverables</p><h2 className="momentum-title">You leave with momentum.</h2><ul className="deliverables">{service.deliverables.map((item) => <li key={item}>{item}</li>)}</ul></article>}</section>
     <section className="article-cta"><div className="shell"><p className="kicker">Ready when you are</p><h2>Let’s make the next step clear.</h2><Link className="button" href="/contact">Book a consultation →</Link></div></section>
   </main>;
