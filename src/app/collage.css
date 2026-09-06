@@ -614,17 +614,17 @@
 }
 
 .multiverse-service .process-block {
-  color: #172319;
-  background: #a88d41;
+  color: #fff;
+  background: #183d29;
 }
 
 .multiverse-service .process-block .kicker,
 .multiverse-service .process-block b {
-  color: #172319;
+  color: #fff;
 }
 
 .multiverse-service .process-block li {
-  border-color: #17231955;
+  border-color: #ffffff55;
 }
 
 .multiverse-service .process-block li:last-child {
