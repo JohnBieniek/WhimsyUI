@@ -47,14 +47,14 @@ export default function ServicesPage() {
           <Image
             className="offset-square-collage offset-square-collage-mobile"
             src={offsetSquareCollage}
-            alt="A collage of selected Whimsy campaign work"
+            alt="Whimsy campaign posters for the Jackson County Rose Parade, student art show, live music, World Book Day, and Lakeland Cabaret performances."
             priority
             sizes="100vw"
           />
           <Image
             className="offset-square-collage offset-square-collage-desktop"
             src={offsetSquareCollageDesktop}
-            alt="A collage of selected Whimsy campaign work"
+            alt="Whimsy campaign posters for the Jackson County Rose Parade, student art show, live music, World Book Day, and Lakeland Cabaret performances."
             priority
             sizes="55vw"
           />

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getImageAlt } from "../../image-alt";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { caseStudies } from "../../work-data";
@@ -92,7 +93,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
           <p>Our work with Lakeland Cabaret is representative of the broad spectrum of help we provide at Whimsy. The holistic elevation of a brand with logo work, website design, marketing, and photography can take any company’s offerings to the next level. We’d love a chance to work with you on any or all of these things. Reach out for a free consultation to find out how you can take the next step of your journey today!</p>
         </div>
         <div className="lakeland-photo-grid">
-          {study.images.slice(1).map((file, index) => <figure className={file.endsWith("performer.webp") ? "lakeland-dj-photo" : undefined} key={file}><Image src={`/work/${file}`} alt={`Lakeland Cabaret performance and event photography ${index + 1}`} fill sizes="(max-width: 800px) 50vw, 25vw" /></figure>)}
+          {study.images.slice(1).map((file) => <figure className={file.endsWith("performer.webp") ? "lakeland-dj-photo" : undefined} key={file}><Image src={`/work/${file}`} alt={getImageAlt(`/work/${file}`)} fill sizes="(max-width: 800px) 50vw, 25vw" /></figure>)}
         </div>
       </article>
     </section> : isHoliday ? <section className="holiday-story">
@@ -200,7 +201,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
 
       <aside className="back-school-outcome"><p className="kicker">The result</p><div className="back-school-outcome-copy"><p><strong>More than 3× the previous year’s attendance!</strong></p><p>Kids danced to live music, met Stitch beside the carousel, colored pages and bookmarks, and had school portraits made. Those playful moments gave them reasons to explore and enjoy the event instead of treating it as a quick supply pickup.</p><p>Parents left with practical help for the school year: loaded backpacks, hot-meal vouchers, Michigan Theatre tickets, affordable school-photo options, professional headshots, and direct access to Jackson District Library cards and resources.</p><p>For Jackson Crossing and its businesses, more than triple the prior attendance meant substantially more families moving through the mall. Activities placed near the carousel and tenants, including Sipster’s drinks in front of Dunham’s, extended the visit, created useful foot traffic, and gave participating businesses more opportunities to meet local customers.</p></div></aside>
     </section> : <>
-      <figure className="case-feature"><Image src={`/work/${study.file}`} alt={`Full ${study.title} advertisement`} fill priority sizes="100vw" /></figure>
+      <figure className="case-feature"><Image src={`/work/${study.file}`} alt={getImageAlt(`/work/${study.file}`)} fill priority sizes="100vw" /></figure>
       <section className="case-story">
         <article>
           <p className="kicker">The assignment</p>
@@ -210,7 +211,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
         </article>
         <aside><p className="kicker">Project details</p><ul>{facts.map((fact) => <li key={fact}>{fact}</li>)}</ul></aside>
       </section>
-      <section className="case-gallery">{study.images.map((file, index) => <figure key={file}><Image src={`/work/${file}`} alt={`${study.title} supporting creative ${index + 1}`} fill sizes="(max-width:700px) 100vw, 50vw" /></figure>)}</section>
+      <section className="case-gallery">{study.images.map((file) => <figure key={file}><Image src={`/work/${file}`} alt={getImageAlt(`/work/${file}`)} fill sizes="(max-width:700px) 100vw, 50vw" /></figure>)}</section>
     </>}
     <section className="ready"><h2>Have a campaign in mind?</h2><p>Let’s build something useful for your audience and your community.</p><Link className="button" href="/contact">Start a conversation →</Link></section>
   </main>;

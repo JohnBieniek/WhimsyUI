@@ -22,7 +22,7 @@ export default function ContactPage() {
           <Image
             className="contact-headshot"
             src="/headshot-tight.png"
-            alt="Whimsy consultant"
+            alt="A smiling Whimsy consultant with shoulder-length blond hair against a pale blue background."
             width={778}
             height={508}
             priority
