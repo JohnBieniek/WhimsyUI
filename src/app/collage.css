@@ -1095,6 +1095,12 @@
     white-space: nowrap;
   }
 
+  .mag-showcase > header > .kicker {
+    font-size: clamp(10px, 3.2vw, 14px);
+    letter-spacing: 0;
+    white-space: nowrap;
+  }
+
   .mag-capabilities,
   .mag-responsive {
     grid-template-columns: minmax(0, 1fr);
