@@ -256,6 +256,56 @@
   border-radius: 0;
 }
 
+.article-page[data-service="strategy-session"] .article-body > article:first-of-type {
+  grid-column: 1 / -1;
+}
+
+.strategy-help {
+  grid-column: 1 / -1;
+  min-width: 0;
+}
+
+.strategy-help > header {
+  margin-bottom: 28px;
+}
+
+.strategy-help-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.strategy-help-grid article {
+  padding: 24px;
+  border-top: 4px solid var(--purple);
+  border-radius: 4px;
+  background: var(--mint);
+}
+
+.strategy-help-grid h3 {
+  margin: 0 0 12px;
+  color: var(--purple);
+  font-family: var(--font-display);
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.strategy-help-grid p {
+  margin: 0;
+}
+
+@media (max-width: 1050px) {
+  .strategy-help-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .strategy-help-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 .article-page[data-service="strategy-session"] .strategy-preparation-note {
   margin: 18px 0 0;
   font-size: 14px;
