@@ -315,6 +315,10 @@
   .strategy-help-grid {
     grid-template-columns: minmax(0, 1fr);
   }
+
+  .strategy-help-grid article {
+    text-align: center;
+  }
 }
 
 .strategy-needs-column > .article-callout,
