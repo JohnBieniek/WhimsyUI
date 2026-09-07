@@ -239,6 +239,15 @@
   border-radius: 120px 10px 120px 10px;
 }
 
+.article-page[data-service="strategy-session"] .article-hero > div:first-child {
+  container-type: inline-size;
+}
+
+.article-hero h1.strategy-session-title {
+  font-size: min(56px, 5.5cqi);
+  white-space: nowrap;
+}
+
 .article-page[data-service="brand-advertising-plan"] .article-image {
   height: auto;
   aspect-ratio: 3 / 2;
@@ -359,7 +368,6 @@
   }
 
   .website-support-service .article-hero h1,
-  .article-hero h1.strategy-session-title,
   .multiverse-service .article-hero h1 {
     font-size: clamp(34px, 3.5vw, 56px);
     white-space: nowrap;
@@ -750,11 +758,6 @@
 
   .strategy-help #strategy-help-title span {
     display: block;
-    white-space: nowrap;
-  }
-
-  .article-hero h1.strategy-session-title {
-    font-size: min(50px, calc((100vw - 56px) / 10));
     white-space: nowrap;
   }
 

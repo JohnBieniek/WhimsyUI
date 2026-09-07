@@ -46,7 +46,7 @@ export default function ContactPage() {
           </div>
           <div className="panel price-list">
             <p className="kicker">Fixed-price services</p>
-            <p>Strategy Session <b>$300</b></p>
+            <p>Buisness consulting session <b>$300</b></p>
             <p>Brand &amp; Advertising Plan <b>$1,000</b></p>
             <p>Website Support <b>$100/hour</b></p>
             <p>Website Transfer <b>$750</b></p>
