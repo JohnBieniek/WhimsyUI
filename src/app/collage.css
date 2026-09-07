@@ -990,6 +990,26 @@
   font-size: 16px;
 }
 
+.single-page-service .service-included {
+  color: #fff;
+  border-top-color: #5b8fd6;
+}
+
+.single-page-service .service-included .website-deliverables-intro,
+.single-page-service .service-included .website-deliverables-grid li {
+  background: #0b3b6f;
+}
+
+.single-page-service .service-included .website-deliverables-intro {
+  border-left-color: #ffbf00;
+}
+
+.single-page-service .service-included .kicker,
+.single-page-service .service-included .website-deliverables-intro h2,
+.single-page-service .service-included .website-deliverables-grid h3 {
+  color: #ffbf00;
+}
+
 .website-deliverables-note {
   display: flex;
   grid-column: 1 / -1;
