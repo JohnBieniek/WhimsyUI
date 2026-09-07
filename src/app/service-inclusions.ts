@@ -52,7 +52,7 @@ export const serviceInclusions: Record<string, ServiceInclusion> = {
       { title: "Request and content review", description: "We review your goals, message, logo, photos, and content to organize the page around what visitors need to know." },
       { title: "Collaborative design", description: "We work with you to shape the layout and visual style around your goals, ideas, and brand, using your feedback to refine the design as we build." },
       { title: "One responsive page", description: "A complete page brings your content together in a layout designed for phones, tablets, and desktops." },
-      { title: "Email and follow-up support", description: "Custom email addresses and follow-up email support help you put your new website to work." },
+      { title: "Email, analytics, and support", description: "Custom email addresses, website analytics to understand visitor activity, and follow-up email support help you put your new website to work." },
     ],
   },
 };
