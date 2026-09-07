@@ -770,6 +770,16 @@
 }
 
 @media (max-width: 700px) {
+  .article-page[data-service="ad-campaign"] .article-body > article {
+    container-type: inline-size;
+    min-width: 0;
+  }
+
+  .article-page[data-service="ad-campaign"] .useful-work-title {
+    font-size: 5.9cqi;
+    white-space: nowrap;
+  }
+
   .strategy-help #strategy-help-title {
     font-size: min(32px, 5cqi);
     white-space: normal;
