@@ -12,7 +12,7 @@ export const serviceInclusions: Record<string, ServiceInclusion> = {
       { title: "Campaign preparation", description: "We review your audience, offer, approved copy, and brand assets, then confirm the formats and sizes for your chosen placements." },
       { title: "Four custom ad designs", description: "Four coordinated designs bring your campaign together with consistent visuals and clear calls to action." },
       { title: "Ready-to-use files", description: "Final digital files are prepared in the agreed formats and sizes so you can share them through your chosen channels." },
-      { title: "Follow-up support", description: "Email support helps you use the finished artwork. Paid advertising spend and placement are separate from the design package." },
+      { title: "Follow-up support", description: "We promote your ads on Whimsy's social channels and provide email support to help you use the finished artwork. Paid advertising spend is separate." },
     ],
   },
   "brand-advertising-plan": {
