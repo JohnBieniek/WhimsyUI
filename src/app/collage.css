@@ -266,7 +266,13 @@
 }
 
 .strategy-help > header {
+  container-type: inline-size;
   margin-bottom: 28px;
+}
+
+.strategy-help #strategy-help-title {
+  font-size: min(52px, 3cqi);
+  white-space: nowrap;
 }
 
 .strategy-help-grid {
