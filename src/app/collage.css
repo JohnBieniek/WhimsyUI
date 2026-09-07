@@ -451,6 +451,18 @@
   border-top: 5px solid #5b8fd6;
 }
 
+.single-page-service .article-body > article:first-of-type {
+  container-type: inline-size;
+  min-width: 0;
+}
+
+@media (min-width: 701px) {
+  .single-page-service .useful-work-title {
+    font-size: min(40px, 4.1cqi);
+    white-space: nowrap;
+  }
+}
+
 .single-page-service .article-callout {
   color: #fff;
   background: #0b3b6f;
