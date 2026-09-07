@@ -952,6 +952,10 @@
   padding-top: 30px;
 }
 
+.article-page[data-service="ad-campaign"] .service-included {
+  border-top: 0;
+}
+
 .service-included .website-deliverables-intro,
 .service-included .website-deliverables-grid li {
   background: #eee3f7;
