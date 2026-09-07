@@ -4,8 +4,8 @@ export const adCampaignImages = [
     "alt": "Sisters Smoothies ad for The Livie, a mango and banana smoothie on a golden background."
   },
   {
-    "src": "/services/ad-campaign/sisters-smoothies-ila.jpg",
-    "alt": "Sisters Smoothies ad for The Ila, a mixed-fruit smoothie on a dark berry background."
+    "src": "/services/ad-campaign/sisters-smoothies-cee-cee.jpg",
+    "alt": "Sisters Smoothies ad for The Cee Cee, a strawberry, cherry, blueberry, and banana smoothie on a pink background."
   },
   {
     "src": "/services/ad-campaign/sisters-smoothies-cali.jpg",
