@@ -337,12 +337,12 @@
   line-height: 1.5;
 }
 
-.article-page[data-service="strategy-session"] .process-block li {
+.process-block li {
   justify-content: center;
   text-align: center;
 }
 
-.article-page[data-service="strategy-session"] .process-block li:last-child {
+.process-block li:last-child {
   border-right: 0;
   border-bottom: 0;
 }
@@ -745,11 +745,6 @@
   border-color: #ffffff55;
 }
 
-.multiverse-service .process-block li:last-child {
-  border-right: 0;
-  border-bottom: 0;
-}
-
 @media (max-width: 700px) {
   .strategy-help #strategy-help-title {
     font-size: min(32px, 5cqi);
@@ -764,12 +759,6 @@
   .article-page[data-service="strategy-session"] .useful-work-title {
     font-size: min(30px, calc((100vw - 56px) / 18));
     white-space: nowrap;
-  }
-
-  .article-page[data-service="strategy-session"] .process-block li,
-  .multiverse-service .process-block li {
-    justify-content: flex-start;
-    text-align: left;
   }
 
   .multiverse-service .article-hero h1 {

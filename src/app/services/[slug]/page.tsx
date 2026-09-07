@@ -14,7 +14,7 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
   if (!service) notFound();
   const isLakeland = slug === "single-page-website";
   const isMultiverse = slug === "five-page-website";
-  const processBlock = <div className="process-block"><p className="kicker">{isMultiverse || slug === "strategy-session" ? "How we work" : "How we do it"}</p><ol>{service.process.map((item, index) => <li key={item}><b>{index + 1}</b><span>{item}</span></li>)}</ol></div>;
+  const processBlock = <div className="process-block"><p className="kicker">How we work</p><ol>{service.process.map((item, index) => <li key={item}><b>{index + 1}</b><span>{item}</span></li>)}</ol></div>;
 
   const needsBlock = <aside className="article-callout"><p className="kicker">What we need</p><ul>{service.need.map((item) => <li key={item}>{item}</li>)}</ul></aside>;
 
