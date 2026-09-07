@@ -1,9 +1,10 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 
 import Home from "./page";
 import WorkPage from "./work/page";
 import ContactPage from "./contact/page";
+import ServicesPage from "./services/page";
 
 vi.mock("next/image", () => ({
   default: ({ alt, ...props }: React.ImgHTMLAttributes<HTMLImageElement>) => (
@@ -18,8 +19,14 @@ describe("Home", () => {
     render(<Home />);
 
     expect(screen.getByRole("heading", { level: 1 })).toBeInTheDocument();
-    expect(screen.getAllByRole("link", { name: /learn more/i })[0]).toHaveAttribute("href", "/services/strategy-session");
     expect(screen.getAllByRole("link", { name: /book a consultation/i })[0]).toHaveAttribute("href", "/contact");
+  });
+
+  it("links the consulting card to its renamed page", () => {
+    render(<ServicesPage />);
+    const card = screen.getByRole("heading", { name: /buisness consulting session/i }).closest("article");
+    expect(card).not.toBeNull();
+    expect(within(card!).getByRole("link", { name: /learn more/i })).toHaveAttribute("href", "/services/business-consulting-session");
   });
 
   it("renders work and contact as distinct pages", () => {

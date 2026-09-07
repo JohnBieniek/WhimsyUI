@@ -214,12 +214,12 @@
   flex: 0 0 auto;
 }
 
-.article-page[data-service="strategy-session"] .article-cta {
+.article-page .article-cta {
   padding-block: 6px;
   margin-top: 0;
 }
 
-.article-page[data-service="strategy-session"] > .article-body {
+.article-page[data-service="business-consulting-session"] > .article-body {
   padding-bottom: 24px;
 }
 
@@ -257,11 +257,11 @@
   text-align: center;
 }
 
-.article-page[data-service="strategy-session"] .article-image {
+.article-page[data-service="business-consulting-session"] .article-image {
   border-radius: 120px 10px 120px 10px;
 }
 
-.article-page[data-service="strategy-session"] .article-hero > div:first-child {
+.article-page[data-service="business-consulting-session"] .article-hero > div:first-child {
   container-type: inline-size;
 }
 
@@ -353,7 +353,7 @@
   padding-block: 16px;
 }
 
-.article-page[data-service="strategy-session"] .strategy-preparation-note {
+.article-page[data-service="business-consulting-session"] .strategy-preparation-note {
   margin: 0;
   font-size: 14px;
   line-height: 1.5;
@@ -778,7 +778,7 @@
     white-space: nowrap;
   }
 
-  .article-page[data-service="strategy-session"] .useful-work-title {
+  .article-page[data-service="business-consulting-session"] .useful-work-title {
     font-size: min(30px, calc((100vw - 56px) / 18));
     white-space: nowrap;
   }

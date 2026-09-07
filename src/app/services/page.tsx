@@ -15,7 +15,7 @@ import { services } from "../content";
 
 const serviceIcons = {
   "ad-campaign": Megaphone,
-  "strategy-session": MessagesSquare,
+  "business-consulting-session": MessagesSquare,
   "brand-advertising-plan": FileChartColumnIncreasing,
   "website-support": MonitorCog,
   "website-transfer": ArrowRightLeft,

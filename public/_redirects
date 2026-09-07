@@ -1,3 +1,5 @@
 /work/holiday-local /work/holiday-in-the-halls 301
-/services/business-consulting /services/strategy-session 301
-/services/business-consulting/ /services/strategy-session 301
+/services/business-consulting /services/business-consulting-session 301
+/services/business-consulting/ /services/business-consulting-session 301
+/services/strategy-session /services/business-consulting-session 301
+/services/strategy-session/ /services/business-consulting-session 301
