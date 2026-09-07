@@ -4,7 +4,6 @@ import offsetSquareCollage from "../../../collage/offset square collage.png";
 import offsetSquareCollageDesktop from "../../../collage/offset square collage desktop.png";
 import {
   ArrowRightLeft,
-  BriefcaseBusiness,
   FileChartColumnIncreasing,
   Files,
   LayoutTemplate,
@@ -16,7 +15,6 @@ import { services } from "../content";
 const serviceIcons = {
   "strategy-session": MessagesSquare,
   "brand-advertising-plan": FileChartColumnIncreasing,
-  "business-consulting": BriefcaseBusiness,
   "website-support": MonitorCog,
   "website-transfer": ArrowRightLeft,
   "single-page-website": LayoutTemplate,
