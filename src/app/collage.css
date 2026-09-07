@@ -740,6 +740,11 @@
 }
 
 @media (max-width: 700px) {
+  .article-hero h1.strategy-session-title {
+    font-size: min(50px, calc((100vw - 56px) / 10));
+    white-space: nowrap;
+  }
+
   .article-page[data-service="strategy-session"] .useful-work-title {
     font-size: min(30px, calc((100vw - 56px) / 18));
     white-space: nowrap;
