@@ -7,12 +7,14 @@ import {
   FileChartColumnIncreasing,
   Files,
   LayoutTemplate,
+  Megaphone,
   MessagesSquare,
   MonitorCog,
 } from "lucide-react";
 import { services } from "../content";
 
 const serviceIcons = {
+  "ad-campaign": Megaphone,
   "strategy-session": MessagesSquare,
   "brand-advertising-plan": FileChartColumnIncreasing,
   "website-support": MonitorCog,
