@@ -306,6 +306,11 @@
   }
 }
 
+.strategy-needs-column > .article-callout,
+.strategy-needs-column > .strategy-preparation-note {
+  padding-block: 16px;
+}
+
 .article-page[data-service="strategy-session"] .strategy-preparation-note {
   margin: 0;
   font-size: 14px;
