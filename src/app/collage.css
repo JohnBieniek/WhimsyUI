@@ -770,6 +770,11 @@
 }
 
 @media (max-width: 700px) {
+  .article-page .process-block li {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
   .article-page[data-service="ad-campaign"] .article-body > article {
     container-type: inline-size;
     min-width: 0;
