@@ -740,6 +740,16 @@
 }
 
 @media (max-width: 700px) {
+  .strategy-help #strategy-help-title {
+    font-size: min(32px, 5cqi);
+    white-space: normal;
+  }
+
+  .strategy-help #strategy-help-title span {
+    display: block;
+    white-space: nowrap;
+  }
+
   .article-hero h1.strategy-session-title {
     font-size: min(50px, calc((100vw - 56px) / 10));
     white-space: nowrap;
