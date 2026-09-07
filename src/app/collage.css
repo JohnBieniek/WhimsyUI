@@ -897,43 +897,43 @@
   font-weight: 900;
 }
 
-.article-page[data-service="strategy-session"] .website-deliverables {
+.website-deliverables.service-included {
   color: var(--ink);
   border-top: 6px solid #000;
   padding-top: 30px;
 }
 
-.article-page[data-service="strategy-session"] .website-deliverables-intro,
-.article-page[data-service="strategy-session"] .website-deliverables-grid li {
+.service-included .website-deliverables-intro,
+.service-included .website-deliverables-grid li {
   background: #eee3f7;
 }
 
-.article-page[data-service="strategy-session"] .website-deliverables-intro {
+.service-included .website-deliverables-intro {
   border-left-color: var(--purple);
 }
 
-.article-page[data-service="strategy-session"] .website-deliverables-intro h2,
-.article-page[data-service="strategy-session"] .website-deliverables-grid h3 {
+.service-included .website-deliverables-intro h2,
+.service-included .website-deliverables-grid h3 {
   color: var(--purple);
 }
 
-.article-page[data-service="strategy-session"] .website-deliverables-intro h2 {
+.service-included .website-deliverables-intro h2 {
   font-size: min(32px, 5.7cqi);
 }
 
-.article-page[data-service="strategy-session"] .website-deliverables-grid {
+.service-included .website-deliverables-grid {
   gap: 16px;
 }
 
-.article-page[data-service="strategy-session"] .website-deliverables-grid li {
+.service-included .website-deliverables-grid li {
   padding: 20px;
 }
 
-.article-page[data-service="strategy-session"] .website-deliverables-grid h3 {
+.service-included .website-deliverables-grid h3 {
   font-size: 18px;
 }
 
-.article-page[data-service="strategy-session"] .website-deliverables-grid p {
+.service-included .website-deliverables-grid p {
   font-size: 16px;
 }
 

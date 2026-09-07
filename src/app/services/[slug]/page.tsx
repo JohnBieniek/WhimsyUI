@@ -3,6 +3,7 @@ import { getImageAlt } from "../../image-alt";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { services } from "../../content";
+import { serviceInclusions } from "../../service-inclusions";
 
 export function generateStaticParams() {
   return services.map(({ slug }) => ({ slug }));
@@ -12,6 +13,7 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
   const { slug } = await params;
   const service = services.find((item) => item.slug === slug);
   if (!service) notFound();
+  const included = serviceInclusions[slug];
   const isLakeland = slug === "single-page-website";
   const isMultiverse = slug === "five-page-website";
   const processBlock = <div className="process-block"><p className="kicker">How we work</p><ol>{service.process.map((item, index) => <li key={item}><b>{index + 1}</b><span>{item}</span></li>)}</ol></div>;
@@ -58,7 +60,7 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
         <li><h3>Handoff and support</h3><p>Launch help, a site walkthrough, and follow-up email support.</p></li>
       </ul>
       <div className="website-deliverables-note"><strong>Need something more interactive?</strong><p>We’ll scope custom tools before work begins.</p></div>
-    </section> : slug === "strategy-session" ? <section className="website-deliverables" aria-labelledby="strategy-deliverables-title">
+    </section> : slug === "strategy-session" ? <section className="website-deliverables service-included" aria-labelledby="strategy-deliverables-title">
       <header className="website-deliverables-intro">
         <p className="kicker">What’s included</p>
         <h2 id="strategy-deliverables-title"><span>Clear decisions, captured</span>{" "}<span>in a practical plan.</span></h2>
@@ -70,7 +72,16 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
         <li><h3>Strategy Brief</h3><p>A written decision framework and assessment of opportunities and risks, with a concise action summary and implementation roadmap covering priorities, recommended tools, timing, responsibilities, and measures of success.</p></li>
         <li><h3>Follow-up support</h3><p>Delivery within three business days, plus one round of clarification questions by email within seven days.</p></li>
       </ul>
-    </section> : <article><p className="kicker">Deliverables</p><h2 className="momentum-title">{slug === "ad-campaign" ? "Four ads, ready to share." : "You leave with momentum."}</h2><ul className="deliverables">{service.deliverables.map((item) => <li key={item}>{item}</li>)}</ul></article>}</section>
+    </section> : included && <section className="website-deliverables service-included" aria-labelledby="service-included-title">
+      <header className="website-deliverables-intro">
+        <p className="kicker">What&apos;s included</p>
+        <h2 id="service-included-title"><span>{included.title[0]}</span>{" "}<span>{included.title[1]}</span></h2>
+        <p>{included.intro}</p>
+      </header>
+      <ul className="website-deliverables-grid" role="list">
+        {included.items.map((item) => <li key={item.title}><h3>{item.title}</h3><p>{item.description}</p></li>)}
+      </ul>
+    </section>}</section>
     <section className="article-cta"><div className="shell"><p className="kicker">Ready when you are</p><h2>Let’s make the next step clear.</h2><Link className="button" href="/contact">Book a consultation →</Link></div></section>
   </main>;
 }
