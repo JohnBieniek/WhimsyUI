@@ -214,6 +214,10 @@
   flex: 0 0 auto;
 }
 
+.article-page[data-service="strategy-session"] .article-cta {
+  padding-block: 24px;
+}
+
 .article-page > .article-hero {
   padding-bottom: clamp(12px, 2vw, 20px);
 }
