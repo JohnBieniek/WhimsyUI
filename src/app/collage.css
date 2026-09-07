@@ -235,6 +235,28 @@
   padding-top: clamp(18px, 2vw, 24px);
 }
 
+.ad-campaign-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  min-width: 0;
+  margin: 0;
+}
+
+.ad-campaign-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.ad-campaign-gallery figcaption {
+  grid-column: 1 / -1;
+  color: var(--purple);
+  font-size: 13px;
+  text-align: center;
+}
+
 .article-page[data-service="strategy-session"] .article-image {
   border-radius: 120px 10px 120px 10px;
 }
