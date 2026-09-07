@@ -422,9 +422,7 @@
 
 .single-page-service .article-hero {
   color: #0b2f4a;
-  background: #fff;
-  box-shadow: 0 0 0 100vmax #fff;
-  clip-path: inset(0 -100vmax);
+  background: #f7f6f2;
 }
 
 .single-page-service .article-hero .back-link,
@@ -463,17 +461,17 @@
 }
 
 .single-page-service .process-block {
-  color: #0b2f4a;
-  background: #5b8fd6;
+  color: #fff;
+  background: #0b3b6f;
 }
 
 .single-page-service .process-block .kicker,
 .single-page-service .process-block b {
-  color: #fff;
+  color: #ffbf00;
 }
 
 .single-page-service .process-block li {
-  border-color: #ffffff70;
+  border-color: #ffbf0066;
 }
 
 .single-page-service .featured-site {
