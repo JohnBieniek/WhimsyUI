@@ -863,7 +863,7 @@
 
 .article-page[data-service="strategy-session"] .website-deliverables {
   color: var(--ink);
-  border-top: 6px solid var(--mint-strong);
+  border-top: 6px solid #000;
   padding-top: 30px;
 }
 
