@@ -1381,3 +1381,12 @@
   }
   .ad-collage.home-collage::before{width:190px;height:190px;left:-25px;top:70px}.ad-collage.home-collage::after{width:190px;height:190px;right:35px;top:15px;box-shadow:85px 80px 0 #dff2ed}
 }
+
+/* Keep consecutive text paragraphs separated by half their font size. */
+main p:not(.kicker, .tag):has(+ p:not(.kicker, .tag)) {
+  margin-bottom: 0;
+}
+
+main p:not(.kicker, .tag) + p:not(.kicker, .tag) {
+  margin-top: 0.5em;
+}
