@@ -703,6 +703,10 @@
   letter-spacing: -0.03em;
 }
 
+.multiverse-service .article-body > article > ul > li + li > p:first-child {
+  margin-top: 0.5em;
+}
+
 .multiverse-service .useful-work-title span {
   display: block;
   white-space: nowrap;
