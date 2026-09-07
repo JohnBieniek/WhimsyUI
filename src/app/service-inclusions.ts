@@ -50,7 +50,7 @@ export const serviceInclusions: Record<string, ServiceInclusion> = {
     intro: "We turn your approved content and brand assets into a focused website that makes your offer and the next step easy to understand.",
     items: [
       { title: "Request and content review", description: "We review your goals, message, logo, photos, and content to organize the page around what visitors need to know." },
-      { title: "Three design choices", description: "Three custom design choices give you a clear direction to select before we build the finished page." },
+      { title: "Collaborative design", description: "We work with you to shape the layout and visual style around your goals, ideas, and brand, using your feedback to refine the design as we build." },
       { title: "One responsive page", description: "A complete page brings your content together in a layout designed for phones, tablets, and desktops." },
       { title: "Email and follow-up support", description: "Custom email addresses and follow-up email support help you put your new website to work." },
     ],
