@@ -216,6 +216,11 @@
 
 .article-page[data-service="strategy-session"] .article-cta {
   padding-block: 12px;
+  margin-top: 0;
+}
+
+.article-page[data-service="strategy-session"] > .article-body {
+  padding-bottom: 24px;
 }
 
 .article-page > .article-hero {
