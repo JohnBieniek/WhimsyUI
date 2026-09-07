@@ -740,6 +740,11 @@
 }
 
 @media (max-width: 700px) {
+  .article-page[data-service="strategy-session"] .useful-work-title {
+    font-size: min(30px, calc((100vw - 56px) / 18));
+    white-space: nowrap;
+  }
+
   .article-page[data-service="strategy-session"] .process-block li,
   .multiverse-service .process-block li {
     justify-content: flex-start;
