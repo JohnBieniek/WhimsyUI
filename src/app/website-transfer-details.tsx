@@ -16,9 +16,9 @@ export function WebsiteTransferHandoff() {
     </header>
     <div className="transfer-handoff-grid">
       <article>
-        <h3>Access to your content and accounts</h3>
-        <p>We give you access to the transferred website content, files, and the accounts needed to manage it, including your hosting and analytics. We explain where everything lives and how content changes are made in the new setup. Your domain remains under your control.</p>
-        <p>We can update the site for you after launch, too. Follow-up email support covers questions about the transfer; ongoing edits and additional development can be arranged through <Link href="/services/website-support">Website Support</Link>.</p>
+        <h3>Full CMS access, on your terms</h3>
+        <p>You get full access to our CMS and can make your own website content updates for free, without contacting or hiring us. We show you how to make changes and give you access to your transferred files and the accounts needed to manage the site, including hosting and analytics. Your domain remains under your control.</p>
+        <p>Follow-up email support covers questions about the transfer and using your CMS. If you would like us to make edits for you or build additional features, paid help is optional and available through <Link href="/services/website-support">Website Support</Link>.</p>
       </article>
       <article>
         <h3>Understand how people use your site</h3>

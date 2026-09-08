@@ -51,8 +51,8 @@ export const serviceInclusions: Record<string, ServiceInclusion> = {
       "description": "Connect your existing domain, configure DNS, review email settings, and check redirects, forms, and the live site after the move."
     },
     {
-      "title": "Content access and analytics",
-      "description": "Access to your website content and management accounts, plus Cloudflare Web Analytics setup and a walkthrough of its traffic and performance reports."
+      "title": "Full CMS access and analytics",
+      "description": "Full CMS access lets you update your website content yourself for free, without needing us. Website management accounts, Cloudflare Web Analytics setup, and a walkthrough of its reports are included."
     },
     {
       "title": "Launch and follow-up support",
@@ -66,7 +66,7 @@ export const serviceInclusions: Record<string, ServiceInclusion> = {
     items: [
       { title: "Request and content review", description: "We review your goals, message, logo, photos, and content to organize the page around what visitors need to know." },
       { title: "Collaborative design", description: "We work with you to shape the layout and visual style around your goals, ideas, and brand, using your feedback to refine the design as we build." },
-      { title: "One responsive page", description: "A complete page brings your content together in a layout designed for phones, tablets, and desktops." },
+      { title: "One responsive page", description: "A complete page brings your content together in a layout designed for phones, tablets, and desktops. Full CMS access lets you keep that content up to date yourself for free, without needing us." },
       { title: "Email, analytics, and support", description: "Custom email addresses, website analytics to understand visitor activity, and follow-up email support help you put your new website to work." },
     ],
   },
