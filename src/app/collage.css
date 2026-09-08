@@ -413,7 +413,7 @@
 .single-page-service {
   overflow: hidden;
   color: #0b2f4a;
-  background: #f7f6f2;
+  background: #fff;
 }
 
 .single-page-service .kicker {
@@ -422,7 +422,7 @@
 
 .single-page-service .article-hero {
   color: #0b2f4a;
-  background: #f7f6f2;
+  background: #fff;
 }
 
 .single-page-service .article-hero .back-link,
@@ -488,7 +488,7 @@
 
 .single-page-service .featured-site {
   border: 1px solid #5b8fd655;
-  background: #fff;
+  background: #f7f6f2;
   box-shadow: 12px 12px 0 #5b8fd6;
 }
 
