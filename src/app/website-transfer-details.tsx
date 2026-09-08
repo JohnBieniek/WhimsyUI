@@ -5,7 +5,6 @@ export function WebsiteTransferOverview() {
     <p>We begin with a complete inventory of your website: pages, menus, images, downloads, contact forms, booking tools, payment links, and other features. Together, we confirm what needs to stay, what needs updating, and how the replacement will work. Keeping your existing pages and functionality is part of the plan, not something left until launch day.</p>
     <p>Moving away from Wix or a similar closed website builder can mean rebuilding the site rather than copying its files. We recreate your content and layouts and reconnect the tools your customers use. If a platform-specific feature needs a replacement, we explain the options and agree on the solution and any additional cost before starting.</p>
     <p>You keep your existing domain name. We connect it to the new site by updating its routing settings, check the security certificate, and preserve existing page addresses wherever possible. Where an address changes, we add a redirect to send visitors to the right page. We also review your email settings so the website move does not accidentally disrupt business email.</p>
-    <p>The $750 package includes the agreed basic updates to existing content, such as text, photos, hours, and contact details, along with redirect checks, form testing, and launch verification. We prepare and review the replacement before switching over. New pages, new functionality, larger redesigns, and third-party subscriptions are separate costs, with any additional work quoted and approved first.</p>
   </>;
 }
 
