@@ -264,6 +264,16 @@
   min-width: 0;
 }
 
+.article-page[data-service="website-transfer"] .article-body > article:first-of-type {
+  container-type: inline-size;
+  min-width: 0;
+}
+
+.article-page[data-service="website-transfer"] .useful-work-title {
+  font-size: min(40px, 5cqi);
+  white-space: nowrap;
+}
+
 .transfer-handoff-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
