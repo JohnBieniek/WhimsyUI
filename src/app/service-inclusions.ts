@@ -26,13 +26,13 @@ export const serviceInclusions: Record<string, ServiceInclusion> = {
     ],
   },
   "website-support": {
-    title: ["Practical website help,", "where you need it."],
-    intro: "We review your requests, agree on priorities and estimated time, and complete the updates within the approved hourly scope.",
+    title: ["The work you need,", "with a clear handoff."],
+    intro: "Support is billed at $100 per hour for the scope we agree together. Each request includes a clear plan, the agreed changes, and checks before handoff.",
     items: [
-      { title: "Content and design updates", description: "Refresh text, images, layouts, and other existing content so your site stays accurate and useful." },
-      { title: "Technical fixes", description: "Investigate and resolve the agreed website issues. We work with any programming language and review your existing setup before estimating the work." },
-      { title: "Features and accessibility", description: "Implement agreed feature requests and accessibility improvements that help people navigate and use your website." },
-      { title: "Completion notes", description: "A clear handoff explains what changed, what was checked, and any remaining work or recommended next steps." },
+      { title: "Review and estimate", description: "We assess your requests and site access, agree on priorities, and outline the work and estimated time. Any paid tools or services needed are identified for your approval." },
+      { title: "Agreed website changes", description: "We carry out the approved content edits, repairs, design improvements, or feature work within your existing setup, with updates on progress and any decisions needed." },
+      { title: "Testing and publishing", description: "We check the affected links, forms, or features and review relevant desktop and mobile layouts. Publishing is coordinated with you, followed by checks on the live site." },
+      { title: "Walkthrough and completion notes", description: "You receive a summary of the changes and checks, instructions for any new features, and details of any remaining issues or recommended next steps." },
     ],
   },
   "website-transfer": {
