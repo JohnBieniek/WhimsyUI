@@ -36,15 +36,30 @@ export const serviceInclusions: Record<string, ServiceInclusion> = {
     ],
   },
   "website-transfer": {
-    title: ["A carefully managed move,", "with the details checked."],
-    intro: "We prepare your website transfer, coordinate the move, and verify that the important paths still work when it is complete.",
-    items: [
-      { title: "Domain and DNS setup", description: "Review your current configuration and update the domain and DNS settings needed for the agreed destination." },
-      { title: "Redirect and form checks", description: "Check key redirects and forms so visitors can reach the right pages and continue contacting your business." },
-      { title: "Updates and launch verification", description: "Complete basic website updates included in the transfer and verify the site at its new destination." },
-      { title: "Follow-up support", description: "Email support helps answer questions about the completed move and the updated website setup." },
-    ],
-  },
+  "title": [
+    "Your website, moved,",
+    "checked, and handed over."
+  ],
+  "intro": "The agreed transfer includes your existing pages and functionality, basic content updates, domain setup, launch checks, and a practical handoff.",
+  "items": [
+    {
+      "title": "Pages, features, and updates",
+      "description": "Migrate or rebuild your existing pages and agreed functionality, with basic updates to current text and images. Any new pages, extra features, or larger redesigns are quoted separately."
+    },
+    {
+      "title": "Same domain, checked connections",
+      "description": "Connect your existing domain, configure DNS, review email settings, and check redirects, forms, and the live site after the move."
+    },
+    {
+      "title": "Content access and analytics",
+      "description": "Access to your website content and management accounts, plus Cloudflare Web Analytics setup and a walkthrough of its traffic and performance reports."
+    },
+    {
+      "title": "Launch and follow-up support",
+      "description": "Review the replacement before switching over, verify the launch, and get follow-up email support for questions about the transfer."
+    }
+  ]
+},
   "single-page-website": {
     title: ["One responsive page,", "built around your offer."],
     intro: "We turn your approved content and brand assets into a focused website that makes your offer and the next step easy to understand.",

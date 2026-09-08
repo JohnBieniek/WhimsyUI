@@ -259,6 +259,41 @@
   text-align: center;
 }
 
+.transfer-handoff {
+  grid-column: 1 / -1;
+  min-width: 0;
+}
+
+.transfer-handoff-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.transfer-handoff-grid article {
+  padding: 28px;
+  background: var(--mint);
+  border-radius: 8px;
+}
+
+.transfer-handoff-grid h3 {
+  color: var(--purple);
+  font-size: 22px;
+  margin: 0 0 12px;
+}
+
+.transfer-handoff-grid a {
+  color: var(--purple);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 700px) {
+  .transfer-handoff-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .article-page[data-service="business-consulting-session"] .article-image {
   border-radius: 120px 10px 120px 10px;
 }
