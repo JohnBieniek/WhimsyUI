@@ -10,10 +10,15 @@ export function PagesCmsCard() {
       <p><strong>You will have a seperate beta copy of your website to test your changes.</strong> This is a practice version with its own link. You can publish changes there first, see how they look, and check photos, links, and page layouts before your customers see them. When you are happy, you can promote those changes to your live website, the real version your customers visit. Your live site stays as it is until you choose to publish the checked changes. We show you how to use both copies and move changes from beta to live.</p>
     </header>
     <figure>
-      <a href="/Pages%20CMS.png" target="_blank" rel="noopener noreferrer" aria-label="Open the Pages CMS screenshot at full size">
-        <Image src="/Pages%20CMS.png" alt="Pages CMS showing a menu of website sections, editable slideshow photos, image descriptions, and a Save button" width={3670} height={1494} sizes="(max-width: 700px) 100vw, 90vw" />
-      </a>
-      <figcaption>A real example: choose a section on the left, change its photos or words, and save. Select the image for a closer look.</figcaption>
+      <div className="pages-cms-images">
+        <a href="/Pages%20CMS.png" target="_blank" rel="noopener noreferrer" aria-label="Open the Pages CMS photo editor screenshot at full size">
+          <Image src="/Pages%20CMS.png" alt="Pages CMS showing a menu of website sections, editable slideshow photos, image descriptions, and a Save button" width={2165} height={1494} sizes="(max-width: 700px) 45vw, 42vw" />
+        </a>
+        <a href="/Pages%20CMS%202.png" target="_blank" rel="noopener noreferrer" aria-label="Open the Pages CMS service editor screenshot at full size">
+          <Image src="/Pages%20CMS%202.png" alt="Pages CMS service editor with labeled fields for Music & DJ and Fire Performance titles, descriptions, and details" width={2087} height={1494} sizes="(max-width: 700px) 45vw, 42vw" />
+        </a>
+      </div>
+      <figcaption>Real examples: choose a section on the left, change its photos or words, and save. Select either image for a closer look.</figcaption>
     </figure>
     <ol className="pages-cms-steps">
       <li><h3>Sign in</h3><p>Open the editor link we give you in your web browser. We help you get access and show you around before handing over the site.</p></li>
