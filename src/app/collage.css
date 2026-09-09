@@ -273,17 +273,17 @@
 }
 
 .single-page-service .pages-cms-card {
-  --mint: #0b3b6f;
-  --purple: #ffbf00;
+  --mint: #dcecff;
+  --purple: #0b3b6f;
   --line: #5b8fd655;
   --mint-strong: #ffbf00;
-  color: #fff;
+  color: #0b2f4a;
   border-top: 5px solid #ffbf00;
 }
 
 .single-page-service .pages-cms-card h2,
 .single-page-service .pages-cms-card .kicker {
-  color: #ffbf00;
+  color: #0b3b6f;
 }
 
 .multiverse-service .pages-cms-card {
