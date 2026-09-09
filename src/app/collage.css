@@ -455,6 +455,10 @@
   min-width: 0;
 }
 
+.article-page[data-service="website-transfer"] .article-callout {
+  background: #eee3f6;
+}
+
 .article-page[data-service="website-transfer"] .article-body > article:first-of-type {
   container-type: inline-size;
   min-width: 0;
