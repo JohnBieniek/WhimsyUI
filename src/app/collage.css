@@ -678,8 +678,17 @@
     font-size: clamp(30px, 8vw, 48px);
   }
 
+  .article-page[data-service="brand-advertising-plan"] .article-body > article {
+    container-type: inline-size;
+  }
+
   .article-page[data-service="brand-advertising-plan"] .useful-work-title {
-    font-size: clamp(26px, 7vw, 38px);
+    font-size: min(30px, 6cqi);
+  }
+
+  .article-page[data-service="brand-advertising-plan"] .useful-work-title span {
+    display: block;
+    white-space: nowrap;
   }
 }
 
