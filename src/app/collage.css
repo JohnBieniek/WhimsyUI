@@ -360,6 +360,12 @@
   align-items: start;
 }
 
+.pages-cms-images a {
+  aspect-ratio: 2165 / 1494;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
 .pages-cms-card img {
   display: block;
   width: 100%;
