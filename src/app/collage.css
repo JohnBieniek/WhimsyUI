@@ -343,6 +343,17 @@
   max-width: none;
 }
 
+@media (max-width: 700px) {
+  .transfer-costs > header {
+    container-type: inline-size;
+  }
+
+  .transfer-costs > header > .kicker {
+    font-size: min(18px, 5cqi);
+    white-space: nowrap;
+  }
+}
+
 .pages-cms-card h2,
 .transfer-costs h2 {
   font-size: clamp(28px, 3.2vw, 44px);
