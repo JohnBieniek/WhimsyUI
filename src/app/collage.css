@@ -865,17 +865,17 @@
 }
 
 .single-page-service .process-block {
-  color: #fff;
-  background: #0b3b6f;
+  color: #0b2f4a;
+  background: #f7f1d8;
 }
 
 .single-page-service .process-block .kicker,
 .single-page-service .process-block b {
-  color: #ffbf00;
+  color: #0b3b6f;
 }
 
 .single-page-service .process-block li {
-  border-color: #ffbf0066;
+  border-color: #0b3b6f33;
 }
 
 .single-page-service .featured-site {
