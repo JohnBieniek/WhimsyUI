@@ -77,7 +77,7 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
         <li><h3>Pre-session review</h3><p>A short intake followed by our review of your goals, relevant numbers, links, materials, and current situation.</p></li>
         <li><h3>90-minute working session</h3><p>A focused discussion of your business, operations, and marketing that evaluates options, opportunities, and risks and resolves the decisions holding you back.</p></li>
         <li><h3>Strategy Brief</h3><p>A written decision framework and assessment of opportunities and risks, with a concise action summary and implementation roadmap covering priorities, recommended tools, timing, responsibilities, and measures of success.</p></li>
-        <li><h3>Follow-up support</h3><p>Delivery within three business days, plus one round of clarification questions by email within seven days.</p></li>
+        <li><h3>Follow-up support</h3><p>Delivery of a written strategy briefing within three business days, plus up to three rounds of clarification questions by email within seven days.</p></li>
       </ul>
     </section> : included && <>{slug === "website-transfer" && <WebsiteTransferHandoff />}<section className="website-deliverables service-included" aria-labelledby="service-included-title">
       <header className="website-deliverables-intro">
