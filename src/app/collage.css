@@ -536,6 +536,10 @@
   margin-bottom: 24px;
 }
 
+.brand-ad-rollout > header {
+  max-width: none;
+}
+
 .brand-plan-section h2 {
   font-size: clamp(26px, 2.6vw, 38px);
   line-height: 1.15;
