@@ -273,16 +273,17 @@
 }
 
 .single-page-service .pages-cms-card {
-  --mint: #f7f6f2;
-  --purple: #0b3b6f;
+  --mint: #0b3b6f;
+  --purple: #ffbf00;
   --line: #5b8fd655;
   --mint-strong: #ffbf00;
-  color: #0b2f4a;
+  color: #fff;
   border-top: 5px solid #ffbf00;
 }
 
-.single-page-service .pages-cms-card h2 {
-  color: #0b3b6f;
+.single-page-service .pages-cms-card h2,
+.single-page-service .pages-cms-card .kicker {
+  color: #ffbf00;
 }
 
 .multiverse-service .pages-cms-card {
