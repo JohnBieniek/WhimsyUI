@@ -12,10 +12,10 @@ export function PagesCmsCard() {
     <figure>
       <div className="pages-cms-images">
         <a href="/Pages%20CMS.png" target="_blank" rel="noopener noreferrer" aria-label="Open the Pages CMS photo editor screenshot at full size">
-          <Image src="/Pages%20CMS.png" alt="Pages CMS showing a menu of website sections, editable slideshow photos, image descriptions, and a Save button" width={2165} height={1494} sizes="(max-width: 700px) 45vw, 42vw" />
+          <Image src="/Pages%20CMS.png" alt="Pages CMS showing a menu of website sections, editable slideshow photos, image descriptions, and a Save button" width={2165} height={1494} sizes="(max-width: 700px) 100vw, 42vw" />
         </a>
         <a href="/Pages%20CMS%202.png" target="_blank" rel="noopener noreferrer" aria-label="Open the Pages CMS service editor screenshot at full size">
-          <Image src="/Pages%20CMS%202.png" alt="Pages CMS service editor with labeled fields for Music & DJ and Fire Performance titles, descriptions, and details" width={2087} height={1494} sizes="(max-width: 700px) 45vw, 42vw" />
+          <Image src="/Pages%20CMS%202.png" alt="Pages CMS service editor with labeled fields for Music & DJ and Fire Performance titles, descriptions, and details" width={2087} height={1494} sizes="(max-width: 700px) 100vw, 42vw" />
         </a>
       </div>
       <figcaption>Real examples: choose a section on the left, change its photos or words, and save. Select either image for a closer look.</figcaption>

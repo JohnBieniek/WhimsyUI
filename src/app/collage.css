@@ -391,6 +391,12 @@
   border-radius: 8px;
 }
 
+@media (max-width: 700px) {
+  .pages-cms-images {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 .pages-cms-card img {
   display: block;
   width: 100%;
