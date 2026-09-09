@@ -352,6 +352,15 @@
     font-size: min(18px, 5cqi);
     white-space: nowrap;
   }
+
+  .transfer-costs #transfer-costs-title {
+    font-size: min(30px, 5.5cqi);
+  }
+
+  .transfer-costs #transfer-costs-title span {
+    display: block;
+    white-space: nowrap;
+  }
 }
 
 .pages-cms-card h2,
