@@ -12,6 +12,7 @@ import {
   MonitorCog,
 } from "lucide-react";
 import { services } from "../content";
+import { CreatorCredit } from "../creator-credit";
 
 const serviceIcons = {
   "ad-campaign": Megaphone,
@@ -102,6 +103,7 @@ export default function ServicesPage() {
           Book a consultation →
         </Link>
       </section>
+      <CreatorCredit />
     </main>
   );
 }

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ContactForm from "../contact-form";
 import { Partners } from "../site-chrome";
+import { CreatorCredit } from "../creator-credit";
 
 export default function ContactPage() {
   return (
@@ -57,6 +58,7 @@ export default function ContactPage() {
         </aside>
       </section>
       <Partners />
+      <CreatorCredit />
     </main>
   );
 }

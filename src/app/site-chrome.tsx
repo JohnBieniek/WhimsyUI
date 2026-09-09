@@ -11,8 +11,6 @@ const links = [["/", "Home"], ["/services", "Services & Pricing"], ["/contact", 
 export function SiteHeader(){const path=usePathname();return <header className={`site-header shell${path==="/"?" home-header":""}`}><Link href="/" className="nav-logo"><Image src="/logo%20tight.png" alt="Whimsy home" width={4744} height={2198} priority/></Link><nav aria-label="Main navigation">{links.map(([href,label])=><Link key={href} href={href} className={path===href?"active":""}>{label}</Link>)}</nav></header>}
 
 export function SiteFooter() {
-  const path = usePathname();
-  const showCreator = path === "/" || path === "/services" || path === "/contact";
   const [pressed, setPressed] = useState(false);
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const startPress = () => { timer.current = setTimeout(() => setPressed(true), 550); };
@@ -23,11 +21,6 @@ export function SiteFooter() {
       <p>Whimsy · Jackson, Michigan</p>
       <p className={`footer-version${pressed ? " pressed" : ""}`} tabIndex={0} onPointerDown={startPress} onPointerUp={endPress} onPointerCancel={endPress} onPointerLeave={endPress} onClick={() => pressed && setPressed(false)}>Consulting · Media · Marketing <small aria-label={`Version ${appVersion}`}>v{appVersion}</small></p>
     </div>
-    {showCreator && <div className="creator-credit">
-      <p>Created by</p>
-      <Image src="/logo%20white%20tight%20smaller.png" alt="Whimsy — Consulting, Media, Marketing" width={647} height={300} sizes="220px" />
-      <a href="https://facebook.com/Experiencewhimsy" target="_blank" rel="noopener noreferrer">facebook.com/Experiencewhimsy</a>
-    </div>}
   </footer>;
 }
 
