@@ -16,13 +16,15 @@ export const serviceInclusions: Record<string, ServiceInclusion> = {
     ],
   },
   "brand-advertising-plan": {
-    title: ["A clear brand direction,", "with a plan to promote it."],
-    intro: "We connect your message, audience, and channels in a practical 90-day promotion plan built around your budget and capacity.",
+    title: ["Your next three months,", "ready to put into motion."],
+    intro: "The $1,000 package connects the strategy, creative, and rollout in one practical handoff. We walk through the plan with you so your team knows how to use it.",
     items: [
-      { title: "Brand and message audit", description: "We review your existing brand, messaging, and marketing efforts to identify strengths, gaps, and the clearest way to explain your value." },
-      { title: "Audience and channel strategy", description: "Recommendations identify who to reach and how your channels can work together as a coordinated, omnichannel strategy." },
-      { title: "90-day advertising plan", description: "A promotion plan sets out campaign priorities, recommended channels, and timing for the next three months." },
-      { title: "Style guide and support", description: "A marketing brand style guide helps keep your visuals and voice consistent, with follow-up email support as you put the plan into use." },
+      { title: "Brand audit and audience profiles", description: "A review of your existing presence and a written summary of priority customer groups, their needs, buying questions, and the opportunities your campaign should address." },
+      { title: "Unified message and brand guide", description: "A core company message for the next 90 days, supporting talking points, voice and tone guidance, and visual rules for logos, colors, fonts, imagery, and formatting." },
+      { title: "Channel plan and campaign calendar", description: "Recommendations for your channel mix, each channel's role, and a three-month schedule connecting the ads to your offers, publishing responsibilities, and results to track." },
+      { title: "12 custom digital ads", description: "Twelve coordinated ad designs, reviewed with you and delivered in the agreed formats and sizes for your campaign placements." },
+      { title: "Whimsy website placements", description: "All 12 ads run on the Whimsy website during the three-month campaign, with timing and links coordinated around your plan." },
+      { title: "Walkthrough and email support", description: "A practical walkthrough of the guides, calendar, and ad files, plus follow-up email support for questions as you use them." },
     ],
   },
   "website-support": {

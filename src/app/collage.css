@@ -327,6 +327,115 @@
   object-fit: contain;
 }
 
+.brand-plan-section {
+  grid-column: 1 / -1;
+  min-width: 0;
+  padding-top: 28px;
+  border-top: 2px solid var(--line);
+}
+
+.brand-plan-section > header {
+  max-width: 1050px;
+  margin-bottom: 24px;
+}
+
+.brand-plan-section h2 {
+  font-size: clamp(26px, 2.6vw, 38px);
+  line-height: 1.15;
+}
+
+.brand-guide-grid,
+.brand-placement-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.brand-channel-grid,
+.brand-month-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.brand-plan-section article,
+.brand-month-grid > li {
+  padding: 24px;
+  border-radius: 8px;
+  background: var(--mint);
+}
+
+.brand-guide-grid article {
+  background: #eee3f7;
+}
+
+.brand-plan-section h3 {
+  margin: 0 0 14px;
+  color: var(--purple);
+  font-family: var(--font-display);
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.brand-plan-section article p:last-child,
+.brand-month-grid p:last-child {
+  margin-bottom: 0;
+}
+
+.brand-guide-grid ul {
+  margin: 0;
+  padding-left: 20px;
+  list-style: disc;
+  line-height: 1.7;
+}
+
+.brand-guide-grid li + li {
+  margin-top: 12px;
+}
+
+.brand-plan-note {
+  margin: 20px 0 0;
+}
+
+.brand-month-grid {
+  margin: 0 0 24px;
+  padding: 0;
+  list-style: none;
+}
+
+.brand-month-grid > li {
+  color: #fff;
+  background: var(--purple);
+}
+
+.brand-month-grid .kicker,
+.brand-month-grid h3 {
+  color: #fff;
+}
+
+@media (min-width: 701px) and (max-width: 1050px) {
+  .brand-channel-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .brand-guide-grid,
+  .brand-channel-grid,
+  .brand-month-grid,
+  .brand-placement-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .article-page[data-service="brand-advertising-plan"] .article-hero h1 {
+    font-size: clamp(30px, 8vw, 48px);
+  }
+
+  .article-page[data-service="brand-advertising-plan"] .useful-work-title {
+    font-size: clamp(26px, 7vw, 38px);
+  }
+}
+
 .article-page[data-service="website-support"] .article-image {
   border-radius: 16px 100px 16px 16px;
 }
