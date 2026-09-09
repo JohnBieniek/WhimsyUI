@@ -524,6 +524,18 @@
   white-space: nowrap;
 }
 
+.transfer-costs th .transfer-plan-detail {
+  display: inline;
+  font: inherit;
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .transfer-costs th .transfer-plan-detail {
+    display: none;
+  }
+}
+
 .transfer-cost-details {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
