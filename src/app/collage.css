@@ -300,6 +300,12 @@
   color: #33612f;
 }
 
+.transfer-costs > header,
+.transfer-costs > header > p {
+  width: 100%;
+  max-width: none;
+}
+
 .pages-cms-card h2,
 .transfer-costs h2 {
   font-size: clamp(28px, 3.2vw, 44px);
