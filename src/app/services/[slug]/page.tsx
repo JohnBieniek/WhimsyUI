@@ -64,7 +64,7 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
         <li><h3>A Cross platform site</h3><p>Custom layouts built for phones, tablets, and desktops.</p></li>
         <li><h3>Structure and strategy</h3><p>Clear content, visitor paths, calls to action, and feature planning.</p></li>
         <li><h3>Launch setup</h3><p>Domain, security, business email, analytics, and final testing.</p></li>
-        <li><h3>Full CMS access and support</h3><p>Full access to your CMS and a walkthrough so you can update your website content yourself for free, without needing us. Launch help and follow-up email support are included.</p></li>
+        <li><h3>Full CMS access</h3><p>Full access to your CMS and a walkthrough so you can update your website content yourself for free, without needing us. Launch help and follow-up email support are included.</p></li>
       </ul>
       <div className="website-deliverables-note"><strong>Need something more interactive?</strong><p>We’ll scope custom tools before work begins.</p></div>
     </section> : slug === "business-consulting-session" ? <section className="website-deliverables service-included" aria-labelledby="strategy-deliverables-title">
