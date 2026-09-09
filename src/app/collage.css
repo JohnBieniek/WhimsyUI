@@ -1587,6 +1587,29 @@
   font-size: 18px;
 }
 
+.service-title-mobile {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .service-mobile-title-card {
+    container-type: inline-size;
+  }
+
+  .service-mobile-title-card .service-title-desktop {
+    display: none;
+  }
+
+  .service-mobile-title-card .service-title-mobile {
+    display: block;
+  }
+
+  .service-included .website-deliverables-grid .service-mobile-title-card h3 {
+    font-size: min(30px, 7.5cqi);
+    white-space: nowrap;
+  }
+}
+
 .service-included .website-deliverables-grid p {
   font-size: 16px;
 }

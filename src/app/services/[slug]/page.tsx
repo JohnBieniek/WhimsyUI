@@ -86,7 +86,7 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
         <p>{included.intro}</p>
       </header>
       <ul className="website-deliverables-grid" role="list">
-        {included.items.map((item) => <li key={item.title}><h3>{item.title}</h3><p>{item.description}</p></li>)}
+        {included.items.map((item) => <li key={item.title} className={item.mobileTitle ? "service-mobile-title-card" : undefined}><h3>{item.mobileTitle ? <><span className="service-title-desktop">{item.title}</span><span className="service-title-mobile">{item.mobileTitle}</span></> : item.title}</h3><p>{item.description}</p></li>)}
       </ul>
     </section></>}</section>
     <section className="article-cta"><div className="shell"><p className="kicker">Ready when you are</p><h2>Let’s make the next step clear.</h2><Link className="button" href="/contact">Book a consultation →</Link></div></section>

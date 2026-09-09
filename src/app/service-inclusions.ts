@@ -1,7 +1,7 @@
 type ServiceInclusion = {
   title: [string, string];
   intro: string;
-  items: { title: string; description: string }[];
+  items: { title: string; mobileTitle?: string; description: string }[];
 };
 
 export const serviceInclusions: Record<string, ServiceInclusion> = {
@@ -50,6 +50,7 @@ export const serviceInclusions: Record<string, ServiceInclusion> = {
     },
     {
       "title": "Same domain, checked connections",
+      "mobileTitle": "Same domain, validated",
       "description": "Connect your existing domain, configure DNS, review email settings, and check redirects, forms, and the live site after the move."
     },
     {
