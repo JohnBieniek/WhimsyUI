@@ -29,7 +29,7 @@ export function WebsiteTransferCosts() {
     <p className="transfer-price-note">Price examples reviewed September 9, 2026. Follow each plan link for current pricing; location, taxes, promotions, and renewals can change your bill. These packages include different features. Free plans also exist, including Canva Free; moving a free site does not create subscription savings.</p>
     <div className="transfer-cost-details">
       <article><h3>What could you save?</h3><p>Replacing a $17-a-month website plan removes $204 a year in subscription charges. Against the $750 transfer price, that is roughly 44 months to recover the transfer cost through that subscription alone, before any other costs. Higher monthly bills can mean a quicker payback.</p></article>
-      <article><h3>What might you still pay for?</h3><p>Your domain name still needs renewing. We confirm hosting costs and any paid email, booking, shop, or other tools before the move; free hosting can suit a straightforward business website. Optional work you ask us to do is separate. We help you check what can be canceled after launch so you keep the services you still use.</p></article>
+      <article><h3>What might you still pay for?</h3><p>Your domain name still needs renewing. However, that cost will be the same or lower than if you stay with your old provider. We confirm hosting costs and any paid email, booking, shop, or other tools before the move; free hosting can suit a straightforward business website. Optional work you ask us to do is separate. We help you check what can be canceled after launch so you keep the services you still use.</p></article>
     </div>
   </section>;
 }
