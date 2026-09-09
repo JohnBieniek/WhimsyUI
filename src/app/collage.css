@@ -1152,12 +1152,12 @@
 
 .multiverse-service .article-callout {
   border-left: 8px solid #1f5f8c;
-  color: #fff;
-  background: #b3352d;
+  color: #22384b;
+  background: #f7f1d8;
 }
 
 .multiverse-service .article-callout .kicker {
-  color: #fff;
+  color: #1f5f8c;
 }
 
 .multiverse-service .process-block {
