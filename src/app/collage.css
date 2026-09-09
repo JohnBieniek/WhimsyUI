@@ -462,6 +462,29 @@
   margin-bottom: 0;
 }
 
+.transfer-editor-mobile {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .transfer-cost-highlight {
+    container-type: inline-size;
+  }
+
+  .transfer-cost-highlight strong {
+    font-size: min(26px, 7cqi);
+    white-space: nowrap;
+  }
+
+  .transfer-editor-desktop {
+    display: none;
+  }
+
+  .transfer-editor-mobile {
+    display: inline;
+  }
+}
+
 .transfer-price-scroll {
   overflow-x: auto;
 }
