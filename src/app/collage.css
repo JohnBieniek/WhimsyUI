@@ -287,17 +287,19 @@
 }
 
 .multiverse-service .pages-cms-card {
-  --mint: #e7f0f6;
-  --purple: #1f5f8c;
-  --line: #1f5f8c55;
-  --mint-strong: #b3352d;
-  color: #22384b;
-  border-top: 5px solid #b3352d;
+  --mint: #33612f;
+  --purple: #fff;
+  --line: #ffffff55;
+  --mint-strong: #ffffff55;
+  color: #fff;
+  border-top: 5px solid #1f5f8c;
 }
 
+.multiverse-service .article-body .pages-cms-card h2,
+.multiverse-service .pages-cms-card .kicker,
 .multiverse-service .pages-cms-card h3,
 .multiverse-service .pages-cms-steps li::marker {
-  color: #33612f;
+  color: #fff;
 }
 
 .transfer-costs > header,
@@ -1142,8 +1144,13 @@
 }
 
 .multiverse-service .article-callout {
-  border-left: 8px solid #b3352d;
-  background: #e7f0f6;
+  border-left: 8px solid #1f5f8c;
+  color: #fff;
+  background: #b3352d;
+}
+
+.multiverse-service .article-callout .kicker {
+  color: #fff;
 }
 
 .multiverse-service .process-block {
