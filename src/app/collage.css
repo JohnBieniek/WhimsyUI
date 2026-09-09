@@ -532,12 +532,8 @@
 }
 
 .brand-plan-section > header {
-  max-width: 1050px;
-  margin-bottom: 24px;
-}
-
-.brand-ad-rollout > header {
   max-width: none;
+  margin-bottom: 24px;
 }
 
 .brand-plan-section h2 {
