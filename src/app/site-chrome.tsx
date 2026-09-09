@@ -10,7 +10,26 @@ const links = [["/", "Home"], ["/services", "Services & Pricing"], ["/contact", 
 
 export function SiteHeader(){const path=usePathname();return <header className={`site-header shell${path==="/"?" home-header":""}`}><Link href="/" className="nav-logo"><Image src="/logo%20tight.png" alt="Whimsy home" width={4744} height={2198} priority/></Link><nav aria-label="Main navigation">{links.map(([href,label])=><Link key={href} href={href} className={path===href?"active":""}>{label}</Link>)}</nav></header>}
 
-export function SiteFooter(){const [pressed,setPressed]=useState(false);const timer=useRef<ReturnType<typeof setTimeout>|null>(null);const startPress=()=>{timer.current=setTimeout(()=>setPressed(true),550)};const endPress=()=>{if(timer.current)clearTimeout(timer.current);timer.current=null};return <footer><div className="shell"><p>Whimsy · Jackson, Michigan</p><p className={`footer-version${pressed?" pressed":""}`} tabIndex={0} onPointerDown={startPress} onPointerUp={endPress} onPointerCancel={endPress} onPointerLeave={endPress} onClick={()=>pressed&&setPressed(false)}>Consulting · Media · Marketing <small aria-label={`Version ${appVersion}`}>v{appVersion}</small></p></div></footer>}
+export function SiteFooter() {
+  const path = usePathname();
+  const showCreator = path === "/" || path === "/services" || path === "/contact";
+  const [pressed, setPressed] = useState(false);
+  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const startPress = () => { timer.current = setTimeout(() => setPressed(true), 550); };
+  const endPress = () => { if (timer.current) clearTimeout(timer.current); timer.current = null; };
+
+  return <footer>
+    <div className="shell">
+      <p>Whimsy · Jackson, Michigan</p>
+      <p className={`footer-version${pressed ? " pressed" : ""}`} tabIndex={0} onPointerDown={startPress} onPointerUp={endPress} onPointerCancel={endPress} onPointerLeave={endPress} onClick={() => pressed && setPressed(false)}>Consulting · Media · Marketing <small aria-label={`Version ${appVersion}`}>v{appVersion}</small></p>
+    </div>
+    {showCreator && <div className="creator-credit">
+      <p>Created by</p>
+      <Image src="/logo%20white%20tight%20smaller.png" alt="Whimsy — Consulting, Media, Marketing" width={647} height={300} sizes="220px" />
+      <a href="https://facebook.com/Experiencewhimsy" target="_blank" rel="noopener noreferrer">facebook.com/Experiencewhimsy</a>
+    </div>}
+  </footer>;
+}
 
 export function Partners(){return <section className="partners shell" aria-labelledby="partners-title"><h2 id="partners-title">Featured<br/>partners</h2><a className="partner jackson-mark" href="https://shopjacksoncrossing.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit the Jackson Crossing website (opens in a new tab)"><Image className="jackson-crossing-logo" src="/jackson-crossing-logo.png" alt="Jackson Crossing" width={1750} height={899} sizes="(max-width: 700px) 80vw, 24vw"/></a><a className="partner partner-image fetch-partner" href="https://101monroe.com/#commercial" target="_blank" rel="noopener noreferrer" aria-label="Visit the Fetch Market and Deli website (opens in a new tab)"><Image className="fetch-logo" src="/fetch%20logo.jpg" alt="Fetch Market and Deli" width={541} height={540} sizes="(max-width: 700px) 100vw, 24vw"/></a><a className="partner serenity-mark" href="https://www.linkedin.com/company/serenity-sober-living-house/" target="_blank" rel="noopener noreferrer" aria-label="Visit Serenity Sober Living House online (opens in a new tab)"><strong>Serenity</strong><span>SOBER LIVING HOUSE</span><small>“NOT PERFECT, SOBER &amp; FREE”</small></a><a className="partner partner-image lakeland-partner" href="https://lakelandcabaret.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit the Lakeland Cabaret website (opens in a new tab)"><Image className="lakeland-logo" src="/lakeland-cabaret-logo.png" alt="Lakeland Cabaret" width={1900} height={1847} sizes="(max-width: 700px) 110px, 24vw"/></a></section>}
 
