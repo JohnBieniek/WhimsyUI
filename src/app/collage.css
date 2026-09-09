@@ -8,6 +8,10 @@
   text-align: center;
 }
 
+.home-page > .creator-credit {
+  order: 5;
+}
+
 .creator-credit p {
   margin: 0;
   color: var(--ink);
