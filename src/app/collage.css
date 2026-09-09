@@ -272,7 +272,6 @@
   background: var(--mint);
 }
 
-.pages-cms-card > header,
 .transfer-costs > header {
   max-width: 960px;
 }
