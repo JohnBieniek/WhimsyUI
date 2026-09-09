@@ -71,7 +71,7 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
       <header className="website-deliverables-intro">
         <p className="kicker">What’s included</p>
         <h2 id="strategy-deliverables-title"><span>Clear decisions, captured</span>{" "}<span>in a practical plan.</span></h2>
-        <p>We prepare, lead the working session, and document the direction so you can put it into action.</p>
+        <p>We review your materials, prepare what you will need, lead the working session, and document your direction so you can take action.</p>
       </header>
       <ul className="website-deliverables-grid" role="list">
         <li><h3>Pre-session review</h3><p>A short intake followed by our review of your goals, relevant numbers, links, materials, and current situation.</p></li>
