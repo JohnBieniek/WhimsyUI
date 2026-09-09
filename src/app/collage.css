@@ -750,6 +750,17 @@
   }
 }
 
+@media (max-width: 700px) {
+  .website-support-service .article-hero > div:first-child {
+    container-type: inline-size;
+  }
+
+  .website-support-service .article-hero h1 {
+    font-size: min(48px, 9cqi);
+    white-space: nowrap;
+  }
+}
+
 @media (min-width: 1051px) {
   .website-support-service > .article-hero > .article-image {
     align-self: stretch;
