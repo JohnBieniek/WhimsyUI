@@ -19,7 +19,7 @@ export function WebsiteTransferCosts() {
     <div className="transfer-price-scroll" role="region" aria-label="Website subscription price comparison" tabIndex={0}>
       <table>
         <caption>Typical paid plans in USD, using annual billing. Monthly figures are the yearly cost divided by 12, not a month-to-month offer.</caption>
-        <thead><tr><th scope="col">Service &amp; <span className="transfer-plan-detail">example </span>plan</th><th scope="col">Per month</th><th scope="col">Per year</th></tr></thead>
+        <thead><tr><th scope="col">Service &amp; <span className="transfer-plan-detail">example </span>plan</th><th scope="col"><span className="transfer-month-desktop">Per month</span><span className="transfer-month-mobile">Monthly</span></th><th scope="col">Per year</th></tr></thead>
         <tbody>
           {subscriptionExamples.map((plan) => <tr key={plan.name}><th scope="row"><a href={plan.href}>{plan.name}</a><span>{plan.note}</span></th><td>{plan.monthly}</td><td>{plan.yearly}</td></tr>)}
           <tr className="transfer-price-free"><th scope="row"><a href="https://pagescms.org/">Your Pages CMS editor</a><span>Included with your Whimsy website</span></th><td>$0</td><td>$0</td></tr>

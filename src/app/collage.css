@@ -524,15 +524,26 @@
   white-space: nowrap;
 }
 
-.transfer-costs th .transfer-plan-detail {
+.transfer-costs th .transfer-plan-detail,
+.transfer-costs th .transfer-month-desktop,
+.transfer-costs th .transfer-month-mobile {
   display: inline;
   font: inherit;
   margin: 0;
 }
 
+.transfer-costs th .transfer-month-mobile {
+  display: none;
+}
+
 @media (max-width: 700px) {
-  .transfer-costs th .transfer-plan-detail {
+  .transfer-costs th .transfer-plan-detail,
+  .transfer-costs th .transfer-month-desktop {
     display: none;
+  }
+
+  .transfer-costs th .transfer-month-mobile {
+    display: inline;
   }
 }
 
