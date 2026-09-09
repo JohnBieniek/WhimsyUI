@@ -15,7 +15,7 @@ export function WebsiteTransferCosts() {
       <h2 id="transfer-costs-title"><span>Keep your website.</span>{" "}<span>Lose the builder subscription.</span></h2>
       <p>If you are paying Wix, Canva, Squarespace, WordPress.com, or Webflow just to keep your website online and make changes, we can help you move away from that recurring bill. Once your replacement is live, everyday content updates through Pages CMS are free. Choose a section, change the words or photos, and save.</p>
     </header>
-    <div className="transfer-cost-highlight"><strong><span className="transfer-editor-desktop">$0 / month for your content editor</span><span className="transfer-editor-mobile">$0 / month for you editor</span></strong><p>The standard website transfer is a one-time $750 service. Pages CMS access and your own content edits have no subscription fee.</p></div>
+    <div className="transfer-cost-highlight"><strong><span className="transfer-editor-desktop">$0 / month for your content editor</span><span className="transfer-editor-mobile">$0 / month for your editor</span></strong><p>The standard website transfer is a one-time $750 service. Pages CMS access and your own content edits have no subscription fee.</p></div>
     <div className="transfer-price-scroll" role="region" aria-label="Website subscription price comparison" tabIndex={0}>
       <table>
         <caption>Typical paid plans in USD, using annual billing. Monthly figures are the yearly cost divided by 12, not a month-to-month offer.</caption>
