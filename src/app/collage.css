@@ -1361,6 +1361,10 @@
   border-top: 0;
 }
 
+.article-page[data-service="brand-advertising-plan"] .service-included {
+  border-top-color: #39066e;
+}
+
 .service-included .website-deliverables-intro,
 .service-included .website-deliverables-grid li {
   background: #eee3f7;
