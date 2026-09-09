@@ -51,7 +51,7 @@ export function WebsiteTransferHandoff() {
     <div className="transfer-handoff-grid">
       <article>
         <h3>Full CMS access, on your terms</h3>
-        <p>You get full access to our CMS and can make your own website content updates for free, without contacting or hiring us. We show you how to make changes and give you access to your transferred files and the accounts needed to manage the site, including hosting and analytics. Your domain remains under your control.</p>
+        <p>You get full access to our Content Management System and can make your own website content updates for free, without contacting or hiring us. We show you how to make changes and give you access to your transferred files and the accounts needed to manage the site, including hosting and analytics. Your domain remains under your control.</p>
         <p>Follow-up email support covers questions about the transfer and using your CMS. If you would like us to make edits for you or build additional features, paid help is optional and available through <Link href="/services/website-support">Website Support</Link>.</p>
       </article>
       <article>
