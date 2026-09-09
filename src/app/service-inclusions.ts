@@ -17,7 +17,7 @@ export const serviceInclusions: Record<string, ServiceInclusion> = {
   },
   "brand-advertising-plan": {
     title: ["Your next three months,", "ready to put into motion."],
-    intro: "The $1,000 package connects the strategy, creative, and rollout in one practical handoff. We walk through the plan with you so your team knows how to use it.",
+    intro: "The $1,000 package connects the strategy, creative, and rollout in one practical handoff. We walk through the plan with you so your team knows how to use it. Leave with the confidence and materials you need to move forward successfully.",
     items: [
       { title: "Brand audit and audience profiles", description: "A review of your existing presence and a written summary of priority customer groups, their needs, buying questions, and the opportunities your campaign should address." },
       { title: "Unified message and brand guide", description: "A core company message for the next 90 days, supporting talking points, voice and tone guidance, and visual rules for logos, colors, fonts, imagery, and formatting." },
