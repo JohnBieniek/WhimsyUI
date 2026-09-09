@@ -683,6 +683,15 @@
     white-space: nowrap;
   }
 
+  .brand-placement-grid > article {
+    container-type: inline-size;
+  }
+
+  .brand-placement-grid h3 {
+    font-size: min(20px, 5.6cqi);
+    white-space: nowrap;
+  }
+
   .article-page[data-service="brand-advertising-plan"] .article-hero h1 {
     font-size: clamp(30px, 8vw, 48px);
   }
