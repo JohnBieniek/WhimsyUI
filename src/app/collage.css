@@ -624,6 +624,15 @@
     font-size: min(22px, 6.5cqi);
     white-space: nowrap;
   }
+
+  .transfer-handoff-grid > article:nth-child(2) {
+    container-type: inline-size;
+  }
+
+  .transfer-handoff-grid > article:nth-child(2) h3 {
+    font-size: min(22px, 5.6cqi);
+    white-space: nowrap;
+  }
 }
 
 .article-page[data-service="business-consulting-session"] .article-image {
