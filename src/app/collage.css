@@ -674,6 +674,15 @@
     grid-template-columns: minmax(0, 1fr);
   }
 
+  .brand-ad-rollout > header {
+    container-type: inline-size;
+  }
+
+  .brand-ad-rollout #brand-rollout-title {
+    font-size: min(30px, 5.7cqi);
+    white-space: nowrap;
+  }
+
   .article-page[data-service="brand-advertising-plan"] .article-hero h1 {
     font-size: clamp(30px, 8vw, 48px);
   }
