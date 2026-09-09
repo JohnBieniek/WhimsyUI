@@ -615,6 +615,15 @@
   .transfer-handoff-grid {
     grid-template-columns: 1fr;
   }
+
+  .transfer-handoff-grid > article:first-child {
+    container-type: inline-size;
+  }
+
+  .transfer-handoff-grid > article:first-child h3 {
+    font-size: min(22px, 6.5cqi);
+    white-space: nowrap;
+  }
 }
 
 .article-page[data-service="business-consulting-session"] .article-image {
