@@ -751,6 +751,15 @@
 }
 
 @media (max-width: 700px) {
+  .article-page[data-service="website-transfer"] .article-hero > div:first-child {
+    container-type: inline-size;
+  }
+
+  .article-page[data-service="website-transfer"] .article-hero h1.website-transfer-title {
+    font-size: min(48px, 9cqi);
+    white-space: nowrap;
+  }
+
   .website-support-service .article-hero > div:first-child {
     container-type: inline-size;
   }
