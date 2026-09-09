@@ -272,6 +272,33 @@
   background: var(--mint);
 }
 
+.single-page-service .pages-cms-card {
+  --mint: #f7f6f2;
+  --purple: #0b3b6f;
+  --line: #5b8fd655;
+  --mint-strong: #ffbf00;
+  color: #0b2f4a;
+  border-top: 5px solid #ffbf00;
+}
+
+.single-page-service .pages-cms-card h2 {
+  color: #0b3b6f;
+}
+
+.multiverse-service .pages-cms-card {
+  --mint: #e7f0f6;
+  --purple: #1f5f8c;
+  --line: #1f5f8c55;
+  --mint-strong: #b3352d;
+  color: #22384b;
+  border-top: 5px solid #b3352d;
+}
+
+.multiverse-service .pages-cms-card h3,
+.multiverse-service .pages-cms-steps li::marker {
+  color: #33612f;
+}
+
 .transfer-costs > header {
   max-width: 960px;
 }
