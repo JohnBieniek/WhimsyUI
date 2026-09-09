@@ -678,6 +678,10 @@
     container-type: inline-size;
   }
 
+  .brand-channel-heading-detail {
+    display: none;
+  }
+
   .brand-ad-rollout #brand-rollout-title {
     font-size: min(30px, 5.7cqi);
     white-space: nowrap;
