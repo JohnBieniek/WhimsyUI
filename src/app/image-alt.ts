@@ -18,6 +18,7 @@ const imageDescriptions: Record<string, string> = {
   "/work/1233972422090373.jpg": "Musicians performing with guitars outside the Salvaged Decor storefront.",
   "/work/1233619748792307.jpg": "Guitarists performing beside the entrance to Salvaged Decor.",
   "/work/904318161722469.jpg": "Pink Sisters Smoothies advertisement for the Cee Cee, a strawberry, cherry, blueberry, and banana smoothie pictured with fresh fruit.",
+  "/services/ad-campaign/sisters-smoothies-livie.jpg": "Sisters Smoothies ad for The Livie, a mango and banana smoothie on a golden background.",
   "/work/985893490231602.jpg": "Vertical Holiday in the Halls poster with Santa, a Christmas arch, and vendor photos; December 21, noon to 5 p.m.",
   "/work/974588071362144.jpg": "Happy Harvest poster advertising Lakeland Cabaret DJ services next to Alpha Koney on November 23.",
   "/work/957429079744710.jpg": "Mall-O-Ween poster advertising Lakeland Cabaret's spooky DJ event on October 26, with games, musical chairs, and a fire dance.",
