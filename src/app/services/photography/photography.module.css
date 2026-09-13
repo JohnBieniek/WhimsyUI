@@ -134,11 +134,19 @@
   margin: 0 auto;
 }
 
-.locationPhoto img {
+.locationPhotoCrop {
+  position: relative;
+  aspect-ratio: 1536 / 1548;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.locationPhotoCrop img {
+  position: absolute;
+  bottom: 0;
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 10px;
 }
 
 .locationPhoto figcaption {

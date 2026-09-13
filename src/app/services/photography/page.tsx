@@ -112,13 +112,15 @@ export default function PhotographyPage() {
 
       <section className={styles.planning} aria-labelledby="photography-planning-title">
         <figure className={styles.locationPhoto}>
-          <Image
-            src="/Airport%20voltuneering/signal-2026-09-13-08-56-21-708.jpg"
-            alt="Dawn holding a camera at the Jackson County Airport Open House, wearing a yellow volunteer shirt."
-            width={1536}
-            height={2048}
-            sizes="(max-width: 900px) 100vw, 45vw"
-          />
+          <div className={styles.locationPhotoCrop}>
+            <Image
+              src="/Airport%20voltuneering/signal-2026-09-13-08-56-21-708.jpg"
+              alt="Dawn holding a camera at the Jackson County Airport Open House, wearing a yellow volunteer shirt."
+              width={1536}
+              height={2048}
+              sizes="(max-width: 900px) 100vw, 45vw"
+            />
+          </div>
           <figcaption>Dawn Parker at the Jackson County Airport Open House</figcaption>
         </figure>
         <div>
