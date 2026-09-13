@@ -119,6 +119,16 @@ export default function PhotographyPage() {
       </section>
 
       <section className={styles.planning} aria-labelledby="photography-planning-title">
+        <figure className={styles.locationPhoto}>
+          <Image
+            src="/Airport%20voltuneering/signal-2026-09-13-08-56-21-708.jpg"
+            alt="Dawn holding a camera at the Jackson County Airport Open House, wearing a yellow volunteer shirt."
+            width={1536}
+            height={2048}
+            sizes="(max-width: 900px) 100vw, 45vw"
+          />
+          <figcaption>Dawn with her camera at the Jackson County Airport Open House.</figcaption>
+        </figure>
         <div>
           <p className="kicker">A shoot shaped around you</p>
           <h2 id="photography-planning-title">Let’s work out what you need.</h2>
@@ -137,18 +147,18 @@ export default function PhotographyPage() {
             You don’t need a finished shot list to get started. Bring your ideas,
             examples you like, or a description of what you want people to see.
           </p>
+          <aside className={`panel ${styles.checklist}`}>
+            <h3>What to share with us</h3>
+            <ul>
+              <li>What you’d like photographed and how you’ll use the images</li>
+              <li>Your preferred date, location, and available time</li>
+              <li>The people, products, or event moments you want to include</li>
+              <li>Any must-have shots, brand guidelines, or visual references</li>
+              <li>Your budget and when you need the finished photos</li>
+              <li>One contact to help coordinate the shoot</li>
+            </ul>
+          </aside>
         </div>
-        <aside className={`panel ${styles.checklist}`}>
-          <h3>What to share with us</h3>
-          <ul>
-            <li>What you’d like photographed and how you’ll use the images</li>
-            <li>Your preferred date, location, and available time</li>
-            <li>The people, products, or event moments you want to include</li>
-            <li>Any must-have shots, brand guidelines, or visual references</li>
-            <li>Your budget and when you need the finished photos</li>
-            <li>One contact to help coordinate the shoot</li>
-          </ul>
-        </aside>
       </section>
 
       <section className={styles.cta} aria-labelledby="photography-cta-title">

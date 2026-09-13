@@ -73,9 +73,9 @@ const communityWork = [
   },
   {
     name: "Jackson County Airport",
-    image: "/Airport%20voltuneering/signal-2026-09-13-08-56-21-708.jpg",
-    alt: "A volunteer with a camera wearing a yellow Jackson County Airport Open House shirt at the event.",
-    position: "center 48%",
+    image: "/Airport%20voltuneering/signal-2026-09-13-08-56-21-708-4.jpg",
+    alt: "Two volunteers in yellow Jackson County Airport Open House shirts smiling together under a blue canopy.",
+    position: "center 65%",
     copy: "Our team also volunteers at the Jackson County Airport Open House. Giving our time to local events is another way we stay involved with the people and places that make this county home.",
   },
 ];
