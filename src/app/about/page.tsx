@@ -34,7 +34,7 @@ const offerings = [
     title: "Media & events",
     Icon: Camera,
     copy: "Photography, video, business stories, media coordination, and event planning and promotion. We help you introduce the people behind your organization and bring your community together.",
-    links: [{ label: "Talk about your project", href: "/contact" }],
+    links: [{ label: "Photo & video services", href: "/services/photography" }],
   },
   {
     title: "Websites & applications",
