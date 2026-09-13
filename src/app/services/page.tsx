@@ -75,7 +75,7 @@ export default function ServicesPage() {
                   <span className="service-icon" aria-hidden="true">
                     <Camera />
                   </span>
-                  <h2>Photography</h2>
+                  <h2>Photo and Video Services</h2>
                   <strong>$100/hour</strong>
                   <ul>
                     <li>Event photography</li>
