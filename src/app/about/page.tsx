@@ -114,12 +114,18 @@ export default function AboutPage() {
       <section className={styles.story} aria-labelledby="our-story-title">
         <div>
           <p className="kicker">Our story</p>
-          <h2 id="our-story-title">Started by Kay.<br />Connected to Jackson.</h2>
+          <h2 id="our-story-title">Founded by Kay Pickett.<br />Rooted in Jackson.</h2>
           <p>
-            Kay Pickett founded Whimsy and brings a background in community
-            relations, advertising, and the arts to our work. Connecting people,
-            understanding what an organization needs, and finding a creative way
-            to share its story are at the heart of that approach.
+            Kay Pickett founded Whimsy with a background in community relations,
+            advertising, and the arts. She brings those experiences to the
+            practical questions businesses and nonprofits face: what to say,
+            who to reach, and where to go next. Her approach begins with
+            understanding each organization’s goals and turning them into a
+            clear plan. That mix of strategy and creativity shapes Whimsy’s
+            work, from websites and campaigns to events that bring Jackson
+            together. Kay’s connection to the community also guides our work
+            beyond client projects, including the time we give to local
+            organizations and events.
           </p>
           <a className={styles.textLink} href="https://www.linkedin.com/in/kay-pickett">
             Get to know Kay on LinkedIn <ArrowRight aria-hidden="true" size={16} />
