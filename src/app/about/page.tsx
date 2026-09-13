@@ -160,8 +160,8 @@ export default function AboutPage() {
         </div>
         <div className={styles.roles}>
           <article>
-            <h3>Strategy &amp; relationships</h3>
-            <p>Understanding your goals, shaping the plan, and coordinating the people and partnerships that make it possible.</p>
+            <h3>Consulting &amp; business strategy</h3>
+            <p>Assessing your business, setting priorities, and turning your goals into practical action plans with clear next steps for growth and stronger operations.</p>
           </article>
           <article>
             <h3>Creative &amp; media</h3>
