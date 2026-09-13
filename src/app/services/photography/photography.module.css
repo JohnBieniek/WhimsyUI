@@ -77,7 +77,7 @@
   max-height: 640px;
   object-fit: cover;
   object-position: center 30%;
-  border-radius: 100px 10px 100px 10px;
+  clip-path: polygon(18% 0, 82% 0, 100% 18%, 100% 82%, 82% 100%, 18% 100%, 0 82%, 0 18%);
 }
 
 .coverage {
@@ -226,10 +226,6 @@
 
   .hero .lead {
     font-size: 21px;
-  }
-
-  .heroImage {
-    border-radius: 60px 8px 60px 8px;
   }
 
   .coverage {
