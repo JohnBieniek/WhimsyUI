@@ -3,7 +3,6 @@
 }
 
 .pricingCards > article.photographyCard h2 {
-  font-size: clamp(8px, 10cqi, 17px);
   hyphens: auto;
   overflow-wrap: anywhere;
 }
