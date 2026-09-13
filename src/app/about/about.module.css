@@ -24,9 +24,9 @@
 .hero {
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
-  align-items: center;
+  align-items: start;
   gap: 40px;
-  padding-block: 58px 54px;
+  padding-block: 0 54px;
 }
 
 .hero > div {
@@ -276,7 +276,7 @@
   .hero {
     grid-template-columns: 1fr;
     gap: 36px;
-    padding-block: 36px;
+    padding-block: 0 36px;
   }
 
   .hero > div {
@@ -322,10 +322,6 @@
 }
 
 @media (max-width: 700px) {
-  .hero {
-    padding-top: 22px;
-  }
-
   .hero h1 {
     font-size: clamp(32px, 8.5vw, 48px);
   }
