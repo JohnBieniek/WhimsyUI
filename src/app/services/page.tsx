@@ -1,9 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
+import { Fragment } from "react";
 import offsetSquareCollage from "../../../collage/offset square collage.png";
 import offsetSquareCollageDesktop from "../../../collage/offset square collage desktop.png";
 import {
   ArrowRightLeft,
+  Camera,
   FileChartColumnIncreasing,
   Files,
   LayoutTemplate,
@@ -13,6 +15,7 @@ import {
 } from "lucide-react";
 import { services } from "../content";
 import { CreatorCredit } from "../creator-credit";
+import styles from "./services.module.css";
 
 const serviceIcons = {
   "ad-campaign": Megaphone,
@@ -61,37 +64,65 @@ export default function ServicesPage() {
           />
         </div>
       </section>
-      <section className="service-cards">
+      <section className={`service-cards ${styles.pricingCards}`}>
         {services.map((service) => {
           const Icon = serviceIcons[service.slug];
 
           return (
-            <article key={service.slug}>
-              <span className="service-icon" aria-hidden="true">
-                <Icon />
-              </span>
-              <h2>{service.name}</h2>
-              <strong>{service.price}</strong>
-              <ul>
-                {service.deliverables.map((point) => (
-                  <li key={point}>{point}</li>
-                ))}
-              </ul>
-              <Link href={`/services/${service.slug}`}>Learn more →</Link>
-            </article>
+            <Fragment key={service.slug}>
+              {service.slug === "website-support" && (
+                <article className={styles.photographyCard}>
+                  <span className="service-icon" aria-hidden="true">
+                    <Camera />
+                  </span>
+                  <h2>Photography</h2>
+                  <strong>$100/hour</strong>
+                  <ul>
+                    <li>Event photography</li>
+                    <li>Business &amp; brand photos</li>
+                    <li>Headshots</li>
+                    <li>Product photography</li>
+                  </ul>
+                  <Link href="/contact">Book a shoot →</Link>
+                </article>
+              )}
+              <article>
+                <span className="service-icon" aria-hidden="true">
+                  <Icon />
+                </span>
+                <h2>{service.name}</h2>
+                <strong>{service.price}</strong>
+                <ul>
+                  {service.deliverables.map((point) => (
+                    <li key={point}>{point}</li>
+                  ))}
+                </ul>
+                <Link href={`/services/${service.slug}`}>Learn more →</Link>
+              </article>
+            </Fragment>
           );
         })}
-        <aside className="panel extras">
-          <p className="kicker">What costs extra</p>
-          <h3>E-commerce</h3>
-          <p>Online stores and payment processing.</p>
-          <h3>Custom applications</h3>
-          <p>Advanced features and integrations.</p>
-          <h3>Copywriting</h3>
-          <p>Custom writing beyond supplied content.</p>
-          <h3>Paid ad spend</h3>
-          <p>Ad budgets are managed separately.</p>
-        </aside>
+      </section>
+      <section className={`panel ${styles.extras}`} aria-labelledby="extra-costs-title">
+        <h2 className="kicker" id="extra-costs-title">What costs extra</h2>
+        <div className={styles.extraGrid}>
+          <article>
+            <h3>E-commerce</h3>
+            <p>Online stores and payment processing.</p>
+          </article>
+          <article>
+            <h3>Custom applications</h3>
+            <p>Advanced features and integrations.</p>
+          </article>
+          <article>
+            <h3>Copywriting</h3>
+            <p>Custom writing beyond supplied content.</p>
+          </article>
+          <article>
+            <h3>Paid ad spend</h3>
+            <p>Ad budgets are managed separately.</p>
+          </article>
+        </div>
       </section>
       <section className="ready">
         <h2>Ready to get started?</h2>

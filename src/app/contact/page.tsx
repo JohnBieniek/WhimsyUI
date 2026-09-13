@@ -50,6 +50,7 @@ export default function ContactPage() {
             <p>Ad Campaign <b>$300</b></p>
             <p>Buisness consulting session <b>$300</b></p>
             <p>Brand &amp; Advertising Plan <b>$1,000</b></p>
+            <p>Photography <b>$100/hour</b></p>
             <p>Website Support <b>$100/hour</b></p>
             <p>Website Transfer <b>$750</b></p>
             <p>Single-Page Website <b>$750</b></p>
