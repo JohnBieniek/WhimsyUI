@@ -86,7 +86,7 @@ export default function AboutPage() {
       <section className={styles.hero} aria-labelledby="about-title">
         <div>
           <p className="kicker">About Whimsy</p>
-          <h1 id="about-title">Local people.<br />Creative partners.</h1>
+          <h1 id="about-title">Local talent.<br />Trusted work.</h1>
           <p className={styles.intro}>
             We’re Whimsy, a consulting, media, and marketing team rooted in
             Jackson, Michigan. Started by Kay Pickett, we help businesses and
