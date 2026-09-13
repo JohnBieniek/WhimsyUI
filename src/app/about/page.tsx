@@ -135,10 +135,10 @@ export default function AboutPage() {
             entertainment, and organizations serving our neighbors.
           </p>
           <p>
-            That includes advertising and events with Jackson Crossing, branding
-            and a website for Lakeland Cabaret, and creative support for Fetch
-            Market &amp; Deli, Dawn Parker, and Sisters Smoothies. We’ve also
-            worked with Serenity Sober Living House on consulting and brand
+            That includes advertising and events with Jackson Crossing and
+            creative support for Fetch Market &amp; Deli and Sisters Smoothies.
+            We’ve also worked with McAlisters Deli, Mens Warehouse, and JTV,
+            provided Serenity Sober Living House with consulting and brand
             support, and helped promote Huntington’s disease awareness with
             HDSA partners.
           </p>
