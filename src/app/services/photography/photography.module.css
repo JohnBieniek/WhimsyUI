@@ -1,0 +1,277 @@
+.page {
+  padding-bottom: 30px;
+}
+
+.page p,
+.page li {
+  line-height: 1.65;
+}
+
+.page h2 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3vw, 42px);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  margin: 0 0 24px;
+}
+
+.page h3 {
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0 0 12px;
+}
+
+.page :global(.button) {
+  gap: 10px;
+}
+
+.page a:focus-visible {
+  outline: 3px solid var(--purple);
+  outline-offset: 5px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 60px;
+  align-items: center;
+  padding-block: 40px 56px;
+}
+
+.hero > div {
+  min-width: 0;
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(30px, 4.2vw, 64px);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  margin: 0;
+}
+
+.hero h1::after {
+  content: "";
+  display: block;
+  width: 220px;
+  border-bottom: 5px solid var(--mint-strong);
+  margin-top: 22px;
+}
+
+.hero .lead {
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.35;
+  margin-top: 24px;
+}
+
+.hero :global(.button) {
+  margin-top: 16px;
+}
+
+.heroImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 640px;
+  object-fit: cover;
+  object-position: center 30%;
+  border-radius: 100px 10px 100px 10px;
+}
+
+.coverage {
+  padding-block: 40px 54px;
+  border-top: 1px solid var(--line);
+}
+
+.coverage > h2 {
+  max-width: 780px;
+}
+
+.coverageGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.coverageGrid article {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 22px;
+  padding: 28px;
+  border: 1px solid #b9ded6;
+  border-radius: 8px;
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--purple);
+  color: white;
+}
+
+.coverageGrid p {
+  margin: 0;
+  font-size: 15px;
+}
+
+.coverageGrid .uses {
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+  margin-top: 18px;
+}
+
+.process {
+  background: var(--purple);
+  color: white;
+  border-radius: 10px;
+  padding: 32px;
+}
+
+.process h2 {
+  font-size: 18px;
+  color: var(--mint-strong);
+  letter-spacing: 0.02em;
+}
+
+.process ol {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.process li {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  gap: 16px;
+}
+
+.process li > span {
+  color: var(--mint-strong);
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.process h3 {
+  font-size: 18px;
+}
+
+.process p {
+  margin: 0;
+  font-size: 15px;
+}
+
+.planning {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: start;
+  padding-block: 60px;
+}
+
+.checklist {
+  padding: 30px;
+}
+
+.checklist ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+.checklist li {
+  padding-left: 4px;
+  margin-top: 12px;
+}
+
+.checklist li::marker {
+  color: var(--purple);
+}
+
+.cta {
+  padding: 40px 24px;
+  margin-bottom: 32px;
+  background: var(--mint);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.cta h2 {
+  margin-bottom: 16px;
+}
+
+.cta :global(.button) {
+  margin-top: 12px;
+}
+
+@media (max-width: 900px) {
+  .hero,
+  .planning {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+
+  .heroImage {
+    width: min(100%, 580px);
+    max-height: none;
+    margin-inline: auto;
+  }
+
+  .coverageGrid article {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .process ol {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    padding-block: 16px 36px;
+  }
+
+  .hero h1 {
+    font-size: clamp(28px, 8vw, 48px);
+  }
+
+  .hero .lead {
+    font-size: 21px;
+  }
+
+  .heroImage {
+    border-radius: 60px 8px 60px 8px;
+  }
+
+  .coverage {
+    padding-block: 32px 36px;
+  }
+
+  .coverageGrid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .coverageGrid article,
+  .process,
+  .checklist {
+    padding: 24px;
+  }
+
+  .planning {
+    padding-block: 36px;
+  }
+
+  .cta {
+    padding: 32px 20px;
+  }
+}

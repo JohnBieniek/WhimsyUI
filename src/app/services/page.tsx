@@ -83,7 +83,7 @@ export default function ServicesPage() {
                     <li>Headshots</li>
                     <li>Product photography</li>
                   </ul>
-                  <Link href="/contact">Book a shoot →</Link>
+                  <Link href="/services/photography">Learn more →</Link>
                 </article>
               )}
               <article>
