@@ -119,7 +119,7 @@ export default function PhotographyPage() {
             height={2048}
             sizes="(max-width: 900px) 100vw, 45vw"
           />
-          <figcaption>Dawn with her camera at the Jackson County Airport Open House.</figcaption>
+          <figcaption>Dawn Parker at the Jackson County Airport Open House</figcaption>
         </figure>
         <div>
           <p className="kicker">A shoot shaped around you</p>
