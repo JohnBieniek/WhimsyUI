@@ -151,8 +151,11 @@ export default function AboutPage() {
           <h2 id="team-title">Different skills.<br />One shared purpose.</h2>
           <p>
             Our team brings together the planning, creative, and technical work
-            that helps your organization move forward. Here’s how those pieces
-            fit together.
+            that helps your organization move forward. We start by listening to
+            your goals and getting to know the people you want to reach. Then we
+            turn that understanding into clear messages, thoughtful design, and
+            practical tools. We stay involved as your needs change, helping you
+            build on what works and tackle what comes next.
           </p>
         </div>
         <div className={styles.roles}>
