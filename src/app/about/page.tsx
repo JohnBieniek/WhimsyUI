@@ -184,8 +184,10 @@ export default function AboutPage() {
         <div className={styles.serviceGrid}>
           {offerings.map(({ title, Icon, copy, links }) => (
             <article key={title}>
-              <span className={styles.icon}><Icon aria-hidden="true" size={25} /></span>
-              <h3>{title}</h3>
+              <div className={styles.serviceHeading}>
+                <span className={styles.icon}><Icon aria-hidden="true" size={25} /></span>
+                <h3>{title}</h3>
+              </div>
               <p>{copy}</p>
               <div className={styles.serviceLinks}>
                 {links.map(({ label, href }) => (
