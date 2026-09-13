@@ -1,0 +1,363 @@
+.page p {
+  line-height: 1.65;
+}
+
+.page h2 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3vw, 42px);
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  margin: 0 0 20px;
+}
+
+.page h3 {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0 0 12px;
+}
+
+.page :global(.button) {
+  gap: 10px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  align-items: center;
+  gap: 40px;
+  padding-block: 58px 54px;
+}
+
+.hero > div {
+  min-width: 0;
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(38px, 3.7vw, 58px);
+  line-height: 1.03;
+  letter-spacing: -0.035em;
+  margin: 0;
+}
+
+.hero h1::after {
+  content: "";
+  display: block;
+  width: 220px;
+  border-bottom: 5px solid var(--mint-strong);
+  margin-top: 22px;
+}
+
+.hero .intro {
+  font-size: 18px;
+  margin-top: 22px;
+}
+
+.hero :global(.button) {
+  margin-top: 12px;
+}
+
+.collage {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  padding-block: 44px 54px;
+  border-top: 1px solid var(--line);
+}
+
+.story p:last-of-type {
+  margin-bottom: 20px;
+}
+
+.textLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--purple);
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.textLink svg {
+  flex-shrink: 0;
+}
+
+.textLink:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.page a:focus-visible {
+  outline: 3px solid var(--purple);
+  outline-offset: 5px;
+}
+
+.team {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 65px;
+  padding: 40px;
+  border-radius: 10px;
+  background: var(--mint);
+}
+
+.teamIntro p:last-child {
+  margin-bottom: 0;
+}
+
+.roles article {
+  padding-block: 16px;
+  border-bottom: 1px solid #bddad3;
+}
+
+.roles article:first-child {
+  padding-top: 0;
+}
+
+.roles article:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.roles h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.roles p {
+  margin: 0;
+  font-size: 15px;
+}
+
+.services {
+  padding-block: 66px;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.sectionHeader h2 {
+  max-width: 740px;
+  margin-bottom: 0;
+}
+
+.sectionHeader > a {
+  flex-shrink: 0;
+  margin-bottom: 4px;
+}
+
+.serviceGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.serviceGrid article {
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+  border: 1px solid #b9ded6;
+  border-radius: 8px;
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--purple);
+  color: white;
+  margin-bottom: 22px;
+}
+
+.serviceGrid p {
+  font-size: 15px;
+  margin: 0 0 22px;
+}
+
+.serviceLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.community {
+  background: var(--mint);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.communityHeader {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 55px;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.communityHeader h2,
+.communityHeader > p {
+  margin-bottom: 0;
+}
+
+.communityGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.communityGrid article {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.communityImage {
+  position: relative;
+  aspect-ratio: 4 / 3;
+}
+
+.communityImage img {
+  object-fit: cover;
+}
+
+.communityCopy {
+  padding: 24px;
+}
+
+.communityCopy h3 {
+  font-size: 19px;
+}
+
+.communityCopy p {
+  font-size: 15px;
+  margin: 0;
+}
+
+.cta {
+  text-align: center;
+  max-width: 780px;
+  margin-inline: auto;
+  padding: 68px 16px 40px;
+}
+
+.cta p:not(:global(.kicker)) {
+  max-width: 620px;
+  margin: 0 auto 24px;
+}
+
+@media (max-width: 1050px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding-block: 36px;
+  }
+
+  .hero > div {
+    max-width: 700px;
+  }
+
+  .collage {
+    max-width: 820px;
+    margin-inline: auto;
+  }
+
+  .story,
+  .team {
+    gap: 32px;
+  }
+
+  .sectionHeader {
+    flex-direction: column;
+    align-items: start;
+    gap: 16px;
+  }
+
+  .serviceGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .communityHeader {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .community {
+    padding: 28px;
+  }
+
+  .communityGrid {
+    gap: 16px;
+  }
+
+  .communityCopy {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    padding-top: 22px;
+  }
+
+  .hero h1 {
+    font-size: clamp(32px, 8.5vw, 48px);
+  }
+
+  .hero .intro {
+    font-size: 17px;
+  }
+
+  .story,
+  .team,
+  .serviceGrid,
+  .communityGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .story {
+    padding-block: 32px 40px;
+    gap: 32px;
+  }
+
+  .team,
+  .community {
+    padding: 26px 20px;
+  }
+
+  .services {
+    padding-block: 44px;
+  }
+
+  .serviceGrid article {
+    padding: 24px;
+  }
+
+  .communityGrid {
+    gap: 24px;
+  }
+
+  .communityCopy {
+    padding: 22px;
+  }
+
+  .cta {
+    padding: 46px 0 24px;
+  }
+}
