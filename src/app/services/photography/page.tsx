@@ -38,18 +38,22 @@ const photographyServices = [
   },
 ];
 
-const process = [
+const photographyInclusions = [
   {
-    title: "Plan the shoot",
-    copy: "Tell us what you’re photographing and why. Together, we confirm the location, timing, priorities, and intended use of the images.",
+    title: "Planning and a shared shot list",
+    copy: "We talk through your goals, location, schedule, and where the photos will be used. Together, we agree on the people, products, and moments to capture so everyone knows what to expect.",
   },
   {
-    title: "Capture the details",
-    copy: "We work through the agreed shot list, with attention to the people, setting, and moments that make your story your own.",
+    title: "Photography on location",
+    copy: "Your booked time covers the agreed shoot, whether that means portraits, products, your workplace, or an event. We work through the shot list with attention to the setting and the details that tell your story.",
   },
   {
-    title: "Put your photos to work",
-    copy: "We agree on image selection, any editing needs, file formats, and delivery timing as part of planning your project.",
+    title: "Image selection and agreed edits",
+    copy: "We confirm the image selection and editing scope before the shoot. The work follows that agreement, with any additional retouching or extra requests discussed and quoted separately.",
+  },
+  {
+    title: "Digital delivery and handoff",
+    copy: "Receive your finished photographs in the formats and on the schedule we agree together. We plan delivery around how you’ll use them, from team pages and product listings to campaigns and event recaps.",
   },
 ];
 
@@ -106,18 +110,6 @@ export default function PhotographyPage() {
         </div>
       </section>
 
-      <section className={styles.process} aria-labelledby="photography-process-title">
-        <h2 className="kicker" id="photography-process-title">How we work</h2>
-        <ol>
-          {process.map(({ title, copy }, index) => (
-            <li key={title}>
-              <span aria-hidden="true">0{index + 1}</span>
-              <div><h3>{title}</h3><p>{copy}</p></div>
-            </li>
-          ))}
-        </ol>
-      </section>
-
       <section className={styles.planning} aria-labelledby="photography-planning-title">
         <figure className={styles.locationPhoto}>
           <Image
@@ -147,24 +139,37 @@ export default function PhotographyPage() {
             You don’t need a finished shot list to get started. Bring your ideas,
             examples you like, or a description of what you want people to see.
           </p>
-          <aside className={`panel ${styles.checklist}`}>
-            <h3>What to share with us</h3>
-            <ul>
-              <li>What you’d like photographed and how you’ll use the images</li>
-              <li>Your preferred date, location, and available time</li>
-              <li>The people, products, or event moments you want to include</li>
-              <li>Any must-have shots, brand guidelines, or visual references</li>
-              <li>Your budget and when you need the finished photos</li>
-              <li>One contact to help coordinate the shoot</li>
-            </ul>
-          </aside>
         </div>
       </section>
 
+      <section
+        className={`website-deliverables service-included ${styles.included}`}
+        aria-labelledby="photography-included-title"
+      >
+        <header className="website-deliverables-intro">
+          <p className="kicker">What’s included</p>
+          <h2 id="photography-included-title">Your story, captured and ready to share.</h2>
+          <p>
+            Your agreed photography project includes shoot planning, the booked
+            coverage, image selection and agreed editing, and digital delivery
+            shaped around the way you’ll use your photos.
+          </p>
+        </header>
+        <ul className="website-deliverables-grid" role="list">
+          {photographyInclusions.map(({ title, copy }) => (
+            <li key={title}>
+              <h3>{title}</h3>
+              <p>{copy}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
+
       <section className={styles.cta} aria-labelledby="photography-cta-title">
-        <p className="kicker">Let’s get it in the frame</p>
-        <h2 id="photography-cta-title">Tell us what you want to capture.</h2>
-        <p>Book a free consultation to talk through your ideas and plan the next step.</p>
+        <div>
+          <p className="kicker">Ready when you are</p>
+          <h2 id="photography-cta-title">Let’s make the next step clear.</h2>
+        </div>
         <Link className="button" href="/contact">
           Book a consultation <ArrowRight aria-hidden="true" size={17} />
         </Link>

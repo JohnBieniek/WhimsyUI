@@ -125,61 +125,17 @@
   margin-top: 18px;
 }
 
-.process {
-  background: var(--purple);
-  color: white;
-  border-radius: 10px;
-  padding: 32px;
-}
-
-.process h2 {
-  font-size: 18px;
-  color: var(--mint-strong);
-  letter-spacing: 0.02em;
-}
-
-.process ol {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 28px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.process li {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  align-items: start;
-  gap: 16px;
-}
-
-.process li > span {
-  color: var(--mint-strong);
-  font-size: 28px;
-  font-weight: 800;
-  line-height: 1;
-}
-
-.process h3 {
-  font-size: 18px;
-}
-
-.process p {
-  margin: 0;
-  font-size: 15px;
-}
-
 .planning {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
+  grid-template-columns: 0.75fr 1.25fr;
   gap: 60px;
-  align-items: start;
-  padding-block: 60px;
+  align-items: center;
+  padding-block: 16px 60px;
 }
 
 .locationPhoto {
-  margin: 0;
+  width: min(100%, 400px);
+  margin: 0 auto;
 }
 
 .locationPhoto img {
@@ -195,40 +151,46 @@
   line-height: 1.5;
 }
 
-.checklist {
-  padding: 30px;
-  margin-top: 28px;
+.included {
+  margin-bottom: 48px;
 }
 
-.checklist ul {
-  list-style: disc;
-  padding-left: 20px;
-  margin-bottom: 0;
+.included :global(.website-deliverables-intro) {
+  padding-right: 24px;
 }
 
-.checklist li {
-  padding-left: 4px;
-  margin-top: 12px;
-}
-
-.checklist li::marker {
-  color: var(--purple);
+.included :global(.website-deliverables-intro) h2 {
+  font-size: clamp(28px, 2.6vw, 36px);
+  line-height: 1.15;
 }
 
 .cta {
-  padding: 40px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 36px 32px;
   margin-bottom: 32px;
   background: var(--mint);
   border-radius: 10px;
-  text-align: center;
+}
+
+.cta > div {
+  flex: 1 1 420px;
+  min-width: 0;
+}
+
+.cta :global(.kicker) {
+  margin: 0 0 12px;
 }
 
 .cta h2 {
-  margin-bottom: 16px;
+  margin: 0;
 }
 
 .cta :global(.button) {
-  margin-top: 12px;
+  flex: 0 0 auto;
 }
 
 @media (max-width: 900px) {
@@ -245,10 +207,6 @@
   }
 
   .coverageGrid article {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .process ol {
     grid-template-columns: minmax(0, 1fr);
   }
 }
@@ -279,14 +237,16 @@
     gap: 18px;
   }
 
-  .coverageGrid article,
-  .process,
-  .checklist {
+  .coverageGrid article {
     padding: 24px;
   }
 
   .planning {
-    padding-block: 36px;
+    padding-block: 0 36px;
+  }
+
+  .included {
+    margin-bottom: 36px;
   }
 
   .cta {
