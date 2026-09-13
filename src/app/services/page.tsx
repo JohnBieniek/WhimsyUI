@@ -82,6 +82,8 @@ export default function ServicesPage() {
                     <li>Business &amp; brand photos</li>
                     <li>Headshots</li>
                     <li>Product photography</li>
+                    <li>Digital handoff</li>
+                    <li>Editing available</li>
                   </ul>
                   <Link href="/services/photography">Learn more →</Link>
                 </article>
