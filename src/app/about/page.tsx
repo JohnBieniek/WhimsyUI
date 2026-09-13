@@ -13,6 +13,12 @@ export const metadata: Metadata = {
 
 const offerings = [
   {
+    title: "Advertising & campaigns",
+    Icon: Megaphone,
+    copy: "Coordinated ads, social content, and promotions for products, openings, fundraisers, and events. From a set of four ads to a larger campaign, we bring the message together.",
+    links: [{ label: "Ad campaigns", href: "/services/ad-campaign" }],
+  },
+  {
     title: "Business consulting",
     Icon: ClipboardList,
     copy: "A practical outside perspective on growth, operations, partnerships, and the decisions ahead. We help you set priorities and leave with a plan you can use.",
@@ -25,25 +31,10 @@ const offerings = [
     links: [{ label: "Brand & advertising plans", href: "/services/brand-advertising-plan" }],
   },
   {
-    title: "Advertising & campaigns",
-    Icon: Megaphone,
-    copy: "Coordinated ads, social content, and promotions for products, openings, fundraisers, and events. From a set of four ads to a larger campaign, we bring the message together.",
-    links: [{ label: "Ad campaigns", href: "/services/ad-campaign" }],
-  },
-  {
     title: "Media & events",
     Icon: Camera,
     copy: "Photography, video, business stories, media coordination, and event planning and promotion. We help you introduce the people behind your organization and bring your community together.",
     links: [{ label: "Photo & video services", href: "/services/photography" }],
-  },
-  {
-    title: "Websites & applications",
-    Icon: Monitor,
-    copy: "Single-page sites, full business and nonprofit websites, online stores, and custom applications. We connect clear content and thoughtful design with the features your visitors need.",
-    links: [
-      { label: "Single-page websites", href: "/services/single-page-website" },
-      { label: "Five-page websites", href: "/services/five-page-website" },
-    ],
   },
   {
     title: "Website care & transfers",
@@ -52,6 +43,15 @@ const offerings = [
     links: [
       { label: "Website support", href: "/services/website-support" },
       { label: "Website transfers", href: "/services/website-transfer" },
+    ],
+  },
+  {
+    title: "Websites & applications",
+    Icon: Monitor,
+    copy: "Single-page sites, full business and nonprofit websites, online stores, and custom applications. We connect clear content and thoughtful design with the features your visitors need.",
+    links: [
+      { label: "Single-page websites", href: "/services/single-page-website" },
+      { label: "Five-page websites", href: "/services/five-page-website" },
     ],
   },
 ];
