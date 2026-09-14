@@ -201,3 +201,31 @@ Files: `media/1702365816840081.mp4`
 Original archive caption:
 
 > Media Monday! Airing on- HGTV, USA, FOOD, TBS, Bravo, AMC, TLC, Entertainment & Free-form! Had the privilege of working with The Jackson Crossing Mall and Media Advantage to create this wonderful holiday commercial. Media Advantage did wonderful with filming/editing, and I appreciate being trusted with the script, directing and casting! Hope everyone is safe and warm this holiday season!
+
+## Seasonal gallery revision
+
+Holidays now contains Holiday in the Halls, Malloween, Valentine’s at Jackson Crossing, and Happy Harvest. Holiday in the Halls is the only Christmas selection. Previous case-study URLs remain accessible. Happy Harvest excludes the Christmas-themed floral advertisement from the same archive post.
+
+### 2025-02-22 11:13 AM EST
+
+Files: `media/1040973861390231.jpg`
+
+> 2025 has been wonderful so far! Always such a pleasure working with local businesses and entrepreneurs! We love bringing your vision to life with custom posters, social media ads, logos, and more. Don’t hesitate to reach out—we can’t wait to collaborate with you! #SupportLocal #GraphicDesign #Marketing
+
+### 2024-11-23 06:10 PM EST
+
+Files: `media/974588071362144.jpg`, `media/974588108028807.jpg`, `media/974588138028804.jpg`, `media/974588164695468.jpg`, `media/974588238028794.jpg`, `media/974588278028790.jpg`
+
+> Another amazing event in the books with The Jackson Crossing Mall! Such a pleasure to assist in advertising and curating such a wonderful group of vendors! Check out the Christmas event next, it's going to be the biggest of the year, and don't miss Santa's Grand Opening on Black Friday if you're local! Lakeland Cabaret Albert's Backyard Sweets The Kilted Farmers Heavenly Bakes & Cakes Peggy's custom floral designs & many more!
+
+### 2024-10-14 02:19 PM EDT
+
+Files: `media/944490211038597.jpg`, `media/944490204371931.jpg`, `media/944490191038599.jpg`, `media/944490197705265.jpg`, `media/944490221038596.jpg`, `media/944490217705263.jpg`, `media/944490207705264.jpg`, `media/944490201038598.jpg`, `media/944490194371932.jpg`, `media/944490214371930.jpg`
+
+> 🎃 Malloween at Jackson Crossing Mall is Almost Here! 🎃 Get ready for a spooktacular day at the 2nd Annual Malloween! Bring the whole family out for a fun-filled Halloween event at Jackson Crossing Mall—you won't want to miss it! 👻 🕸️ Date: October 26th 🕸️ Time: Noon-5p 🎃 Here’s What to Expect: 👗 Costume Fun! – Dress up in your costumes and hit the mall for some trick-or-treating! There will be candy stops throughout the mall, so make sure to bring your candy bags! 🛍️ Shop Our Vendors! – Local vendors will be showcasing unique items and Halloween treats you’ll love! Whether you're shopping for stationery, gifts, or something special, there’s something for everyone! 🍴 Grab a Bite! – Feeling hungry? Head over to the FFF TRUCK parked in front of Dunham's for delicious food, including their famous egg rolls, loaded fries, and more! Don't miss out on this fang-tastic day of fun, food, and festivities! 🎉👻 Tag your friends, share the news, and we’ll see you at the 2nd Annual Malloween! 🕷️
+
+### 2024-02-19 10:00 AM EST
+
+Files: `media/787291360091817.jpg`
+
+> Media Monday: This was such a full fun month! From Ad's and magazines to running a large event! Can't wait to see what March holds! If you are looking for logo creation, Ad's, Posters or more reach out any time!

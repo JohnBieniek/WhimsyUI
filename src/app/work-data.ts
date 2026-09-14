@@ -12,6 +12,9 @@ const projects: Record<Category, Array<[string,string,string,string,string]>> = 
     ["miss-crossroads-visit","894475189373433.jpg","Miss Crossroads Community Visit","Jackson Crossing","A joyful public appearance built around connection, visibility, and community support."],
   ],
   "Advertising": [
+    ["malloween","archive/944490211038597.jpg","Malloween at Jackson Crossing","Jackson Crossing","A Halloween campaign connecting costumes, trick-or-treating, music, food, and local vendors."],
+    ["valentines-at-jackson-crossing","archive/1040973861390231.jpg","Valentine’s at Jackson Crossing","Jackson Crossing","Seasonal promotions for Valentine’s gifts, photography, and a gathering in the halls."],
+    ["happy-harvest","archive/974588278028790.jpg","Happy Harvest","Jackson Crossing","Autumn event advertising and vendor coordination celebrating local makers, treats, and music."],
     ["team-hope-walk","team hope core.jpg","Team Hope Walk","Huntington’s Disease Society of America partners (HDSA)","A coordinated awareness campaign connecting the Central Michigan Team Hope Walk with clear event promotion, donation messaging, and practical Huntington’s disease education."],
     ["social-growth","797501532404133.jpg","Jackson Crossing Social Growth","Jackson Crossing","A six-month advertising rhythm that grew awareness through consistent events, tenants, and community stories."],
     ["holiday-in-the-halls","1000952755392342.jpg","Holiday in the Halls","Jackson Crossing","A coordinated holiday campaign that moved from clear promotional creativity to a festive live event with Santa, local vendors, music, treats, and family activities."],
