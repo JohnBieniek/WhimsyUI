@@ -34,7 +34,7 @@ export default function WorkGallery() {
         <h2>{item.title}</h2>
         <strong>{item.client}</strong>
         <p>{item.summary}</p>
-        <Link href={`/work/${item.slug}`}>View case study →</Link>
+        <Link href={`/work/${item.slug === "lakeland-website" ? "lakeland-cabaret" : item.slug}`}>View case study →</Link>
       </article>)}
     </section>
   </>;
