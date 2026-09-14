@@ -72,8 +72,8 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
   const isBackToSchool = study.slug === "back-to-school-bash";
   const facts = study.facts;
 
-  return <main className={`case-page shell ${styles.existing}`}>
-    <Link className="back-link" href="/work">← All work</Link>
+  return <main className={isHoliday ? "case-page shell" : `case-page shell ${styles.existing}`}>
+    <Link className="back-link" href={isHoliday ? "/" : "/work"}>{isHoliday ? "← Home" : "← All work"}</Link>
     <header className={`case-header ${isLakeland ? "lakeland-case-header" : isHoliday ? "holiday-case-header" : isTeamHope ? "team-hope-case-header" : isBackToSchool ? "back-school-case-header" : ""}`.trim()}>
       {!isLakeland && !isHoliday && !isTeamHope && !isBackToSchool && study.category !== "Community events" && <p className="kicker">{selectedCategoryBySlug[study.slug] ?? study.category} · Case study</p>}
       <h1>{study.title}</h1>
@@ -144,9 +144,10 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
       </div>
 
       <div className="holiday-live-story">
-        <header><p className="kicker">The day in the halls</p><h2 className="holiday-live-one-line">A truly festive place to gather!</h2></header>
+        <header><p className="kicker">The day in the halls</p><h2 className="holiday-live-one-line">A truely festive place to gather!</h2></header>
         <figure className="holiday-live-dj"><Image src="/work/lakeland%20cabaret/mall%20christmas%20backdrop.jpg" alt="The DJ performing beneath the Merry Christmas arch at Holiday in the Halls" fill sizes="(max-width: 800px) 100vw, 64vw" /><a className="holiday-lakeland-tag" href="https://lakelandcabaret.com/" target="_blank" rel="noopener noreferrer">Lakeland Cabaret ↗</a></figure>
         <div className="holiday-live-note"><p>The live event carried festive energy throughout the mall! Santa greeted families, vendors filled the halls, and a DJ performed beneath the illuminated Merry Christmas arch.</p><p>The photography closes the loop between promotion and experience, showing the people and seasonal setting behind the campaign.</p></div>
+        <figure className="holiday-event-recap"><Image src="/work/holiday-in-the-halls/1271100088377606.jpg" alt="A holiday character greeting children beside the carousel at Jackson Crossing" fill sizes="(max-width: 800px) 100vw, 46vw" /></figure>
       </div>
 
       <div className="holiday-thanks">
