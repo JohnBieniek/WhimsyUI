@@ -7,7 +7,7 @@ import styles from "./work.module.css";
 export default function SoftwareProject({ project }: { project: (typeof softwareProjects)[number] }) {
   return (
     <main className={`inner-page shell ${styles.page}`}>
-      <Link className="back-link" href="/work#software">← All software projects</Link>
+      <Link className="back-link" href="/work#campaigns">← All work</Link>
       <header className={styles.projectHero}>
         <div>
           <p className="kicker">Software · {project.kind}</p>
