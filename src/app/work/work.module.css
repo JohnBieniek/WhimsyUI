@@ -34,15 +34,29 @@
 .detailImage img { object-fit: contain; padding: 16px; }
 .detailImage figcaption { margin-top: 12px; line-height: 1.5; }
 .credit { font-size: 14px; margin-bottom: 28px; }
+.storyOverview { display: grid; grid-template-columns: 1fr 1.35fr; gap: 40px; padding: 28px; margin-bottom: 36px; background: var(--mint); border-left: 6px solid var(--purple); }
+.storyOverview p:first-child, .storyChapter p:first-child { margin-top: 0; }
+.storyOverview p:last-child { margin-bottom: 0; }
+.storyChapter { padding-block: 32px; border-top: 1px solid var(--line); }
+.storyChapter > h2 { max-width: 1000px; }
+.chapterCopy { max-width: 900px; }
+.illustratedChapter { display: grid; grid-template-columns: 1fr 1.15fr; align-items: start; gap: 36px; }
+.illustratedChapter figure { margin: 0; }
+.chapterImage { position: relative; aspect-ratio: 4 / 3; background: var(--mint); border-radius: 10px; overflow: hidden; }
+.chapterImage img { object-fit: contain; padding: 12px; }
+.illustratedChapter figcaption { font-size: 14px; line-height: 1.5; margin-top: 12px; }
+.storyChapter > .details { margin-top: 24px; }
 .cta { display: flex; align-items: center; flex-wrap: wrap; justify-content: space-between; gap: 24px; padding: 28px; background: var(--mint); border-radius: 10px; margin-bottom: 28px; }
 .cta h2 { margin-bottom: 0; }
 .cta :global(.kicker) { margin-top: 0; }
 .page a:focus-visible { outline: 3px solid var(--purple); outline-offset: 4px; }
 @media (max-width: 900px) {
+  .storyOverview, .illustratedChapter { grid-template-columns: minmax(0, 1fr); gap: 20px; }
   .hero, .projectHero { grid-template-columns: minmax(0, 1fr); gap: 24px; }
   .details { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 700px) {
+  .storyOverview { padding: 20px; }
   .softwareGrid { grid-template-columns: minmax(0, 1fr); gap: 20px; }
   .cardCopy, .cta { padding: 20px; }
   .section { padding-block: 24px 28px; }
