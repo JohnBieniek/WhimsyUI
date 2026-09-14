@@ -58,18 +58,18 @@ const offerings = [
 
 const communityWork = [
   {
-    name: "Grow Jackson & River & Rail",
-    image: "/about/grow-jackson-volunteering.jpg",
-    alt: "Community Impact Day volunteers shoveling mulch at Grow Jackson and River & Rail.",
-    position: "center 68%",
-    copy: "During Community Impact Day, we joined other local volunteers to work on plant beds, mulch, and compost, lending a hand to the people growing Jackson’s local food community.",
-  },
-  {
     name: "Serenity Sober Living House",
     image: "/about/serenity-volunteering.jpg",
     alt: "Kay taking a group selfie with fellow Community Impact Day participants outside Serenity Sober Living House.",
     position: "center 30%",
     copy: "We weeded, planted flowers, edged garden beds, helped build a fire pit, and cleared a patio as part of the Jackson County Chamber of Commerce’s Community Impact Day.",
+  },
+  {
+    name: "Grow Jackson & River & Rail",
+    image: "/about/grow-jackson-volunteering.jpg",
+    alt: "Community Impact Day volunteers shoveling mulch at Grow Jackson and River & Rail.",
+    position: "center 68%",
+    copy: "During Community Impact Day, we joined other local volunteers to work on plant beds, mulch, and compost, lending a hand to the people growing Jackson’s local food community.",
   },
   {
     name: "Jackson County Airport",
