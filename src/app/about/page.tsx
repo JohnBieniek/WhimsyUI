@@ -88,14 +88,21 @@ export default function AboutPage() {
           <p className="kicker">About Whimsy</p>
           <h1 id="about-title">Local talent.<br />Trusted work.</h1>
           <p className={styles.intro}>
-            We’re Whimsy, a consulting, media, and marketing team rooted in
-            Jackson, Michigan. Started by Kay Pickett, we help businesses and
-            nonprofits tell their stories, reach more people, and turn good
-            ideas into work that makes a difference.
+            We’re Whimsy! We do consulting, media, and marketing work around
+            Jackson, Michigan. We’ve made websites, ad campaigns, and creative
+            materials for dozens of local companies. We help businesses,
+            nonprofits, and community organizations throughout the Jackson area.
+            Our work spans shops, restaurants, radio stations, real estate
+            brokers, community organizations and much more.
           </p>
           <p>
-            From websites and advertising campaigns to community events and
-            hands-on volunteering, we’re invested in the place we call home.
+            You likely know many of the companies we work with. From Jackson
+            Crossing, to Mens Warehouse, to JTV we help everyone reach their
+            audience and goals. Our support has helped Fetch Market &amp; Deli,
+            Sisters Smoothies, Serenity Sober Living House, The Welcome Home
+            Organization as well as many others. Big or small, we have the skills
+            and connections to elevate your brand and accelerate your growth.
+            Reach out to talk to us about how we can make your organization shine!
           </p>
           <Link className="button" href="/contact">
             Let’s work together <ArrowRight aria-hidden="true" size={17} />
@@ -114,7 +121,7 @@ export default function AboutPage() {
       <section className={styles.story} aria-labelledby="our-story-title">
         <div>
           <p className="kicker">Our story</p>
-          <h2 id="our-story-title">Founded by Kay Pickett.<br />Rooted in Jackson.</h2>
+          <h2 id="our-story-title">Founded by Kay Pickett. Rooted in Jackson.</h2>
           <p>
             Kay Pickett founded Whimsy with a background in community relations,
             advertising, and the arts. She brings those experiences to the
@@ -130,24 +137,6 @@ export default function AboutPage() {
           <a className={styles.textLink} href="https://www.linkedin.com/in/kay-pickett">
             Get to know Kay on LinkedIn <ArrowRight aria-hidden="true" size={16} />
           </a>
-        </div>
-        <div>
-          <p className="kicker">The organizations beside us</p>
-          <h2 className={styles.localWorkTitle}>Good work, all around town.</h2>
-          <p>
-            We’ve made websites, campaigns, and creative materials for businesses,
-            nonprofits, and community organizations throughout the Jackson area.
-            Our work spans shops and restaurants, local makers, real estate,
-            entertainment, and organizations serving our neighbors.
-          </p>
-          <p>
-            That includes advertising and events with Jackson Crossing and
-            creative support for Fetch Market &amp; Deli and Sisters Smoothies.
-            We’ve also worked with McAlisters Deli, Mens Warehouse, and JTV,
-            provided Serenity Sober Living House with consulting and brand
-            support, and helped promote Huntington’s disease awareness with
-            HDSA partners.
-          </p>
         </div>
       </section>
 
