@@ -133,7 +133,7 @@ export default function AboutPage() {
         </div>
         <div>
           <p className="kicker">The organizations beside us</p>
-          <h2>Good work, all around town.</h2>
+          <h2 className={styles.localWorkTitle}>Good work, all around town.</h2>
           <p>
             We’ve made websites, campaigns, and creative materials for businesses,
             nonprofits, and community organizations throughout the Jackson area.
