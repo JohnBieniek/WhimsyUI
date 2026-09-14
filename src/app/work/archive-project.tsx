@@ -3,6 +3,7 @@ import Link from "next/link";
 import { type ArchiveStory } from "./archive-stories";
 import dimensions from "./archive-images.json";
 import styles from "./archive-project.module.css";
+import { ProjectCallToAction, ProjectHeader } from "./project-framing";
 
 function ArchiveImage({ item, hero = false }: { item: [string, string]; hero?: boolean }) {
   const [id, caption] = item;
@@ -16,13 +17,11 @@ function ArchiveImage({ item, hero = false }: { item: [string, string]; hero?: b
 }
 
 export default function ArchiveProject({ story, title, client, category }: { story: ArchiveStory; title: string; client: string; category: string }) {
-  return <main className={`shell ${styles.page}`}>
+  return <main className={`case-page shell ${styles.page}`}>
     <Link className="back-link" href="/work">← All work</Link>
-    <header className={styles.header}>
+    <ProjectHeader title={story.title ?? title} description={story.summary}>
       <p className="kicker">{category} · {client}</p>
-      <h1>{story.title ?? title}</h1>
-      <p>{story.summary}</p>
-    </header>
+    </ProjectHeader>
     <section className={styles.opening}>
       <div>
         <p className="kicker">The project</p>
@@ -46,11 +45,6 @@ export default function ArchiveProject({ story, title, client, category }: { sto
         {section.images.map(item => <ArchiveImage item={item} key={item[0]} />)}
       </div>}
     </section>)}
-    <section className={styles.cta}>
-      <p className="kicker">Your next project</p>
-      <h2>Let’s make something worth sharing.</h2>
-      <p>From a business introduction to a full campaign, we can help you plan the message, create the content, and bring it to your audience.</p>
-      <Link className="button" href="/contact">Book a free consultation →</Link>
-    </section>
+    <ProjectCallToAction />
   </main>;
 }

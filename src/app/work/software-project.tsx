@@ -4,23 +4,20 @@ import { CreatorCredit } from "../creator-credit";
 import { softwareProjects } from "./software-projects";
 import { softwareStories } from "./software-stories";
 import styles from "./work.module.css";
+import { ProjectCallToAction, ProjectHeader } from "./project-framing";
 
 export default function SoftwareProject({ project }: { project: (typeof softwareProjects)[number] }) {
   const story = softwareStories[project.slug];
   return (
-    <main className={`inner-page shell ${styles.page}`}>
+    <main className={`case-page shell ${styles.page}`}>
       <Link className="back-link" href="/work#campaigns">← All work</Link>
-      <header className={styles.projectHero}>
-        <div>
-          <p className="kicker">Software · {project.kind}</p>
-          <h1>{project.title}</h1>
-          <p className={styles.intro}>{project.intro}</p>
-          <a className="button" href={project.link}>{project.linkLabel} ↗</a>
-        </div>
-        <a className={styles.projectImage} href={project.image} target="_blank" rel="noopener noreferrer" aria-label={`View full screenshot: ${project.alt}`}>
-          <Image src={project.image} alt={project.alt} fill priority sizes="(max-width: 900px) 100vw, 55vw" />
-        </a>
-      </header>
+      <ProjectHeader title={project.title} description={project.intro}>
+        <p className="kicker">Software · {project.kind}</p>
+        <a className="button" href={project.link}>{project.linkLabel} ↗</a>
+      </ProjectHeader>
+      <a className={styles.projectImage} href={project.image} target="_blank" rel="noopener noreferrer" aria-label={`View full screenshot: ${project.alt}`}>
+        <Image src={project.image} alt={project.alt} fill priority sizes="(max-width: 1080px) 100vw, 1000px" />
+      </a>
       {story && <section className={styles.storyOverview} aria-labelledby="project-brief-title">
         <div><p className="kicker">The project</p><h2 id="project-brief-title">{story.title}</h2></div>
         <div>{story.overview.map(paragraph => <p key={paragraph}>{paragraph}</p>)}</div>
@@ -58,11 +55,8 @@ export default function SoftwareProject({ project }: { project: (typeof software
         <figcaption>{project.detailCaption}</figcaption>
       </figure>}
       <p className={styles.credit}>Software by John Bieniek. <a href={project.source}>Read the engineering overview ↗</a></p>
-      <section className={styles.cta}>
-        <div><p className="kicker">Your next project</p><h2>Let’s build something useful.</h2></div>
-        <Link className="button" href="/contact">Book a consultation →</Link>
-      </section>
       <CreatorCredit />
+      <ProjectCallToAction />
     </main>
   );
 }

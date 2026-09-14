@@ -23,8 +23,7 @@
 .cardCopy :global(.kicker) { font-size: 14px; margin-bottom: 12px; }
 .cardCopy > p:not(:global(.kicker)) { margin: 0 0 20px; }
 .cardLink { margin-top: auto; }
-.projectHero { display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: start; padding-bottom: 40px; }
-.projectImage { position: relative; aspect-ratio: 4 / 3; background: var(--mint); border-radius: 10px; overflow: hidden; }
+.projectImage { display: block; position: relative; width: min(100%, 1000px); margin: 0 auto 40px; aspect-ratio: 4 / 3; background: var(--mint); border-radius: 10px; overflow: hidden; }
 .details { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
 .details article { background: #eee3f7; padding: 24px; border-top: 4px solid var(--purple); }
 .details h3 { color: var(--purple); font-size: 20px; }
@@ -56,7 +55,7 @@
 .page a:focus-visible { outline: 3px solid var(--purple); outline-offset: 4px; }
 @media (max-width: 900px) {
   .storyOverview, .illustratedChapter { grid-template-columns: minmax(0, 1fr); gap: 20px; }
-  .hero, .projectHero { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .hero { grid-template-columns: minmax(0, 1fr); gap: 24px; }
   .details { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 700px) {

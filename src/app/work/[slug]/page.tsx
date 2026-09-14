@@ -9,6 +9,7 @@ import { selectedCategoryBySlug } from "../portfolio-selection";
 import { archiveStories } from "../archive-stories";
 import ArchiveProject from "../archive-project";
 import styles from "../archive-project.module.css";
+import { ProjectCallToAction } from "../project-framing";
 
 export function generateStaticParams() {
   return [...new Set([...caseStudies, ...softwareProjects].map(({ slug }) => slug))].map(slug => ({ slug }));
@@ -228,6 +229,6 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
       </section>
       <section className="case-gallery">{study.images.map((file) => <figure key={file}><Image src={`/work/${file}`} alt={getImageAlt(`/work/${file}`)} fill sizes="(max-width:700px) 100vw, 50vw" /></figure>)}</section>
     </>}
-    <section className="ready"><h2>Have a campaign in mind?</h2><p>Let’s build something useful for your audience and your community.</p><Link className="button" href="/contact">Start a conversation →</Link></section>
+    <ProjectCallToAction />
   </main>;
 }
