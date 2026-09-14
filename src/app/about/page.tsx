@@ -232,7 +232,7 @@ export default function AboutPage() {
                   alt={alt}
                   fill
                   sizes="(max-width: 700px) 100vw, 33vw"
-                  style={{ objectPosition: position }}
+                  style={{ objectPosition: position, transform: image === "/about/serenity-volunteering.jpg" ? "scaleX(-1)" : undefined }}
                 />
               </div>
               <div className={styles.communityCopy}>
