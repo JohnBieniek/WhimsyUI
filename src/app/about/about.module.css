@@ -66,10 +66,16 @@
 
 .story {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 70px;
+  grid-template-columns: minmax(0, 1fr);
   padding-block: 44px 54px;
   border-top: 1px solid var(--line);
+}
+
+@media (min-width: 1051px) {
+  .story h2 {
+    font-size: clamp(28px, 3vw, 42px);
+    white-space: nowrap;
+  }
 }
 
 .story p:last-of-type {
@@ -323,10 +329,6 @@
 
 @media (max-width: 700px) {
   .communityHeader h2 {
-    font-size: clamp(18px, 5.5vw, 28px);
-  }
-
-  .story .localWorkTitle {
     font-size: clamp(18px, 5.5vw, 28px);
   }
 
