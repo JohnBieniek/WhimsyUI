@@ -3,9 +3,17 @@ import { getImageAlt } from "../../image-alt";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { caseStudies } from "../../work-data";
+import { softwareProjects } from "../software-projects";
+import SoftwareProject from "../software-project";
 
 export function generateStaticParams() {
-  return caseStudies.map(({ slug }) => ({ slug }));
+  return [...new Set([...caseStudies, ...softwareProjects].map(({ slug }) => slug))].map(slug => ({ slug }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const project = softwareProjects.find(item => item.slug === slug) ?? caseStudies.find(item => item.slug === slug);
+  return project ? { title: `${project.title} | Our Work | Whimsy`, description: project.summary } : {};
 }
 
 const teamHopeEducation = [
@@ -47,6 +55,8 @@ const holidayPartnerAds = [
 
 export default async function CaseStudy({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+  const software = softwareProjects.find(item => item.slug === slug);
+  if (software) return <SoftwareProject project={software} />;
   const study = caseStudies.find((item) => item.slug === slug);
   if (!study) notFound();
 
@@ -54,11 +64,10 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
   const isHoliday = study.slug === "holiday-in-the-halls";
   const isTeamHope = study.slug === "team-hope-walk";
   const isBackToSchool = study.slug === "back-to-school-bash";
-  const linksHome = ["social-growth", "back-to-school-bash", "holiday-in-the-halls", "team-hope-walk", "lakeland-cabaret"].includes(study.slug);
   const facts = study.facts;
 
   return <main className="case-page shell">
-    <Link className="back-link" href={linksHome ? "/" : "/work"}>{linksHome ? "← Home" : "← All work"}</Link>
+    <Link className="back-link" href="/work">← All work</Link>
     <header className={`case-header ${isLakeland ? "lakeland-case-header" : isHoliday ? "holiday-case-header" : isTeamHope ? "team-hope-case-header" : isBackToSchool ? "back-school-case-header" : ""}`.trim()}>
       {!isLakeland && !isHoliday && !isTeamHope && !isBackToSchool && study.category !== "Community events" && <p className="kicker">{study.category} · Case study</p>}
       <h1>{study.title}</h1>
