@@ -95,15 +95,6 @@ export default function AboutPage() {
             Our work spans shops, restaurants, radio stations, real estate
             brokers, community organizations and much more.
           </p>
-          <p>
-            You likely know many of the companies we work with. From Jackson
-            Crossing, to Mens Warehouse, to JTV we help everyone reach their
-            audience and goals. Our support has helped Fetch Market &amp; Deli,
-            Sisters Smoothies, Serenity Sober Living House, The Welcome Home
-            Organization as well as many others. Big or small, we have the skills
-            and connections to elevate your brand and accelerate your growth.
-            Reach out to talk to us about how we can make your organization shine!
-          </p>
           <Link className="button" href="/contact">
             Let’s work together <ArrowRight aria-hidden="true" size={17} />
           </Link>
@@ -122,9 +113,6 @@ export default function AboutPage() {
         <div>
           <p className="kicker">Our story</p>
           <h2 id="our-story-title">Founded by Kay Pickett. Rooted in Jackson.</h2>
-          <a className={styles.textLink} href="https://www.linkedin.com/in/kay-pickett">
-            Get to know Kay on LinkedIn <ArrowRight aria-hidden="true" size={16} />
-          </a>
           <p>
             Kay Pickett founded Whimsy with a background in community relations,
             advertising, and the arts. She brings those experiences to the
@@ -137,6 +125,18 @@ export default function AboutPage() {
             beyond client projects, including the time we give to local
             organizations and events.
           </p>
+          <p>
+            You likely know many of the companies we work with. From Jackson
+            Crossing, to Mens Warehouse, to JTV we help everyone reach their
+            audience and goals. Our support has helped Fetch Market &amp; Deli,
+            Sisters Smoothies, Serenity Sober Living House, The Welcome Home
+            Organization as well as many others. Big or small, we have the skills
+            and connections to elevate your brand and accelerate your growth.
+            Reach out to talk to us about how we can make your organization shine!
+          </p>
+          <a className={styles.textLink} href="https://www.linkedin.com/in/kay-pickett">
+            Get to know Kay on LinkedIn <ArrowRight aria-hidden="true" size={16} />
+          </a>
         </div>
       </section>
 
