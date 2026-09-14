@@ -12,7 +12,6 @@ export default function SoftwareProject({ project }: { project: (typeof software
     <main className={`case-page shell ${styles.page}`}>
       <Link className="back-link" href="/work#campaigns">← All work</Link>
       <ProjectHeader title={project.title} description={project.intro}>
-        <p className="kicker">Software · {project.kind}</p>
         <a className="button" href={project.link}>{project.linkLabel} ↗</a>
       </ProjectHeader>
       <a className={styles.projectImage} href={project.image} target="_blank" rel="noopener noreferrer" aria-label={`View full screenshot: ${project.alt}`}>

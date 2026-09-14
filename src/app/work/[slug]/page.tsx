@@ -5,7 +5,6 @@ import { notFound } from "next/navigation";
 import { caseStudies } from "../../work-data";
 import { softwareProjects } from "../software-projects";
 import SoftwareProject from "../software-project";
-import { selectedCategoryBySlug } from "../portfolio-selection";
 import { archiveStories } from "../archive-stories";
 import ArchiveProject from "../archive-project";
 import styles from "../archive-project.module.css";
@@ -65,7 +64,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
   const study = caseStudies.find((item) => item.slug === slug);
   if (!study) notFound();
   const archiveStory = archiveStories[slug];
-  if (archiveStory) return <ArchiveProject story={archiveStory} title={study.title} client={study.client} category={selectedCategoryBySlug[slug] ?? study.category} />;
+  if (archiveStory) return <ArchiveProject story={archiveStory} title={study.title} />;
 
   const isLakeland = study.slug === "lakeland-cabaret";
   const isHoliday = study.slug === "holiday-in-the-halls";
@@ -76,10 +75,8 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
   return <main className={isHoliday ? "case-page shell" : `case-page shell ${styles.existing}`}>
     <Link className="back-link" href={isHoliday ? "/" : "/work"}>{isHoliday ? "← Home" : "← All work"}</Link>
     <header className={`case-header ${isLakeland ? "lakeland-case-header" : isHoliday ? "holiday-case-header" : isTeamHope ? "team-hope-case-header" : isBackToSchool ? "back-school-case-header" : ""}`.trim()}>
-      {!isLakeland && !isHoliday && !isTeamHope && !isBackToSchool && study.category !== "Community events" && <p className="kicker">{selectedCategoryBySlug[study.slug] ?? study.category} · Case study</p>}
       <h1>{study.title}</h1>
       <p className="intro">{study.summary}</p>
-      <div className="case-meta"><span>Partner</span><b>{study.client}</b>{!isLakeland && !isHoliday && !isTeamHope && !isBackToSchool && <><span>Project</span><b>{study.event}</b></>}</div>
       {isLakeland && <a className="button case-website" href="https://lakelandcabaret.com/" target="_blank" rel="noopener noreferrer">Visit Lakeland Cabaret ↗</a>}
     </header>
     {isLakeland ? <section className="lakeland-project-sections">

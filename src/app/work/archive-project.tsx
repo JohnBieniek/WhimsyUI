@@ -16,12 +16,10 @@ function ArchiveImage({ item, hero = false }: { item: [string, string]; hero?: b
   </figure>;
 }
 
-export default function ArchiveProject({ story, title, client, category }: { story: ArchiveStory; title: string; client: string; category: string }) {
+export default function ArchiveProject({ story, title }: { story: ArchiveStory; title: string }) {
   return <main className={`case-page shell ${styles.page}`}>
     <Link className="back-link" href="/work">← All work</Link>
-    <ProjectHeader title={story.title ?? title} description={story.summary}>
-      <p className="kicker">{category} · {client}</p>
-    </ProjectHeader>
+    <ProjectHeader title={story.title ?? title} description={story.summary} />
     <section className={styles.opening}>
       <div>
         <p className="kicker">The project</p>
