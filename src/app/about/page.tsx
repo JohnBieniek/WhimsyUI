@@ -122,6 +122,9 @@ export default function AboutPage() {
         <div>
           <p className="kicker">Our story</p>
           <h2 id="our-story-title">Founded by Kay Pickett. Rooted in Jackson.</h2>
+          <a className={styles.textLink} href="https://www.linkedin.com/in/kay-pickett">
+            Get to know Kay on LinkedIn <ArrowRight aria-hidden="true" size={16} />
+          </a>
           <p>
             Kay Pickett founded Whimsy with a background in community relations,
             advertising, and the arts. She brings those experiences to the
@@ -134,9 +137,6 @@ export default function AboutPage() {
             beyond client projects, including the time we give to local
             organizations and events.
           </p>
-          <a className={styles.textLink} href="https://www.linkedin.com/in/kay-pickett">
-            Get to know Kay on LinkedIn <ArrowRight aria-hidden="true" size={16} />
-          </a>
         </div>
       </section>
 
