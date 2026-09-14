@@ -5,9 +5,10 @@ import { useState } from "react";
 import { getImageAlt } from "../image-alt";
 import { caseStudies } from "../work-data";
 import { softwareProjects } from "./software-projects";
+import { selectedWork, workCategories } from "./portfolio-selection";
 
-const categories = ["All work", "Community events", "Advertising", "Media", "Brand support", "Software"];
-const projects = [
+const categories = ["All work", ...workCategories];
+const availableProjects = [
   ...caseStudies.filter(item => item.category !== "Websites").map(item => ({
     ...item,
     image: `/work/${item.file}`,
@@ -15,6 +16,11 @@ const projects = [
   })),
   ...softwareProjects.map(item => ({ ...item, category: "Software", client: item.kind })),
 ];
+const projects = workCategories.flatMap(category => selectedWork[category].map(slug => {
+  const project = availableProjects.find(item => item.slug === slug);
+  if (!project) throw new Error(`Missing selected work project: ${slug}`);
+  return { ...project, category };
+}));
 
 export default function WorkGallery() {
   const [active, setActive] = useState("All work");

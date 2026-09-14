@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { caseStudies } from "../../work-data";
 import { softwareProjects } from "../software-projects";
 import SoftwareProject from "../software-project";
+import { selectedCategoryBySlug } from "../portfolio-selection";
 
 export function generateStaticParams() {
   return [...new Set([...caseStudies, ...softwareProjects].map(({ slug }) => slug))].map(slug => ({ slug }));
@@ -69,7 +70,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
   return <main className="case-page shell">
     <Link className="back-link" href="/work">← All work</Link>
     <header className={`case-header ${isLakeland ? "lakeland-case-header" : isHoliday ? "holiday-case-header" : isTeamHope ? "team-hope-case-header" : isBackToSchool ? "back-school-case-header" : ""}`.trim()}>
-      {!isLakeland && !isHoliday && !isTeamHope && !isBackToSchool && study.category !== "Community events" && <p className="kicker">{study.category} · Case study</p>}
+      {!isLakeland && !isHoliday && !isTeamHope && !isBackToSchool && study.category !== "Community events" && <p className="kicker">{selectedCategoryBySlug[study.slug] ?? study.category} · Case study</p>}
       <h1>{study.title}</h1>
       <p className="intro">{study.summary}</p>
       <div className="case-meta"><span>Partner</span><b>{study.client}</b>{!isLakeland && !isHoliday && !isTeamHope && !isBackToSchool && <><span>Project</span><b>{study.event}</b></>}</div>
