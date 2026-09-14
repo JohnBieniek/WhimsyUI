@@ -229,3 +229,11 @@ Files: `media/944490211038597.jpg`, `media/944490204371931.jpg`, `media/94449019
 Files: `media/787291360091817.jpg`
 
 > Media Monday: This was such a full fun month! From Ad's and magazines to running a large event! Can't wait to see what March holds! If you are looking for logo creation, Ad's, Posters or more reach out any time!
+
+## Malloween event recap
+
+The site owner supplied three event photographs in `public/`: `mall o ween crowd.jpg`, `mall o ween dj with people.jpg`, and `mall o ween kids no identifiable faces.jpg`.
+
+The photographs are used as supplied, with the owner's confirmation. Copies are published as `public/work/archive/malloween-crowd.jpg`, `malloween-dj.jpg`, and `malloween-games.jpg`, respectively; dimensions are recorded in `src/app/work/archive-images.json`.
+
+The owner also supplied the recap details: visitors enjoyed the music and shops, and children enjoyed musical chairs, freeze dance, candy, and prizes. The closing copy explains the value for businesses and attendees without introducing attendance figures or measured sales results.

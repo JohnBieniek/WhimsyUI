@@ -378,5 +378,17 @@
   "974588238028794": {
     "width": 1080,
     "height": 1080
+  },
+  "malloween-crowd": {
+    "width": 2048,
+    "height": 1800
+  },
+  "malloween-dj": {
+    "width": 2048,
+    "height": 1181
+  },
+  "malloween-games": {
+    "width": 680,
+    "height": 906
   }
 }

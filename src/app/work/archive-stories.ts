@@ -11,6 +11,28 @@ export const archiveStories: Record<string, ArchiveStory> = {
     sections: [
       { kicker: "Things to do", title: "Give the activities their own invitation.", paragraphs: ["The entertainment promotions introduced Lakeland Cabaret's DJ set, local dance classes, a Studio One Photography session, and a Stitch appearance. Each ad offered a different reason to stop, with event details repeated where visitors needed them.", "The photography piece used an autumn backdrop, while the DJ artwork leaned into darker Halloween imagery. Those individual styles gave each activity personality within a shared seasonal campaign."], images: [["944490197705265", "Malloween promotion for local dance classes"], ["944490221038596", "Studio One Photography's autumn photo session at Malloween"], ["944490214371930", "Malloween Stitch appearance announcement for 4 to 5 PM"]] },
       { kicker: "Food and shopping", title: "Let each business bring something different.", paragraphs: ["F'ing Fantastic Food Truck's promotion highlighted egg rolls, fries, and nachos, with the event announcement directing visitors to the truck outside Dunham's. Other pieces introduced clothing, home décor, handmade jewelry, and sweets.", "Product photographs make the variety tangible. Someone arriving for Halloween activities could also discover a local maker, browse a display, or plan a food stop as part of the same visit."], images: [["944490204371931", "Food truck advertisement for Malloween"], ["944490191038599", "BINHI clothing collection promotion for Malloween"], ["944490217705263", "Home décor and seasonal displays promoted for Malloween"], ["944490207705264", "Handmade jewelry promotion for the Halloween event"], ["944490201038598", "McCallister Creations sweets promotion in the Malloween campaign"], ["944490194371932", "Enchanted Chains permanent jewelry promotion for Malloween"]] },
+      {
+        kicker: "The event in action",
+        title: "Music, games, and reasons to stay.",
+        paragraphs: [
+          "Visitors loved the music from Lakeland Cabaret’s DJ, gathering around the booth and enjoying the Halloween atmosphere. Attendees explored the shops and event vendors throughout Jackson Crossing, finding treats, gifts, and plenty of local businesses to discover along the way.",
+          "Kids joined in musical chairs and freeze dance, with candy and prizes adding to the excitement. The games gave families a chance to play, cheer one another on, and enjoy the afternoon together, turning a shopping trip into a shared Halloween celebration.",
+        ],
+        images: [
+          ["malloween-crowd", "Costumed shoppers exploring stores and vendor displays at Jackson Crossing during Malloween."],
+          ["malloween-dj", "Visitors gathering around Lakeland Cabaret’s DJ booth during Malloween."],
+          ["malloween-games", "Halloween costumes and family activities beside the Malloween DJ booth."],
+        ],
+      },
+      {
+        kicker: "The value of bringing people together",
+        title: "A memorable day for visitors. New connections for businesses.",
+        paragraphs: [
+          "For the shops and participating vendors, Malloween brought people into the halls and gave them reasons to browse, ask questions, and spend time with local businesses. Whimsy’s advertising introduced the offerings before the event, while the music and activities created opportunities to turn that interest into conversations and customer relationships.",
+          "For attendees, shopping, music, games, candy, and prizes came together in one welcoming outing. Families could make memories and discover something new, while businesses had a chance to become part of those memories. That shared value gives people a reason to return and helps local businesses build lasting connections with their community.",
+        ],
+        images: [],
+      },
     ],
   },
   "valentines-at-jackson-crossing": {
