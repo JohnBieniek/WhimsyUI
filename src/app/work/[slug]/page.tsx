@@ -6,6 +6,9 @@ import { caseStudies } from "../../work-data";
 import { softwareProjects } from "../software-projects";
 import SoftwareProject from "../software-project";
 import { selectedCategoryBySlug } from "../portfolio-selection";
+import { archiveStories } from "../archive-stories";
+import ArchiveProject from "../archive-project";
+import styles from "../archive-project.module.css";
 
 export function generateStaticParams() {
   return [...new Set([...caseStudies, ...softwareProjects].map(({ slug }) => slug))].map(slug => ({ slug }));
@@ -14,7 +17,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const project = softwareProjects.find(item => item.slug === slug) ?? caseStudies.find(item => item.slug === slug);
-  return project ? { title: `${project.title} | Our Work | Whimsy`, description: project.summary } : {};
+  return project ? { title: `${archiveStories[slug]?.title ?? project.title} | Our Work | Whimsy`, description: archiveStories[slug]?.summary ?? project.summary } : {};
 }
 
 const teamHopeEducation = [
@@ -60,6 +63,8 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
   if (software) return <SoftwareProject project={software} />;
   const study = caseStudies.find((item) => item.slug === slug);
   if (!study) notFound();
+  const archiveStory = archiveStories[slug];
+  if (archiveStory) return <ArchiveProject story={archiveStory} title={study.title} client={study.client} category={selectedCategoryBySlug[slug] ?? study.category} />;
 
   const isLakeland = study.slug === "lakeland-cabaret";
   const isHoliday = study.slug === "holiday-in-the-halls";
@@ -67,7 +72,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
   const isBackToSchool = study.slug === "back-to-school-bash";
   const facts = study.facts;
 
-  return <main className="case-page shell">
+  return <main className={`case-page shell ${styles.existing}`}>
     <Link className="back-link" href="/work">← All work</Link>
     <header className={`case-header ${isLakeland ? "lakeland-case-header" : isHoliday ? "holiday-case-header" : isTeamHope ? "team-hope-case-header" : isBackToSchool ? "back-school-case-header" : ""}`.trim()}>
       {!isLakeland && !isHoliday && !isTeamHope && !isBackToSchool && study.category !== "Community events" && <p className="kicker">{selectedCategoryBySlug[study.slug] ?? study.category} · Case study</p>}
@@ -139,10 +144,9 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
       </div>
 
       <div className="holiday-live-story">
-        <header><p className="kicker">The day in the halls</p><h2 className="holiday-live-one-line">A truely festive place to gather!</h2></header>
+        <header><p className="kicker">The day in the halls</p><h2 className="holiday-live-one-line">A truly festive place to gather!</h2></header>
         <figure className="holiday-live-dj"><Image src="/work/lakeland%20cabaret/mall%20christmas%20backdrop.jpg" alt="The DJ performing beneath the Merry Christmas arch at Holiday in the Halls" fill sizes="(max-width: 800px) 100vw, 64vw" /><a className="holiday-lakeland-tag" href="https://lakelandcabaret.com/" target="_blank" rel="noopener noreferrer">Lakeland Cabaret ↗</a></figure>
         <div className="holiday-live-note"><p>The live event carried festive energy throughout the mall! Santa greeted families, vendors filled the halls, and a DJ performed beneath the illuminated Merry Christmas arch.</p><p>The photography closes the loop between promotion and experience, showing the people and seasonal setting behind the campaign.</p></div>
-        <figure className="holiday-event-recap"><Image src="/work/holiday-in-the-halls/1271100088377606.jpg" alt="A holiday character greeting children beside the carousel at Jackson Crossing" fill sizes="(max-width: 800px) 100vw, 46vw" /></figure>
       </div>
 
       <div className="holiday-thanks">
@@ -186,7 +190,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
       <div className="back-school-opening">
         <figure className="back-school-opening-art"><Image src="/work/back-to-school/1478820320938914.jpg" alt="Back to School Bash campaign overview" fill priority sizes="(max-width: 800px) 100vw, 48vw" /></figure>
         <div className="back-school-opening-copy">
-          <p className="kicker">An excelent start to the school year</p>
+          <p className="kicker">An excellent start to the school year</p>
           <h2 className="back-school-opening-title"><span>Practical help, without</span><span>the overwhelming atmosphere.</span></h2>
           <p>Jackson Crossing wanted families to have an easier way to get ready for school. The Back to School Bash brought useful resources together in an enjoyable event designed to feel welcoming from start to finish.</p>
           <dl><div><dt>Date</dt><dd>August 1</dd></div><div><dt>Time</dt><dd>Noon–4 PM</dd></div><div><dt>Location</dt><dd>Jackson Crossing</dd></div></dl>

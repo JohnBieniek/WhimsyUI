@@ -6,13 +6,16 @@ import { getImageAlt } from "../image-alt";
 import { caseStudies } from "../work-data";
 import { softwareProjects } from "./software-projects";
 import { selectedWork, workCategories } from "./portfolio-selection";
+import { archiveStories } from "./archive-stories";
 
 const categories = ["All work", ...workCategories];
 const availableProjects = [
   ...caseStudies.filter(item => item.category !== "Websites").map(item => ({
     ...item,
-    image: `/work/${item.file}`,
-    alt: getImageAlt(`/work/${item.file}`),
+    title: archiveStories[item.slug]?.title ?? item.title,
+    summary: archiveStories[item.slug]?.summary ?? item.summary,
+    image: archiveStories[item.slug] ? `/work/archive/${archiveStories[item.slug].hero[0]}.jpg` : `/work/${item.file}`,
+    alt: archiveStories[item.slug]?.hero[1] ?? getImageAlt(`/work/${item.file}`),
   })),
   ...softwareProjects.map(item => ({ ...item, category: "Software", client: item.kind })),
 ];
