@@ -40,6 +40,11 @@
 .page :global(.button) { background: var(--farm-green); border-color: var(--farm-green); color: #fff; }
 .page :global(.button:hover) { background: #1c3327; border-color: #1c3327; }
 
+@media (min-width: 1001px) {
+  .stickerCopy { container-type: inline-size; }
+  .page .stickerCopy h2 { font-size: min(44px, 4.65cqw); text-wrap: nowrap; }
+}
+
 @media (max-width: 1000px) {
   .opening, .stickers, .value { gap: 28px; }
   .stickers, .value { padding: 28px; }
