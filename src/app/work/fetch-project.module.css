@@ -56,11 +56,19 @@
 .page :global(.button:hover) { border-color: var(--fetch-cream); background: var(--fetch-cream); }
 .page > :global(.ready) a:focus-visible { outline-color: var(--fetch-gold); }
 
+@media (min-width: 701px) {
+  .savoryGrid { grid-template-rows: minmax(0, 1fr) auto; align-items: stretch; }
+  .savoryGrid > .photo:first-child { display: flex; flex-direction: column; min-height: 0; }
+  .savoryGrid > .photo:first-child a { position: relative; flex: 1; min-height: 0; }
+  .savoryGrid > .photo:first-child img { position: absolute; inset: 0; height: 100%; object-fit: cover; object-position: center bottom; }
+}
+
 @media (max-width: 1000px) {
   .opening, .place, .archiveHeader, .takeaway { gap: 28px; }
   .place, .sweets, .takeaway { padding: 28px; }
   .archiveGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .sweetsGrid { gap: 16px; }
+  .savoryGrid { grid-template-columns: minmax(0, .85fr) minmax(0, 1fr); }
 }
 
 @media (max-width: 700px) {
