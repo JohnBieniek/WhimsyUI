@@ -4,6 +4,11 @@
 .page .twoLineHeading { font-size: min(40px, 6.2cqw); line-height: 1.12; }
 .twoLineHeading span { display: block; }
 
+.centeredGallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 28px 22px; }
+.centeredGallery .figure { flex: 0 0 calc((100% - 44px) / 3); }
+@media (max-width: 1000px) { .centeredGallery .figure { flex-basis: calc((100% - 22px) / 2); } }
+@media (max-width: 700px) { .centeredGallery .figure { flex-basis: 100%; } }
+
 .imageLeft { display: grid; grid-template-columns: minmax(0, .75fr) minmax(0, 1.25fr); gap: 48px; align-items: center; }
 .imageLeft .chapterHeading { display: block; min-width: 0; margin-bottom: 0; }
 .imageLeft .gallery { columns: 1; width: 100%; max-width: 380px; margin: 0; justify-self: center; }

@@ -42,7 +42,10 @@ export default function ArchiveProject({ story, title }: { story: ArchiveStory; 
     </section>
     {story.sections.map(section => {
       const imageLeft = section.layout === "image-left";
-      const gallery = section.images.length > 0 && <div className={section.galleryLayout === "stacked" ? styles.stackedGallery : `${styles.gallery} ${section.images.length === 1 ? styles.single : ""}`}>
+      const galleryClass = section.galleryLayout === "stacked" ? styles.stackedGallery
+        : section.galleryLayout === "centered" ? styles.centeredGallery
+        : `${styles.gallery} ${section.images.length === 1 ? styles.single : ""}`;
+      const gallery = section.images.length > 0 && <div className={galleryClass}>
         {section.images.map(item => <ArchiveImage item={item} key={item[0]} />)}
       </div>;
       return <section className={`${styles.chapter} ${imageLeft ? styles.imageLeft : ""}`} key={Array.isArray(section.title) ? section.title.join(" ") : section.title}>
