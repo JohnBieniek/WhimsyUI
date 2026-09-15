@@ -8,21 +8,33 @@ import { ProjectCallToAction, ProjectHeader } from "./project-framing";
 
 export default function SoftwareProject({ project }: { project: (typeof softwareProjects)[number] }) {
   const story = softwareStories[project.slug];
-  const sideBySide = project.slug === "whimsy-warden";
+  const isWarden = project.slug === "whimsy-warden";
   const hero = <a className={styles.projectImage} href={project.image} target="_blank" rel="noopener noreferrer" aria-label={`View full screenshot: ${project.alt}`}>
-    <Image src={project.image} alt={project.alt} fill priority sizes={sideBySide ? "(max-width: 900px) 100vw, 50vw" : "(max-width: 1080px) 100vw, 1000px"} />
+    <Image src={project.image} alt={project.alt} fill priority sizes={isWarden ? "(max-width: 900px) 100vw, 50vw" : "(max-width: 1080px) 100vw, 1000px"} />
   </a>;
   const overview = story && <section className={styles.storyOverview} aria-labelledby="project-brief-title">
     <div><p className="kicker">The project</p><h2 id="project-brief-title">{story.title}</h2></div>
     <div>{story.overview.map(paragraph => <p key={paragraph}>{paragraph}</p>)}</div>
   </section>;
+  const chapters = story?.chapters.map((chapter, index) => <section className={`${styles.storyChapter} ${isWarden && index === 0 ? styles.mintChapter : ""}`} key={chapter.title} aria-labelledby={`chapter-${index}`}>
+    <p className="kicker">{chapter.kicker}</p>
+    <h2 id={`chapter-${index}`}>{chapter.title}</h2>
+    <div className={chapter.image && chapter.image !== project.image ? styles.illustratedChapter : styles.chapterCopy}>
+      <div>{chapter.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}</div>
+      {chapter.image && chapter.image !== project.image && <figure>
+        <a className={styles.chapterImage} href={chapter.image} target="_blank" rel="noopener noreferrer" aria-label={`View full screenshot: ${chapter.alt}`}><Image src={chapter.image} alt={chapter.alt ?? ""} fill sizes="(max-width: 900px) 100vw, 50vw" /></a>
+        <figcaption>{chapter.caption}</figcaption>
+      </figure>}
+    </div>
+    {chapter.points && <div className={styles.details}>{chapter.points.map(point => <article key={point.title}><h3>{point.title}</h3><p>{point.copy}</p></article>)}</div>}
+  </section>);
   return (
     <main className={`case-page shell ${styles.page} ${project.slug === "sonic-shielding" ? styles.sonic : ""}`}>
       <Link className="back-link" href="/work#campaigns">← All work</Link>
       <ProjectHeader title={project.title} description={project.intro}>
         <a className="button" href={project.link}>{project.linkLabel} ↗</a>
       </ProjectHeader>
-      {sideBySide ? <div className={styles.projectOpening}>{overview}{hero}</div> : <>{hero}{overview}</>}
+      {isWarden ? <div className={styles.projectOpening}>{overview}{hero}</div> : <>{hero}{overview}</>}
       <section className={styles.section} aria-labelledby="project-details-title">
         <p className="kicker">What we built</p>
         <h2 id="project-details-title">Useful features. Thoughtful details.</h2>
@@ -30,18 +42,11 @@ export default function SoftwareProject({ project }: { project: (typeof software
           {project.sections.map(({ title, copy }) => <article key={title}><h3>{title}</h3><p>{copy}</p></article>)}
         </div>
       </section>
-      {story?.chapters.map((chapter, index) => <section className={`${styles.storyChapter} ${project.slug === "whimsy-warden" && index === 0 ? styles.mintChapter : ""}`} key={chapter.title} aria-labelledby={`chapter-${index}`}>
-        <p className="kicker">{chapter.kicker}</p>
-        <h2 id={`chapter-${index}`}>{chapter.title}</h2>
-        <div className={chapter.image && chapter.image !== project.image ? styles.illustratedChapter : styles.chapterCopy}>
-          <div>{chapter.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}</div>
-          {chapter.image && chapter.image !== project.image && <figure>
-            <a className={styles.chapterImage} href={chapter.image} target="_blank" rel="noopener noreferrer" aria-label={`View full screenshot: ${chapter.alt}`}><Image src={chapter.image} alt={chapter.alt ?? ""} fill sizes="(max-width: 900px) 100vw, 50vw" /></a>
-            <figcaption>{chapter.caption}</figcaption>
-          </figure>}
-        </div>
-        {chapter.points && <div className={styles.details}>{chapter.points.map(point => <article key={point.title}><h3>{point.title}</h3><p>{point.copy}</p></article>)}</div>}
-      </section>)}
+      {isWarden ? <>
+        {chapters?.slice(0, 2)}
+        <div className={styles.chapterPair}>{chapters?.slice(2, 4)}</div>
+        {chapters?.slice(4)}
+      </> : chapters}
       {project.slug === "multiverse-adventurers-guild" && <section className={styles.storyChapter}>
         <p className="kicker">On a smaller screen</p>
         <h2>The same game, ready to take to the table.</h2>

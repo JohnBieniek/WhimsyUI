@@ -41,6 +41,8 @@
 .projectOpening .projectImage { width: 100%; margin: 0; }
 .storyChapter { padding-block: 32px; border-top: 1px solid var(--line); }
 .storyChapter > h2 { max-width: 1000px; }
+.chapterPair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px; align-items: start; }
+.chapterPair > .storyChapter { min-width: 0; }
 .chapterCopy { max-width: 900px; }
 .storyChapter[aria-labelledby="chapter-1"] > .chapterCopy { max-width: none; }
 .mintChapter { padding: 32px; margin-bottom: 28px; border: 1px solid #c9ddd8; border-radius: 12px; background: var(--mint); }
@@ -89,6 +91,7 @@
 .sonic .storyChapter a:focus-visible, .sonic > :global(.ready) a:focus-visible { outline-color: var(--sonic-aqua); }
 
 @media (max-width: 900px) {
+  .chapterPair { grid-template-columns: minmax(0, 1fr); gap: 0; }
   .projectOpening { grid-template-columns: minmax(0, 1fr); gap: 24px; }
   .storyOverview, .illustratedChapter { grid-template-columns: minmax(0, 1fr); gap: 20px; }
   .hero { grid-template-columns: minmax(0, 1fr); gap: 24px; }
