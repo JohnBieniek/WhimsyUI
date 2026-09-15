@@ -15,6 +15,10 @@ const galleryThumbnails: Partial<Record<string, { image: string; alt: string }>>
     image: "/work/archive/cascades-kitten-hero.jpg",
     alt: "A fluffy tabby kitten being gently held at Cascades Humane Society.",
   },
+  "fetch-market-launch": {
+    image: "/caprese.jpg",
+    alt: "Caprese sandwiches, with Cowboy Club sandwiches behind them.",
+  },
   "heavenly-bakes-and-cakes": {
     image: "/work/archive/1040973798056904.jpg",
     alt: "Heavenly Bakes & Cakes advertisement showing gift boxes of chocolate-dipped strawberries with colorful coatings and decorations.",
@@ -68,7 +72,7 @@ export default function WorkGallery() {
                     ? { objectPosition: "center 35%" }
                     : item.slug === "alpha-koney-story" || item.slug === "valentines-at-jackson-crossing"
                       ? { objectPosition: "center 20%" }
-                      : item.slug === "cascades-ribbon-cutting" || item.slug === "happy-harvest" || item.slug === "serenity-support" || item.slug === "welcome-home-organization"
+                      : item.slug === "cascades-ribbon-cutting" || item.slug === "fetch-market-launch" || item.slug === "happy-harvest" || item.slug === "serenity-support" || item.slug === "welcome-home-organization"
                         ? { objectPosition: "center top" }
                         : undefined}
             />
