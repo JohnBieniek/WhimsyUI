@@ -1,5 +1,6 @@
-type StorySection = { kicker: string; title: string; paragraphs: string[]; images: [string, string][]; galleryLayout?: "stacked" };
-export type ArchiveStory = { title?: string; summary: string; heading: string | [string, string]; introduction: string[]; hero: [string, string]; services: string[]; sections: StorySection[]; video?: string };
+type StoryHeading = string | [string, string];
+type StorySection = { kicker: string; title: StoryHeading; paragraphs: string[]; images: [string, string][]; galleryLayout?: "stacked" };
+export type ArchiveStory = { title?: string; summary: string; heading: StoryHeading; introduction: string[]; hero: [string, string]; services: string[]; sections: StorySection[]; video?: string };
 
 export const archiveStories: Record<string, ArchiveStory> = {
   "malloween": {
@@ -38,13 +39,13 @@ export const archiveStories: Record<string, ArchiveStory> = {
   },
   "valentines-at-jackson-crossing": {
     summary: "Valentine's promotions connecting gifts, photography, and local businesses with seasonal visits to Jackson Crossing.",
-    heading: "Make the occasion personal. Make the details clear.",
+    heading: ["Make the occasion personal.", "Make the details clear."],
     introduction: ["Valentine's Day gives local businesses a chance to offer something thoughtful: a gift, a photograph, or time spent together. Whimsy's Jackson Crossing work includes a floral gift promotion and photography-led creative connected to Cupid's Corner.", "These pieces come from separate Valentine's campaigns. Each keeps its own offer and dates, showing how the occasion can support different businesses while giving customers a clear next step."],
     hero: ["1040973861390231", "Peggy's Custom Floral Designs Valentine's promotion for February 13 and 14, 2025"],
     services: ["Seasonal advertising", "Graphic design", "Business promotion"],
     sections: [
       { kicker: "Valentine's gifts · 2025", title: "Show the gift, then explain where to find it.", paragraphs: ["Peggy's Custom Floral Designs' advertisement pairs floral borders with photographs of decorated gift arrangements. Pink, red, and heart details make the occasion immediately recognizable, while the products remain central to the invitation.", "The ad lists February 13 and 14 at Jackson Crossing, including different hours for each day. That information helps shoppers plan a visit around a short seasonal window: Thursday from 11 AM to 6 PM and Friday from 11 AM to 5 PM."], images: [] },
-      { kicker: "Photography and Cupid's Corner · 2024", title: "Connect a seasonal offer to a larger gathering.", paragraphs: ["Studio One Photography's earlier creative uses a bold red portrait, hearts, and a booking prompt to introduce Valentine's specials. The supporting information connects the piece to Cupid's Corner on February 14, from 2 to 6 PM, with photography, live music, vendors, and food.", "The two campaigns show different ways to approach the same occasion. A product-led invitation helps someone choose a gift; a portrait-led promotion helps them picture an experience. In both, the seasonal design works alongside the practical details customers need to take part."], images: [["787291360091817", "Studio One Photography Valentine's specials and Cupid's Corner event promotion"]] },
+      { kicker: "Photography and Cupid's Corner · 2024", title: ["Connect a seasonal offer", "to a larger gathering."], paragraphs: ["Studio One Photography's earlier creative uses a bold red portrait, hearts, and a booking prompt to introduce Valentine's specials. The supporting information connects the piece to Cupid's Corner on February 14, from 2 to 6 PM, with photography, live music, vendors, and food.", "The two campaigns show different ways to approach the same occasion. A product-led invitation helps someone choose a gift; a portrait-led promotion helps them picture an experience. In both, the seasonal design works alongside the practical details customers need to take part."], images: [["787291360091817", "Studio One Photography Valentine's specials and Cupid's Corner event promotion"]] },
     ],
   },
   "happy-harvest": {

@@ -16,16 +16,20 @@ function ArchiveImage({ item, hero = false }: { item: [string, string]; hero?: b
   </figure>;
 }
 
+function ArchiveHeading({ heading }: { heading: ArchiveStory["heading"] }) {
+  return <h2 className={Array.isArray(heading) ? styles.twoLineHeading : undefined}>
+    {Array.isArray(heading) ? heading.map((line, index) => <span key={line}>{index > 0 ? " " : ""}{line}</span>) : heading}
+  </h2>;
+}
+
 export default function ArchiveProject({ story, title }: { story: ArchiveStory; title: string }) {
   return <main className={`case-page shell ${styles.page}`}>
     <Link className="back-link" href="/work">← All work</Link>
     <ProjectHeader title={story.title ?? title} description={story.summary} />
     <section className={styles.opening}>
-      <div className={Array.isArray(story.heading) ? styles.openingCopy : undefined}>
+      <div className={Array.isArray(story.heading) ? styles.headingColumn : undefined}>
         <p className="kicker">The project</p>
-        <h2 className={Array.isArray(story.heading) ? styles.twoLineHeading : undefined}>
-          {Array.isArray(story.heading) ? story.heading.map((line, index) => <span key={line}>{index > 0 ? " " : ""}{line}</span>) : story.heading}
-        </h2>
+        <ArchiveHeading heading={story.heading} />
         {story.introduction.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
         <ul className={styles.services}>{story.services.map(service => <li key={service}>{service}</li>)}</ul>
       </div>
@@ -36,9 +40,12 @@ export default function ArchiveProject({ story, title }: { story: ArchiveStory; 
         <figcaption>Script, direction, and casting: Whimsy. Filming and editing: Media Advantage.</figcaption>
       </figure> : <ArchiveImage item={story.hero} hero />}
     </section>
-    {story.sections.map(section => <section className={styles.chapter} key={section.title}>
+    {story.sections.map(section => <section className={styles.chapter} key={Array.isArray(section.title) ? section.title.join(" ") : section.title}>
       <header className={styles.chapterHeading}>
-        <div><p className="kicker">{section.kicker}</p><h2>{section.title}</h2></div>
+        <div className={Array.isArray(section.title) ? styles.headingColumn : undefined}>
+          <p className="kicker">{section.kicker}</p>
+          <ArchiveHeading heading={section.title} />
+        </div>
         <div>{section.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}</div>
       </header>
       {section.images.length > 0 && <div className={section.galleryLayout === "stacked" ? styles.stackedGallery : `${styles.gallery} ${section.images.length === 1 ? styles.single : ""}`}>
