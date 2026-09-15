@@ -1,7 +1,7 @@
 import { Candy, Ghost, MoonStar, Sparkles } from "lucide-react";
 import styles from "./halloween-decorations.module.css";
 
-type HalloweenVariant = "intro" | "campaign" | "event" | "value";
+type HalloweenVariant = "intro" | "activities" | "shopping" | "event" | "value";
 
 function Pumpkin({ className }: { className: string }) {
   return <svg className={className} viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" focusable="false">

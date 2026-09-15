@@ -6,6 +6,14 @@ import dimensions from "./archive-images.json";
 import { ProjectCallToAction, ProjectHeader } from "./project-framing";
 import styles from "./harvest-project.module.css";
 
+function HarvestDecorations({ variant }: { variant: "intro" | "invitation" | "music" | "vendors" | "takeaway" }) {
+  return <div className={`${styles.decorations} ${styles[`${variant}Decorations`]}`} aria-hidden="true">
+    <Leaf className={styles.leaf} strokeWidth={1} focusable="false" />
+    <Wheat className={styles.wheat} strokeWidth={1} focusable="false" />
+    <Leaf className={styles.smallLeaf} strokeWidth={1} focusable="false" />
+  </div>;
+}
+
 function HarvestHeading({ text }: { text: ArchiveStory["heading"] }) {
   return <h2 className={styles.headline}>
     {Array.isArray(text) ? text.map((line, index) => <span key={line}>{index > 0 ? " " : ""}{line}</span>) : text}
@@ -33,8 +41,7 @@ export default function HarvestProject({ story, title }: { story: ArchiveStory; 
     <ProjectHeader title={title} description={story.summary} />
 
     <section className={styles.introduction}>
-      <Leaf className={styles.leaf} aria-hidden="true" strokeWidth={1} />
-      <Wheat className={styles.wheat} aria-hidden="true" strokeWidth={1} />
+      <HarvestDecorations variant="intro" />
       <div className={styles.introContent}>
         <div className={styles.headingContainer}><HarvestHeading text={story.heading} /></div>
         <p>Something handmade, something sweet, and music along the way. Happy Harvest brought local businesses together for a warm autumn welcome at Jackson Crossing.</p>
@@ -43,6 +50,7 @@ export default function HarvestProject({ story, title }: { story: ArchiveStory; 
     </section>
 
     <section className={styles.invitation}>
+      <HarvestDecorations variant="invitation" />
       <HarvestArtwork item={story.hero} caption="The Happy Harvest invitation brought the participating vendors together." />
       <div className={styles.invitationCopy}>
         <h2>Local makers.<br />One shared invitation.</h2>
@@ -55,6 +63,7 @@ export default function HarvestProject({ story, title }: { story: ArchiveStory; 
     </section>
 
     <section className={styles.music}>
+      <HarvestDecorations variant="music" />
       <header className={styles.sectionHeader}>
         <div className={styles.headingContainer}><HarvestHeading text={entertainment.title} /></div>
         <p>{entertainment.paragraphs[0]}</p>
@@ -66,6 +75,7 @@ export default function HarvestProject({ story, title }: { story: ArchiveStory; 
     </section>
 
     <section className={styles.vendors}>
+      <HarvestDecorations variant="vendors" />
       <header className={styles.sectionHeader}>
         <div className={styles.headingContainer}><HarvestHeading text={vendors.title} /></div>
         <p>{vendors.paragraphs[0]}</p>
@@ -76,6 +86,7 @@ export default function HarvestProject({ story, title }: { story: ArchiveStory; 
     </section>
 
     <section className={styles.takeaway}>
+      <HarvestDecorations variant="takeaway" />
       <h2>More to explore.<br />More reasons to visit.</h2>
       <div>
         <p>{vendors.paragraphs[1]}</p>

@@ -7,30 +7,36 @@
 .page section { min-width: 0; }
 
 .introduction, .gifts, .photography, .takeaway { position: relative; isolation: isolate; }
-.decorations { position: absolute; inset: 0; z-index: -1; overflow: hidden; border-radius: inherit; pointer-events: none; color: #b94b64; }
-.decorations svg { position: absolute; width: clamp(100px, 14vw, 190px); height: auto; opacity: .15; }
-.decorations .heartOne { left: -36px; top: 10px; transform: rotate(-22deg); }
-.decorations .heartTwo { width: 82px; right: 28px; bottom: 28px; opacity: .1; transform: rotate(18deg); }
-.decorations .loveNote { right: -24px; top: 24px; transform: rotate(18deg); }
-.decorations .flower { width: 120px; left: 28px; bottom: -32px; transform: rotate(12deg); }
-.decorations .sparkles { width: 62px; right: 25%; top: 24px; opacity: .2; transform: rotate(-12deg); }
-.giftsDecorations .heartOne { left: 42%; top: 12%; width: 108px; }
-.giftsDecorations .heartTwo { width: 144px; right: -26px; bottom: 36px; }
-.giftsDecorations .loveNote { top: -28px; }
-.giftsDecorations .flower { left: 48%; bottom: -28px; width: 170px; }
-.giftsDecorations .sparkles { right: 10%; top: 36%; }
+.decorations { --accent-scale: 1; --accent-fade: 1; position: absolute; inset: 0; z-index: -1; overflow: hidden; border-radius: inherit; pointer-events: none; color: #b94b64; }
+.decorations svg { position: absolute; width: calc(var(--size, 150px) * var(--accent-scale)); height: auto; opacity: calc(var(--opacity, .15) * var(--accent-fade)); }
+.heartTwo { --opacity: .1; }
+.sparkles { --opacity: .2; }
+
+.introDecorations .heartOne { --size: 186px; inset: 8px auto auto -28px; transform: rotate(-22deg); }
+.introDecorations .heartTwo { --size: 88px; inset: auto 18px 18px auto; transform: rotate(18deg); }
+.introDecorations .loveNote { --size: 156px; inset: 20px -22px auto auto; transform: rotate(18deg); }
+.introDecorations .flower { --size: 124px; inset: auto auto -28px 22%; transform: rotate(12deg); }
+.introDecorations .sparkles { --size: 56px; inset: 4px auto auto 62%; transform: rotate(-12deg); }
+
+.giftsDecorations .heartOne { --size: 164px; inset: auto -32px 28px auto; transform: rotate(28deg); }
+.giftsDecorations .heartTwo { --size: 116px; inset: -18px auto auto 52%; transform: rotate(-18deg); }
+.giftsDecorations .loveNote { --size: 120px; inset: 12px 3% auto auto; transform: rotate(-12deg); }
+.giftsDecorations .flower { --size: 144px; inset: auto auto 0 -18px; transform: rotate(32deg); }
+.giftsDecorations .sparkles { --size: 64px; inset: auto 34% 12px auto; transform: rotate(22deg); }
+
 .photographyDecorations { color: #f4b7c4; }
-.photographyDecorations .heartOne { top: 90px; }
-.photographyDecorations .heartTwo { width: 220px; right: -38px; bottom: 110px; opacity: .08; }
-.photographyDecorations .loveNote { top: 48px; }
-.photographyDecorations .flower { width: 170px; left: -28px; bottom: 72px; }
-.photographyDecorations .sparkles { left: 22%; right: auto; top: 36px; }
-.photographyDecorations .heartThree { width: 84px; left: 7%; top: 48%; transform: rotate(22deg); }
-.takeawayDecorations .heartOne { left: -24px; top: -28px; }
-.takeawayDecorations .heartTwo { right: 38%; bottom: -18px; }
-.takeawayDecorations .loveNote { top: auto; bottom: -38px; }
-.takeawayDecorations .flower { left: 30%; bottom: -46px; }
-.takeawayDecorations .sparkles { right: 24px; top: 10px; }
+.photographyDecorations .heartOne { --size: 180px; inset: -26px 18% auto auto; transform: rotate(12deg); }
+.photographyDecorations .heartTwo { --size: 210px; --opacity: .08; inset: auto auto 36px -24px; transform: rotate(-28deg); }
+.photographyDecorations .loveNote { --size: 164px; inset: 34% auto auto -26px; transform: rotate(-24deg); }
+.photographyDecorations .flower { --size: 168px; inset: 48% -28px auto auto; transform: rotate(-12deg); }
+.photographyDecorations .sparkles { --size: 58px; inset: 14px auto auto 14%; transform: rotate(32deg); }
+.photographyDecorations .heartThree { --size: 84px; inset: auto 6% 16px auto; transform: rotate(24deg); }
+
+.takeawayDecorations .heartOne { --size: 174px; inset: auto -18px -38px auto; transform: rotate(-14deg); }
+.takeawayDecorations .heartTwo { --size: 94px; inset: 4px auto auto 28%; transform: rotate(32deg); }
+.takeawayDecorations .loveNote { --size: 120px; inset: auto auto 12px -22px; transform: rotate(12deg); }
+.takeawayDecorations .flower { --size: 132px; inset: -28px 20% auto auto; transform: rotate(-24deg); }
+.takeawayDecorations .sparkles { --size: 46px; inset: 16px 8% auto auto; transform: rotate(-32deg); }
 
 .introduction h2,
 .gifts h2,
@@ -168,21 +174,13 @@
 }
 
 @media (max-width: 700px) {
-  .decorations svg { width: 112px; opacity: .11; }
-  .decorations .heartOne { left: -36px; }
-  .decorations .heartTwo { width: 76px; right: -16px; bottom: 18px; }
-  .decorations .loveNote { right: -36px; top: 28px; }
-  .decorations .flower { width: 96px; left: -22px; bottom: -28px; }
-  .decorations .sparkles { width: 42px; right: 24%; top: 16px; }
-  .giftsDecorations .heartOne { top: 56%; }
-  .giftsDecorations .loveNote { top: 55%; }
-  .giftsDecorations .sparkles { top: auto; bottom: 22%; right: 12px; }
-  .photographyDecorations .heartOne { top: 18px; }
-  .photographyDecorations .heartTwo { width: 130px; bottom: 48px; }
-  .photographyDecorations .flower { bottom: 20px; }
-  .photographyDecorations .sparkles { left: 30%; }
-  .photographyDecorations .heartThree { width: 62px; left: -18px; top: 55%; }
-  .takeawayDecorations .loveNote { top: auto; bottom: -28px; }
+  .decorations { --accent-scale: .66; --accent-fade: .75; }
+  .introDecorations .heartOne { inset: -12px auto auto -24px; }
+  .giftsDecorations .loveNote { inset: 48% -18px auto auto; }
+  .giftsDecorations .heartTwo { inset: -16px auto auto 24%; }
+  .photographyDecorations .loveNote { inset: 40% auto auto -24px; }
+  .photographyDecorations .flower { inset: 68% -22px auto auto; }
+  .takeawayDecorations .flower { inset: -20px 4% auto auto; }
   .introduction { padding: 36px 16px 0; border-radius: 14px 14px 0 0; }
   .introCopy { font-size: 16px; margin-bottom: 24px; }
   .services { gap: 12px 24px; padding-block: 20px; font-size: 12px; }

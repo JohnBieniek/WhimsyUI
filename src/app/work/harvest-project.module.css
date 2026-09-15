@@ -40,9 +40,32 @@
 .headingContainer .headline { font-size: min(54px, 6.4cqw); }
 .headline span { display: block; }
 .introContent > p { max-width: 740px; margin: 0 auto 36px; font-size: 18px; }
-.leaf, .wheat { position: absolute; width: 180px; height: 180px; color: #9b571d; opacity: .15; pointer-events: none; }
-.leaf { left: -30px; top: 12px; transform: rotate(-25deg); }
-.wheat { right: -24px; top: 42px; transform: rotate(20deg); }
+.introduction, .invitation, .music, .vendors, .takeaway { position: relative; isolation: isolate; }
+.decorations { --accent-scale: 1; --accent-fade: 1; position: absolute; inset: 0; z-index: -1; overflow: hidden; border-radius: inherit; pointer-events: none; color: #9b571d; }
+.decorations svg { position: absolute; width: calc(var(--size, 180px) * var(--accent-scale)); height: auto; opacity: calc(.15 * var(--accent-fade)); }
+.smallLeaf { color: #87351f; }
+
+.introDecorations .leaf { --size: 180px; inset: 12px auto auto -30px; transform: rotate(-25deg); }
+.introDecorations .wheat { --size: 164px; inset: auto -24px 18px auto; transform: rotate(20deg); }
+.introDecorations .smallLeaf { --size: 68px; inset: -10px auto auto 62%; transform: rotate(45deg); }
+
+.invitationDecorations .leaf { --size: 152px; inset: -20px -24px auto auto; transform: rotate(35deg); }
+.invitationDecorations .wheat { --size: 192px; inset: auto 26% -34px auto; transform: rotate(-32deg); }
+.invitationDecorations .smallLeaf { --size: 82px; inset: auto auto 20px -12px; transform: rotate(-15deg); }
+
+.musicDecorations { color: #f7cf86; }
+.musicDecorations .smallLeaf { color: #edb182; }
+.musicDecorations .leaf { --size: 164px; inset: -32px auto auto 40%; transform: rotate(-45deg); }
+.musicDecorations .wheat { --size: 204px; inset: auto auto -28px -24px; transform: rotate(16deg); }
+.musicDecorations .smallLeaf { --size: 104px; inset: 32% -16px auto auto; transform: rotate(60deg); }
+
+.vendorsDecorations .leaf { --size: 186px; inset: auto -26px 12px auto; transform: rotate(-12deg); }
+.vendorsDecorations .wheat { --size: 172px; inset: 18px auto auto -28px; transform: rotate(38deg); }
+.vendorsDecorations .smallLeaf { --size: 76px; inset: -16px 18% auto auto; transform: rotate(-60deg); }
+
+.takeawayDecorations .leaf { --size: 144px; inset: auto auto -24px -20px; transform: rotate(28deg); }
+.takeawayDecorations .wheat { --size: 160px; inset: -28px -12px auto auto; transform: rotate(-18deg); }
+.takeawayDecorations .smallLeaf { --size: 64px; inset: 8px auto auto 40%; transform: rotate(80deg); }
 
 .services {
   display: flex;
@@ -136,8 +159,10 @@
 @media (max-width: 700px) {
   .introduction { padding: 36px 16px 0; border-radius: 14px 14px 0 0; }
   .introContent > p { font-size: 16px; margin-bottom: 24px; }
-  .leaf, .wheat { width: 120px; height: 120px; opacity: .1; }
-  .wheat { top: auto; bottom: 40px; }
+  .decorations { --accent-scale: .67; --accent-fade: .7; }
+  .invitationDecorations .leaf { inset: 48% -20px auto auto; }
+  .musicDecorations .smallLeaf { inset: 38% -16px auto auto; }
+  .vendorsDecorations .wheat { inset: 8px auto auto -22px; }
   .services { gap: 12px 24px; padding-block: 20px; font-size: 12px; }
   .invitation { grid-template-columns: minmax(0, 1fr); padding: 24px 16px 32px; border-radius: 0 0 14px 14px; }
   .invitationCopy h2 { font-size: 30px; }

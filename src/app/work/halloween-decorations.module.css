@@ -1,57 +1,59 @@
-.decorations { --pumpkin: #a34c14; --haunt: #5b326b; --moon: #94631d; position: absolute; inset: 0; z-index: -1; overflow: hidden; border-radius: inherit; pointer-events: none; color: var(--haunt); }
-.decorations > svg { position: absolute; width: clamp(110px, 13vw, 190px); height: auto; opacity: .14; }
-.decorations .pumpkinOne { left: -38px; top: -28px; color: var(--pumpkin); transform: rotate(-15deg); }
-.decorations .pumpkinTwo { width: 152px; right: -38px; bottom: 34px; color: var(--pumpkin); transform: rotate(18deg); }
-.decorations .ghost { width: 140px; right: -28px; top: 18%; transform: rotate(15deg); }
-.decorations .candy { width: 100px; left: 24px; bottom: -18px; color: var(--pumpkin); transform: rotate(-22deg); }
-.decorations .moon { width: 80px; right: 24px; top: 18px; color: var(--moon); transform: rotate(12deg); }
-.decorations .bat { width: 108px; left: 36%; top: 12px; transform: rotate(-14deg); opacity: .12; }
-.decorations .sparkles { width: 52px; left: 20%; top: 34%; color: var(--moon); opacity: .2; }
+.decorations { --pumpkin: #a34c14; --haunt: #5b326b; --moon: #94631d; --accent-scale: 1; --accent-fade: 1; position: absolute; inset: 0; z-index: -1; overflow: hidden; border-radius: inherit; pointer-events: none; color: var(--haunt); }
+.decorations > svg { position: absolute; width: calc(var(--size, 150px) * var(--accent-scale)); height: auto; opacity: calc(var(--opacity, .14) * var(--accent-fade)); }
+.pumpkinOne, .pumpkinTwo, .candy { color: var(--pumpkin); }
+.moon, .sparkles { color: var(--moon); }
+.sparkles { --opacity: .2; }
+.bat { --opacity: .12; }
 
-.intro .ghost { left: 43%; right: auto; top: 28px; }
-.intro .pumpkinTwo { left: 32%; right: auto; bottom: -32px; }
-.intro .moon { left: 28%; right: auto; top: 18px; }
-.intro .bat { left: -24px; top: 48%; }
-.intro .sparkles { left: 48%; top: 42%; }
+/* Each card owns its complete arrangement; mobile scales it without resetting corners. */
+.intro .pumpkinOne { --size: 180px; inset: -24px auto auto -30px; transform: rotate(-18deg); }
+.intro .pumpkinTwo { --size: 142px; inset: auto auto -28px 34%; transform: rotate(22deg); }
+.intro .ghost { --size: 120px; inset: 28px auto auto 44%; transform: rotate(12deg); }
+.intro .candy { --size: 86px; inset: auto auto -16px 6%; transform: rotate(-26deg); }
+.intro .moon { --size: 72px; inset: 10px auto auto 23%; transform: rotate(-10deg); }
+.intro .bat { --size: 106px; inset: 48% auto auto -22px; transform: rotate(18deg); }
+.intro .sparkles { --size: 46px; inset: 58% auto auto 43%; transform: rotate(12deg); }
 
-.campaign { --pumpkin: #ffb05d; --haunt: #e8d9eb; --moon: #efc87e; }
-.campaign .pumpkinOne, .campaign .pumpkinTwo { opacity: .18; }
-.campaign .ghost { opacity: .1; }
-.campaign .candy { bottom: 22px; }
-.campaign .sparkles { left: 5%; top: 48%; }
+.activities, .shopping { --pumpkin: #ffb05d; --haunt: #e8d9eb; --moon: #efc87e; --opacity: .16; }
+.activities .ghost, .shopping .ghost { --opacity: .1; }
+.activities .pumpkinOne { --size: 190px; inset: 8px -32px auto auto; transform: rotate(24deg); }
+.activities .pumpkinTwo { --size: 124px; inset: auto auto -24px 10%; transform: rotate(-12deg); }
+.activities .ghost { --size: 142px; inset: 120px auto auto -26px; transform: rotate(-18deg); }
+.activities .candy { --size: 96px; inset: -20px auto auto 42%; transform: rotate(32deg); }
+.activities .moon { --size: 84px; inset: auto 28% 8px auto; transform: rotate(16deg); }
+.activities .bat { --size: 118px; inset: 12px auto auto 14%; transform: rotate(-12deg); }
+.activities .sparkles { --size: 52px; inset: 40% 10px auto auto; transform: rotate(-8deg); }
 
-.event .ghost { left: -30px; right: auto; top: 52%; }
-.event .pumpkinTwo { bottom: 14%; }
-.event .candy { left: 32%; bottom: -28px; }
-.event .bat { left: 46%; }
+.shopping .pumpkinOne { --size: 192px; inset: auto -30px 12px auto; transform: rotate(-20deg); }
+.shopping .pumpkinTwo { --size: 150px; inset: -36px auto auto 34%; transform: rotate(10deg); }
+.shopping .ghost { --size: 122px; inset: 12px 9% auto auto; transform: rotate(22deg); }
+.shopping .candy { --size: 104px; inset: auto auto -18px 20%; transform: rotate(-12deg); }
+.shopping .moon { --size: 68px; inset: 12px auto auto 12px; transform: rotate(24deg); }
+.shopping .bat { --size: 100px; inset: 30% auto auto -16px; transform: rotate(28deg); }
+.shopping .sparkles { --size: 48px; inset: 16px auto auto 63%; transform: rotate(18deg); }
 
-.value .pumpkinOne { width: 150px; top: -24px; }
-.value .pumpkinTwo { width: 100px; left: 34%; right: auto; bottom: -26px; }
-.value .ghost { width: 120px; top: auto; bottom: -26px; }
-.value .candy { width: 72px; left: auto; right: 25%; top: -18px; bottom: auto; }
-.value .moon { width: 62px; right: 10px; top: 10px; }
-.value .bat { left: 38%; top: -16px; }
-.value .sparkles { left: 10%; top: auto; bottom: 12px; }
+.event .pumpkinOne { --size: 170px; inset: 42% auto auto -30px; transform: rotate(14deg); }
+.event .pumpkinTwo { --size: 134px; inset: -28px 3% auto auto; transform: rotate(-24deg); }
+.event .ghost { --size: 130px; inset: auto auto -26px 45%; transform: rotate(-12deg); }
+.event .candy { --size: 80px; inset: 18px auto auto 22%; transform: rotate(18deg); }
+.event .moon { --size: 78px; inset: auto auto 20px 14%; transform: rotate(-18deg); }
+.event .bat { --size: 112px; inset: 72px 2% auto auto; transform: rotate(-26deg); }
+.event .sparkles { --size: 56px; inset: auto 10% 10px auto; transform: rotate(22deg); }
+
+.value .pumpkinOne { --size: 148px; inset: auto auto -30px -20px; transform: rotate(-28deg); }
+.value .pumpkinTwo { --size: 108px; inset: -24px 35% auto auto; transform: rotate(28deg); }
+.value .ghost { --size: 118px; inset: 12px -26px auto auto; transform: rotate(8deg); }
+.value .candy { --size: 76px; inset: auto 5% -20px auto; transform: rotate(36deg); }
+.value .moon { --size: 64px; inset: 8px auto auto 24px; transform: rotate(6deg); }
+.value .bat { --size: 96px; inset: 10px auto auto 40%; transform: rotate(-18deg); }
+.value .sparkles { --size: 42px; inset: auto auto 12px 34%; transform: rotate(-24deg); }
 
 @media (max-width: 700px) {
-  .decorations > svg { width: 120px; opacity: .1; }
-  .decorations .pumpkinOne { left: -34px; top: -24px; }
-  .decorations .pumpkinTwo { width: 100px; right: -28px; bottom: 24px; }
-  .decorations .ghost { width: 92px; right: -28px; top: 30%; }
-  .decorations .candy { width: 68px; left: -22px; bottom: -12px; }
-  .decorations .moon { width: 56px; right: 8px; top: 14px; }
-  .decorations .bat { width: 70px; left: 46%; top: -4px; }
-  .decorations .sparkles { width: 34px; left: -10px; top: 44%; opacity: .15; }
-  .intro .ghost { left: auto; top: 36%; }
-  .intro .pumpkinTwo { left: auto; bottom: -28px; }
-  .intro .moon { left: auto; }
-  .intro .candy { top: 30%; bottom: auto; }
-  .campaign .pumpkinOne, .campaign .pumpkinTwo { opacity: .14; }
-  .event .ghost { left: -30px; right: auto; top: 58%; }
-  .event .pumpkinTwo { bottom: 38%; }
-  .value .pumpkinOne { width: 118px; }
-  .value .pumpkinTwo { left: 30%; right: auto; bottom: -24px; }
-  .value .ghost { top: auto; bottom: -18px; }
-  .value .candy { left: -24px; right: auto; top: 54%; bottom: auto; }
-  .value .sparkles { top: auto; bottom: 22%; }
+  .decorations { --accent-scale: .68; --accent-fade: .75; }
+  .intro .ghost { inset: 36% -18px auto auto; }
+  .intro .sparkles { inset: 64% auto auto -8px; }
+  .activities .ghost { inset: 22% auto auto -22px; }
+  .shopping .ghost { inset: 16px -20px auto auto; }
+  .event .bat { inset: 84px -18px auto auto; }
+  .value .pumpkinTwo { inset: -16px 26% auto auto; }
 }

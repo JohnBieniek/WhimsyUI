@@ -1,56 +1,52 @@
 .panel { position: relative; isolation: isolate; }
-.decorations { position: absolute; inset: 0; z-index: -1; overflow: hidden; border-radius: inherit; pointer-events: none; color: #27664f; }
-.decorations > svg { position: absolute; width: clamp(100px, 12vw, 170px); height: auto; opacity: .14; }
-.decorations .snowflakeOne { top: -26px; right: -24px; color: #488293; transform: rotate(12deg); }
-.decorations .snowflakeTwo { width: 86px; left: -26px; top: 36%; color: #488293; transform: rotate(-18deg); opacity: .12; }
-.decorations .character { width: 140px; right: -18px; bottom: -24px; transform: rotate(8deg); }
-.decorations .accent { width: 96px; left: 18px; bottom: -20px; color: #b51f32; transform: rotate(-16deg); }
-.decorations .sparkles { width: 56px; left: 28%; top: 24px; color: #a97827; opacity: .2; }
-.intro .snowflakeOne { top: 26px; }
-.intro .character { bottom: 20%; }
-.intro .accent { bottom: 18px; }
-.invitation .snowflakeOne { left: -30px; right: auto; top: -18px; }
-.invitation .snowflakeTwo { left: auto; right: -24px; top: 40%; }
-.invitation .character { left: -32px; right: auto; bottom: -16px; width: 180px; }
-.invitation .accent { left: auto; right: -10px; bottom: 30px; width: 120px; }
-.invitation .sparkles { left: auto; right: 20%; top: 22px; }
-.partners .snowflakeOne { right: -30px; top: -18px; }
-.partners .snowflakeTwo { top: auto; bottom: -14px; left: 32%; }
-.partners .character { left: -30px; right: auto; bottom: -34px; }
-.partners .accent { left: auto; right: 30%; bottom: -26px; width: 72px; }
-.partners .sparkles { top: -12px; left: 24%; }
-.heading .snowflakeOne { width: 100px; right: -18px; top: -34px; }
-.heading .snowflakeTwo { left: 22%; top: -26px; }
-.heading .sparkles { left: 56%; top: -8px; width: 44px; }
-.live .snowflakeOne { width: 120px; }
-.live .character { width: 118px; }
-.live .sparkles { left: 16%; top: -6px; }
-.thanks .snowflakeOne { top: 26px; }
-.thanks .snowflakeTwo { top: 44%; }
-.thanks .character { bottom: -10px; }
-.thanks .accent { left: -12px; bottom: 25%; }
-.thanks .sparkles { left: 30%; top: 16px; }
-.thanks .tree { width: 110px; left: 28%; bottom: -26px; opacity: .1; }
+.decorations { --accent-scale: 1; --accent-fade: 1; position: absolute; inset: 0; z-index: -1; overflow: hidden; border-radius: inherit; pointer-events: none; color: #27664f; }
+.decorations > svg { position: absolute; width: calc(var(--size, 140px) * var(--accent-scale)); height: auto; opacity: calc(var(--opacity, .14) * var(--accent-fade)); }
+.snowflakeOne, .snowflakeTwo { color: #488293; }
+.snowflakeTwo { --opacity: .12; }
+.accent { color: #b51f32; }
+.sparkles { color: #a97827; --opacity: .2; }
+
+.intro .snowflakeOne { --size: 164px; inset: -18px auto auto -24px; transform: rotate(-12deg); }
+.intro .snowflakeTwo { --size: 78px; inset: 38% -16px auto auto; transform: rotate(24deg); }
+.intro .character { --size: 138px; inset: auto 12% -22px auto; transform: rotate(8deg); }
+.intro .accent { --size: 90px; inset: auto auto 20px -12px; transform: rotate(-20deg); }
+.intro .sparkles { --size: 48px; inset: 18px 25% auto auto; transform: rotate(14deg); }
+
+.invitation .snowflakeOne { --size: 178px; inset: auto -20px -24px auto; transform: rotate(22deg); }
+.invitation .snowflakeTwo { --size: 72px; inset: 16px auto auto 26%; transform: rotate(-8deg); }
+.invitation .character { --size: 154px; inset: -22px -16px auto auto; transform: rotate(-12deg); }
+.invitation .accent { --size: 118px; inset: 42% auto auto -18px; transform: rotate(28deg); }
+.invitation .sparkles { --size: 56px; inset: auto auto 8px 38%; transform: rotate(-18deg); }
+
+.partners .snowflakeOne { --size: 132px; inset: -28px 38% auto auto; transform: rotate(-26deg); }
+.partners .snowflakeTwo { --size: 98px; inset: auto 8% -20px auto; transform: rotate(10deg); }
+.partners .character { --size: 142px; inset: 2px auto auto -24px; transform: rotate(16deg); }
+.partners .accent { --size: 82px; inset: auto auto -24px 30%; transform: rotate(-12deg); }
+.partners .sparkles { --size: 44px; inset: 12px 4% auto auto; transform: rotate(24deg); }
+
+.heading .snowflakeOne { --size: 96px; inset: -20px auto auto 4%; transform: rotate(18deg); }
+.heading .snowflakeTwo { --size: 72px; inset: auto 12% -24px auto; transform: rotate(-20deg); }
+.heading .sparkles { --size: 40px; inset: -8px auto auto 62%; transform: rotate(-10deg); }
+
+.live .snowflakeOne { --size: 118px; inset: -20px -22px auto auto; transform: rotate(-16deg); }
+.live .snowflakeTwo { --size: 66px; inset: auto auto -18px 44%; transform: rotate(28deg); }
+.live .character { --size: 108px; inset: auto auto -24px -20px; transform: rotate(-10deg); }
+.live .accent { --size: 74px; inset: 8px auto auto 24%; transform: rotate(18deg); }
+.live .sparkles { --size: 46px; inset: auto 6% 4px auto; transform: rotate(-28deg); }
+
+.thanks .snowflakeOne { --size: 148px; inset: auto auto -24px -16px; transform: rotate(8deg); }
+.thanks .snowflakeTwo { --size: 86px; inset: 12px 20% auto auto; transform: rotate(-30deg); }
+.thanks .character { --size: 130px; inset: 10px auto auto -28px; transform: rotate(14deg); }
+.thanks .accent { --size: 102px; inset: 38% -18px auto auto; transform: rotate(-24deg); }
+.thanks .sparkles { --size: 54px; inset: 6px auto auto 36%; transform: rotate(8deg); }
+.thanks .tree { --size: 116px; --opacity: .1; inset: auto 22% -26px auto; transform: rotate(-8deg); }
 
 @media (max-width: 800px) {
-  .decorations > svg { width: 112px; opacity: .1; }
-  .decorations .snowflakeOne { top: -20px; right: -30px; }
-  .decorations .snowflakeTwo { width: 64px; left: -26px; }
-  .decorations .character { width: 104px; right: -28px; bottom: -18px; }
-  .decorations .accent { width: 74px; left: -18px; bottom: -14px; }
-  .decorations .sparkles { width: 38px; top: 8px; opacity: .16; }
-  .intro .character { bottom: 38%; }
-  .intro .accent { bottom: 24px; }
-  .invitation .snowflakeOne { left: -30px; right: auto; }
-  .invitation .snowflakeTwo { left: auto; right: -24px; }
-  .invitation .character { left: -28px; right: auto; }
-  .invitation .accent { left: auto; right: -14px; bottom: 18px; }
-  .partners .character { left: auto; right: -24px; bottom: -32px; }
-  .partners .accent { left: auto; right: 30%; bottom: -30px; }
-  .partners .sparkles { left: 30%; top: 20px; }
-  .heading .snowflakeOne { top: -36px; }
-  .heading .snowflakeTwo { left: 44%; top: -28px; }
-  .heading .sparkles { left: 25%; top: auto; bottom: -12px; }
-  .thanks .accent { bottom: 34%; }
-  .thanks .tree { width: 90px; left: 24%; }
+  .decorations { --accent-scale: .7; --accent-fade: .75; }
+  .intro .snowflakeTwo { inset: 48% -18px auto auto; }
+  .invitation .accent { inset: 52% auto auto -18px; }
+  .partners .snowflakeOne { inset: -18px 30% auto auto; }
+  .heading .snowflakeTwo { inset: auto 6% -18px auto; }
+  .live .accent { inset: 4px auto auto 36%; }
+  .thanks .character { inset: 30% auto auto -20px; }
 }

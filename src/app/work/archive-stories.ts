@@ -1,5 +1,5 @@
 type StoryHeading = string | [string, string];
-type StorySection = { kicker: string; title: StoryHeading; paragraphs: string[]; images: [string, string][]; galleryLayout?: "stacked" | "centered" | "paired"; layout?: "image-left"; card?: "light-purple" };
+type StorySection = { kicker: string; title: StoryHeading; paragraphs: string[]; images: [string, string][]; galleryLayout?: "stacked" | "centered" | "paired"; layout?: "image-left"; card?: "light-purple"; accent?: "activities" | "shopping" | "event" | "value" };
 export type ArchiveStory = { title?: string; summary: string; heading: StoryHeading; introduction: string[]; hero: [string, string]; services: string[]; sections: StorySection[]; video?: string; theme?: "halloween" };
 
 export const archiveStories: Record<string, ArchiveStory> = {
@@ -11,10 +11,11 @@ export const archiveStories: Record<string, ArchiveStory> = {
     hero: ["944490211038597", "Malloween promotion for Lakeland Cabaret's spooky DJ set"],
     services: ["Campaign design", "Event advertising", "Vendor promotions"],
     sections: [
-      { kicker: "Things to do", title: "Give the activities their own invitation.", paragraphs: ["The entertainment promotions introduced Lakeland Cabaret's DJ set, local dance classes, a Studio One Photography session, and a Stitch appearance. Each ad offered a different reason to stop, with event details repeated where visitors needed them.", "The photography piece used an autumn backdrop, while the DJ artwork leaned into darker Halloween imagery. Those individual styles gave each activity personality within a shared seasonal campaign."], images: [["944490197705265", "Malloween promotion for local dance classes"], ["944490221038596", "Studio One Photography's autumn photo session at Malloween"], ["944490214371930", "Malloween Stitch appearance announcement for 4 to 5 PM"]] },
-      { kicker: "Food and shopping", title: ["Let each business bring", "something different."], paragraphs: ["F'ing Fantastic Food Truck's promotion highlighted egg rolls, fries, and nachos, with the event announcement directing visitors to the truck outside Dunham's. Other pieces introduced clothing, home décor, handmade jewelry, and sweets.", "Product photographs make the variety tangible. Someone arriving for Halloween activities could also discover a local maker, browse a display, or plan a food stop as part of the same visit."], images: [["944490204371931", "Food truck advertisement for Malloween"], ["944490191038599", "BINHI clothing collection promotion for Malloween"], ["944490217705263", "Home décor and seasonal displays promoted for Malloween"], ["944490207705264", "Handmade jewelry promotion for the Halloween event"], ["944490201038598", "McCallister Creations sweets promotion in the Malloween campaign"], ["944490194371932", "Enchanted Chains permanent jewelry promotion for Malloween"]] },
+      { kicker: "Things to do", accent: "activities", title: "Give the activities their own invitation.", paragraphs: ["The entertainment promotions introduced Lakeland Cabaret's DJ set, local dance classes, a Studio One Photography session, and a Stitch appearance. Each ad offered a different reason to stop, with event details repeated where visitors needed them.", "The photography piece used an autumn backdrop, while the DJ artwork leaned into darker Halloween imagery. Those individual styles gave each activity personality within a shared seasonal campaign."], images: [["944490197705265", "Malloween promotion for local dance classes"], ["944490221038596", "Studio One Photography's autumn photo session at Malloween"], ["944490214371930", "Malloween Stitch appearance announcement for 4 to 5 PM"]] },
+      { kicker: "Food and shopping", accent: "shopping", title: ["Let each business bring", "something different."], paragraphs: ["F'ing Fantastic Food Truck's promotion highlighted egg rolls, fries, and nachos, with the event announcement directing visitors to the truck outside Dunham's. Other pieces introduced clothing, home décor, handmade jewelry, and sweets.", "Product photographs make the variety tangible. Someone arriving for Halloween activities could also discover a local maker, browse a display, or plan a food stop as part of the same visit."], images: [["944490204371931", "Food truck advertisement for Malloween"], ["944490191038599", "BINHI clothing collection promotion for Malloween"], ["944490217705263", "Home décor and seasonal displays promoted for Malloween"], ["944490207705264", "Handmade jewelry promotion for the Halloween event"], ["944490201038598", "McCallister Creations sweets promotion in the Malloween campaign"], ["944490194371932", "Enchanted Chains permanent jewelry promotion for Malloween"]] },
       {
         kicker: "The event in action",
+        accent: "event",
         title: "Music, games, and reasons to stay.",
         galleryLayout: "stacked",
         paragraphs: [
@@ -29,6 +30,7 @@ export const archiveStories: Record<string, ArchiveStory> = {
       },
       {
         kicker: "The value of bringing people together",
+        accent: "value",
         title: ["A memorable day for visitors.", "New connections for businesses."],
         card: "light-purple",
         paragraphs: [

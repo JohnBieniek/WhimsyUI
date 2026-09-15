@@ -53,7 +53,7 @@ export default function ArchiveProject({ story, title }: { story: ArchiveStory; 
         {section.images.map(item => <ArchiveImage item={item} key={item[0]} />)}
       </div>;
       return <section className={`${styles.chapter} ${imageLeft ? styles.imageLeft : ""} ${section.card === "light-purple" ? styles.purpleCard : ""} ${section.galleryLayout === "stacked" ? styles.eventChapter : ""}`} key={Array.isArray(section.title) ? section.title.join(" ") : section.title}>
-        {isHalloween && <HalloweenDecorations variant={section.card === "light-purple" ? "value" : section.galleryLayout === "stacked" ? "event" : "campaign"} />}
+        {isHalloween && section.accent && <HalloweenDecorations variant={section.accent} />}
         {imageLeft && gallery}
         <header className={styles.chapterHeading}>
           <div className={Array.isArray(section.title) ? styles.headingColumn : undefined}>
