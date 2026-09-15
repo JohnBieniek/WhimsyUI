@@ -23,6 +23,7 @@
 .opening p:last-child { margin-bottom: 0; }
 .creative { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 36px; align-items: center; padding: 36px; margin-bottom: 40px; border-radius: 14px; background: var(--who-burgundy); color: #fff; }
 .creative .kicker { color: var(--who-gold); }
+.creative .figure img { border: 3px solid var(--who-gold); }
 .creative a:focus-visible { outline-color: var(--who-gold); }
 .deliverables { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 24px 0; }
 .deliverables li { border: 1px solid #ba8995; border-radius: 6px; padding: 8px 12px; font-size: 12px; font-weight: 700; }
