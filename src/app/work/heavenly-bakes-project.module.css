@@ -22,8 +22,9 @@
 .services { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 24px 0 0; }
 .services li { font-size: 12px; font-weight: 700; padding: 8px 12px; border-radius: 6px; background: var(--bakery-lilac); }
 
-.creativePair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; align-items: start; margin-bottom: 36px; }
-.identity, .products { border-radius: 16px; overflow: hidden; }
+.creativePair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; align-items: stretch; margin-bottom: 36px; }
+.identity, .products { display: flex; flex-direction: column; border-radius: 16px; overflow: hidden; }
+.creativePair .cardCopy { flex: 1; }
 .identity { background: var(--bakery-lilac); }
 .products { background: var(--bakery-pink); }
 .cardCopy { padding: 32px; }
