@@ -65,7 +65,7 @@ export default function SoftwareProject({ project }: { project: (typeof software
         <div><Image src={project.detailImage} alt={project.detailAlt} fill sizes="(max-width: 700px) 100vw, 80vw" /></div>
         <figcaption>{project.detailCaption}</figcaption>
       </figure>}
-      <p className={styles.credit}>Software by John Bieniek. <a href={project.source}>Read the engineering overview ↗</a></p>
+      <p className={`${styles.credit} ${isWarden ? styles.centeredCredit : ""}`}>Software by John Bieniek. <a href={project.source}>Read the engineering overview ↗</a></p>
       <CreatorCredit />
       <ProjectCallToAction />
     </main>
