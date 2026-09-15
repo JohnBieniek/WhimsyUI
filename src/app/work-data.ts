@@ -16,7 +16,6 @@ const projects: Record<Category, Array<[string,string,string,string,string]>> = 
     ["valentines-at-jackson-crossing","archive/1040973861390231.jpg","Valentine’s at Jackson Crossing","Jackson Crossing","Seasonal promotions for Valentine’s gifts, photography, and a gathering in the halls."],
     ["happy-harvest","archive/974588278028790.jpg","Happy Harvest","Jackson Crossing","Autumn event advertising and vendor coordination celebrating local makers, treats, and music."],
     ["team-hope-walk","team hope core.jpg","Team Hope Walk","Huntington’s Disease Society of America partners (HDSA)","A coordinated awareness campaign connecting the Central Michigan Team Hope Walk with clear event promotion, donation messaging, and practical Huntington’s disease education."],
-    ["social-growth","797501532404133.jpg","Jackson Crossing Social Growth","Jackson Crossing","A six-month advertising rhythm that grew awareness through consistent events, tenants, and community stories."],
     ["holiday-in-the-halls","1000952755392342.jpg","Holiday in the Halls","Jackson Crossing","A coordinated holiday campaign that moved from clear promotional creativity to a festive live event with Santa, local vendors, music, treats, and family activities."],
     ["back-to-school-ads","1478820320938914.jpg","Back to School Advertising Series","Jackson Crossing","A family-first series making every activity, giveaway, and accessibility detail easy to understand."],
     ["shop-small-saturday","1000952755392342.jpg","Shop Small Saturday","Local businesses","A bold campaign encouraging Jackson-area shoppers to discover and support independent businesses."],
@@ -37,7 +36,7 @@ const projects: Record<Category, Array<[string,string,string,string,string]>> = 
   ],
   "Brand support": [
     ["fox-candles-spotlight","957429079744710.jpg","Fox Candles Spotlight","Fox Candles","A small-business feature translating scent, craft, and personality into an approachable brand story."],
-    ["dawn-parker-campaign","957428976411387.jpg","Dawn Parker Brand Campaign","Dawn Parker, Reinhart","A recognizable social look supporting an accessible, personable real-estate presence."],
+    ["dawn-parker-campaign","archive/787291356758484.jpg","Dawn Parker Real Estate Campaign","Dawn Parker, Reinhart","Real-estate advertising and useful social content connecting a local agent with future buyers and sellers."],
     ["serenity-support","957428889744729.jpg","Serenity Brand Support","Serenity Sober Living House","Clear, compassionate brand materials centered on dignity, recovery, and community."],
     ["fetch-market-launch","957426256411659.jpg","Fetch Market Launch Support","Fetch Market & Deli","Early-stage messaging and media support for a new downtown Brooklyn market concept."],
     ["sisters-smoothies-feature","894457882708497.jpg","Sisters Smoothies Feature","Sisters Smoothies","A founder-focused spotlight celebrating five young entrepreneurs and their growing family business."],

@@ -220,15 +220,45 @@ export const archiveStories: Record<string, ArchiveStory> = {
       { kicker: "The gathering", title: "Show the welcome the community brought.", paragraphs: ["The event photographs include remarks, conversations, and the group gathered inside the new space. Wide views establish the turnout while closer views record the people involved in the celebration.", "The follow-up post congratulated Cascades Humane Society and recognized the Chamber and Jackson Crossing. The story continues from the invitation into a record of the day, giving the new location another moment of visibility."], images: [["1426887109465569", "Attendees listening during the opening celebration"], ["1426887206132226", "The crowd inside Cascades Humane Society"], ["1426887249465555", "Opening-day conversations in the new space"], ["1426887299465550", "Speakers and guests at the ribbon-cutting gathering"]] },
     ],
   },
-  "social-growth": {
-    summary: "A documented six-month snapshot of Jackson Crossing's social audience, supported by local business features and a continuing calendar of community stories.",
-    heading: "Give people a reason to keep following.",
-    introduction: ["Jackson Crossing's social presence brings together stores, food, entertainment, and community activity. Whimsy's archived progress graphic records the page moving from 191 likes and 243 followers to about 1,400 likes and 1,600 followers over six-plus months.", "Those figures describe the page at the time of the archived update. They are a historical audience snapshot, not a claim about today's totals or a measurement of sales."],
-    hero: ["797501532404133", "Archived Jackson Crossing audience comparison at the start, three months, and six months"],
-    services: ["Social media strategy", "Business advertising", "Community content"],
+  "dawn-parker-campaign": {
+    summary: "Real-estate advertising, moving advice, and social content that give Dawn Parker a recognizable, approachable presence with future buyers and sellers.",
+    heading: "Make a local expert easy to remember.",
+    introduction: [
+      "Whimsy supported Dawn Parker's real-estate presence with social media management and creative built around the people preparing for their next home. The work brings together homebuyer advertising, property promotion, practical moving advice, and seasonal messages.",
+      "Each piece has a different job, while Dawn's name and Reinhart identity connect the campaign. A homebuyer ad opens the conversation; useful advice gives people something to keep and return to as their plans take shape.",
+    ],
+    hero: ["787291356758484", "Dawn Parker's Own Your Dream Home advertisement"],
+    services: ["Social media management", "Real-estate advertising", "Educational content"],
     sections: [
-      { kicker: "The content", title: "A mall has more than one story to tell.", paragraphs: ["Individual business features give people reasons to discover what is in the halls. Alpha Koney Island's food and the Sisters Smoothies family story are examples of Whimsy's local business content, each giving a tenant a distinct voice within the broader Jackson Crossing presence.", "These examples show the range of the relationship. A food advertisement offers a direct reason to visit, while a business introduction builds familiarity with the people behind the counter."], images: [["772622481558705", "Alpha Koney Island advertising from Whimsy's Jackson Crossing work"], ["755016366652650", "Sisters Smoothies business feature from the Jackson Crossing portfolio"]] },
-      { kicker: "An ongoing relationship", title: "Keep the page connected to what is happening locally.", paragraphs: ["Later campaigns continued that mix of tenant promotion and community activity. Student artwork, seasonal visits, and nonprofit openings give the mall's communications a calendar beyond individual shopping offers.", "The approach connects useful information with recognizable local places. Someone following for one business can discover an event or community organization on a later visit to the page."], images: [["1088502653304018", "A later Student Art Show campaign at Jackson Crossing"], ["1426596552827958", "A later Cascades Humane Society opening announcement"]] },
+      {
+        kicker: "Useful advice",
+        title: "Give people something they can use.",
+        paragraphs: ["The moving-tip series breaks a busy transition into four manageable steps: plan ahead, declutter, prepare an essentials box, and label belongings. Large numbers and short explanations make the sequence easy to follow, while warm neutrals, muted red, and interior photographs hold the series together."],
+        images: [
+          ["768185018669118", "Moving tip 1: plan ahead with a checklist"],
+          ["768185005335786", "Moving tip 2: declutter before packing"],
+          ["768185012002452", "Moving tip 3: prepare a box of first-night essentials"],
+          ["768185002002453", "Moving tip 4: label and color-code boxes"],
+        ],
+      },
+      {
+        kicker: "Property promotion",
+        title: "Make the opportunity easy to understand.",
+        paragraphs: ["The property advertisement gives the home photograph, asking price, and agent identity distinct places in the design. A reader can scan the offer and know who is behind it, with Dawn's name and the Reinhart mark anchoring the piece."],
+        images: [["729573502530270", "Archived Michigan home advertisement for Dawn Parker"]],
+      },
+      {
+        kicker: "A personal presence",
+        title: "Leave room for a warmer message.",
+        paragraphs: ["Seasonal greetings give the page another way to connect with its audience between property updates. The Valentine's creative uses soft pinks and an open, friendly composition while keeping Dawn's identity visible. The tone changes with the occasion, and the person behind the message stays recognizable."],
+        images: [["787291366758483", "Dawn Parker's Valentine's Day greeting"]],
+      },
+      {
+        kicker: "The value",
+        title: "Stay useful. Stay recognizable.",
+        paragraphs: ["For Dawn, the campaign provides a range of material for introducing her services, presenting a property, and maintaining a personal presence. For future clients, it pairs a recognizable local contact with clear information and practical help. The work gives people reasons to remember her when they are ready for their next move."],
+        images: [],
+      },
     ],
   },
 };

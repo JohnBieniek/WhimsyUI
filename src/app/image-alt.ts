@@ -1,5 +1,9 @@
 // Describe the asset itself: some portfolio entries reuse the same image.
 const imageDescriptions: Record<string, string> = {
+  "/work/archive/787291356758484.jpg": "Dawn Parker real-estate advertisement showing a house resting above an open hand against a pink sky, with the message Own Your Dream Home.",
+  "/work/archive/944490211038597.jpg": "Dark Malloween poster advertising Lakeland Cabaret's spooky DJ, games, musical chairs, and fire dance on October 26.",
+  "/work/archive/1040973861390231.jpg": "Peggy's Custom Floral Designs Valentine's promotion with flower arrangements and gift baskets for February 13 and 14 at Jackson Crossing.",
+  "/work/archive/974588278028790.jpg": "Happy Harvest vendor list in autumn red and gold with leaves, pumpkins, and local business names.",
   "/work/1478820320938914.jpg": "Back to School Bash poster with blue lockers, advertising free backpacks, school photos, library sign-ups, and family activities at Jackson Crossing.",
   "/work/1385435016944112.jpg": "Jackson County Student Art Show poster featuring a student painting of an orange dragon; exhibition runs April 20 through May 4 at Jackson Crossing.",
   "/work/1426596552827958.jpg": "Gold ribbon and scissors announce the Cascades Humane Society grand opening on June 3 at Jackson Crossing.",
