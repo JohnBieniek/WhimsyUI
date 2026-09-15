@@ -1,5 +1,6 @@
 // Describe the asset itself: some portfolio entries reuse the same image.
 const imageDescriptions: Record<string, string> = {
+  "/work/archive/793715222782764.jpg": "Burnt Honey food advertisement with a loaded-fries photograph, bold yellow lettering, a black background, and location details for Spring Arbor.",
   "/work/archive/787291356758484.jpg": "Dawn Parker real-estate advertisement showing a house resting above an open hand against a pink sky, with the message Own Your Dream Home.",
   "/work/archive/944490211038597.jpg": "Dark Malloween poster advertising Lakeland Cabaret's spooky DJ, games, musical chairs, and fire dance on October 26.",
   "/work/archive/1040973861390231.jpg": "Peggy's Custom Floral Designs Valentine's promotion with flower arrangements and gift baskets for February 13 and 14 at Jackson Crossing.",

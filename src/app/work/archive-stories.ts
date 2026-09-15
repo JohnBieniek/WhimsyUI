@@ -175,15 +175,43 @@ export const archiveStories: Record<string, ArchiveStory> = {
       },
     ],
   },
-  "grazing-thyme-opening": {
-    summary: "Grand-opening coverage introducing Grazing Thyme's new Brooklyn space through the ribbon cutting, café details, and market displays.",
-    heading: "A new space deserves a proper introduction.",
-    introduction: ["Grazing Thyme's grand opening in Brooklyn offered an opportunity to show the business from several angles: the celebration outside, the comfortable seating inside, and the food and goods available to explore.", "Whimsy's opening-day feature congratulated the business and encouraged people to stop in. The photographs make that invitation useful by showing visitors what the new space actually looks like."],
-    hero: ["1404297108391236", "The Grazing Thyme grand-opening ribbon cutting in Brooklyn"],
-    services: ["Opening-day coverage", "Location photography", "Local business promotion"],
+  "restaurant-food-truck-advertising": {
+    summary: "Four advertisements created by Whimsy for restaurant and food-truck promotions, connecting distinctive food, recognizable brands, and clear reasons to visit.",
+    heading: "Give good food a clear invitation.",
+    introduction: [
+      "Whimsy created these advertisements as part of its local business and event promotion work. The collection features Burnt Honey, Buffalo Wild Wings, Craveable, and Shorties, with a different visual approach for each business and offer.",
+      "Burnt Honey's design leads with bold yellow lettering and a close view of the food against a textured black background. The logo and location details complete the invitation, connecting the dish with a business people can seek out.",
+    ],
+    hero: ["793715222782764", "Burnt Honey advertisement with food photography and Spring Arbor location details"],
+    services: ["Ad design", "Brand-led creative", "Event promotion"],
     sections: [
-      { kicker: "Inside the café", title: "Show the atmosphere beyond the front door.", paragraphs: ["The seating, flowers, wall details, and café counter communicate the room's character. Wider photographs help people understand the space; closer views show the care put into the decoration and displays.", "Those details give a new visitor a more complete introduction than the ribbon cutting alone. The opening is the occasion, but the room is part of what people can return to enjoy."], images: [["1404297171724563", "Seating and wall decorations inside Grazing Thyme"], ["1404297278391219", "The café counter and product displays"], ["1404297318391215", "Flowers and decorative details in the café"]] },
-      { kicker: "Reasons to explore", title: "Let the small details extend the invitation.", paragraphs: ["The market shelves and counter displays add another side to the story. They show that the visit can include browsing as well as a meal, while the seating photographs communicate the relaxed setting.", "The opening-day feature connects the celebration with the everyday experience of visiting. It gives Grazing Thyme a collection of images that introduce both the new location and its welcoming character."], images: [["1404297225057891", "Market shelves inside Grazing Thyme"], ["1404297381724542", "Products displayed along the café counter"], ["1404297425057871", "The decorated seating bench in the new space"]] },
+      {
+        kicker: "Buffalo Wild Wings",
+        title: "Lead with the food. Make the next step clear.",
+        paragraphs: ["The chicken-wing ad puts the food inside a phone-shaped frame, pairing a close-up image with a short headline and an order prompt. Yellow, black, and the familiar logo connect the promotion to the brand while keeping the offer easy to scan."],
+        images: [["769506615203625", "Buffalo Wild Wings chicken-wing advertisement with an Order Now prompt"]],
+      },
+      {
+        kicker: "Craveable",
+        title: "Give a different menu its own identity.",
+        paragraphs: ["Craveable's piece introduces its plant-based menu through food images, bright blue lettering, and a direct statement about its offer. The location cue beside the Secretary of State's office helps turn interest in the food into a practical next stop."],
+        images: [["870210031799949", "Craveable plant-based food advertisement with a location cue"]],
+      },
+      {
+        kicker: "Shorties",
+        title: "Turn an appearance into a plan.",
+        paragraphs: [
+          "The Patriotic Palooza artwork brings Shorties' chef, food truck, and identity together with the June 30 date and noon start. Bright turquoise, celebratory shapes, and large type give the event promotion its own energy.",
+          "The design also names the location and a nearby landmark. Those details help an audience move from noticing the announcement to knowing when and where to find the truck.",
+        ],
+        images: [["870210345133251", "Shorties food-truck promotion for Patriotic Palooza on June 30"]],
+      },
+      {
+        kicker: "The value",
+        title: "Make the business easier to choose.",
+        paragraphs: ["For the businesses, each ad gives the offer a distinct, recognizable presentation. For the audience, it answers useful questions: what looks good, who offers it, and how to take the next step. The work connects the appeal of the food with the information someone needs to act."],
+        images: [],
+      },
     ],
   },
   "fox-candles-spotlight": {

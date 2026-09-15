@@ -8,10 +8,10 @@ const projects: Record<Category, Array<[string,string,string,string,string]>> = 
     ["santa-stories","994558686031749.jpg","Santa Stories","Jackson Crossing","A holiday reading experience created with the Jackson District Library and community partners."],
     ["cascades-ribbon-cutting","1233972312090384.jpg","Cascades Humane Society Ribbon Cutting","Cascades Humane Society","A welcoming grand-opening event that introduced a trusted nonprofit to its new mall location."],
     ["grow-jackson-opening","1275042854649996.jpg","Grow Jackson & River Rail Opening","Grow Jackson","Ribbon-cutting storytelling for a community-focused market and local food initiative."],
-    ["grazing-thyme-opening","837501851737434.jpg","Grazing Thyme Grand Opening","Grazing Thyme","On-location event media celebrating a new Brooklyn space and the people behind it."],
     ["miss-crossroads-visit","894475189373433.jpg","Miss Crossroads Community Visit","Jackson Crossing","A joyful public appearance built around connection, visibility, and community support."],
   ],
   "Advertising": [
+    ["restaurant-food-truck-advertising","archive/793715222782764.jpg","Restaurant & Food Truck Advertising","Local food businesses","Four finished advertisements showing Whimsy's creative work across restaurant offers, food-truck appearances, and local dining promotions."],
     ["malloween","archive/944490211038597.jpg","Malloween at Jackson Crossing","Jackson Crossing","A Halloween campaign connecting costumes, trick-or-treating, music, food, and local vendors."],
     ["valentines-at-jackson-crossing","archive/1040973861390231.jpg","Valentine’s at Jackson Crossing","Jackson Crossing","Seasonal promotions for Valentine’s gifts, photography, and a gathering in the halls."],
     ["happy-harvest","archive/974588278028790.jpg","Happy Harvest","Jackson Crossing","Autumn event advertising and vendor coordination celebrating local makers, treats, and music."],
@@ -42,7 +42,6 @@ const projects: Record<Category, Array<[string,string,string,string,string]>> = 
     ["sisters-smoothies-feature","894457882708497.jpg","Sisters Smoothies Feature","Sisters Smoothies","A founder-focused spotlight celebrating five young entrepreneurs and their growing family business."],
     ["alpha-koney-story","944490221038596.jpg","Alpha Koney Island Story","Alpha Koney Island","Brand storytelling positioning a familiar mall restaurant as a welcoming place for group gatherings."],
     ["local-maker-series","906381761516109.jpg","Local Maker Series","Jackson-area makers","Flexible visual templates giving each maker a distinct voice inside a consistent campaign."],
-    ["grazing-thyme-brand","837501851737434.jpg","Grazing Thyme Brand Story","Grazing Thyme","Warm opening content highlighting the character, menu, and atmosphere of a new local space."],
   ],
   "Websites": [
     ["lakeland-cabaret","lakeland cabaret/site.png","Lakeland Cabaret","Lakeland Cabaret","A new brand and website bringing the collective's performance booking, photography, and event services into one vivid online home."],

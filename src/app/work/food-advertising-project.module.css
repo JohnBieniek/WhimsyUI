@@ -1,0 +1,65 @@
+.page {
+  --food-ink: #24292c;
+  --food-gold: #ffe05a;
+  --food-cream: #fff5d7;
+  --food-blue: #eaf4fb;
+  --food-teal: #dff6f3;
+  --food-line: #ded7c6;
+  color: var(--food-ink);
+}
+
+.page section, .page figure { min-width: 0; }
+.page p { line-height: 1.7; }
+.page section h2 { font-family: var(--font-display); font-size: clamp(28px, 3.2vw, 44px); line-height: 1.12; text-wrap: balance; margin: 0 0 24px; }
+.kicker { font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; margin: 0 0 14px; }
+.page :global(.back-link) { color: var(--food-ink); }
+.page a:focus-visible { outline: 3px solid #705a00; outline-offset: 5px; }
+
+.advertisement { margin: 0; }
+.advertisement a { display: block; border-radius: 10px; }
+.advertisement img { display: block; width: 100%; height: auto; border-radius: 10px; }
+.advertisement figcaption { font-size: 13px; line-height: 1.5; margin-top: 12px; }
+
+.opening { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; align-items: center; padding-block: 30px 48px; border-top: 1px solid var(--food-line); }
+.services { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 24px 0 0; }
+.services li { background: var(--food-cream); border: 1px solid var(--food-line); padding: 8px 12px; border-radius: 6px; font-size: 12px; font-weight: 700; }
+
+.campaignPair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; margin-bottom: 40px; align-items: start; }
+.wings, .craveable { border-radius: 14px; overflow: hidden; }
+.wings { background: var(--food-cream); }
+.craveable { background: var(--food-blue); }
+.campaignPair .advertisement img, .campaignPair .advertisement a { border-radius: 0; }
+.campaignPair .advertisement figcaption { padding-inline: 28px; }
+.wings .advertisement figcaption { padding-bottom: 24px; }
+.cardCopy { padding: 28px; }
+.cardCopy p:last-child { margin-bottom: 0; }
+.page .cardCopy h2 { font-size: clamp(28px, 2.7vw, 38px); }
+
+.event { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 36px; padding: 32px; margin-bottom: 40px; border-radius: 14px; background: var(--food-teal); }
+.eventCopy { padding-right: 12px; }
+.eventCopy p:last-child { margin-bottom: 0; }
+.value { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 40px; align-items: center; padding: 36px; border-radius: 14px; border-left: 5px solid var(--food-gold); background: var(--food-ink); color: #fff; margin-bottom: 36px; }
+.value .kicker { color: var(--food-gold); }
+.page .value h2, .value p:last-child { margin-bottom: 0; }
+.value > div > p:first-child { margin-top: 0; }
+.page > :global(.ready) { border-color: var(--food-ink); }
+.page > :global(.ready) h2 { font-size: 20px; line-height: 1.5; margin: 0; }
+.page :global(.button) { background: var(--food-gold); border-color: var(--food-gold); color: var(--food-ink); }
+.page :global(.button:hover) { background: var(--food-cream); border-color: var(--food-ink); }
+
+@media (max-width: 1000px) {
+  .opening, .event { gap: 28px; }
+  .event, .value { padding: 28px; }
+  .campaignPair { gap: 22px; }
+  .cardCopy { padding: 24px; }
+}
+
+@media (max-width: 700px) {
+  .opening, .campaignPair, .event, .value { grid-template-columns: minmax(0, 1fr); }
+  .opening { padding-block: 24px 32px; }
+  .cardCopy, .event, .value { padding: 24px 18px; }
+  .campaignPair, .event { margin-bottom: 28px; }
+  .campaignPair .advertisement figcaption { padding-inline: 18px; }
+  .eventCopy { padding-right: 0; }
+  .value { gap: 24px; }
+}
