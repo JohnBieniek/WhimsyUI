@@ -50,7 +50,8 @@
 .communityHeader > div > p:first-child { margin-top: 0; }
 .communityHeader p:last-child { margin-bottom: 0; }
 .animalGallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; align-items: start; }
-.smallAnimal { background: var(--chs-cream); border: 1px solid var(--chs-line); border-radius: 12px; overflow: hidden; }
+.animalGallery img { aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; }
+.smallAnimal { background: var(--chs-cream); box-shadow: inset 0 0 0 1px var(--chs-line); border-radius: 12px; overflow: hidden; }
 .smallAnimal .figure a, .smallAnimal .figure img { border-radius: 0; }
 .smallAnimal figcaption { padding-inline: 24px; }
 .smallAnimalCopy { padding: 28px 24px; }
