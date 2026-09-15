@@ -21,9 +21,11 @@ export default function ArchiveProject({ story, title }: { story: ArchiveStory; 
     <Link className="back-link" href="/work">← All work</Link>
     <ProjectHeader title={story.title ?? title} description={story.summary} />
     <section className={styles.opening}>
-      <div>
+      <div className={Array.isArray(story.heading) ? styles.openingCopy : undefined}>
         <p className="kicker">The project</p>
-        <h2>{story.heading}</h2>
+        <h2 className={Array.isArray(story.heading) ? styles.twoLineHeading : undefined}>
+          {Array.isArray(story.heading) ? story.heading.map((line, index) => <span key={line}>{index > 0 ? " " : ""}{line}</span>) : story.heading}
+        </h2>
         {story.introduction.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
         <ul className={styles.services}>{story.services.map(service => <li key={service}>{service}</li>)}</ul>
       </div>

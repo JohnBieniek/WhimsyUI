@@ -1,10 +1,10 @@
 type StorySection = { kicker: string; title: string; paragraphs: string[]; images: [string, string][]; galleryLayout?: "stacked" };
-export type ArchiveStory = { title?: string; summary: string; heading: string; introduction: string[]; hero: [string, string]; services: string[]; sections: StorySection[]; video?: string };
+export type ArchiveStory = { title?: string; summary: string; heading: string | [string, string]; introduction: string[]; hero: [string, string]; services: string[]; sections: StorySection[]; video?: string };
 
 export const archiveStories: Record<string, ArchiveStory> = {
   "malloween": {
     summary: "A Halloween campaign bringing costumes, trick-or-treating, music, food, and independent vendors together at Jackson Crossing.",
-    heading: "One spooky afternoon. Plenty of reasons to explore.",
+    heading: ["One spooky afternoon.", "Plenty of reasons to explore."],
     introduction: ["The second annual Malloween invited families to Jackson Crossing on October 26, from noon to 5 PM. Costumes and candy stops gave the day its Halloween character, while local vendors, food, photography, and entertainment offered reasons to spend time throughout the mall.", "Whimsy's campaign gave those participants individual promotions within the larger event. Each piece connected a specific attraction with the Malloween invitation, helping visitors see what they could discover before they arrived."],
     hero: ["944490211038597", "Malloween promotion for Lakeland Cabaret's spooky DJ set"],
     services: ["Campaign design", "Event advertising", "Vendor promotions"],
