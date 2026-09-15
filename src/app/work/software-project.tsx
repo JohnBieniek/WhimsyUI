@@ -30,7 +30,7 @@ export default function SoftwareProject({ project }: { project: (typeof software
           {project.sections.map(({ title, copy }) => <article key={title}><h3>{title}</h3><p>{copy}</p></article>)}
         </div>
       </section>
-      {story?.chapters.map((chapter, index) => <section className={styles.storyChapter} key={chapter.title} aria-labelledby={`chapter-${index}`}>
+      {story?.chapters.map((chapter, index) => <section className={`${styles.storyChapter} ${project.slug === "whimsy-warden" && index === 0 ? styles.mintChapter : ""}`} key={chapter.title} aria-labelledby={`chapter-${index}`}>
         <p className="kicker">{chapter.kicker}</p>
         <h2 id={`chapter-${index}`}>{chapter.title}</h2>
         <div className={chapter.image && chapter.image !== project.image ? styles.illustratedChapter : styles.chapterCopy}>
