@@ -132,7 +132,7 @@ export const archiveStories: Record<string, ArchiveStory> = {
   },
   "sisters-smoothies-feature": {
     summary: "A family business introduction and a coordinated set of five signature-drink ads for Sisters Smoothies at Jackson Crossing.",
-    heading: "Five sisters. Five drinks. One recognizable campaign.",
+    heading: ["Five sisters. Five drinks.", "One recognizable campaign."],
     introduction: ["Sisters Smoothies grew from smoothies at school events to a food truck and a place at Jackson Crossing. Whimsy introduced the five young entrepreneurs and their family's role in building the business, then brought the menu into a colorful series of product ads.", "Each signature smoothie carries a sister's name. That gives the campaign a natural connection between the products on offer and the people behind them."],
     hero: ["755016366652650", "Sisters Smoothies business introduction collage"],
     services: ["Business storytelling", "Product advertising", "Campaign design"],
