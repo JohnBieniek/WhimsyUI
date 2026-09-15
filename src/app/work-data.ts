@@ -36,7 +36,7 @@ const projects: Record<Category, Array<[string,string,string,string,string]>> = 
   ],
   "Brand support": [
     ["fox-candles-spotlight","957429079744710.jpg","Fox Candles Spotlight","Fox Candles","A small-business feature translating scent, craft, and personality into an approachable brand story."],
-    ["dawn-parker-campaign","archive/787291356758484.jpg","Dawn Parker Real Estate Campaign","Dawn Parker, Reinhart","Real-estate advertising and useful social content connecting a local agent with future buyers and sellers."],
+    ["ingendahl-acres-branding","archive/708070294680591.jpg","Ingendahl Acres Branding","Ingendahl Acres","Logo designs, stickers, and social graphics bringing a Maine farm's animals and personality into its visual identity."],
     ["serenity-support","957428889744729.jpg","Serenity Brand Support","Serenity Sober Living House","Clear, compassionate brand materials centered on dignity, recovery, and community."],
     ["fetch-market-launch","957426256411659.jpg","Fetch Market Launch Support","Fetch Market & Deli","Early-stage messaging and media support for a new downtown Brooklyn market concept."],
     ["sisters-smoothies-feature","894457882708497.jpg","Sisters Smoothies Feature","Sisters Smoothies","A founder-focused spotlight celebrating five young entrepreneurs and their growing family business."],

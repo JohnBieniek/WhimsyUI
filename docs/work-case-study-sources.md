@@ -12,7 +12,7 @@ The selected gallery remains 20 projects, four per category. The 13 expanded arc
 - Community Day photos document preparation and media activity, not event attendance. Removed the unrelated Cascades ribbon-cutting artwork from its thumbnail.
 - Fetch's archived photographs show pre-opening work. Following the user's clarification that Whimsy did little work at Grazing Thyme, those case-study pages were retired and replaced by the [restaurant and food-truck advertising showcase](./food-advertising-work-sources.md). The original opening-day source record remains below for reference.
 - Serenity focuses on documented consulting, training, and volunteering; displaying its logo was not treated as evidence that Whimsy designed it.
-- Jackson Crossing Social Growth was retired from the site and replaced in the selected Businesses portfolio by the [Dawn Parker real-estate campaign](./dawn-parker-work-sources.md). Its original source records remain below for reference.
+- Jackson Crossing Social Growth and Dawn Parker Real Estate Campaign were retired from the site. Their selected Businesses slot now features [Ingendahl Acres Branding](./ingendahl-acres-work-sources.md). Original source records remain for reference.
 - Holiday commercial credits Whimsy for script, direction, and casting, and Media Advantage for filming and editing. Poster is a frame from the actual archived video.
 - Software screenshots remain specific to their applications; full-size links improve access to dense interface details.
 

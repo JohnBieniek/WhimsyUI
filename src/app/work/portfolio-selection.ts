@@ -5,7 +5,7 @@ export const selectedWork = {
   "Community Events": ["back-to-school-bash", "student-art-show", "community-day", "team-hope-walk"],
   Software: ["lakeland-website", "multiverse-adventurers-guild", "sonic-shielding", "whimsy-warden"],
   Restaurants: ["fetch-market-launch", "sisters-smoothies-feature", "alpha-koney-story", "restaurant-food-truck-advertising"],
-  Businesses: ["dawn-parker-campaign", "fox-candles-spotlight", "serenity-support", "cascades-ribbon-cutting"],
+  Businesses: ["ingendahl-acres-branding", "fox-candles-spotlight", "serenity-support", "cascades-ribbon-cutting"],
 } satisfies Record<(typeof workCategories)[number], string[]>;
 
 export const selectedCategoryBySlug: Record<string, string> = Object.fromEntries(

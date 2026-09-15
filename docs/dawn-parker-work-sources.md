@@ -1,6 +1,6 @@
 # Dawn Parker campaign sources
 
-The Dawn Parker case study replaces Jackson Crossing Social Growth in the selected Businesses portfolio. The old Social Growth page is retired; its URL redirects to `/work/dawn-parker-campaign`.
+This case study has been retired at the user's request and replaced by [Ingendahl Acres Branding](./ingendahl-acres-work-sources.md). Both Dawn Parker and the earlier Social Growth URLs redirect to `/work/ingendahl-acres-branding`. The source record below preserves the evidence reviewed for the retired page.
 
 Reviewed the original captions and images in `archive/deliverables/whimsy_context_catalog/inventory.csv` and `media/`. The seven selected images are copied unchanged into `public/work/archive/` and each appears once in the case study.
 
