@@ -50,7 +50,7 @@ export default function WorkGallery() {
                 ? { objectFit: "contain", background: "var(--mint)" }
                 : item.slug === "alpha-koney-story"
                   ? { objectPosition: "center 20%" }
-                  : item.slug === "cascades-ribbon-cutting"
+                  : item.slug === "cascades-ribbon-cutting" || item.slug === "happy-harvest"
                     ? { objectPosition: "center top" }
                     : undefined}
             />

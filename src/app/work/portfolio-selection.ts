@@ -1,7 +1,7 @@
-export const workCategories = ["Holidays", "Community Events", "Software", "Restaurants", "Businesses"] as const;
+export const workCategories = ["Seasonal Events", "Community Events", "Software", "Restaurants", "Businesses"] as const;
 
 export const selectedWork = {
-  Holidays: ["holiday-in-the-halls", "malloween", "valentines-at-jackson-crossing", "happy-harvest"],
+  "Seasonal Events": ["holiday-in-the-halls", "malloween", "valentines-at-jackson-crossing", "happy-harvest"],
   "Community Events": ["back-to-school-bash", "student-art-show", "community-day", "team-hope-walk"],
   Software: ["lakeland-website", "multiverse-adventurers-guild", "sonic-shielding", "whimsy-warden"],
   Restaurants: ["fetch-market-launch", "sisters-smoothies-feature", "alpha-koney-story", "restaurant-food-truck-advertising"],
