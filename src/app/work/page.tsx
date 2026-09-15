@@ -26,7 +26,10 @@ export default function WorkPage() {
         <WorkGallery />
       </section>
       <section className={styles.cta}>
-        <div><p className="kicker">Ready when you are</p><h2>Let’s make the next step clear.</h2></div>
+        <div>
+          <h2>Ready to get started?</h2>
+          <p>Book a free consultation to discuss your goals and the right mix of services.</p>
+        </div>
         <Link className="button" href="/contact">Book a consultation →</Link>
       </section>
       <CreatorCredit />
