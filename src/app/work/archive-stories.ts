@@ -166,7 +166,7 @@ export const archiveStories: Record<string, ArchiveStory> = {
       },
       {
         kicker: "The value",
-        title: "Give the restaurant more reasons to be remembered.",
+        title: ["Give the restaurant more", "reasons to be remembered."],
         paragraphs: [
           "For Alpha, the advertising and event feature connect its name with both everyday dining and community gatherings. The work gives the restaurant a story to share with people who may know its location but have not considered it for their next occasion.",
           "For visitors and group organizers, that story makes the choice easier to picture: where to go, what the setting feels like, and how people can spend time together. A local business becomes part of the next plan.",
