@@ -14,6 +14,8 @@ import FetchProject from "../fetch-project";
 import IngendahlProject from "../ingendahl-project";
 import HumaneSocietyProject from "../humane-society-project";
 import WelcomeHomeProject from "../welcome-home-project";
+import HolidayDecorations from "../holiday-decorations";
+import holidayDecorations from "../holiday-decorations.module.css";
 import styles from "../archive-project.module.css";
 import lakelandStyles from "../lakeland-project.module.css";
 import { ProjectCallToAction } from "../project-framing";
@@ -127,7 +129,8 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
     </section> : isHoliday ? <section className="holiday-story">
       <div className="holiday-story-opening">
         <figure className="holiday-story-hero"><Image src="/work/1000952755392342.jpg" alt="Holiday in the Halls campaign and event overview" fill priority sizes="(max-width: 800px) 100vw, 49vw" /></figure>
-        <div className="holiday-story-intro">
+        <div className={`holiday-story-intro ${holidayDecorations.panel}`}>
+          <HolidayDecorations variant="intro" />
           <p className="kicker">One event, many reasons to visit</p>
           <h2 className="holiday-two-line-title"><span>We gave the whole day</span>{" "}<span>a clear invitation.</span></h2>
           <p>Whimsy promoted and hosted Holiday in the Halls for Jackson Crossing on December 21. The campaign brought Santa, music, free face painting, holiday treats, and local shopping into one recognizable event story.</p>
@@ -136,7 +139,8 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
       </div>
 
       <div className="holiday-invitation">
-        <header>
+        <header className={holidayDecorations.panel}>
+          <HolidayDecorations variant="invitation" />
           <p className="kicker">The main invitation</p>
           <h2 className="holiday-two-line-title"><span>We turned a full day of Christmas</span><span>into one clear reason to visit.</span></h2>
           <p>The primary ad brought Santa photos, local vendors, home decor, gifts, sweet treats, and a live DJ into one easy-to-scan invitation. Real event photography made every promise feel tangible instead of generic.</p>
@@ -147,7 +151,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
       </div>
 
       <div className="holiday-partners">
-        <header><p className="kicker">A campaign for the participants, too</p><h2 className="holiday-two-line-title"><span>Each store and performer</span><span>got a moment of their own.</span></h2><p>Instead of asking one general ad to do every job, Whimsy created focused invitations for the businesses, performers, and activities families could discover. Together, the pieces made the event feel active before the doors even opened.</p></header>
+        <header className={holidayDecorations.panel}><HolidayDecorations variant="partners" /><p className="kicker">A campaign for the participants, too</p><h2 className="holiday-two-line-title"><span>Each store and performer</span><span>got a moment of their own.</span></h2><p>Instead of asking one general ad to do every job, Whimsy created focused invitations for the businesses, performers, and activities families could discover. Together, the pieces made the event feel active before the doors even opened.</p></header>
         <div className="holiday-partner-wall">
           {holidayPartnerAds.map(([file, label]) => <figure className="holiday-partner-ad" key={file}>
             <div><Image src={`/work/holiday-in-the-halls/${file}`} alt={`Holiday in the Halls promotion for ${label}`} fill sizes="(max-width: 800px) 50vw, 25vw" /></div>
@@ -157,15 +161,16 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
       </div>
 
       <div className="holiday-live-story">
-        <header><p className="kicker">The day in the halls</p><h2 className="holiday-live-one-line">A truely festive place to gather!</h2></header>
+        <header className={holidayDecorations.panel}><HolidayDecorations variant="heading" /><p className="kicker">The day in the halls</p><h2 className="holiday-live-one-line">A truely festive place to gather!</h2></header>
         <figure className="holiday-live-dj"><Image src="/work/lakeland%20cabaret/mall%20christmas%20backdrop.jpg" alt="The DJ performing beneath the Merry Christmas arch at Holiday in the Halls" fill sizes="(max-width: 800px) 100vw, 64vw" /><a className="holiday-lakeland-tag" href="https://lakelandcabaret.com/" target="_blank" rel="noopener noreferrer">Lakeland Cabaret ↗</a></figure>
-        <div className="holiday-live-note"><p>The live event carried festive energy throughout the mall! Santa greeted families, vendors filled the halls, and a DJ performed beneath the illuminated Merry Christmas arch.</p><p>The photography closes the loop between promotion and experience, showing the people and seasonal setting behind the campaign.</p></div>
+        <div className={`holiday-live-note ${holidayDecorations.panel}`}><HolidayDecorations variant="live" /><p>The live event carried festive energy throughout the mall! Santa greeted families, vendors filled the halls, and a DJ performed beneath the illuminated Merry Christmas arch.</p><p>The photography closes the loop between promotion and experience, showing the people and seasonal setting behind the campaign.</p></div>
         <figure className="holiday-event-recap"><Image src="/work/holiday-in-the-halls/1271100088377606.jpg" alt="A holiday character greeting children beside the carousel at Jackson Crossing" fill sizes="(max-width: 800px) 100vw, 46vw" /></figure>
       </div>
 
       <div className="holiday-thanks">
         <figure><Image src="/work/holiday-in-the-halls/1000952532059031.jpg" alt="Holiday in the Halls thank-you to the participating vendors" fill sizes="(max-width: 800px) 100vw, 45vw" /></figure>
-        <div>
+        <div className={holidayDecorations.panel}>
+          <HolidayDecorations variant="thanks" />
           <p className="kicker">After the event</p>
           <h2 className="holiday-two-line-title"><span>The campaign ended by recognizing</span><span>the community that made it possible.</span></h2>
           <p>The mix of savings, entertainment, and memorable photos gave adults practical reasons to visit while keeping the day exciting for kids. This allowed families to make more of one holiday trip. They could browse seasonal offers, meet Santa, enjoy the music, discover local makers, and pick up treats together.</p>
