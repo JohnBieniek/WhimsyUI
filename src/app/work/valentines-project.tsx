@@ -56,7 +56,6 @@ export default function ValentinesProject({ story, title }: { story: ArchiveStor
 
     <section className={styles.photography}>
       <header className={styles.photoHeader}>
-        <p className={styles.eyebrow}>02 / Photography &amp; Cupid’s Corner / 2024</p>
         <div className={styles.headlineContainer}><CampaignHeading text={photography.title} /></div>
         <p>A bold portrait, a vivid red palette, and an invitation to join in. Studio One Photography’s creative promoted February 17 Valentine’s specials, while its sponsor panel connected the business to Cupid’s Corner on February 14.</p>
       </header>
