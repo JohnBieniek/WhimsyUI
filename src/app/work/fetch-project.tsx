@@ -80,8 +80,8 @@ export default function FetchProject({ story, title }: { story: ArchiveStory; ti
         <p>Chocolate ganache brownies, toasted coconut and lime mousse, and strawberry cheesecake mousse complete the picture. Close-up photographs make the textures, colors, and presentation part of the invitation.</p>
       </header>
       <div className={styles.sweetsGrid}>
-        <FetchPhoto item={photos.brownies} />
         <FetchPhoto item={photos.coconut} />
+        <FetchPhoto item={photos.brownies} />
         <FetchPhoto item={photos.strawberry} />
       </div>
     </section>
