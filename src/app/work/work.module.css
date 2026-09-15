@@ -90,6 +90,7 @@
 .sonic .storyOverview { border-left-color: var(--sonic-aqua); background: var(--sonic-panel); color: var(--sonic-text); }
 .sonic .section { border-top-color: var(--sonic-border); }
 .sonic .storyChapter { padding: 32px; margin-bottom: 28px; border: 1px solid var(--sonic-border); border-radius: 12px; background: var(--sonic-panel); color: var(--sonic-text); }
+.sonic .chapterCopy { max-width: none; }
 .sonic .details article { border-top-color: var(--sonic-aqua); background: var(--sonic-raised); color: var(--sonic-text); }
 .sonic .storyChapter .details article { background: var(--sonic-navy); }
 .sonic .details h3, .sonic .storyOverview :global(.kicker), .sonic .storyChapter :global(.kicker) { color: var(--sonic-aqua); }
