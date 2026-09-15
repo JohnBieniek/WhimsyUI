@@ -1,9 +1,10 @@
 type StoryHeading = string | [string, string];
 type StorySection = { kicker: string; title: StoryHeading; paragraphs: string[]; images: [string, string][]; galleryLayout?: "stacked" | "centered" | "paired"; layout?: "image-left"; card?: "light-purple" };
-export type ArchiveStory = { title?: string; summary: string; heading: StoryHeading; introduction: string[]; hero: [string, string]; services: string[]; sections: StorySection[]; video?: string };
+export type ArchiveStory = { title?: string; summary: string; heading: StoryHeading; introduction: string[]; hero: [string, string]; services: string[]; sections: StorySection[]; video?: string; theme?: "halloween" };
 
 export const archiveStories: Record<string, ArchiveStory> = {
   "malloween": {
+    theme: "halloween",
     summary: "A Halloween campaign bringing costumes, trick-or-treating, music, food, and independent vendors together at Jackson Crossing.",
     heading: ["One spooky afternoon.", "Plenty of reasons to explore."],
     introduction: ["The second annual Malloween invited families to Jackson Crossing on October 26, from noon to 5 PM. Costumes and candy stops gave the day its Halloween character, while local vendors, food, photography, and entertainment offered reasons to spend time throughout the mall.", "Whimsy's campaign gave those participants individual promotions within the larger event. Each piece connected a specific attraction with the Malloween invitation, helping visitors see what they could discover before they arrived."],

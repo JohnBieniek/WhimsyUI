@@ -43,3 +43,34 @@
 @media(max-width:400px){.existing :global(.team-hope-case-study h2),.existing :global(.team-hope-case-study h2 span),.existing :global(.team-hope-case-study .kicker){white-space:normal;overflow-wrap:break-word}}
 @media(max-width:1000px){.gallery{columns:2}.opening{gap:28px}.chapterHeading{gap:28px}}
 @media(max-width:700px){.opening,.chapterHeading{grid-template-columns:1fr;gap:20px}.opening{padding:24px 0 32px}.chapter{padding:30px 0}.gallery{columns:1}.single{columns:1}.figure img{max-height:none}.chapterHeading{margin-bottom:20px}}
+
+.halloween { color: #2b2130; }
+.halloween > header h1 { color: #843711; }
+.halloween .opening,
+.halloween .chapter { padding: clamp(28px, 3.2vw, 44px); margin-bottom: 28px; border-radius: 16px; }
+.halloween .opening { background: #ffead2; border: 1px solid #e7b67f; }
+.halloween .opening h2 { color: #44204f; }
+.halloween .opening :global(.kicker) { color: #843711; }
+.halloween .services li { background: #e8d6f0; color: #44204f; }
+.halloween .figure a { background: #ead6c3; }
+.halloween .figure figcaption { color: #61432f; }
+.halloween .chapter { background: #261e29; color: #fff3df; border: 1px solid #4b3851; }
+.halloween .chapter:nth-of-type(2) { background: #44204f; border-color: #673867; }
+.halloween .chapter :global(.kicker) { color: #ffb05d; }
+.halloween .chapter .figure a { background: #382a3e; }
+.halloween .chapter .figure figcaption { color: #e8d9eb; }
+.halloween .chapter .figure a:focus-visible { outline-color: #ffb05d; }
+.halloween .eventChapter { background: #ffead2; color: #2b2130; border-color: #e7b67f; }
+.halloween .eventChapter h2 { color: #44204f; }
+.halloween .eventChapter :global(.kicker) { color: #843711; }
+.halloween .eventChapter .figure a { background: #ead6c3; }
+.halloween .eventChapter .figure figcaption { color: #61432f; }
+.halloween .eventChapter .figure a:focus-visible { outline-color: #44204f; }
+.halloween .purpleCard { background: #eee3f7; color: #2b2130; border-color: #dacde1; margin-bottom: 40px; }
+.halloween .purpleCard h2,
+.halloween .purpleCard :global(.kicker) { color: #44204f; }
+
+@media (max-width: 700px) {
+  .halloween .opening, .halloween .chapter { padding: 24px 20px; border-radius: 12px; }
+  .halloween .purpleCard { margin-bottom: 30px; }
+}

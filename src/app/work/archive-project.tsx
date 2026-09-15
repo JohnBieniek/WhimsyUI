@@ -23,7 +23,7 @@ function ArchiveHeading({ heading }: { heading: ArchiveStory["heading"] }) {
 }
 
 export default function ArchiveProject({ story, title }: { story: ArchiveStory; title: string }) {
-  return <main className={`case-page shell ${styles.page}`}>
+  return <main className={`case-page shell ${styles.page} ${story.theme === "halloween" ? styles.halloween : ""}`}>
     <Link className="back-link" href="/work">← All work</Link>
     <ProjectHeader title={story.title ?? title} description={story.summary} />
     <section className={styles.opening}>
@@ -49,7 +49,7 @@ export default function ArchiveProject({ story, title }: { story: ArchiveStory; 
       const gallery = section.images.length > 0 && <div className={galleryClass}>
         {section.images.map(item => <ArchiveImage item={item} key={item[0]} />)}
       </div>;
-      return <section className={`${styles.chapter} ${imageLeft ? styles.imageLeft : ""} ${section.card === "light-purple" ? styles.purpleCard : ""}`} key={Array.isArray(section.title) ? section.title.join(" ") : section.title}>
+      return <section className={`${styles.chapter} ${imageLeft ? styles.imageLeft : ""} ${section.card === "light-purple" ? styles.purpleCard : ""} ${section.galleryLayout === "stacked" ? styles.eventChapter : ""}`} key={Array.isArray(section.title) ? section.title.join(" ") : section.title}>
         {imageLeft && gallery}
         <header className={styles.chapterHeading}>
           <div className={Array.isArray(section.title) ? styles.headingColumn : undefined}>
