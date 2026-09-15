@@ -47,7 +47,7 @@
 .halloween { color: #2b2130; }
 .halloween > header h1 { color: #843711; }
 .halloween .opening,
-.halloween .chapter { padding: clamp(28px, 3.2vw, 44px); margin-bottom: 28px; border-radius: 16px; }
+.halloween .chapter { position: relative; isolation: isolate; padding: clamp(28px, 3.2vw, 44px); margin-bottom: 28px; border-radius: 16px; }
 .halloween .opening { background: #ffead2; border: 1px solid #e7b67f; }
 .halloween .opening h2 { color: #44204f; }
 .halloween .opening :global(.kicker) { color: #843711; }

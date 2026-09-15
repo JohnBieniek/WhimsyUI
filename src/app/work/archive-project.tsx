@@ -4,6 +4,7 @@ import { type ArchiveStory } from "./archive-stories";
 import dimensions from "./archive-images.json";
 import styles from "./archive-project.module.css";
 import { ProjectCallToAction, ProjectHeader } from "./project-framing";
+import HalloweenDecorations from "./halloween-decorations";
 
 function ArchiveImage({ item, hero = false }: { item: [string, string]; hero?: boolean }) {
   const [id, caption] = item;
@@ -23,10 +24,12 @@ function ArchiveHeading({ heading }: { heading: ArchiveStory["heading"] }) {
 }
 
 export default function ArchiveProject({ story, title }: { story: ArchiveStory; title: string }) {
-  return <main className={`case-page shell ${styles.page} ${story.theme === "halloween" ? styles.halloween : ""}`}>
+  const isHalloween = story.theme === "halloween";
+  return <main className={`case-page shell ${styles.page} ${isHalloween ? styles.halloween : ""}`}>
     <Link className="back-link" href="/work">← All work</Link>
     <ProjectHeader title={story.title ?? title} description={story.summary} />
     <section className={styles.opening}>
+      {isHalloween && <HalloweenDecorations variant="intro" />}
       <div className={Array.isArray(story.heading) ? styles.headingColumn : undefined}>
         <p className="kicker">The project</p>
         <ArchiveHeading heading={story.heading} />
@@ -50,6 +53,7 @@ export default function ArchiveProject({ story, title }: { story: ArchiveStory; 
         {section.images.map(item => <ArchiveImage item={item} key={item[0]} />)}
       </div>;
       return <section className={`${styles.chapter} ${imageLeft ? styles.imageLeft : ""} ${section.card === "light-purple" ? styles.purpleCard : ""} ${section.galleryLayout === "stacked" ? styles.eventChapter : ""}`} key={Array.isArray(section.title) ? section.title.join(" ") : section.title}>
+        {isHalloween && <HalloweenDecorations variant={section.card === "light-purple" ? "value" : section.galleryLayout === "stacked" ? "event" : "campaign"} />}
         {imageLeft && gallery}
         <header className={styles.chapterHeading}>
           <div className={Array.isArray(section.title) ? styles.headingColumn : undefined}>

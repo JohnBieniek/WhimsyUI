@@ -1,0 +1,57 @@
+.decorations { --pumpkin: #a34c14; --haunt: #5b326b; --moon: #94631d; position: absolute; inset: 0; z-index: -1; overflow: hidden; border-radius: inherit; pointer-events: none; color: var(--haunt); }
+.decorations > svg { position: absolute; width: clamp(110px, 13vw, 190px); height: auto; opacity: .14; }
+.decorations .pumpkinOne { left: -38px; top: -28px; color: var(--pumpkin); transform: rotate(-15deg); }
+.decorations .pumpkinTwo { width: 152px; right: -38px; bottom: 34px; color: var(--pumpkin); transform: rotate(18deg); }
+.decorations .ghost { width: 140px; right: -28px; top: 18%; transform: rotate(15deg); }
+.decorations .candy { width: 100px; left: 24px; bottom: -18px; color: var(--pumpkin); transform: rotate(-22deg); }
+.decorations .moon { width: 80px; right: 24px; top: 18px; color: var(--moon); transform: rotate(12deg); }
+.decorations .bat { width: 108px; left: 36%; top: 12px; transform: rotate(-14deg); opacity: .12; }
+.decorations .sparkles { width: 52px; left: 20%; top: 34%; color: var(--moon); opacity: .2; }
+
+.intro .ghost { left: 43%; right: auto; top: 28px; }
+.intro .pumpkinTwo { left: 32%; right: auto; bottom: -32px; }
+.intro .moon { left: 28%; right: auto; top: 18px; }
+.intro .bat { left: -24px; top: 48%; }
+.intro .sparkles { left: 48%; top: 42%; }
+
+.campaign { --pumpkin: #ffb05d; --haunt: #e8d9eb; --moon: #efc87e; }
+.campaign .pumpkinOne, .campaign .pumpkinTwo { opacity: .18; }
+.campaign .ghost { opacity: .1; }
+.campaign .candy { bottom: 22px; }
+.campaign .sparkles { left: 5%; top: 48%; }
+
+.event .ghost { left: -30px; right: auto; top: 52%; }
+.event .pumpkinTwo { bottom: 14%; }
+.event .candy { left: 32%; bottom: -28px; }
+.event .bat { left: 46%; }
+
+.value .pumpkinOne { width: 150px; top: -24px; }
+.value .pumpkinTwo { width: 100px; left: 34%; right: auto; bottom: -26px; }
+.value .ghost { width: 120px; top: auto; bottom: -26px; }
+.value .candy { width: 72px; left: auto; right: 25%; top: -18px; bottom: auto; }
+.value .moon { width: 62px; right: 10px; top: 10px; }
+.value .bat { left: 38%; top: -16px; }
+.value .sparkles { left: 10%; top: auto; bottom: 12px; }
+
+@media (max-width: 700px) {
+  .decorations > svg { width: 120px; opacity: .1; }
+  .decorations .pumpkinOne { left: -34px; top: -24px; }
+  .decorations .pumpkinTwo { width: 100px; right: -28px; bottom: 24px; }
+  .decorations .ghost { width: 92px; right: -28px; top: 30%; }
+  .decorations .candy { width: 68px; left: -22px; bottom: -12px; }
+  .decorations .moon { width: 56px; right: 8px; top: 14px; }
+  .decorations .bat { width: 70px; left: 46%; top: -4px; }
+  .decorations .sparkles { width: 34px; left: -10px; top: 44%; opacity: .15; }
+  .intro .ghost { left: auto; top: 36%; }
+  .intro .pumpkinTwo { left: auto; bottom: -28px; }
+  .intro .moon { left: auto; }
+  .intro .candy { top: 30%; bottom: auto; }
+  .campaign .pumpkinOne, .campaign .pumpkinTwo { opacity: .14; }
+  .event .ghost { left: -30px; right: auto; top: 58%; }
+  .event .pumpkinTwo { bottom: 38%; }
+  .value .pumpkinOne { width: 118px; }
+  .value .pumpkinTwo { left: 30%; right: auto; bottom: -24px; }
+  .value .ghost { top: auto; bottom: -18px; }
+  .value .candy { left: -24px; right: auto; top: 54%; bottom: auto; }
+  .value .sparkles { top: auto; bottom: 22%; }
+}
