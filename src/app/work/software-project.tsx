@@ -8,19 +8,21 @@ import { ProjectCallToAction, ProjectHeader } from "./project-framing";
 
 export default function SoftwareProject({ project }: { project: (typeof softwareProjects)[number] }) {
   const story = softwareStories[project.slug];
+  const sideBySide = project.slug === "whimsy-warden";
+  const hero = <a className={styles.projectImage} href={project.image} target="_blank" rel="noopener noreferrer" aria-label={`View full screenshot: ${project.alt}`}>
+    <Image src={project.image} alt={project.alt} fill priority sizes={sideBySide ? "(max-width: 900px) 100vw, 50vw" : "(max-width: 1080px) 100vw, 1000px"} />
+  </a>;
+  const overview = story && <section className={styles.storyOverview} aria-labelledby="project-brief-title">
+    <div><p className="kicker">The project</p><h2 id="project-brief-title">{story.title}</h2></div>
+    <div>{story.overview.map(paragraph => <p key={paragraph}>{paragraph}</p>)}</div>
+  </section>;
   return (
     <main className={`case-page shell ${styles.page} ${project.slug === "sonic-shielding" ? styles.sonic : ""}`}>
       <Link className="back-link" href="/work#campaigns">← All work</Link>
       <ProjectHeader title={project.title} description={project.intro}>
         <a className="button" href={project.link}>{project.linkLabel} ↗</a>
       </ProjectHeader>
-      <a className={styles.projectImage} href={project.image} target="_blank" rel="noopener noreferrer" aria-label={`View full screenshot: ${project.alt}`}>
-        <Image src={project.image} alt={project.alt} fill priority sizes="(max-width: 1080px) 100vw, 1000px" />
-      </a>
-      {story && <section className={styles.storyOverview} aria-labelledby="project-brief-title">
-        <div><p className="kicker">The project</p><h2 id="project-brief-title">{story.title}</h2></div>
-        <div>{story.overview.map(paragraph => <p key={paragraph}>{paragraph}</p>)}</div>
-      </section>}
+      {sideBySide ? <div className={styles.projectOpening}>{overview}{hero}</div> : <>{hero}{overview}</>}
       <section className={styles.section} aria-labelledby="project-details-title">
         <p className="kicker">What we built</p>
         <h2 id="project-details-title">Useful features. Thoughtful details.</h2>
