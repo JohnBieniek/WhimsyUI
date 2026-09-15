@@ -83,13 +83,7 @@ export default function HumaneSocietyProject({ story, title }: { story: ArchiveS
       <div className={styles.animalGallery}>
         <HumaneImage item={community.images[0]} sizes="(max-width: 700px) 100vw, 33vw" />
         <HumaneImage item={community.images[1]} sizes="(max-width: 700px) 100vw, 33vw" />
-        <div className={styles.smallAnimal}>
-          <HumaneImage item={community.images[2]} sizes="(max-width: 700px) 100vw, 33vw" />
-          <div className={styles.smallAnimalCopy}>
-            <h3>Care comes in every size.</h3>
-            <p>Small companions deserve the same attention to their needs and the same chance to find a caring home.</p>
-          </div>
-        </div>
+        <HumaneImage item={community.images[2]} sizes="(max-width: 700px) 100vw, 33vw" />
       </div>
       <div className={styles.takeaway}><p>{community.paragraphs[2]}</p></div>
     </section>
