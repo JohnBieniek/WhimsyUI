@@ -4,6 +4,11 @@
 .page .twoLineHeading { font-size: min(40px, 6.2cqw); line-height: 1.12; }
 .twoLineHeading span { display: block; }
 
+.chapter.purpleCard { padding: 36px; margin-bottom: 40px; background: #eee3f7; border: 1px solid #dacde1; border-radius: 12px; }
+.purpleCard .chapterHeading { align-items: center; }
+.purpleCard .chapterHeading:last-child, .purpleCard .chapterHeading h2, .purpleCard .chapterHeading p:last-child { margin-bottom: 0; }
+@media (max-width: 700px) { .chapter.purpleCard { padding: 24px 20px; margin-bottom: 30px; } }
+
 .centeredGallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 28px 22px; }
 .centeredGallery .figure { flex: 0 0 calc((100% - 44px) / 3); }
 @media (max-width: 1000px) { .centeredGallery .figure { flex-basis: calc((100% - 22px) / 2); } }

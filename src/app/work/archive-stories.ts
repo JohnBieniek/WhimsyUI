@@ -1,5 +1,5 @@
 type StoryHeading = string | [string, string];
-type StorySection = { kicker: string; title: StoryHeading; paragraphs: string[]; images: [string, string][]; galleryLayout?: "stacked" | "centered"; layout?: "image-left" };
+type StorySection = { kicker: string; title: StoryHeading; paragraphs: string[]; images: [string, string][]; galleryLayout?: "stacked" | "centered"; layout?: "image-left"; card?: "light-purple" };
 export type ArchiveStory = { title?: string; summary: string; heading: StoryHeading; introduction: string[]; hero: [string, string]; services: string[]; sections: StorySection[]; video?: string };
 
 export const archiveStories: Record<string, ArchiveStory> = {
@@ -133,7 +133,7 @@ export const archiveStories: Record<string, ArchiveStory> = {
     hero: ["755016366652650", "Sisters Smoothies business introduction collage"],
     services: ["Business storytelling", "Product advertising", "Campaign design"],
     sections: [
-      { kicker: "The business story", title: "Show the journey behind the counter.", paragraphs: ["The introductory feature celebrated the sisters' progression from school events to their own business in the mall. It recognized their parents' support and invited local customers to encourage young entrepreneurs in their community.", "That background gives a product promotion a more personal starting point. Customers can learn who makes the drinks as well as what they can order."], images: [] },
+      { kicker: "The business story", title: "Show the journey behind the counter.", card: "light-purple", paragraphs: ["The introductory feature celebrated the sisters' progression from school events to their own business in the mall. It recognized their parents' support and invited local customers to encourage young entrepreneurs in their community.", "That background gives a product promotion a more personal starting point. Customers can learn who makes the drinks as well as what they can order."], images: [] },
       { kicker: "The signature menu", title: "Make each flavor easy to recognize.", galleryLayout: "centered", paragraphs: ["The five ads share a layout, logo placement, and order prompt while changing the fruit, color, and drink name. Strawberry pinks, mango yellows, and darker berry tones give the individual recipes their own character.", "The connected format allows each drink to stand alone in a feed while still looking like part of Sisters Smoothies. Seen together, the series presents a range of choices without losing the family identity at the center of the campaign."], images: [["904318161722469", "The Cee Cee smoothie advertisement"], ["904318168389135", "The Ila smoothie advertisement"], ["904318158389136", "The Sophie strawberry and mango smoothie advertisement"], ["904318165055802", "The Livie mango and banana smoothie advertisement"], ["904318171722468", "The Cali strawberry and banana smoothie advertisement"]] },
     ],
   },
