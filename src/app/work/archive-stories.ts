@@ -342,7 +342,6 @@ export const archiveStories: Record<string, ArchiveStory> = {
         paragraphs: [
           "Helping animals find caring homes does good on both sides of the relationship. Cats, dogs, and small animals need safety, attention, and people committed to their care. The people who welcome them gain companionship, shared routines, and another member of the household.",
           "Cascades Humane Society brings that work into the community, giving people a place to meet animals and learn how they can help. A visit can become an adoption conversation, an introduction to volunteering, or a decision to support the care that continues every day.",
-          "Our role was to make that invitation visible. The ads, opening promotion, and event photographs helped introduce the location and the lives at the heart of its mission, connecting a community celebration with opportunities for lasting care and companionship.",
         ],
         images: [
           ["cascades-community-cat", "A curious tabby kitten at Cascades Humane Society"],

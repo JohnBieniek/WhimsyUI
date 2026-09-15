@@ -78,14 +78,13 @@ export default function HumaneSocietyProject({ story, title }: { story: ArchiveS
           <p className={styles.kicker}>{community.kicker}</p>
           <h2 id="humane-community-title">{community.title}</h2>
         </div>
-        <div>{community.paragraphs.slice(0, 2).map(paragraph => <p key={paragraph}>{paragraph}</p>)}</div>
+        <div>{community.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}</div>
       </header>
       <div className={styles.animalGallery}>
         <HumaneImage item={community.images[0]} sizes="(max-width: 700px) 100vw, 33vw" />
         <HumaneImage item={community.images[1]} sizes="(max-width: 700px) 100vw, 33vw" />
         <HumaneImage item={community.images[2]} sizes="(max-width: 700px) 100vw, 33vw" />
       </div>
-      <div className={styles.takeaway}><p>{community.paragraphs[2]}</p></div>
     </section>
 
     <ProjectCallToAction />

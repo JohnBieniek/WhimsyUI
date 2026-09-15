@@ -51,8 +51,6 @@
 .communityHeader p:last-child { margin-bottom: 0; }
 .animalGallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; align-items: start; }
 .animalGallery img { aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; }
-.takeaway { padding: 28px 32px; background: var(--chs-pale); border-left: 5px solid var(--chs-lime); border-radius: 10px; margin-top: 32px; }
-.takeaway p { margin: 0; text-align: center; }
 .page > :global(.ready) { border-color: var(--chs-green); }
 .page > :global(.ready) h2 { font-size: 20px; line-height: 1.5; margin: 0; }
 .page :global(.button) { background: var(--chs-green); border-color: var(--chs-green); color: #fff; }
@@ -67,7 +65,7 @@
 @media (max-width: 700px) {
   .introduction, .adGrid, .celebrationIntro, .crowdGallery, .communityHeader, .animalGallery { grid-template-columns: minmax(0, 1fr); }
   .introduction { padding-block: 24px 32px; }
-  .cardCopy, .celebration, .takeaway { padding: 24px 18px; }
+  .cardCopy, .celebration { padding: 24px 18px; }
   .adGrid figcaption { padding-inline: 18px; }
   .advertising, .celebration { margin-bottom: 32px; }
   .crowdGallery, .animalGallery { gap: 28px; }
