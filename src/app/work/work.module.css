@@ -47,7 +47,8 @@
 .storyOverview p:last-child { margin-bottom: 0; }
 .projectOpening { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; align-items: center; margin-bottom: 36px; }
 .projectOpening .storyOverview { display: block; min-width: 0; margin-bottom: 0; }
-.projectOpening .projectImage { width: 100%; margin: 0; }
+.projectOpening .projectImage { width: 100%; margin: 0; aspect-ratio: 32 / 21; background: transparent; border-radius: 0; }
+.projectOpening .projectImage img { padding: 0; }
 .storyChapter { padding-block: 32px; border-top: 1px solid var(--line); }
 .storyChapter > h2 { max-width: 1000px; }
 .chapterPair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px; align-items: start; }
