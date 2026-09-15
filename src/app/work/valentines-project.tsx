@@ -41,7 +41,6 @@ export default function ValentinesProject({ story, title }: { story: ArchiveStor
         <CampaignArtwork item={story.hero} caption="Peggy’s Custom Floral Designs · February 2025" />
       </div>
       <div className={styles.giftCopy}>
-        <p className={styles.eyebrow}>01 / Valentine’s gifts / 2025</p>
         <h2>{gifts.title}</h2>
         <p>{gifts.paragraphs[0]}</p>
         <div className={styles.visitDetails}>
