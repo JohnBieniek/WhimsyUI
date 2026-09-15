@@ -5,7 +5,7 @@ import dimensions from "./archive-images.json";
 import { ProjectCallToAction, ProjectHeader } from "./project-framing";
 import styles from "./ingendahl-project.module.css";
 
-function FarmImage({ item, preload = false, sizes = "(max-width: 700px) 100vw, 50vw" }: { item: [string, string]; preload?: boolean; sizes?: string }) {
+function FarmImage({ item, preload = false, sizes = "(max-width: 700px) 100vw, 50vw", showCaption = true }: { item: [string, string]; preload?: boolean; sizes?: string; showCaption?: boolean }) {
   const [id, caption] = item;
   const size = dimensions[id as keyof typeof dimensions];
   const src = `/work/archive/${id}.jpg`;
@@ -14,7 +14,7 @@ function FarmImage({ item, preload = false, sizes = "(max-width: 700px) 100vw, 5
     <a href={src} target="_blank" rel="noopener noreferrer" aria-label={`View full image: ${caption}`}>
       <Image src={src} alt={caption} width={size.width} height={size.height} preload={preload} sizes={sizes} />
     </a>
-    <figcaption>{caption}</figcaption>
+    {showCaption && <figcaption>{caption}</figcaption>}
   </figure>;
 }
 
@@ -54,7 +54,7 @@ export default function IngendahlProject({ story, title }: { story: ArchiveStory
         {graphics.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
       </header>
       <div className={styles.graphicsGrid}>
-        {graphics.images.map(item => <FarmImage item={item} key={item[0]} sizes="(max-width: 700px) 100vw, 33vw" />)}
+        {graphics.images.map(item => <FarmImage item={item} key={item[0]} sizes="(max-width: 700px) 100vw, 33vw" showCaption={false} />)}
       </div>
     </section>
 
