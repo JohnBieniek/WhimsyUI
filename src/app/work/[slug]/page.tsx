@@ -90,7 +90,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
   const facts = study.facts;
 
   return <main className={isHoliday ? "case-page shell" : `case-page shell ${styles.existing} ${isLakeland ? lakelandStyles.page : ""}`}>
-    <Link className="back-link" href={isHoliday ? "/" : "/work"}>{isHoliday ? "← Home" : "← All work"}</Link>
+    <Link className="back-link" href="/work">← All work</Link>
     <header className={`case-header ${isLakeland ? "lakeland-case-header" : isHoliday ? "holiday-case-header" : isTeamHope ? "team-hope-case-header" : isBackToSchool ? "back-school-case-header" : ""}`.trim()}>
       <h1>{study.title}</h1>
       <p className="intro">{study.summary}</p>
