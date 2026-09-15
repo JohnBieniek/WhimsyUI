@@ -217,7 +217,7 @@ export const archiveStories: Record<string, ArchiveStory> = {
       },
       {
         kicker: "Local partnerships",
-        title: "A coat drive with a place to land.",
+        title: "Warm coats for local families.",
         paragraphs: [
           "In December, Whimsy helped connect Jackson Crossing, Dawn and Travis Parker, WHO, and Lakeland Cabaret. The mall hosted the Parkers' coat drive, and the collected coats went to WHO's Whoville event, with music provided by Lakeland Cabaret's DJ.",
           "The partners brought different things to the effort: a collection location, donated coats, an event that could put them into the community, and entertainment for the gathering. Whimsy's role was to help those contributions come together and share the story of the collaboration.",
