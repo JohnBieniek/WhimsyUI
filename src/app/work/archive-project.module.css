@@ -4,6 +4,11 @@
 .page .twoLineHeading { font-size: min(40px, 6.2cqw); line-height: 1.12; }
 .twoLineHeading span { display: block; }
 
+.alignedGallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; align-items: start; }
+.alignedPair { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 1000px; margin-inline: auto; }
+.alignedGallery .figure img { aspect-ratio: 4 / 5; max-height: none; object-fit: cover; object-position: center top; }
+@media (max-width: 700px) { .alignedGallery { grid-template-columns: minmax(0, 1fr); gap: 28px; } }
+
 .chapter:is(.purpleCard, .mintCard) { padding: 36px; margin-bottom: 40px; border: 1px solid #dacde1; border-radius: 12px; }
 .chapter.purpleCard { background: #eee3f7; }
 .chapter.mintCard { background: var(--mint); border-color: #c7e2d9; }
