@@ -6,6 +6,32 @@
 
 .page section { min-width: 0; }
 
+.introduction, .gifts, .photography, .takeaway { position: relative; isolation: isolate; }
+.decorations { position: absolute; inset: 0; z-index: -1; overflow: hidden; border-radius: inherit; pointer-events: none; color: #b94b64; }
+.decorations svg { position: absolute; width: clamp(100px, 14vw, 190px); height: auto; opacity: .15; }
+.decorations .heartOne { left: -36px; top: 10px; transform: rotate(-22deg); }
+.decorations .heartTwo { width: 82px; right: 28px; bottom: 28px; opacity: .1; transform: rotate(18deg); }
+.decorations .loveNote { right: -24px; top: 24px; transform: rotate(18deg); }
+.decorations .flower { width: 120px; left: 28px; bottom: -32px; transform: rotate(12deg); }
+.decorations .sparkles { width: 62px; right: 25%; top: 24px; opacity: .2; transform: rotate(-12deg); }
+.giftsDecorations .heartOne { left: 42%; top: 12%; width: 108px; }
+.giftsDecorations .heartTwo { width: 144px; right: -26px; bottom: 36px; }
+.giftsDecorations .loveNote { top: -28px; }
+.giftsDecorations .flower { left: 48%; bottom: -28px; width: 170px; }
+.giftsDecorations .sparkles { right: 10%; top: 36%; }
+.photographyDecorations { color: #f4b7c4; }
+.photographyDecorations .heartOne { top: 90px; }
+.photographyDecorations .heartTwo { width: 220px; right: -38px; bottom: 110px; opacity: .08; }
+.photographyDecorations .loveNote { top: 48px; }
+.photographyDecorations .flower { width: 170px; left: -28px; bottom: 72px; }
+.photographyDecorations .sparkles { left: 22%; right: auto; top: 36px; }
+.photographyDecorations .heartThree { width: 84px; left: 7%; top: 48%; transform: rotate(22deg); }
+.takeawayDecorations .heartOne { left: -24px; top: -28px; }
+.takeawayDecorations .heartTwo { right: 38%; bottom: -18px; }
+.takeawayDecorations .loveNote { top: auto; bottom: -38px; }
+.takeawayDecorations .flower { left: 30%; bottom: -46px; }
+.takeawayDecorations .sparkles { right: 24px; top: 10px; }
+
 .introduction h2,
 .gifts h2,
 .photography h2,
@@ -131,7 +157,7 @@
 
 .takeaway h2 { font-size: clamp(30px, 3vw, 42px); margin-bottom: 0; }
 .takeaway > div > p:last-child { margin-bottom: 0; }
-.takeaway > div:nth-child(2) > p:first-child { margin-top: 0; }
+.takeaway > div:last-child > p:first-child { margin-top: 0; }
 
 @media (max-width: 1000px) {
   .introduction { padding: 44px 28px 0; }
@@ -142,6 +168,21 @@
 }
 
 @media (max-width: 700px) {
+  .decorations svg { width: 112px; opacity: .11; }
+  .decorations .heartOne { left: -36px; }
+  .decorations .heartTwo { width: 76px; right: -16px; bottom: 18px; }
+  .decorations .loveNote { right: -36px; top: 28px; }
+  .decorations .flower { width: 96px; left: -22px; bottom: -28px; }
+  .decorations .sparkles { width: 42px; right: 24%; top: 16px; }
+  .giftsDecorations .heartOne { top: 56%; }
+  .giftsDecorations .loveNote { top: 55%; }
+  .giftsDecorations .sparkles { top: auto; bottom: 22%; right: 12px; }
+  .photographyDecorations .heartOne { top: 18px; }
+  .photographyDecorations .heartTwo { width: 130px; bottom: 48px; }
+  .photographyDecorations .flower { bottom: 20px; }
+  .photographyDecorations .sparkles { left: 30%; }
+  .photographyDecorations .heartThree { width: 62px; left: -18px; top: 55%; }
+  .takeawayDecorations .loveNote { top: auto; bottom: -28px; }
   .introduction { padding: 36px 16px 0; border-radius: 14px 14px 0 0; }
   .introCopy { font-size: 16px; margin-bottom: 24px; }
   .services { gap: 12px 24px; padding-block: 20px; font-size: 12px; }

@@ -1,9 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Flower2, Gift, Heart, Mail, Sparkles } from "lucide-react";
 import type { ArchiveStory } from "./archive-stories";
 import dimensions from "./archive-images.json";
 import { ProjectCallToAction, ProjectHeader } from "./project-framing";
 import styles from "./valentines-project.module.css";
+
+function ValentineDecorations({ theme }: { theme: "intro" | "gifts" | "photography" | "takeaway" }) {
+  const Accent = theme === "gifts" ? Gift : Mail;
+  return <div className={[styles.decorations, styles[`${theme}Decorations`]].filter(Boolean).join(" ")} aria-hidden="true">
+    <Heart className={styles.heartOne} strokeWidth={1} focusable="false" />
+    <Heart className={styles.heartTwo} strokeWidth={1} fill="currentColor" focusable="false" />
+    <Accent className={styles.loveNote} strokeWidth={1} focusable="false" />
+    <Flower2 className={styles.flower} strokeWidth={1} focusable="false" />
+    <Sparkles className={styles.sparkles} strokeWidth={1} focusable="false" />
+    {theme === "photography" && <Heart className={styles.heartThree} strokeWidth={1} focusable="false" />}
+  </div>;
+}
 
 function CampaignHeading({ text }: { text: ArchiveStory["heading"] }) {
   return <h2 className={styles.headline}>
@@ -30,6 +43,7 @@ export default function ValentinesProject({ story, title }: { story: ArchiveStor
     <ProjectHeader title={title} description={story.summary} />
 
     <section className={styles.introduction}>
+      <ValentineDecorations theme="intro" />
       <p className={styles.eyebrow}>The idea</p>
       <div className={styles.headlineContainer}><CampaignHeading text={story.heading} /></div>
       <p className={styles.introCopy}>Thoughtful gifts and a reason to spend time together. Whimsy connected local businesses with the Valentine’s season through floral promotions and photography-led creative at Jackson Crossing.</p>
@@ -37,6 +51,7 @@ export default function ValentinesProject({ story, title }: { story: ArchiveStor
     </section>
 
     <section className={styles.gifts}>
+      <ValentineDecorations theme="gifts" />
       <div className={styles.giftArtwork}>
         <CampaignArtwork item={story.hero} caption="Peggy’s Custom Floral Designs · February 2025" />
       </div>
@@ -55,6 +70,7 @@ export default function ValentinesProject({ story, title }: { story: ArchiveStor
     </section>
 
     <section className={styles.photography}>
+      <ValentineDecorations theme="photography" />
       <header className={styles.photoHeader}>
         <div className={styles.headlineContainer}><CampaignHeading text={photography.title} /></div>
         <p>A bold portrait, a vivid red palette, and an invitation to join in. Studio One Photography’s creative promoted February 17 Valentine’s specials, while its sponsor panel connected the business to Cupid’s Corner on February 14.</p>
@@ -69,6 +85,7 @@ export default function ValentinesProject({ story, title }: { story: ArchiveStor
     </section>
 
     <section className={styles.takeaway}>
+      <ValentineDecorations theme="takeaway" />
       <div><p className={styles.eyebrow}>The common thread</p><h2>A personal reason to visit.</h2></div>
       <div>
         <p>{photography.paragraphs[1]}</p>
