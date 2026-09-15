@@ -39,7 +39,7 @@ export default function ArchiveProject({ story, title }: { story: ArchiveStory; 
         <div><p className="kicker">{section.kicker}</p><h2>{section.title}</h2></div>
         <div>{section.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}</div>
       </header>
-      {section.images.length > 0 && <div className={`${styles.gallery} ${section.images.length === 1 ? styles.single : ""}`}>
+      {section.images.length > 0 && <div className={section.galleryLayout === "stacked" ? styles.stackedGallery : `${styles.gallery} ${section.images.length === 1 ? styles.single : ""}`}>
         {section.images.map(item => <ArchiveImage item={item} key={item[0]} />)}
       </div>}
     </section>)}

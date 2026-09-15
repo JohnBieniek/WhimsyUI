@@ -1,4 +1,4 @@
-type StorySection = { kicker: string; title: string; paragraphs: string[]; images: [string, string][] };
+type StorySection = { kicker: string; title: string; paragraphs: string[]; images: [string, string][]; galleryLayout?: "stacked" };
 export type ArchiveStory = { title?: string; summary: string; heading: string; introduction: string[]; hero: [string, string]; services: string[]; sections: StorySection[]; video?: string };
 
 export const archiveStories: Record<string, ArchiveStory> = {
@@ -14,6 +14,7 @@ export const archiveStories: Record<string, ArchiveStory> = {
       {
         kicker: "The event in action",
         title: "Music, games, and reasons to stay.",
+        galleryLayout: "stacked",
         paragraphs: [
           "Visitors loved the music from Lakeland Cabaret’s DJ, gathering around the booth and enjoying the Halloween atmosphere. Attendees explored the shops and event vendors throughout Jackson Crossing, finding treats, gifts, and plenty of local businesses to discover along the way.",
           "Kids joined in musical chairs and freeze dance, with candy and prizes adding to the excitement. The games gave families a chance to play, cheer one another on, and enjoy the afternoon together, turning a shopping trip into a shared Halloween celebration.",
