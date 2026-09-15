@@ -12,6 +12,7 @@ import ValentinesProject from "../valentines-project";
 import HarvestProject from "../harvest-project";
 import FetchProject from "../fetch-project";
 import IngendahlProject from "../ingendahl-project";
+import HumaneSocietyProject from "../humane-society-project";
 import FoodAdvertisingProject from "../food-advertising-project";
 import styles from "../archive-project.module.css";
 import lakelandStyles from "../lakeland-project.module.css";
@@ -76,6 +77,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
   if (slug === "happy-harvest" && archiveStory) return <HarvestProject story={archiveStory} title={study.title} />;
   if (slug === "fetch-market-launch" && archiveStory) return <FetchProject story={archiveStory} title={study.title} />;
   if (slug === "ingendahl-acres-branding" && archiveStory) return <IngendahlProject story={archiveStory} title={study.title} />;
+  if (slug === "cascades-ribbon-cutting" && archiveStory) return <HumaneSocietyProject story={archiveStory} title={study.title} />;
   if (slug === "restaurant-food-truck-advertising" && archiveStory) return <FoodAdvertisingProject story={archiveStory} title={study.title} />;
   if (archiveStory) return <ArchiveProject story={archiveStory} title={study.title} />;
 

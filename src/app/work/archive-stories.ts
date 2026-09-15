@@ -238,14 +238,56 @@ export const archiveStories: Record<string, ArchiveStory> = {
     ],
   },
   "cascades-ribbon-cutting": {
-    summary: "A clear opening-day invitation and event photographs welcoming Cascades Humane Society to its additional location at Jackson Crossing.",
-    heading: "Welcome a new neighbor. Explain how to take part.",
-    introduction: ["Cascades Humane Society's additional Jackson Crossing location opened with a ribbon cutting and community open house. The invitation brought the ceremony, open-house hours, and pet-viewing opportunity together so visitors could plan their stop.", "Whimsy's coverage followed that invitation with photographs of the gathering. The collection shows the nonprofit's new setting, the people who came to celebrate, and the community connections around the opening."],
-    hero: ["1426596552827958", "June 3 grand-opening invitation for Cascades Humane Society at Jackson Crossing"],
-    services: ["Opening promotion", "Event photography", "Nonprofit visibility"],
+    summary: "Advertising, grand-opening promotion, and event photography welcoming Cascades Humane Society to Jackson Crossing and helping people connect with animals in need of a home.",
+    heading: "A warm welcome. A chance for a new beginning.",
+    introduction: [
+      "Cascades Humane Society's new Jackson Crossing location created another place for people to meet animals, learn about adoption, and support local animal care. Whimsy helped introduce it through custom advertisements, grand-opening promotion, and photographs of the celebration.",
+      "The work connected a practical invitation with a personal reason to visit. Behind the opening announcement were animals with their own personalities, people ready to care for them, and the possibility of a new companion.",
+    ],
+    hero: ["cascades-kitten-hero", "A fluffy kitten gets a gentle cuddle at Cascades Humane Society"],
+    services: ["Ad creation", "Grand-opening promotion", "Event photography"],
     sections: [
-      { kicker: "The invitation", title: "Make the day's different opportunities clear.", paragraphs: ["The opening announcement listed a 12:30 PM ribbon cutting with the Jackson County Chamber of Commerce, an open house from 12:30 to 2:30 PM, and adoptions and pet viewing until 6 PM. Visitors could choose the part of the day that worked for them.", "That practical information matters for a nonprofit opening. The celebration introduces the location, while the longer viewing hours give people another way to engage with its work."], images: [["1426887029465577", "Visitors arriving at the Cascades Humane Society mall location"], ["1426887362798877", "Information and displays inside the new location"]] },
-      { kicker: "The gathering", title: "Show the welcome the community brought.", paragraphs: ["The event photographs include remarks, conversations, and the group gathered inside the new space. Wide views establish the turnout while closer views record the people involved in the celebration.", "The follow-up post congratulated Cascades Humane Society and recognized the Chamber and Jackson Crossing. The story continues from the invitation into a record of the day, giving the new location another moment of visibility."], images: [["1426887109465569", "Attendees listening during the opening celebration"], ["1426887206132226", "The crowd inside Cascades Humane Society"], ["1426887249465555", "Opening-day conversations in the new space"], ["1426887299465550", "Speakers and guests at the ribbon-cutting gathering"]] },
+      {
+        kicker: "The advertising",
+        title: "A clear invitation, built around a good cause.",
+        paragraphs: [
+          "We created the grand-opening ad with gold ribbon and scissors, a prominent June 3 date, and the CHS and Jackson Crossing identities. The design gave the opening a sense of occasion while keeping the organization, location, and invitation easy to recognize.",
+          "Our social promotion paired the artwork with the details people needed to attend: a 12:30 PM ribbon cutting with the Jackson County Chamber of Commerce, an open house from 12:30 to 2:30 PM, and adoption opportunities and pet viewing until 6 PM. It gave people several ways to take part in the day.",
+          "The Adopt Locally ad brought the animals into the message. We paired cat photographs with CHS green, paw prints, and clear location information for the Target wing. The afternoon visiting information gave the audience a practical next step, extending the invitation beyond the grand-opening celebration.",
+        ],
+        images: [
+          ["1426596552827958", "Whimsy's gold ribbon-and-scissors advertisement for the June 3 grand opening"],
+          ["cascades-adopt-locally", "Whimsy's Adopt Locally advertisement featuring cats, CHS green, and the Jackson Crossing location"],
+        ],
+      },
+      {
+        kicker: "The grand opening",
+        title: "A ribbon cut. A community ready to welcome them.",
+        paragraphs: [
+          "The June 3 opening brought the CHS team, Chamber representatives, and local supporters together to celebrate the new location. Guests gathered around the red ribbon, filled the space, and spent time talking with one another and meeting the animals.",
+          "We photographed the ribbon cutting, the crowd, and the welcome at the storefront, then shared the celebration in our follow-up promotion. Those images carried the opening's energy to people who could not attend and gave the new location another opportunity to be discovered.",
+        ],
+        images: [
+          ["cascades-ribbon-cutting", "The CHS team and supporters cutting the red Chamber ribbon at the grand opening"],
+          ["cascades-opening-welcome", "Guests gathering beneath the Cascades Humane Society sign and green balloons"],
+          ["1426887109465569", "The grand-opening crowd filling the new Cascades Humane Society space"],
+          ["1426887206132226", "Visitors talking and meeting animals during the CHS open house"],
+        ],
+      },
+      {
+        kicker: "The community impact",
+        title: "Better lives for animals. Companionship for people.",
+        paragraphs: [
+          "Helping animals find caring homes does good on both sides of the relationship. Cats, dogs, and small animals need safety, attention, and people committed to their care. The people who welcome them gain companionship, shared routines, and another member of the household.",
+          "Cascades Humane Society brings that work into the community, giving people a place to meet animals and learn how they can help. A visit can become an adoption conversation, an introduction to volunteering, or a decision to support the care that continues every day.",
+          "Our role was to make that invitation visible. The ads, opening promotion, and event photographs helped introduce the location and the lives at the heart of its mission, connecting a community celebration with opportunities for lasting care and companionship.",
+        ],
+        images: [
+          ["cascades-community-cat", "A curious tabby kitten at Cascades Humane Society"],
+          ["cascades-community-dog", "A gray-and-white dog with a blue collar enjoying a reassuring cuddle"],
+          ["cascades-community-small-pet", "A guinea pig peeking out from a pink hideaway at Cascades Humane Society"],
+        ],
+      },
     ],
   },
   "ingendahl-acres-branding": {

@@ -6,7 +6,7 @@ const projects: Record<Category, Array<[string,string,string,string,string]>> = 
     ["student-art-show","1385435016944112.jpg","Jackson County Student Art Show","Jackson County Schools","A countywide gallery experience celebrating student work from more than 25 local schools."],
     ["community-day","1426596552827958.jpg","Community Day","Jackson Crossing","A partner-led gathering designed to connect local organizations with the families they serve."],
     ["santa-stories","994558686031749.jpg","Santa Stories","Jackson Crossing","A holiday reading experience created with the Jackson District Library and community partners."],
-    ["cascades-ribbon-cutting","1233972312090384.jpg","Cascades Humane Society Ribbon Cutting","Cascades Humane Society","A welcoming grand-opening event that introduced a trusted nonprofit to its new mall location."],
+    ["cascades-ribbon-cutting","archive/cascades-kitten-hero.jpg","Cascades Humane Society Grand Opening","Cascades Humane Society","Advertising, opening-day promotion, and event photography connecting the community with Cascades Humane Society's new Jackson Crossing location."],
     ["grow-jackson-opening","1275042854649996.jpg","Grow Jackson & River Rail Opening","Grow Jackson","Ribbon-cutting storytelling for a community-focused market and local food initiative."],
     ["miss-crossroads-visit","894475189373433.jpg","Miss Crossroads Community Visit","Jackson Crossing","A joyful public appearance built around connection, visibility, and community support."],
   ],

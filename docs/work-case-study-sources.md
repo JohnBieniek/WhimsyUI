@@ -10,6 +10,7 @@ The selected gallery remains 20 projects, four per category. The 13 expanded arc
 - Removed the 2025 Santa image from the December 2024 Holiday in the Halls story.
 - Student Art Show artwork is separated into 2024, 2025, and 2026 editions.
 - Community Day photos document preparation and media activity, not event attendance. Removed the unrelated Cascades ribbon-cutting artwork from its thumbnail.
+- Cascades Humane Society now has a [dedicated grand-opening case study](./humane-society-work-sources.md) with the user's new kitten, ribbon-cutting, storefront, adoption-ad, and animal photographs, alongside the original opening advertisement and crowd coverage.
 - Fetch's archived photographs show pre-opening work. Following the user's clarification that Whimsy did little work at Grazing Thyme, those case-study pages were retired and replaced by the [restaurant and food-truck advertising showcase](./food-advertising-work-sources.md). The original opening-day source record remains below for reference.
 - Serenity focuses on documented consulting, training, and volunteering; displaying its logo was not treated as evidence that Whimsy designed it.
 - Jackson Crossing Social Growth and Dawn Parker Real Estate Campaign were retired from the site. Their selected Businesses slot now features [Ingendahl Acres Branding](./ingendahl-acres-work-sources.md). Original source records remain for reference.

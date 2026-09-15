@@ -1,0 +1,79 @@
+.page {
+  --chs-ink: #283323;
+  --chs-green: #345222;
+  --chs-lime: #b9d87b;
+  --chs-pale: #eff5e4;
+  --chs-cream: #faf3df;
+  --chs-line: #d9dfd0;
+  color: var(--chs-ink);
+}
+
+.page section, .page article, .page figure { min-width: 0; }
+.page p { line-height: 1.7; }
+.page section h2 { font-family: var(--font-display); font-size: clamp(28px, 3.2vw, 44px); line-height: 1.12; text-wrap: balance; margin: 0 0 24px; }
+.page h3 { font-family: var(--font-display); font-size: clamp(24px, 2.4vw, 32px); line-height: 1.2; text-wrap: balance; margin: 0 0 18px; }
+.kicker { color: var(--chs-green); font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; margin: 0 0 14px; }
+.page :global(.back-link) { color: var(--chs-green); }
+.page a:focus-visible { outline: 3px solid var(--chs-green); outline-offset: 5px; }
+.figure { margin: 0; }
+.figure a { display: block; border-radius: 10px; }
+.figure img { display: block; width: 100%; height: auto; border-radius: 10px; }
+.figure figcaption { font-size: 13px; line-height: 1.5; margin-top: 12px; }
+
+.introduction { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; align-items: center; padding-block: 30px 48px; border-top: 1px solid var(--chs-line); }
+.services { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 24px 0 0; }
+.services li { background: var(--chs-pale); border: 1px solid var(--chs-line); padding: 8px 12px; border-radius: 6px; font-size: 12px; font-weight: 700; }
+
+.advertising { margin-bottom: 40px; }
+.sectionHeader { max-width: 850px; margin: 0 auto 32px; text-align: center; }
+.adGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; align-items: start; }
+.openingAd, .adoptionAd { border: 1px solid var(--chs-line); border-radius: 14px; overflow: hidden; }
+.openingAd { background: var(--chs-cream); }
+.adoptionAd { background: var(--chs-pale); }
+.adGrid .figure a, .adGrid .figure img { border-radius: 0; }
+.adGrid figcaption { padding-inline: 28px; }
+.openingAd figcaption { padding-bottom: 24px; }
+.cardCopy { padding: 28px; }
+.cardCopy p:last-child { margin-bottom: 0; }
+
+.celebration { padding: 36px; border-radius: 14px; background: var(--chs-green); color: #fff; margin-bottom: 44px; }
+.celebration .kicker { color: var(--chs-lime); }
+.celebration a:focus-visible { outline-color: var(--chs-lime); }
+.celebrationIntro { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px; align-items: center; margin-bottom: 32px; }
+.celebrationIntro p:last-child { margin-bottom: 0; }
+.crowdGallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; align-items: start; }
+.celebration figcaption { color: #edf4e2; }
+
+.community { margin-bottom: 36px; }
+.communityHeader { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 40px; align-items: start; margin-bottom: 28px; }
+.communityHeader > div > p:first-child { margin-top: 0; }
+.communityHeader p:last-child { margin-bottom: 0; }
+.animalGallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; align-items: start; }
+.smallAnimal { background: var(--chs-cream); border: 1px solid var(--chs-line); border-radius: 12px; overflow: hidden; }
+.smallAnimal .figure a, .smallAnimal .figure img { border-radius: 0; }
+.smallAnimal figcaption { padding-inline: 24px; }
+.smallAnimalCopy { padding: 28px 24px; }
+.smallAnimalCopy p:last-child { margin-bottom: 0; }
+.takeaway { padding: 28px 32px; background: var(--chs-pale); border-left: 5px solid var(--chs-lime); border-radius: 10px; margin-top: 32px; }
+.takeaway p { margin: 0; }
+.page > :global(.ready) { border-color: var(--chs-green); }
+.page > :global(.ready) h2 { font-size: 20px; line-height: 1.5; margin: 0; }
+.page :global(.button) { background: var(--chs-green); border-color: var(--chs-green); color: #fff; }
+.page :global(.button:hover) { background: #253d17; border-color: #253d17; }
+
+@media (max-width: 1000px) {
+  .introduction, .adGrid, .celebrationIntro, .communityHeader { gap: 28px; }
+  .cardCopy, .celebration { padding: 28px; }
+  .crowdGallery, .animalGallery { gap: 20px; }
+  .smallAnimalCopy { padding: 24px 18px; }
+  .smallAnimal figcaption { padding-inline: 18px; }
+}
+
+@media (max-width: 700px) {
+  .introduction, .adGrid, .celebrationIntro, .crowdGallery, .communityHeader, .animalGallery { grid-template-columns: minmax(0, 1fr); }
+  .introduction { padding-block: 24px 32px; }
+  .cardCopy, .celebration, .takeaway { padding: 24px 18px; }
+  .adGrid figcaption { padding-inline: 18px; }
+  .advertising, .celebration { margin-bottom: 32px; }
+  .crowdGallery, .animalGallery { gap: 28px; }
+}

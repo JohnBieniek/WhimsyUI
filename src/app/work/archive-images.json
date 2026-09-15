@@ -425,5 +425,12 @@
   "738553388298948": {
     "width": 1080,
     "height": 1080
-  }
+  },
+  "cascades-kitten-hero": { "width": 1292, "height": 871 },
+  "cascades-adopt-locally": { "width": 940, "height": 788 },
+  "cascades-ribbon-cutting": { "width": 1278, "height": 886 },
+  "cascades-opening-welcome": { "width": 2048, "height": 1366 },
+  "cascades-community-cat": { "width": 1638, "height": 2048 },
+  "cascades-community-dog": { "width": 558, "height": 753 },
+  "cascades-community-small-pet": { "width": 1289, "height": 675 }
 }
