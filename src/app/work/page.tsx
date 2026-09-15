@@ -22,7 +22,7 @@ export default function WorkPage() {
       <section id="campaigns" className={styles.section} aria-labelledby="campaigns-title">
         <p className="kicker">Campaigns &amp; community</p>
         <h2 id="campaigns-title">Local stories. Shared experiences.</h2>
-        <p className={styles.campaignIntro}>Twenty projects spanning holidays, community events, software, restaurants, and businesses. Explore four examples in each category to see the work behind the stories.</p>
+        <p className={styles.campaignIntro}>Explore a small selection of our work to see how we bring ideas to life through advertising, consulting, websites, and software. We share these stories to give you a closer look at what we do and inspire your next endeavor.</p>
         <WorkGallery />
       </section>
       <section className={styles.cta}>
