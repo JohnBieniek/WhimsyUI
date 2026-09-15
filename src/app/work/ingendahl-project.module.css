@@ -43,6 +43,8 @@
 @media (min-width: 1001px) {
   .stickerCopy { container-type: inline-size; }
   .page .stickerCopy h2 { font-size: min(44px, 4.65cqw); text-wrap: nowrap; }
+  .value > div:first-child { container-type: inline-size; min-width: 0; }
+  .page .value h2 { font-size: min(44px, 5.4cqw); }
 }
 
 @media (max-width: 1000px) {
