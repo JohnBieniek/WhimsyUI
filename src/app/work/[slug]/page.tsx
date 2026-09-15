@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { caseStudies } from "../../work-data";
 import { softwareProjects } from "../software-projects";
 import SoftwareProject from "../software-project";
+import MultiverseProject from "../multiverse-project";
 import { archiveStories } from "../archive-stories";
 import ArchiveProject from "../archive-project";
 import ValentinesProject from "../valentines-project";
@@ -62,6 +63,7 @@ const holidayPartnerAds = [
 export default async function CaseStudy({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const software = softwareProjects.find(item => item.slug === slug);
+  if (software?.slug === "multiverse-adventurers-guild") return <MultiverseProject project={software} />;
   if (software) return <SoftwareProject project={software} />;
   const study = caseStudies.find((item) => item.slug === slug);
   if (!study) notFound();

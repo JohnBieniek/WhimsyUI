@@ -1,0 +1,97 @@
+.page {
+  --guild-blue: #1f5f8c;
+  --guild-deep-blue: #174666;
+  --guild-green: #33612f;
+  --guild-red: #b3352d;
+  --guild-cream: #f7f1d8;
+  --guild-ink: #22384b;
+}
+
+.page section, .page article { min-width: 0; }
+.page p { line-height: 1.65; }
+.heading { font-family: var(--font-display); font-size: clamp(28px, 2.8vw, 42px); line-height: 1.1; text-wrap: balance; margin: 0 0 24px; }
+.kicker { font-family: var(--font-display); font-size: 14px; line-height: 1.4; text-transform: uppercase; letter-spacing: .02em; margin: 0 0 14px; }
+.page .visitButton { background: var(--guild-red); border-color: var(--guild-red); }
+.page a:focus-visible { outline: 3px solid var(--guild-red); outline-offset: 5px; }
+
+.screenshot { min-width: 0; margin: 0; border-radius: 8px; background: var(--guild-cream); }
+.screenshot a { display: block; padding: 0; border-radius: inherit; }
+.screenshot img { display: block; width: 100%; height: auto; padding: 0; border-radius: 8px 8px 0 0; }
+.screenshot figcaption { padding: 12px 16px; border-radius: 0 0 8px 8px; background: var(--guild-red); color: #fff; font-size: 12px; line-height: 1.5; font-weight: 700; }
+.heroImage img { border-radius: 8px; }
+
+.overview { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 28px; align-items: center; margin-bottom: 36px; }
+.overviewCopy { padding: 32px; background: var(--guild-cream); color: var(--guild-ink); border-top: 5px solid var(--guild-red); border-radius: 0 0 12px 12px; }
+.overviewCopy .heading, .overviewCopy .kicker { color: var(--guild-blue); }
+.overviewCopy > p:last-child { margin-bottom: 0; }
+
+.capabilities { padding: 36px; margin-bottom: 36px; border-radius: 12px; background: var(--guild-cream); color: var(--guild-ink); }
+.capabilities > header { text-align: center; margin-bottom: 28px; }
+.capabilities .heading { font-size: clamp(26px, 2.6vw, 38px); margin-bottom: 0; color: var(--guild-blue); }
+.capabilities .kicker { color: var(--guild-blue); }
+.capabilityGrid, .commandPoints { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; border-radius: 8px; overflow: hidden; }
+.capabilityGrid { background: #ffffff55; }
+.capabilityGrid article { padding: 24px; background: var(--guild-green); color: #fff; }
+.capabilityGrid h3, .commandPoints h3 { font-family: var(--font-display); font-size: 20px; line-height: 1.2; margin: 0 0 14px; }
+.capabilityGrid p, .commandPoints p { font-size: 15px; margin: 0; }
+
+.featureCard { padding: 36px; border-radius: 12px; background: var(--guild-blue); color: #fff; margin-bottom: 36px; }
+.featureColumns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px; }
+.featureColumn { display: flex; flex-direction: column; gap: 28px; }
+.featureColumn:first-child > .screenshot { margin-top: auto; }
+.featureCopy > p:last-child { margin-bottom: 0; }
+.featureCard a:focus-visible, .library a:focus-visible, .mobileCard a:focus-visible { outline-color: #f1d98e; }
+.commandPoints { margin-top: 36px; background: #ffffff55; }
+.commandPoints article { padding: 24px; background: var(--guild-deep-blue); }
+
+.rulebook { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 40px; padding: 36px; margin-bottom: 36px; border-left: 6px solid var(--guild-red); border-radius: 0 12px 12px 0; background: var(--guild-cream); color: var(--guild-ink); }
+.rulebook .heading, .rulebook .kicker { color: var(--guild-blue); }
+.rulebook > div > p:first-child { margin-top: 0; }
+.rulebook > div > p:last-child { margin-bottom: 0; }
+
+.library { padding: 0; border-radius: 12px; background: var(--guild-green); color: #fff; margin-bottom: 36px; }
+.libraryCopy { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 40px; padding: 36px; }
+.libraryCopy > div > p:first-child { margin-top: 0; }
+.libraryCopy > div > p:last-child { margin-bottom: 0; }
+.library > .screenshot, .library > .screenshot img { border-radius: 0; }
+.library > .screenshot { padding: 0; border-radius: 0 0 12px 12px; }
+.library > .screenshot figcaption { border-radius: 0 0 12px 12px; }
+
+.mobileCard { display: grid; grid-template-columns: minmax(0, 1.2fr) repeat(2, minmax(0, 1fr)); gap: 28px; align-items: center; padding: 36px; border-radius: 12px; background: var(--guild-deep-blue); color: #fff; margin-bottom: 32px; }
+.mobileIntro { min-width: 0; }
+.mobileIntro .heading { font-size: clamp(26px, 2.4vw, 36px); }
+.mobileIntro > p:not(.kicker) { margin-bottom: 28px; }
+.phone { width: 100%; max-width: 330px; justify-self: center; }
+.credit { font-size: 14px; color: var(--guild-ink); margin-block: 28px; }
+.credit a { color: var(--guild-blue); font-weight: 800; text-decoration: underline; text-underline-offset: 4px; }
+
+@media (max-width: 1100px) {
+  .overview { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  .overviewCopy { padding: 24px; }
+  .capabilities, .featureCard, .rulebook, .libraryCopy, .mobileCard { padding: 28px; }
+  .featureColumns, .rulebook, .libraryCopy { gap: 28px; }
+  .capabilityGrid article, .commandPoints article { padding: 20px; }
+  .mobileCard { gap: 20px; }
+}
+
+@media (max-width: 900px) {
+  .overview, .featureColumns, .rulebook, .libraryCopy { grid-template-columns: minmax(0, 1fr); }
+  .overview { gap: 0; }
+  .heroImage, .heroImage img { border-radius: 12px 12px 0 0; }
+  .featureColumn + .featureColumn { border-top: 1px solid #ffffff55; padding-top: 28px; }
+  .featureColumn:first-child > .screenshot { margin-top: 0; }
+  .capabilityGrid, .commandPoints { grid-template-columns: minmax(0, 1fr); }
+  .page > :global(.ready) { flex-direction: column; align-items: center; gap: 8px; max-width: 760px; margin-inline: auto; text-align: center; }
+}
+
+@media (max-width: 700px) {
+  .overview, .capabilities, .featureCard, .rulebook, .library { margin-bottom: 24px; }
+  .overviewCopy, .capabilities, .featureCard, .rulebook, .libraryCopy, .mobileCard { padding: 24px 18px; }
+  .heading { font-size: 28px; margin-bottom: 20px; }
+  .kicker { font-size: 12px; }
+  .featureColumns, .featureColumn { gap: 24px; }
+  .commandPoints { margin-top: 28px; }
+  .screenshot figcaption { padding: 10px 12px; }
+  .mobileCard { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .phone { width: min(78%, 330px); }
+}
