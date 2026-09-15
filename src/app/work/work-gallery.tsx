@@ -7,6 +7,7 @@ import { caseStudies } from "../work-data";
 import { softwareProjects } from "./software-projects";
 import { selectedWork, workCategories } from "./portfolio-selection";
 import { archiveStories } from "./archive-stories";
+import styles from "./work.module.css";
 
 const categories = ["All work", ...workCategories];
 const availableProjects = [
@@ -22,7 +23,7 @@ const availableProjects = [
 const projects = workCategories.flatMap(category => selectedWork[category].map(slug => {
   const project = availableProjects.find(item => item.slug === slug);
   if (!project) throw new Error(`Missing selected work project: ${slug}`);
-  return { ...project, category };
+  return { ...project, category, href: `/work/${project.slug === "lakeland-website" ? "lakeland-cabaret" : project.slug}` };
 })).sort((a, b) => a.title.localeCompare(b.title, "en", { sensitivity: "base" }));
 
 export default function WorkGallery() {
@@ -38,12 +39,16 @@ export default function WorkGallery() {
     </fieldset>
     <section className="portfolio-grid" aria-live="polite">
       {shown.map(item => <article key={item.slug}>
-        <div><Image src={item.image} alt={item.alt} fill sizes="(max-width: 700px) 90vw, 25vw" style={item.category === "Software" ? { objectFit: "contain", background: "var(--mint)" } : undefined} /></div>
+        <div>
+          <Link className={styles.galleryImageLink} href={item.href} aria-label={`View ${item.title} case study`}>
+            <Image src={item.image} alt={item.alt} fill sizes="(max-width: 700px) 90vw, 25vw" style={item.category === "Software" ? { objectFit: "contain", background: "var(--mint)" } : undefined} />
+          </Link>
+        </div>
         <p className="tag">{item.category}</p>
         <h2>{item.title}</h2>
         <strong>{item.client}</strong>
         <p>{item.summary}</p>
-        <Link href={`/work/${item.slug === "lakeland-website" ? "lakeland-cabaret" : item.slug}`}>View case study →</Link>
+        <Link href={item.href}>View case study →</Link>
       </article>)}
     </section>
   </>;

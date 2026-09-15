@@ -17,6 +17,8 @@
 .page :global(.filters) label { flex: 0 1 auto; min-width: 0; }
 .page :global(.filters) label span { padding: 10px 16px; }
 .page :global(.portfolio-grid) h2 { font-size: 22px; line-height: 1.2; }
+.galleryImageLink { display: block; position: relative; height: 100%; }
+.page .galleryImageLink:focus-visible { outline-offset: -4px; }
 .softwareGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
 .softwareGrid > article { display: flex; flex-direction: column; border: 1px solid #b9ded6; border-radius: 10px; overflow: hidden; }
 .cardImage { position: relative; display: block; aspect-ratio: 16 / 10; background: var(--mint); border-bottom: 1px solid #b9ded6; }
