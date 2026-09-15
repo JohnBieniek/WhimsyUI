@@ -44,6 +44,7 @@
 .partners { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 36px; align-items: center; padding: 36px; margin-bottom: 40px; border-radius: 14px; background: #f8ecef; }
 .partners p:last-child { margin-bottom: 0; }
 .partnerImages { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; align-items: start; }
+.partnerImages img { aspect-ratio: 9 / 10; object-fit: cover; }
 .value { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 40px; align-items: start; padding: 36px 0; margin-bottom: 24px; border-top: 4px solid var(--who-teal); }
 .value .kicker { color: var(--who-teal); }
 .page .value h2, .value p:last-child { margin-bottom: 0; }
