@@ -443,5 +443,9 @@
   "1021283623359255": { "width": 1080, "height": 1080 },
   "1021283576692593": { "width": 1080, "height": 1080 },
   "1040973798056904": { "width": 1080, "height": 1080 },
-  "1000952525392365": { "width": 1080, "height": 1080 }
+  "1000952525392365": { "width": 1080, "height": 1080 },
+  "ingendahl-open-farm-day-garden": { "width": 1024, "height": 1024 },
+  "ingendahl-open-farm-day-rooster": { "width": 1024, "height": 1024 },
+  "ingendahl-open-farm-day-cow": { "width": 1024, "height": 1024 },
+  "ingendahl-open-farm-day-lamb": { "width": 1600, "height": 1600 }
 }

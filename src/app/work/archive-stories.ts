@@ -385,6 +385,17 @@ export const archiveStories: Record<string, ArchiveStory> = {
         ],
       },
       {
+        kicker: "Event advertising",
+        title: "An invitation to Open Farm Day.",
+        paragraphs: ["The Open Farm Day ads pair farm-animal photographs with a shared layout, the farm's name, and clear event details. Each version promotes the same gathering, with local vendors, pony rides, a walk-in petting zoo, tie-dye, refreshments, and a food truck, while a different photograph gives each ad its own character."],
+        images: [
+          ["ingendahl-open-farm-day-garden", "Ingendahl Acres Open Farm Day advertisement with a rooster among flowers, the July 26 date, activities, and Wells address"],
+          ["ingendahl-open-farm-day-rooster", "Ingendahl Acres Open Farm Day advertisement with a close-up rooster photograph and the event details"],
+          ["ingendahl-open-farm-day-cow", "Ingendahl Acres Open Farm Day advertisement with a cow beside a fence and the event details"],
+          ["ingendahl-open-farm-day-lamb", "Ingendahl Acres Open Farm Day advertisement with a lamb photograph and the event details"],
+        ],
+      },
+      {
         kicker: "The value",
         title: "Give a small business something people can remember.",
         paragraphs: ["For Ingendahl Acres, the work provides artwork to use in print and online, with enough variety to show different sides of the farm. For customers and supporters, the animals and place name make the business easier to recognize, while the stickers offer a small, tangible connection to it."],

@@ -12,4 +12,17 @@ Reviewed the original captions and images in `archive/deliverables/whimsy_contex
 
 The page describes documented logo and sticker work and the visible structure of the graphics. It does not attribute the source photographs or individual animal illustrations to Whimsy, claim printing/manufacturing services, or invent business results. Its green, cream, and yellow palette draws on the farm settings in the original photographs.
 
+## Open Farm Day advertisements
+
+On September 15, 2026, the user supplied `public/acresfarms.zip` and requested all four new images on the page. The original PNG files are copied unchanged to `public/work/archive/`:
+
+| ZIP member | Published asset |
+| --- | --- |
+| `signal-2026-09-15-13-10-44-189.png` | `ingendahl-open-farm-day-garden.png` |
+| `signal-2026-09-15-13-10-44-189-1.png` | `ingendahl-open-farm-day-rooster.png` |
+| `signal-2026-09-15-13-10-44-189-2.png` | `ingendahl-open-farm-day-cow.png` |
+| `signal-2026-09-15-13-10-44-189-3.png` | `ingendahl-open-farm-day-lamb.png` |
+
+The ads promote the second annual Open Farm Day on July 26, with local vendors and the activities listed in the artwork. No year is shown, so the page describes the creative without presenting the event as upcoming or claiming results. The new gallery uses four columns on desktop and two columns on mobile, with full-image links and descriptive alt text rather than visible captions.
+
 The retired URLs use `public/_redirects`, following [Cloudflare Pages redirects](https://developers.cloudflare.com/pages/configuration/redirects/), with clean, trailing-slash, and `.html` paths pointing directly to the replacement.

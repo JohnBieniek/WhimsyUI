@@ -31,6 +31,9 @@
 .graphicsHeader { max-width: 880px; margin: 0 auto 32px; text-align: center; }
 .graphicsGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
 
+.event { margin-bottom: 40px; padding-top: 32px; border-top: 1px solid var(--farm-line); }
+.eventGrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+
 .value { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: center; padding: 36px; border-radius: 14px; background: var(--farm-green); color: var(--farm-cream); margin-bottom: 36px; }
 .value .kicker { color: var(--farm-gold); }
 .page .value h2, .value p:last-child { margin-bottom: 0; }
@@ -61,5 +64,7 @@
   .stickers, .value { padding: 24px 18px; }
   .stickers, .graphics { margin-bottom: 28px; }
   .graphicsGrid { gap: 28px; }
+  .event { margin-bottom: 28px; }
+  .eventGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
   .value { gap: 24px; }
 }

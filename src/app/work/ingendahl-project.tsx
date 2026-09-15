@@ -5,10 +5,10 @@ import dimensions from "./archive-images.json";
 import { ProjectCallToAction, ProjectHeader } from "./project-framing";
 import styles from "./ingendahl-project.module.css";
 
-function FarmImage({ item, preload = false, sizes = "(max-width: 700px) 100vw, 50vw", showCaption = true }: { item: [string, string]; preload?: boolean; sizes?: string; showCaption?: boolean }) {
+function FarmImage({ item, preload = false, sizes = "(max-width: 700px) 100vw, 50vw", showCaption = true, format = "jpg" }: { item: [string, string]; preload?: boolean; sizes?: string; showCaption?: boolean; format?: "jpg" | "png" }) {
   const [id, caption] = item;
   const size = dimensions[id as keyof typeof dimensions];
-  const src = `/work/archive/${id}.jpg`;
+  const src = `/work/archive/${id}.${format}`;
 
   return <figure className={styles.figure}>
     <a href={src} target="_blank" rel="noopener noreferrer" aria-label={`View full image: ${caption}`}>
@@ -19,7 +19,7 @@ function FarmImage({ item, preload = false, sizes = "(max-width: 700px) 100vw, 5
 }
 
 export default function IngendahlProject({ story, title }: { story: ArchiveStory; title: string }) {
-  const [stickers, graphics, value] = story.sections;
+  const [stickers, graphics, event, value] = story.sections;
 
   return <main className={`case-page shell ${styles.page}`}>
     <Link className="back-link" href="/work">← All work</Link>
@@ -55,6 +55,17 @@ export default function IngendahlProject({ story, title }: { story: ArchiveStory
       </header>
       <div className={styles.graphicsGrid}>
         {graphics.images.map(item => <FarmImage item={item} key={item[0]} sizes="(max-width: 700px) 100vw, 33vw" showCaption={false} />)}
+      </div>
+    </section>
+
+    <section className={styles.event} aria-labelledby="ingendahl-event-title">
+      <header className={styles.graphicsHeader}>
+        <p className={styles.kicker}>{event.kicker}</p>
+        <h2 id="ingendahl-event-title">{event.title}</h2>
+        {event.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
+      </header>
+      <div className={styles.eventGrid}>
+        {event.images.map(item => <FarmImage item={item} key={item[0]} sizes="(max-width: 700px) 50vw, 25vw" showCaption={false} format="png" />)}
       </div>
     </section>
 
