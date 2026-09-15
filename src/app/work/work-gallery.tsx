@@ -48,7 +48,7 @@ export default function WorkGallery() {
               sizes="(max-width: 700px) 90vw, 25vw"
               style={item.category === "Software"
                 ? { objectFit: "contain", background: "var(--mint)" }
-                : item.slug === "alpha-koney-story"
+                : item.slug === "alpha-koney-story" || item.slug === "valentines-at-jackson-crossing"
                   ? { objectPosition: "center 20%" }
                   : item.slug === "cascades-ribbon-cutting" || item.slug === "happy-harvest"
                     ? { objectPosition: "center top" }
