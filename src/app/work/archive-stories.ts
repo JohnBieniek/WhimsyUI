@@ -175,41 +175,60 @@ export const archiveStories: Record<string, ArchiveStory> = {
       },
     ],
   },
-  "restaurant-food-truck-advertising": {
-    summary: "Four advertisements created by Whimsy for restaurant and food-truck promotions, connecting distinctive food, recognizable brands, and clear reasons to visit.",
-    heading: "Give good food a clear invitation.",
+  "welcome-home-organization": {
+    title: "Welcome Home Organization",
+    summary: "A shared rebranding, website, and marketing project through Leadership Jackson, supported by community promotion and local partnerships.",
+    heading: "A clearer identity for a community mission.",
     introduction: [
-      "Whimsy created these advertisements as part of its local business and event promotion work. The collection features Burnt Honey, Buffalo Wild Wings, Craveable, and Shorties, with a different visual approach for each business and offer.",
-      "Burnt Honey's design leads with bold yellow lettering and a close view of the food against a textured black background. The logo and location details complete the invitation, connecting the dish with a business people can seek out.",
+      "The Welcome Home Organization works with communities in Jackson and Albion through youth initiatives, urban agriculture, and transitional support. Explaining that range of work means helping people understand both the larger mission and the practical ways they can take part.",
+      "Through Leadership Jackson with the Jackson County Chamber of Commerce, Whimsy's Kay Pickett worked alongside a team supporting WHO. The project brought together a full rebrand, website updates, and a complete marketing package, with the team's work celebrated in April 2026.",
     ],
-    hero: ["793715222782764", "Burnt Honey advertisement with food photography and Spring Arbor location details"],
-    services: ["Ad design", "Brand-led creative", "Event promotion"],
+    hero: ["1390509449770002", "The Leadership Jackson team and Welcome Home Organization at the project presentation"],
+    services: ["Rebranding", "Website updates", "Marketing materials"],
     sections: [
       {
-        kicker: "Buffalo Wild Wings",
-        title: "Lead with the food. Make the next step clear.",
-        paragraphs: ["The chicken-wing ad puts the food inside a phone-shaped frame, pairing a close-up image with a short headline and an order prompt. Yellow, black, and the familiar logo connect the promotion to the brand while keeping the offer easy to scan."],
-        images: [["769506615203625", "Buffalo Wild Wings chicken-wing advertisement with an Order Now prompt"]],
-      },
-      {
-        kicker: "Craveable",
-        title: "Give a different menu its own identity.",
-        paragraphs: ["Craveable's piece introduces its plant-based menu through food images, bright blue lettering, and a direct statement about its offer. The location cue beside the Secretary of State's office helps turn interest in the food into a practical next stop."],
-        images: [["870210031799949", "Craveable plant-based food advertisement with a location cue"]],
-      },
-      {
-        kicker: "Shorties",
-        title: "Turn an appearance into a plan.",
+        kicker: "The creative work",
+        title: "One mission, carried across the work.",
         paragraphs: [
-          "The Patriotic Palooza artwork brings Shorties' chef, food truck, and identity together with the June 30 date and noon start. Bright turquoise, celebratory shapes, and large type give the event promotion its own energy.",
-          "The design also names the location and a nearby landmark. Those details help an audience move from noticing the announcement to knowing when and where to find the truck.",
+          "The rebrand, website updates, and marketing package were parts of the same team project. Together, they addressed how WHO presents itself, explains its work, and introduces its mission to people who may want to get involved.",
+          "Each part serves a different purpose: an identity people can recognize, a website where they can learn more, and materials that support outreach. Connecting those pieces gives an organization a more consistent starting point for conversations with its community.",
         ],
-        images: [["870210345133251", "Shorties food-truck promotion for Patriotic Palooza on June 30"]],
+        images: [],
+      },
+      {
+        kicker: "Listening and planning",
+        title: "Start with the people behind the mission.",
+        paragraphs: [
+          "The relationship included meeting WHO's board through Leadership Jackson in November 2025. That evening at Bella Notte brought the project team into the same room as the people guiding the organization and its community work.",
+          "Those connections matter to a creative project. Before deciding how to present an organization, there is value in learning from the people who know its work, its partnerships, and the community it serves.",
+        ],
+        images: [["1260243139463301", "Meeting with WHO's board and Leadership Jackson peers at Bella Notte"]],
+      },
+      {
+        kicker: "Community promotion",
+        title: "Make getting involved feel possible.",
+        paragraphs: [
+          "Whimsy's September coverage introduced WHO through a practical project: volunteers painting tires for a new sensory playground. Photographs showed the preparation and colorful materials, while the accompanying post invited local people to join the next workday.",
+          "It gave the mission a concrete example. Someone seeing the post could understand what was happening, why it mattered, and how showing up could contribute to a shared community space.",
+        ],
+        images: [["1215787063908909", "Paint supplies being organized during WHO's sensory playground workday"], ["1215787187242230", "A brightly painted tire prepared for the sensory playground"]],
+      },
+      {
+        kicker: "Local partnerships",
+        title: "A coat drive with a place to land.",
+        paragraphs: [
+          "In December, Whimsy helped connect Jackson Crossing, Dawn and Travis Parker, WHO, and Lakeland Cabaret. The mall hosted the Parkers' coat drive, and the collected coats went to WHO's Whoville event, with music provided by Lakeland Cabaret's DJ.",
+          "The partners brought different things to the effort: a collection location, donated coats, an event that could put them into the community, and entertainment for the gathering. Whimsy's role was to help those contributions come together and share the story of the collaboration.",
+        ],
+        images: [["1282288987258716", "Donated coats gathered for WHO's Whoville event"], ["1282289017258713", "Lakeland Cabaret providing music at the Whoville gathering"]],
       },
       {
         kicker: "The value",
-        title: "Make the business easier to choose.",
-        paragraphs: ["For the businesses, each ad gives the offer a distinct, recognizable presentation. For the audience, it answers useful questions: what looks good, who offers it, and how to take the next step. The work connects the appeal of the food with the information someone needs to act."],
+        title: "Give good work a clearer way to reach people.",
+        paragraphs: [
+          "For WHO, the team project combined its public identity, website, and marketing materials in support of one mission. The surrounding community work gave that mission specific stories to tell, from a playground taking shape to a coat drive reaching its destination.",
+          "For neighbors and potential partners, those stories make participation easier to picture. They show the people involved, the work underway, and the different ways a local business or individual can contribute.",
+        ],
         images: [],
       },
     ],

@@ -2,6 +2,7 @@
 const imageDescriptions: Record<string, string> = {
   "/work/archive/cascades-kitten-hero.jpg": "A fluffy tabby kitten being gently held at Cascades Humane Society.",
   "/work/archive/708070294680591.jpg": "Ingendahl Acres Moolisa cow sticker resting on a leaf beside a yellow sunflower.",
+  "/work/archive/1390509449770002.jpg": "The Leadership Jackson team and Welcome Home Organization at the project presentation.",
   "/work/archive/793715222782764.jpg": "Burnt Honey food advertisement with a loaded-fries photograph, bold yellow lettering, a black background, and location details for Spring Arbor.",
   "/work/archive/787291356758484.jpg": "Dawn Parker real-estate advertisement showing a house resting above an open hand against a pink sky, with the message Own Your Dream Home.",
   "/work/archive/944490211038597.jpg": "Dark Malloween poster advertising Lakeland Cabaret's spooky DJ, games, musical chairs, and fire dance on October 26.",

@@ -1,5 +1,7 @@
 # Restaurant and food-truck advertising sources
 
+Retired on 2026-09-15 in favor of the focused [Welcome Home Organization case study](welcome-home-work-sources.md). The restaurant advertising URL and both older Grazing Thyme URLs now redirect directly to `/work/welcome-home-organization`. The records below preserve the sources for the former showcase.
+
 This showcase replaces Grazing Thyme Grand Opening in the selected Restaurants portfolio. The user clarified that Whimsy did little work at Grazing Thyme. Both the opening page and the generic Grazing Thyme brand page are retired, with redirects to `/work/restaurant-food-truck-advertising`.
 
 The replacement is a collection of individual advertisements. It is not presented as one coordinated campaign or as evidence of direct national-brand contracts. Copy describes the visible design work and practical information within the ads.
@@ -14,4 +16,4 @@ Reviewed the captions in `archive/deliverables/whimsy_context_catalog/inventory.
 
 The case study attributes advertisement design to Whimsy. It does not claim food photography, logo authorship, event production, sales results, or current offers and schedules. The artwork is shown as past work.
 
-The shared portfolio stays at twenty projects, with four in each category. Existing [Cloudflare Pages redirect rules](https://developers.cloudflare.com/pages/configuration/redirects/) cover both retired Grazing Thyme slugs, their trailing-slash variants, and `.html` paths.
+The original showcase occupied a Restaurants slot. Its replacement belongs under Businesses; category sizes follow the selected projects. [Cloudflare Pages redirect rules](https://developers.cloudflare.com/pages/configuration/redirects/) cover the retired slugs, their trailing-slash variants, and `.html` paths.

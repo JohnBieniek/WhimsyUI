@@ -1,0 +1,74 @@
+.page {
+  --who-ink: #30252a;
+  --who-burgundy: #602536;
+  --who-teal: #245e63;
+  --who-cream: #fbf4e7;
+  --who-gold: #f4cf7c;
+  --who-line: #e1d4d4;
+  color: var(--who-ink);
+}
+
+.page section, .page figure, .page section > div { min-width: 0; }
+.page p { line-height: 1.7; }
+.page section h2 { font-family: var(--font-display); font-size: clamp(28px, 3.2vw, 44px); line-height: 1.12; text-wrap: balance; margin: 0 0 24px; }
+.kicker { color: var(--who-burgundy); font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; margin: 0 0 14px; }
+.page :global(.back-link) { color: var(--who-burgundy); }
+.page a:focus-visible { outline: 3px solid var(--who-teal); outline-offset: 5px; }
+.figure { margin: 0; }
+.figure a { display: block; border-radius: 10px; }
+.figure img { display: block; width: 100%; height: auto; border-radius: 10px; }
+.figure figcaption { font-size: 13px; line-height: 1.5; margin-top: 12px; }
+
+.opening { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; align-items: center; padding-block: 30px 48px; border-top: 1px solid var(--who-line); }
+.opening p:last-child { margin-bottom: 0; }
+.creative { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 36px; align-items: center; padding: 36px; margin-bottom: 40px; border-radius: 14px; background: var(--who-burgundy); color: #fff; }
+.creative .kicker { color: var(--who-gold); }
+.creative a:focus-visible { outline-color: var(--who-gold); }
+.deliverables { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 24px 0; }
+.deliverables li { border: 1px solid #ba8995; border-radius: 6px; padding: 8px 12px; font-size: 12px; font-weight: 700; }
+.websiteLink { display: inline-block; color: var(--who-gold); font-weight: 800; text-decoration: underline; text-underline-offset: 4px; line-height: 1.6; }
+
+.storyPair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; align-items: start; margin-bottom: 40px; }
+.planning, .community { border-radius: 14px; overflow: hidden; }
+.planning { background: var(--who-cream); }
+.community { background: #eaf4f1; }
+.community .kicker { color: var(--who-teal); }
+.planning > .figure img, .planning > .figure a { border-radius: 0; }
+.planning > .figure figcaption { padding-inline: 28px; }
+.cardCopy { padding: 28px; }
+.cardCopy p:last-child { margin-bottom: 0; }
+.page .cardCopy h2 { font-size: clamp(28px, 2.7vw, 38px); }
+.communityImages { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; padding: 0 28px 28px; }
+
+.partners { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 36px; align-items: center; padding: 36px; margin-bottom: 40px; border-radius: 14px; background: #f8ecef; }
+.partners p:last-child { margin-bottom: 0; }
+.partnerImages { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; align-items: start; }
+.value { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 40px; align-items: start; padding: 36px 0; margin-bottom: 24px; border-top: 4px solid var(--who-teal); }
+.value .kicker { color: var(--who-teal); }
+.page .value h2, .value p:last-child { margin-bottom: 0; }
+.value > div > p:first-child { margin-top: 0; }
+.page > :global(.ready) { border-color: var(--who-burgundy); }
+.page > :global(.ready) h2 { font-size: 20px; line-height: 1.5; margin: 0; }
+.page :global(.button) { background: var(--who-burgundy); border-color: var(--who-burgundy); color: #fff; }
+.page :global(.button:hover) { background: #461b28; border-color: #461b28; }
+
+@media (max-width: 1000px) {
+  .opening, .creative, .partners, .value { gap: 28px; }
+  .creative, .partners { padding: 28px; }
+  .cardCopy { padding: 24px; }
+  .storyPair { gap: 22px; }
+  .communityImages { gap: 14px; padding: 0 24px 24px; }
+}
+@media (max-width: 900px) {
+  .creative, .partners { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 700px) {
+  .opening, .storyPair, .value { grid-template-columns: minmax(0, 1fr); }
+  .opening { padding-block: 24px 32px; }
+  .creative, .partners, .cardCopy { padding: 24px 18px; }
+  .creative, .storyPair, .partners { margin-bottom: 28px; }
+  .planning > .figure figcaption { padding-inline: 18px; }
+  .communityImages { padding: 0 18px 24px; }
+  .partnerImages { gap: 14px; }
+  .value { gap: 24px; }
+}
