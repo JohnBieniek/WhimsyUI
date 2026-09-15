@@ -11,7 +11,7 @@ export default function SoftwareProject({ project }: { project: (typeof software
   const isWarden = project.slug === "whimsy-warden";
   const isSonic = project.slug === "sonic-shielding";
   const hero = <a className={styles.projectImage} href={project.image} target="_blank" rel="noopener noreferrer" aria-label={`View full screenshot: ${project.alt}`}>
-    <Image src={project.image} alt={project.alt} fill priority sizes={isWarden ? "(max-width: 900px) 100vw, 50vw" : "(max-width: 1080px) 100vw, 1000px"} />
+    <Image src={project.image} alt={project.alt} fill priority sizes={isWarden ? "(max-width: 1279px) 100vw, 50vw" : "(max-width: 1080px) 100vw, 1000px"} />
   </a>;
   const overview = story && <section className={styles.storyOverview} aria-labelledby="project-brief-title">
     <div><p className="kicker">The project</p><h2 id="project-brief-title">{story.title}</h2></div>

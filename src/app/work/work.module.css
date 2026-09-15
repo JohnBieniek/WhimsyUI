@@ -111,10 +111,16 @@
 .sonic a:focus-visible { outline-color: var(--sonic-link); }
 .sonic .storyChapter a:focus-visible, .sonic > :global(.ready) a:focus-visible { outline-color: var(--sonic-aqua); }
 
+@media (min-width: 1280px) {
+  .projectOpening .projectImage { align-self: stretch; aspect-ratio: auto; }
+  .projectOpening .projectImage img { object-fit: cover; object-position: center top; }
+}
+@media (max-width: 1279px) {
+  .projectOpening { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+}
 @media (max-width: 900px) {
   .chapterPair { grid-template-columns: minmax(0, 1fr); gap: 20px; }
   .listeningPair { grid-template-columns: minmax(0, 1fr); }
-  .projectOpening { grid-template-columns: minmax(0, 1fr); gap: 24px; }
   .storyOverview, .illustratedChapter { grid-template-columns: minmax(0, 1fr); gap: 20px; }
   .hero { grid-template-columns: minmax(0, 1fr); grid-template-areas: "kicker" "title" "copy"; gap: 12px; }
   .heroCopy { margin-top: 12px; }
