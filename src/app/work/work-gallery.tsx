@@ -11,6 +11,10 @@ import styles from "./work.module.css";
 
 const categories = ["All work", ...workCategories];
 const galleryThumbnails: Partial<Record<string, { image: string; alt: string }>> = {
+  "cascades-ribbon-cutting": {
+    image: "/work/archive/cascades-kitten-hero.jpg",
+    alt: "A fluffy tabby kitten being gently held at Cascades Humane Society.",
+  },
   "heavenly-bakes-and-cakes": {
     image: "/work/archive/1040973798056904.jpg",
     alt: "Heavenly Bakes & Cakes advertisement showing gift boxes of chocolate-dipped strawberries with colorful coatings and decorations.",

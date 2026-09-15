@@ -4,11 +4,12 @@ The user requested a fuller case study about Whimsy's ad creation, grand-opening
 
 ## New original images
 
-Selected images were visually reviewed and copied unchanged from the ZIP into `public/work/archive/`. All filenames below begin with `signal-2026-09-15-09-58-29-759`; the table lists their suffixes. Each selected photograph appears once on the case study page, and the hero also represents the project in the Work gallery.
+Selected images were visually reviewed and copied unchanged from the ZIP into `public/work/archive/`. All filenames below begin with `signal-2026-09-15-09-58-29-759`; the table lists their suffixes. Each photograph used on the case study appears once. On September 15, 2026, the user requested a different kitty for the page hero; the replacement is the gray tabby from `-14.jpg`. The established Work gallery thumbnail uses the earlier held-kitten photograph.
 
 | ZIP suffix | Public archive ID | Use |
 | --- | --- | --- |
-| `-16.jpg` | `cascades-kitten-hero` | Fluffy tabby kitten being held; hero |
+| `-14.jpg` | `cascades-gray-kitten-hero` | Gray tabby looking toward the camera; page hero |
+| `-16.jpg` | `cascades-kitten-hero` | Fluffy tabby kitten being held; Work gallery thumbnail |
 | `.jpg` | `cascades-adopt-locally` | Green Adopt Locally advertisement |
 | `-10.jpg` | `cascades-ribbon-cutting` | Red ribbon and ceremonial scissors |
 | `-11.jpg` | `cascades-opening-welcome` | Guests beneath the CHS storefront sign |

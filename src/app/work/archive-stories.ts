@@ -306,7 +306,7 @@ export const archiveStories: Record<string, ArchiveStory> = {
       "Cascades Humane Society's new Jackson Crossing location created another place for people to meet animals, learn about adoption, and support local animal care. Whimsy helped introduce it through custom advertisements, grand-opening promotion, and photographs of the celebration.",
       "The work connected a practical invitation with a personal reason to visit. Behind the opening announcement were animals with their own personalities, people ready to care for them, and the possibility of a new companion.",
     ],
-    hero: ["cascades-kitten-hero", "A fluffy kitten gets a gentle cuddle at Cascades Humane Society"],
+    hero: ["cascades-gray-kitten-hero", "A gray tabby kitten looking toward the camera at Cascades Humane Society"],
     services: ["Ad creation", "Grand-opening promotion", "Event photography"],
     sections: [
       {
