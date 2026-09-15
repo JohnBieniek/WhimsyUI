@@ -46,7 +46,8 @@
 .archiveHeader p:first-child { margin-top: 0; }
 .archiveHeader p:last-child { margin-bottom: 0; }
 .archiveGrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; align-items: start; }
-.partners { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 860px; margin-inline: auto; align-items: center; }
+.partners { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 860px; margin-inline: auto; align-items: start; }
+.partners .photo:first-child img { aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; }
 
 .takeaway { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 40px; align-items: center; padding: 36px; border-left: 5px solid var(--fetch-gold); background: var(--fetch-cream); margin-bottom: 36px; }
 .takeaway h2, .takeaway p { margin: 0; }
