@@ -21,7 +21,9 @@
 
 .opening { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; align-items: center; padding-block: 30px 48px; border-top: 1px solid var(--who-line); }
 .opening p:last-child { margin-bottom: 0; }
-.creative { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 36px; align-items: center; padding: 36px; margin-bottom: 40px; border-radius: 14px; background: var(--who-burgundy); color: #fff; }
+.creative { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); grid-template-areas: "image copy"; gap: 36px; align-items: center; padding: 36px; margin-bottom: 40px; border-radius: 14px; background: var(--who-burgundy); color: #fff; }
+.creativeCopy { grid-area: copy; }
+.creative > .figure { grid-area: image; }
 .creative .kicker { color: var(--who-gold); }
 .creative .figure img { border: 3px solid var(--who-gold); }
 .creative a:focus-visible { outline-color: var(--who-gold); }
@@ -63,6 +65,7 @@
 }
 @media (max-width: 900px) {
   .creative, .partners { grid-template-columns: minmax(0, 1fr); }
+  .creative { grid-template-areas: "copy" "image"; }
 }
 @media (max-width: 700px) {
   .opening, .storyPair, .value { grid-template-columns: minmax(0, 1fr); }
