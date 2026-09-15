@@ -46,6 +46,11 @@
 .page :global(.button) { background: var(--bakery-plum); border-color: var(--bakery-plum); color: #fff; }
 .page :global(.button:hover) { background: #482740; border-color: #482740; }
 
+@media (min-width: 1001px) {
+  .products .cardCopy { container-type: inline-size; }
+  .page .products .cardCopy h2 { font-size: min(38px, 5.2cqw); text-wrap: nowrap; }
+}
+
 @media (max-width: 1000px) {
   .opening, .holiday, .value { gap: 28px; }
   .opening, .holiday, .cardCopy { padding: 24px; }
