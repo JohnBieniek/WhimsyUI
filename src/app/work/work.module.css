@@ -12,7 +12,7 @@
 .cardLink:hover, .credit a:hover { text-decoration: underline; }
 .section { padding-block: 28px 40px; border-top: 1px solid var(--line); scroll-margin-top: 24px; }
 .section > p:not(:global(.kicker)) { max-width: 760px; margin: 0 0 28px; }
-.section > p.campaignIntro { max-width: none; font-size: 20px; }
+.campaignHeader > p.campaignIntro { max-width: none; font-size: 20px; margin: 0 0 28px; }
 .page :global(.filters) { min-width: 0; width: 100%; margin-inline: 0; display: flex; flex-wrap: wrap; gap: 10px; }
 .page :global(.filters) label { flex: 0 1 auto; min-width: 0; }
 .page :global(.filters) label span { padding: 10px 16px; }
@@ -109,8 +109,10 @@
   .details { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 700px) {
-  .section[aria-labelledby="campaigns-title"] { container-type: inline-size; }
-  .section[aria-labelledby="campaigns-title"] > h2 { font-size: min(26px, 5.35cqw); text-wrap: nowrap; }
+  .campaignHeader { container-type: inline-size; padding: 24px 16px; margin-bottom: 28px; border: 1px solid #dacde1; border-radius: 12px; background: #eee3f7; }
+  .campaignHeader > :global(.kicker) { margin-top: 0; }
+  .campaignHeader > h2 { font-size: min(26px, 5.35cqw); text-wrap: nowrap; }
+  .campaignHeader > p.campaignIntro { margin-bottom: 0; }
   .mintChapter { padding: 24px 18px; }
   .sonic .storyChapter { padding: 24px 18px; }
   .storyOverview { padding: 20px; }
