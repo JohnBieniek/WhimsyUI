@@ -9,7 +9,7 @@ import { ProjectCallToAction, ProjectHeader } from "./project-framing";
 export default function SoftwareProject({ project }: { project: (typeof softwareProjects)[number] }) {
   const story = softwareStories[project.slug];
   return (
-    <main className={`case-page shell ${styles.page}`}>
+    <main className={`case-page shell ${styles.page} ${project.slug === "sonic-shielding" ? styles.sonic : ""}`}>
       <Link className="back-link" href="/work#campaigns">← All work</Link>
       <ProjectHeader title={project.title} description={project.intro}>
         <a className="button" href={project.link}>{project.linkLabel} ↗</a>

@@ -53,12 +53,41 @@
 .cta h2 { margin-bottom: 0; }
 .cta :global(.kicker) { margin-top: 0; }
 .page a:focus-visible { outline: 3px solid var(--purple); outline-offset: 4px; }
+
+.sonic {
+  --sonic-navy: #071b35;
+  --sonic-panel: #152744;
+  --sonic-raised: #233e5e;
+  --sonic-aqua: #77d6d0;
+  --sonic-link: #146e75;
+  --sonic-text: #f0fcff;
+  --sonic-muted: #bfd8e7;
+  --sonic-border: #365676;
+  color: var(--sonic-navy);
+}
+
+.sonic :global(.kicker), .sonic :global(.back-link), .sonic .credit a, .sonic :global(.creator-credit a) { color: var(--sonic-link); }
+.sonic .projectImage, .sonic .chapterImage { background: var(--sonic-navy); }
+.sonic .storyOverview { border-left-color: var(--sonic-aqua); background: var(--sonic-panel); color: var(--sonic-text); }
+.sonic .section { border-top-color: var(--sonic-border); }
+.sonic .storyChapter { padding: 32px; margin-bottom: 28px; border: 1px solid var(--sonic-border); border-radius: 12px; background: var(--sonic-panel); color: var(--sonic-text); }
+.sonic .details article { border-top-color: var(--sonic-aqua); background: var(--sonic-raised); color: var(--sonic-text); }
+.sonic .storyChapter .details article { background: var(--sonic-navy); }
+.sonic .details h3, .sonic .storyOverview :global(.kicker), .sonic .storyChapter :global(.kicker) { color: var(--sonic-aqua); }
+.sonic .illustratedChapter figcaption { color: var(--sonic-muted); }
+.sonic > :global(.ready) { border-color: var(--sonic-navy); border-top: 4px solid var(--sonic-aqua); background: var(--sonic-navy); color: var(--sonic-text); }
+.sonic :global(.button) { border-color: var(--sonic-aqua); background: var(--sonic-aqua); color: var(--sonic-navy); }
+.sonic :global(.button:hover) { border-color: var(--sonic-muted); background: var(--sonic-muted); }
+.sonic a:focus-visible { outline-color: var(--sonic-link); }
+.sonic .storyChapter a:focus-visible, .sonic > :global(.ready) a:focus-visible { outline-color: var(--sonic-aqua); }
+
 @media (max-width: 900px) {
   .storyOverview, .illustratedChapter { grid-template-columns: minmax(0, 1fr); gap: 20px; }
   .hero { grid-template-columns: minmax(0, 1fr); gap: 24px; }
   .details { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 700px) {
+  .sonic .storyChapter { padding: 24px 18px; }
   .storyOverview { padding: 20px; }
   .softwareGrid { grid-template-columns: minmax(0, 1fr); gap: 20px; }
   .cardCopy, .cta { padding: 20px; }
