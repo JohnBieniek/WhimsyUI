@@ -1,5 +1,5 @@
 type StoryHeading = string | [string, string];
-type StorySection = { kicker: string; title: StoryHeading; paragraphs: string[]; images: [string, string][]; galleryLayout?: "stacked" | "centered"; layout?: "image-left"; card?: "light-purple" };
+type StorySection = { kicker: string; title: StoryHeading; paragraphs: string[]; images: [string, string][]; galleryLayout?: "stacked" | "centered" | "paired"; layout?: "image-left"; card?: "light-purple" };
 export type ArchiveStory = { title?: string; summary: string; heading: StoryHeading; introduction: string[]; hero: [string, string]; services: string[]; sections: StorySection[]; video?: string };
 
 export const archiveStories: Record<string, ArchiveStory> = {
@@ -138,14 +138,41 @@ export const archiveStories: Record<string, ArchiveStory> = {
     ],
   },
   "alpha-koney-story": {
-    summary: "Restaurant advertising and a photo story showing Alpha Koney Island's food, hospitality, and space for group gatherings at Jackson Crossing.",
+    summary: "Restaurant advertising and community event coverage presenting Alpha Koney Island as a familiar place to eat, meet, and gather at Jackson Crossing.",
     heading: "A local favorite, with room for your whole group.",
-    introduction: ["Whimsy's work with Alpha Koney Island includes media ads and a business feature following a Jackson County Chamber of Commerce networking event. Together, they tell two useful stories: what is on the menu and how the restaurant can welcome a group.", "The feature invited families, organizations, and networking groups to consider the restaurant for a gathering. Real food and event photographs support that invitation with a look at the meal and the setting."],
+    introduction: ["Whimsy paired restaurant advertising with a business feature following a Jackson County Chamber of Commerce networking event at Alpha Koney Island. The work introduced the restaurant to local audiences and showed its role as a place for people to come together.", "The campaign connected an everyday dining invitation with a real example of the restaurant hosting a group. The finished advertisement, recognizable entrance, and guests in conversation carry that story from promotion to the experience of visiting."],
     hero: ["772622481558705", "Alpha Koney Island restaurant advertisement featuring its food"],
-    services: ["Restaurant advertising", "Food photography", "Business features"],
+    services: ["Restaurant advertising", "Business features", "Event coverage"],
     sections: [
-      { kicker: "The food", title: "Give the menu something people can see.", paragraphs: ["The photographs include wraps, salads, shared platters, and dessert from the restaurant's event spread. A mix of close details and serving views shows individual dishes alongside the way a group meal comes together.", "This collection supports the feature's description of Greek food and hospitality without relying on unrelated food photography. It is the restaurant's own table, ready for its guests."], images: [["1285889786898636", "A filled wrap from Alpha Koney Island"], ["1285889820231966", "Salad served at the restaurant gathering"], ["1285889863565295", "A shared platter of wraps"], ["1285889893565292", "Dessert from the event spread"]] },
-      { kicker: "The gathering", title: "Show what hosting a group can look like.", paragraphs: ["The Chamber networking event supplied a real example of the space in use. Photographs move from the restaurant entrance to the serving area and the people gathered inside, making the group-dining invitation concrete.", "Pairing the setting with food details gives the feature more range than a menu ad alone. An organization planning its next get-together can picture both the meal and the atmosphere."], images: [["1285889730231975", "Alpha Koney Island entrance at Jackson Crossing"], ["1285889760231972", "Plates and food arranged for the networking event"], ["1285889916898623", "The restaurant's group event setup"], ["1285889956898619", "Guests gathered for the Chamber networking event"], ["1285889990231949", "Networking guests inside Alpha Koney Island"]] },
+      {
+        kicker: "The invitation",
+        title: "Connect an everyday visit with a larger gathering.",
+        card: "light-purple",
+        paragraphs: [
+          "The restaurant advertisement brings the Alpha name, a selection of dishes, and Jackson Crossing together in one recognizable piece. It gives a local audience a quick introduction to the restaurant and a clear sense of where to find it.",
+          "The business feature extends that introduction to families, organizations, and networking groups. The message gives people another reason to consider Alpha: a familiar place for their next get-together.",
+        ],
+        images: [],
+      },
+      {
+        kicker: "The gathering",
+        title: "Show a place where people come together.",
+        galleryLayout: "paired",
+        paragraphs: [
+          "The Chamber networking event gave the invitation a real setting. The entrance photograph connects Alpha's name and location with the event, while the wider view shows guests seated together and talking beneath the restaurant sign.",
+          "Together, these views help a prospective visitor picture arriving and spending time there. For someone considering a group gathering, they show the atmosphere and the restaurant's connection to the local business community.",
+        ],
+        images: [["1285889730231975", "Alpha Koney Island's entrance and Chamber networking event sign at Jackson Crossing"], ["1285889956898619", "Guests sharing tables and conversation during the Chamber networking event"]],
+      },
+      {
+        kicker: "The value",
+        title: "Give the restaurant more reasons to be remembered.",
+        paragraphs: [
+          "For Alpha, the advertising and event feature connect its name with both everyday dining and community gatherings. The work gives the restaurant a story to share with people who may know its location but have not considered it for their next occasion.",
+          "For visitors and group organizers, that story makes the choice easier to picture: where to go, what the setting feels like, and how people can spend time together. A local business becomes part of the next plan.",
+        ],
+        images: [],
+      },
     ],
   },
   "grazing-thyme-opening": {

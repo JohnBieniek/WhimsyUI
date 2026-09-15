@@ -11,6 +11,7 @@
 
 .centeredGallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 28px 22px; }
 .centeredGallery .figure { flex: 0 0 calc((100% - 44px) / 3); }
+.pairedGallery .figure { flex-basis: calc((100% - 22px) / 2); }
 @media (max-width: 1000px) { .centeredGallery .figure { flex-basis: calc((100% - 22px) / 2); } }
 @media (max-width: 700px) { .centeredGallery .figure { flex-basis: 100%; } }
 
