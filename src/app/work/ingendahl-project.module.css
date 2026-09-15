@@ -41,6 +41,8 @@
 .page :global(.button:hover) { background: #1c3327; border-color: #1c3327; }
 
 @media (min-width: 1001px) {
+  .opening > div { container-type: inline-size; min-width: 0; }
+  .page .opening h2 { font-size: min(44px, 5.8cqw); text-wrap: nowrap; }
   .stickerCopy { container-type: inline-size; }
   .page .stickerCopy h2 { font-size: min(44px, 4.65cqw); text-wrap: nowrap; }
   .value > div:first-child { container-type: inline-size; min-width: 0; }
