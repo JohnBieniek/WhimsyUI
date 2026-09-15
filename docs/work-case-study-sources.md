@@ -6,6 +6,7 @@ The selected gallery highlights focused projects across seasonal events, communi
 
 ## Editorial corrections
 
+- Fox Candles was replaced by [Heavenly Bakes & Cakes Advertising](./heavenly-bakes-work-sources.md), restoring the fourth Restaurants selection with a focused bakery project. The former Fox URLs redirect to the replacement; original Fox source records remain below for reference.
 - The Black Friday and Santa Stories recap combines two events. Santa Stories uses its dedicated storytime set; Black Friday uses retail scenes from the shared week and explains that context.
 - Removed the 2025 Santa image from the December 2024 Holiday in the Halls story.
 - Student Art Show artwork is separated into 2024, 2025, and 2026 editions.

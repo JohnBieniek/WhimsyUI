@@ -11,6 +11,7 @@ const projects: Record<Category, Array<[string,string,string,string,string]>> = 
     ["miss-crossroads-visit","894475189373433.jpg","Miss Crossroads Community Visit","Jackson Crossing","A joyful public appearance built around connection, visibility, and community support."],
   ],
   "Advertising": [
+    ["heavenly-bakes-and-cakes","archive/1021283623359255.jpg","Heavenly Bakes & Cakes Advertising","Heavenly Bakes & Cakes","Custom-cake and strawberry advertisements, a local-business spotlight, and holiday promotion for a Jackson baker."],
     ["malloween","archive/944490211038597.jpg","Malloween at Jackson Crossing","Jackson Crossing","A Halloween campaign connecting costumes, trick-or-treating, music, food, and local vendors."],
     ["valentines-at-jackson-crossing","archive/1040973861390231.jpg","Valentine’s at Jackson Crossing","Jackson Crossing","Seasonal promotions for Valentine’s gifts, photography, and a gathering in the halls."],
     ["happy-harvest","archive/974588278028790.jpg","Happy Harvest","Jackson Crossing","Autumn event advertising and vendor coordination celebrating local makers, treats, and music."],
@@ -35,7 +36,6 @@ const projects: Record<Category, Array<[string,string,string,string,string]>> = 
   ],
   "Brand support": [
     ["welcome-home-organization","archive/1390509449770002.jpg","Welcome Home Organization","The Welcome Home Organization","A shared rebranding, website, and marketing project through Leadership Jackson, supported by community promotion and local partnerships."],
-    ["fox-candles-spotlight","957429079744710.jpg","Fox Candles Spotlight","Fox Candles","A small-business feature translating scent, craft, and personality into an approachable brand story."],
     ["ingendahl-acres-branding","archive/708070294680591.jpg","Ingendahl Acres Branding","Ingendahl Acres","Logo designs, stickers, and social graphics bringing a Maine farm's animals and personality into its visual identity."],
     ["serenity-support","957428889744729.jpg","Serenity Brand Support","Serenity Sober Living House","Clear, compassionate brand materials centered on dignity, recovery, and community."],
     ["fetch-market-launch","957426256411659.jpg","Fetch Market Launch Support","Fetch Market & Deli","Early-stage messaging and media support for a new downtown Brooklyn market concept."],

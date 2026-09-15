@@ -11,6 +11,10 @@ import styles from "./work.module.css";
 
 const categories = ["All work", ...workCategories];
 const galleryThumbnails: Partial<Record<string, { image: string; alt: string }>> = {
+  "heavenly-bakes-and-cakes": {
+    image: "/work/archive/1040973798056904.jpg",
+    alt: "Heavenly Bakes & Cakes advertisement showing gift boxes of chocolate-dipped strawberries with colorful coatings and decorations.",
+  },
   malloween: {
     image: "/mall%20o%20week%20initial.jpg",
     alt: "Visitors gathering around a costumed DJ at a Halloween-decorated booth during Malloween.",
@@ -54,13 +58,15 @@ export default function WorkGallery() {
               sizes="(max-width: 700px) 90vw, 25vw"
               style={item.category === "Software" && item.slug !== "lakeland-website"
                 ? { objectFit: "contain", background: "var(--mint)" }
-                : item.slug === "malloween"
-                  ? { objectPosition: "center 35%" }
-                  : item.slug === "alpha-koney-story" || item.slug === "valentines-at-jackson-crossing"
-                    ? { objectPosition: "center 20%" }
-                    : item.slug === "cascades-ribbon-cutting" || item.slug === "happy-harvest" || item.slug === "serenity-support" || item.slug === "welcome-home-organization"
-                      ? { objectPosition: "center top" }
-                      : undefined}
+                : item.slug === "heavenly-bakes-and-cakes"
+                  ? { objectPosition: "center 80%" }
+                  : item.slug === "malloween"
+                    ? { objectPosition: "center 35%" }
+                    : item.slug === "alpha-koney-story" || item.slug === "valentines-at-jackson-crossing"
+                      ? { objectPosition: "center 20%" }
+                      : item.slug === "cascades-ribbon-cutting" || item.slug === "happy-harvest" || item.slug === "serenity-support" || item.slug === "welcome-home-organization"
+                        ? { objectPosition: "center top" }
+                        : undefined}
             />
           </Link>
         </div>

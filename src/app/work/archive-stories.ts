@@ -235,15 +235,53 @@ export const archiveStories: Record<string, ArchiveStory> = {
       },
     ],
   },
-  "fox-candles-spotlight": {
-    summary: "A small-business spotlight introducing Fox Candles' fragrances, product range, and Jackson Crossing location through product photographs and a personal recommendation.",
-    heading: "Make a small discovery easier to find.",
-    introduction: ["Fox Candles' spotlight introduced a local maker in the halls at Jackson Crossing, near Ulta Beauty and Citi Trends. The feature paired a practical location description with photographs of the candles customers could browse.", "The range extends beyond candles to car scents and other fragrance products. A later post returned to that everyday use, sharing a personal experience with the car scents and inviting readers to visit."],
-    hero: ["1337786245042323", "Rows of labeled Fox Candles jars"],
-    services: ["Product features", "Local business promotion", "Social content"],
+  "heavenly-bakes-and-cakes": {
+    title: "Heavenly Bakes & Cakes Advertising",
+    summary: "Custom-cake and strawberry advertisements, a local-business spotlight, and holiday promotion for a Jackson baker.",
+    heading: "Put the baker's creativity on the menu.",
+    introduction: [
+      "Heavenly Bakes & Cakes makes custom cakes, hand-dipped strawberries, and other sweet treats. Whimsy's advertising brought that range into view, pairing the products with the details customers need to ask about an order.",
+      "The custom-cake ad gives a bright blue birthday cake the center of the page, with a bold headline and pink sunburst drawing attention to the baker's work. Our January 2025 business spotlight added a personal recommendation, recognizing the care behind the creations and encouraging readers to support a local baker.",
+    ],
+    hero: ["1021283623359255", "Custom-cake advertisement with a blue birthday cake and ordering details"],
+    services: ["Advertisement design", "Business storytelling", "Seasonal promotion"],
     sections: [
-      { kicker: "The product", title: "Give the range room to speak for itself.", paragraphs: ["The product photographs show rows of jars, recognizable labels, and a variety of fragrances. That is useful detail for a business whose appeal depends on choices a photograph cannot fully convey, such as scent.", "The accompanying copy supplies the missing context by describing the fragrance range and inviting customers to explore it in person. The visuals introduce the products; the words give people a reason to visit."], images: [["1337786278375653", "Fox Candles fragrance jars displayed together"]] },
-      { kicker: "An everyday connection", title: "Follow the product beyond the shelf.", paragraphs: ["A later photograph showed a Fox Candles car fragrance in use, alongside the business's packaging. The post described trying a new scent after enjoying the previous one, making the recommendation specific and personal.", "Together, the shelf view and in-use photograph tell a fuller small-business story. Customers can see what is available and how a local purchase can become part of an ordinary day."], images: [["1441182931369320", "Fox Candles car fragrance and branded packaging"]] },
+      {
+        kicker: "The business at a glance",
+        title: "Make the next step easy to find.",
+        paragraphs: [
+          "The companion business graphic gives the winged-cupcake identity room to stand out. Its pink rays connect it visually to the custom-cake ad, while the address, phone number, email, and website sit together in a clear contact block.",
+          "One piece introduces the business; the other shows what it can make. Both carry the practical information a customer needs to move from admiring a cake to discussing their own occasion.",
+        ],
+        images: [["1021283576692593", "Heavenly Bakes & Cakes business advertisement with its cupcake identity and contact details"]],
+      },
+      {
+        kicker: "The product detail",
+        title: "Let the treats make the invitation.",
+        paragraphs: [
+          "The strawberry advertisement takes a closer look at the variety: chocolate drizzle, colorful coatings, heart details, and decorated gift boxes. Angled panels bring several examples together without reducing the promotion to a list of flavors.",
+          "Soft pinks and illustrated cupcakes surround the product photographs, with the business name and contact information above. The design gives someone choosing a treat or gift a concrete example to ask about.",
+        ],
+        images: [["1040973798056904", "Chocolate-dipped strawberry advertisement with decorated gift boxes and pink bakery details"]],
+      },
+      {
+        kicker: "Seasonal promotion",
+        title: "Bring a local baker into the holiday plans.",
+        paragraphs: [
+          "For Holiday in the Halls at Jackson Crossing, Whimsy created a Heavenly Bakes & Cakes vendor promotion within the wider event campaign. Evergreen colors, ornaments, gifts, and candy-cane details connected the bakery to the Christmas outing.",
+          "Photographs of decorated pretzels, cakesicles, and cupcakes made the invitation specific. The copy suggested treats to enjoy or give as gifts, helping visitors picture a stop at the baker's display as part of their day in the halls.",
+        ],
+        images: [["1000952525392365", "Heavenly Bakes & Cakes vendor advertisement for Holiday in the Halls"]],
+      },
+      {
+        kicker: "The value for a local food business",
+        title: "Give the work behind each treat a wider audience.",
+        paragraphs: [
+          "A custom baker has more to offer than a product name. Showing the decoration, variety, and care behind the treats helps customers understand what they can request. Clear contact details give that interest somewhere to go.",
+          "For the business, product ads and event promotion provide different ways to be discovered. For customers, they offer ideas for celebrations, thoughtful gifts, and a chance to support someone making food in their own community.",
+        ],
+        images: [],
+      },
     ],
   },
   "serenity-support": {

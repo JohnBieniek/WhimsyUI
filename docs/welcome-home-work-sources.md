@@ -1,6 +1,6 @@
 # Welcome Home Organization case study
 
-Reviewed 2026-09-15. Replaces the unfocused Restaurant & Food Truck Advertising collection with one documented relationship. The replacement lives at `/work/welcome-home-organization` under Businesses. Restaurants now contains three selections and Businesses five; the full gallery remains alphabetically ordered.
+Reviewed 2026-09-15. Replaces the unfocused Restaurant & Food Truck Advertising collection with one documented relationship. The replacement lives at `/work/welcome-home-organization` under Businesses. A subsequent [Heavenly Bakes & Cakes replacement for Fox Candles](./heavenly-bakes-work-sources.md) restores four Restaurants and four Businesses selections; the full gallery remains alphabetically ordered.
 
 ## Project attribution
 
