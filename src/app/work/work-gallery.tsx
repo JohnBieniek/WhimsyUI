@@ -41,7 +41,19 @@ export default function WorkGallery() {
       {shown.map(item => <article key={item.slug}>
         <div>
           <Link className={styles.galleryImageLink} href={item.href} aria-label={`View ${item.title} case study`}>
-            <Image src={item.image} alt={item.alt} fill sizes="(max-width: 700px) 90vw, 25vw" style={item.category === "Software" ? { objectFit: "contain", background: "var(--mint)" } : item.slug === "alpha-koney-story" ? { objectPosition: "center 20%" } : undefined} />
+            <Image
+              src={item.image}
+              alt={item.alt}
+              fill
+              sizes="(max-width: 700px) 90vw, 25vw"
+              style={item.category === "Software"
+                ? { objectFit: "contain", background: "var(--mint)" }
+                : item.slug === "alpha-koney-story"
+                  ? { objectPosition: "center 20%" }
+                  : item.slug === "cascades-ribbon-cutting"
+                    ? { objectPosition: "center top" }
+                    : undefined}
+            />
           </Link>
         </div>
         <p className="tag">{item.category}</p>
