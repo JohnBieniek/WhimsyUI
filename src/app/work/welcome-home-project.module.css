@@ -29,17 +29,17 @@
 .deliverables li { border: 1px solid #ba8995; border-radius: 6px; padding: 8px 12px; font-size: 12px; font-weight: 700; }
 .websiteLink { display: inline-block; color: var(--who-gold); font-weight: 800; text-decoration: underline; text-underline-offset: 4px; line-height: 1.6; }
 
-.storyPair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; align-items: start; margin-bottom: 40px; }
+.storyPair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; align-items: stretch; margin-bottom: 40px; }
 .planning, .community { border-radius: 14px; overflow: hidden; }
 .planning { background: var(--who-cream); }
-.community { background: #eaf4f1; }
+.community { display: flex; flex-direction: column; background: #eaf4f1; }
 .community .kicker { color: var(--who-teal); }
 .planning > .figure img, .planning > .figure a { border-radius: 0; }
 .planning > .figure figcaption { padding-inline: 28px; }
 .cardCopy { padding: 28px; }
 .cardCopy p:last-child { margin-bottom: 0; }
 .page .cardCopy h2 { font-size: clamp(28px, 2.7vw, 38px); }
-.communityImages { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; padding: 0 28px 28px; }
+.communityImages { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; padding: 0 28px 28px; margin-top: auto; }
 
 .partners { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 36px; align-items: center; padding: 36px; margin-bottom: 40px; border-radius: 14px; background: #f8ecef; }
 .partners p:last-child { margin-bottom: 0; }
