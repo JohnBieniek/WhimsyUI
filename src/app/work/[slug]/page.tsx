@@ -8,6 +8,7 @@ import SoftwareProject from "../software-project";
 import { archiveStories } from "../archive-stories";
 import ArchiveProject from "../archive-project";
 import ValentinesProject from "../valentines-project";
+import HarvestProject from "../harvest-project";
 import styles from "../archive-project.module.css";
 import { ProjectCallToAction } from "../project-framing";
 
@@ -66,6 +67,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
   if (!study) notFound();
   const archiveStory = archiveStories[slug];
   if (slug === "valentines-at-jackson-crossing" && archiveStory) return <ValentinesProject story={archiveStory} title={study.title} />;
+  if (slug === "happy-harvest" && archiveStory) return <HarvestProject story={archiveStory} title={study.title} />;
   if (archiveStory) return <ArchiveProject story={archiveStory} title={study.title} />;
 
   const isLakeland = study.slug === "lakeland-cabaret";

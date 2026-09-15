@@ -1,0 +1,152 @@
+.page {
+  --chestnut: #462819;
+  --rust: #a34b25;
+  --gold: #e9b85e;
+  --cream: #fbf3e5;
+  --forest: #293c2b;
+}
+
+.page section { min-width: 0; }
+
+.introduction h2,
+.invitation h2,
+.music h2,
+.vendors h2,
+.takeaway h2 {
+  font-family: var(--font-display);
+  line-height: 1.08;
+  text-wrap: balance;
+  margin: 0 0 24px;
+}
+
+.introduction p,
+.invitation p,
+.music p,
+.vendors p,
+.takeaway p { line-height: 1.7; }
+
+.introduction {
+  position: relative;
+  overflow: hidden;
+  padding: 64px 48px 0;
+  border-radius: 20px 20px 0 0;
+  background: #f3d7a3;
+  color: var(--chestnut);
+  text-align: center;
+}
+
+.introContent { position: relative; }
+.headingContainer { container-type: inline-size; max-width: 980px; margin-inline: auto; }
+.headingContainer .headline { font-size: min(54px, 6.4cqw); }
+.headline span { display: block; }
+.introContent > p { max-width: 740px; margin: 0 auto 36px; font-size: 18px; }
+.leaf, .wheat { position: absolute; width: 180px; height: 180px; color: #9b571d; opacity: .15; pointer-events: none; }
+.leaf { left: -30px; top: 12px; transform: rotate(-25deg); }
+.wheat { right: -24px; top: 42px; transform: rotate(20deg); }
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 40px;
+  list-style: none;
+  margin: 0;
+  padding: 24px 0;
+  border-top: 1px solid #46281930;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.invitation {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: clamp(32px, 5vw, 68px);
+  align-items: center;
+  padding: 48px;
+  border-radius: 0 0 20px 20px;
+  background: var(--cream);
+  color: var(--chestnut);
+}
+
+.invitationCopy h2 { font-size: clamp(30px, 3vw, 44px); }
+.artwork { margin: 0; min-width: 0; }
+.artwork a { display: block; border-radius: 8px; }
+.artwork a:focus-visible { outline: 3px solid currentColor; outline-offset: 6px; }
+.artwork img { display: block; width: 100%; height: auto; border-radius: 8px; }
+.artwork figcaption { margin-top: 14px; font-size: 12px; line-height: 1.5; }
+.invitation .artwork img { box-shadow: 0 12px 32px #46281918; }
+
+.eventFacts { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 30px 0 0; padding-top: 24px; border-top: 2px solid var(--rust); }
+.eventFacts dt { margin-bottom: 6px; font-size: 12px; }
+.eventFacts dd { margin: 0; font-size: 16px; font-weight: 800; }
+
+.music {
+  margin-top: 36px;
+  padding: 56px 48px 40px;
+  border-radius: 20px;
+  border-top: 8px solid var(--gold);
+  background: var(--forest);
+  color: #fff5df;
+}
+
+.sectionHeader { text-align: center; margin-bottom: 36px; }
+.sectionHeader .headline { font-size: min(50px, 7cqw); }
+.sectionHeader > p { max-width: 800px; margin: 0 auto; font-size: 17px; }
+.music .headline { color: #f7cf86; }
+.musicArtwork { max-width: 640px; margin-inline: auto; }
+.music .artwork figcaption { color: #e0e6d7; }
+.musicNote { max-width: 800px; margin: 28px auto 0; text-align: center; font-size: 16px; }
+
+.vendors {
+  margin-top: 36px;
+  padding: 52px 48px 40px;
+  border-radius: 20px;
+  background: var(--cream);
+  color: var(--chestnut);
+}
+
+.vendors .headline { color: #87351f; }
+.vendorGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px 28px; }
+.vendorGrid .artwork figcaption { padding-bottom: 14px; border-bottom: 2px solid #c98b4b; font-size: 17px; font-weight: 700; }
+
+.takeaway {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  gap: 48px;
+  align-items: center;
+  margin: 36px 0;
+  padding: 44px 48px;
+  border-radius: 20px;
+  background: var(--gold);
+  color: var(--chestnut);
+}
+
+.takeaway h2 { font-size: clamp(30px, 3vw, 40px); margin: 0; }
+.takeaway p:first-child { margin-top: 0; }
+.takeaway p:last-child { margin-bottom: 0; }
+
+@media (max-width: 1000px) {
+  .introduction { padding: 48px 28px 0; }
+  .invitation { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 28px; padding: 32px 28px; }
+  .music, .vendors { padding: 40px 28px 32px; }
+  .takeaway { gap: 28px; padding: 32px 28px; }
+  .page > :global(.ready) { flex-direction: column; align-items: center; gap: 8px; max-width: 760px; margin-inline: auto; text-align: center; }
+}
+
+@media (max-width: 700px) {
+  .introduction { padding: 36px 16px 0; border-radius: 14px 14px 0 0; }
+  .introContent > p { font-size: 16px; margin-bottom: 24px; }
+  .leaf, .wheat { width: 120px; height: 120px; opacity: .1; }
+  .wheat { top: auto; bottom: 40px; }
+  .services { gap: 12px 24px; padding-block: 20px; font-size: 12px; }
+  .invitation { grid-template-columns: minmax(0, 1fr); padding: 24px 16px 32px; border-radius: 0 0 14px 14px; }
+  .invitationCopy h2 { font-size: 30px; }
+  .eventFacts { gap: 16px; margin-top: 24px; }
+  .eventFacts dd { font-size: 14px; }
+  .music, .vendors { margin-top: 24px; padding: 32px 16px 24px; border-radius: 14px; }
+  .sectionHeader { margin-bottom: 24px; }
+  .sectionHeader > p { font-size: 16px; }
+  .vendorGrid { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .vendorGrid .artwork figcaption { font-size: 16px; }
+  .takeaway { grid-template-columns: minmax(0, 1fr); gap: 24px; margin-block: 24px; padding: 28px 20px; border-radius: 14px; }
+}
