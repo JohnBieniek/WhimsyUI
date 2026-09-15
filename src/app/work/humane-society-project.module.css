@@ -42,6 +42,7 @@
 .celebrationIntro { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px; align-items: center; margin-bottom: 32px; }
 .celebrationIntro p:last-child { margin-bottom: 0; }
 .crowdGallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; align-items: start; }
+.crowdGallery img { aspect-ratio: 3 / 2; object-fit: cover; }
 .celebration figcaption { color: #edf4e2; }
 
 .community { margin-bottom: 36px; }
