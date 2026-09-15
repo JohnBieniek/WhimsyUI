@@ -69,6 +69,7 @@
 .halloween .purpleCard { background: #eee3f7; color: #2b2130; border-color: #dacde1; margin-bottom: 40px; }
 .halloween .purpleCard h2,
 .halloween .purpleCard :global(.kicker) { color: #44204f; }
+.halloween .purpleCard .twoLineHeading { font-size: min(40px, 5.4cqw); }
 
 @media (max-width: 700px) {
   .halloween .opening, .halloween .chapter { padding: 24px 20px; border-radius: 12px; }

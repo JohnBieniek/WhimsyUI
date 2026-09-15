@@ -29,7 +29,7 @@ export const archiveStories: Record<string, ArchiveStory> = {
       },
       {
         kicker: "The value of bringing people together",
-        title: "A memorable day for visitors. New connections for businesses.",
+        title: ["A memorable day for visitors.", "New connections for businesses."],
         card: "light-purple",
         paragraphs: [
           "For the shops and participating vendors, Malloween brought people into the halls and gave them reasons to browse, ask questions, and spend time with local businesses. Whimsy’s advertising introduced the offerings before the event, while the music and activities created opportunities to turn that interest into conversations and customer relationships.",
