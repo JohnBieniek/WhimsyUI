@@ -156,7 +156,7 @@ export const archiveStories: Record<string, ArchiveStory> = {
       },
       {
         kicker: "The gathering",
-        title: "Where Jackson’s business community connects.",
+        title: "New connections around a familiar table.",
         galleryLayout: "paired",
         paragraphs: [
           "The Chamber networking event gave the invitation a real setting. The entrance photograph connects Alpha's name and location with the event, while the wider view shows guests seated together and talking beneath the restaurant sign.",
