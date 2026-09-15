@@ -5,6 +5,7 @@ export const softwareProjects = [
     kind: "Business website",
     summary: "A responsive website bringing entertainment services, pricing, and event inquiries together in one recognizable brand.",
     image: "/work/lakeland%20cabaret/site.png",
+    thumbnail: "/work/lakeland%20cabaret/site-wide.png",
     alt: "Lakeland Cabaret website with entertainment services and event photography.",
     intro: "Lakeland Cabaret brings music, fire performance, photography, video, and wedding ceremonies together. We designed and built its public website to give those different services a clear home, with practical pricing information and a direct path to planning an event.",
     sections: [

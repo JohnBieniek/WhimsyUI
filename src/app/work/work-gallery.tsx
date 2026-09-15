@@ -18,7 +18,7 @@ const availableProjects = [
     image: archiveStories[item.slug] ? `/work/archive/${archiveStories[item.slug].hero[0]}.jpg` : `/work/${item.file}`,
     alt: archiveStories[item.slug]?.hero[1] ?? getImageAlt(`/work/${item.file}`),
   })),
-  ...softwareProjects.map(item => ({ ...item, category: "Software", client: item.kind })),
+  ...softwareProjects.map(item => ({ ...item, image: item.thumbnail ?? item.image, category: "Software", client: item.kind })),
 ];
 const projects = workCategories.flatMap(category => selectedWork[category].map(slug => {
   const project = availableProjects.find(item => item.slug === slug);
@@ -40,13 +40,13 @@ export default function WorkGallery() {
     <section className="portfolio-grid" aria-live="polite">
       {shown.map(item => <article key={item.slug}>
         <div>
-          <Link className={styles.galleryImageLink} href={item.href} aria-label={`View ${item.title} case study`}>
+          <Link className={`${styles.galleryImageLink}${item.slug === "lakeland-website" ? ` ${styles.lakelandThumbnail}` : ""}`} href={item.href} aria-label={`View ${item.title} case study`}>
             <Image
               src={item.image}
               alt={item.alt}
               fill
               sizes="(max-width: 700px) 90vw, 25vw"
-              style={item.category === "Software"
+              style={item.category === "Software" && item.slug !== "lakeland-website"
                 ? { objectFit: "contain", background: "var(--mint)" }
                 : item.slug === "alpha-koney-story" || item.slug === "valentines-at-jackson-crossing"
                   ? { objectPosition: "center 20%" }

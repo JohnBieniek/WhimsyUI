@@ -18,6 +18,11 @@
 .page :global(.filters) label span { padding: 10px 16px; }
 .page :global(.portfolio-grid) h2 { font-size: 22px; line-height: 1.2; }
 .galleryImageLink { display: block; position: relative; height: 100%; }
+.lakelandThumbnail { container-type: size; background: #0b3b6f; }
+.lakelandThumbnail img { object-fit: cover; object-position: 25% 25%; }
+@container (max-aspect-ratio: 8 / 5) {
+  .lakelandThumbnail img { object-fit: contain; }
+}
 .page .galleryImageLink:focus-visible { outline-offset: -4px; }
 .softwareGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
 .softwareGrid > article { display: flex; flex-direction: column; border: 1px solid #b9ded6; border-radius: 10px; overflow: hidden; }
