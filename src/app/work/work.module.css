@@ -3,8 +3,10 @@
 .page h2 { font-size: clamp(26px, 3vw, 40px); line-height: 1.15; letter-spacing: -.025em; margin: 0 0 20px; }
 .page h3 { font-size: 23px; line-height: 1.2; margin: 0 0 14px; }
 .page p { line-height: 1.65; }
-.hero { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; padding-bottom: 28px; }
-.hero h1 { margin-bottom: 0; }
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-areas: "kicker kicker" "title copy"; gap: 12px 60px; align-items: start; padding-bottom: 28px; }
+.hero > :global(.kicker) { grid-area: kicker; margin: 0; }
+.hero h1 { grid-area: title; margin-bottom: 0; }
+.heroCopy { grid-area: copy; min-width: 0; }
 .intro { font-size: 18px; margin: 0 0 24px; }
 .jumpLinks { display: flex; flex-wrap: wrap; gap: 14px 24px; }
 .jumpLinks a, .cardLink, .credit a { color: var(--purple); font-weight: 800; text-underline-offset: 4px; }
@@ -95,7 +97,8 @@
   .chapterPair { grid-template-columns: minmax(0, 1fr); gap: 0; }
   .projectOpening { grid-template-columns: minmax(0, 1fr); gap: 24px; }
   .storyOverview, .illustratedChapter { grid-template-columns: minmax(0, 1fr); gap: 20px; }
-  .hero { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .hero { grid-template-columns: minmax(0, 1fr); grid-template-areas: "kicker" "title" "copy"; gap: 12px; }
+  .heroCopy { margin-top: 12px; }
   .details { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 700px) {

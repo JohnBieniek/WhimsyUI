@@ -13,8 +13,9 @@ export default function WorkPage() {
   return (
     <main className={`inner-page shell ${styles.page}`}>
       <header className={styles.hero}>
-        <div><p className="kicker">Our work</p><h1>Ideas made real.<br />Work made useful.</h1></div>
-        <div>
+        <p className="kicker">Our work</p>
+        <h1>Ideas made real.<br />Work made useful.</h1>
+        <div className={styles.heroCopy}>
           <p className={styles.intro}>Websites people can navigate, software they can use, and campaigns that bring a community together. Explore the work behind our consulting, creative, and technical services.</p>
           <nav className={styles.jumpLinks} aria-label="Work sections"><a href="#campaigns">Browse our projects ?</a></nav>
         </div>
