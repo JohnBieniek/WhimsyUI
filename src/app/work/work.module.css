@@ -8,9 +8,8 @@
 .hero h1 { grid-area: title; margin-bottom: 0; }
 .heroCopy { grid-area: copy; min-width: 0; }
 .intro { font-size: 18px; margin: 0 0 24px; }
-.jumpLinks { display: flex; flex-wrap: wrap; gap: 14px 24px; }
-.jumpLinks a, .cardLink, .credit a { color: var(--purple); font-weight: 800; text-underline-offset: 4px; }
-.jumpLinks a:hover, .cardLink:hover, .credit a:hover { text-decoration: underline; }
+.cardLink, .credit a { color: var(--purple); font-weight: 800; text-underline-offset: 4px; }
+.cardLink:hover, .credit a:hover { text-decoration: underline; }
 .section { padding-block: 28px 40px; border-top: 1px solid var(--line); scroll-margin-top: 24px; }
 .section > p:not(:global(.kicker)) { max-width: 760px; margin: 0 0 28px; }
 .section > p.campaignIntro { max-width: none; }
