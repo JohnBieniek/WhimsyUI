@@ -23,7 +23,7 @@ const projects = workCategories.flatMap(category => selectedWork[category].map(s
   const project = availableProjects.find(item => item.slug === slug);
   if (!project) throw new Error(`Missing selected work project: ${slug}`);
   return { ...project, category };
-}));
+})).sort((a, b) => a.title.localeCompare(b.title, "en", { sensitivity: "base" }));
 
 export default function WorkGallery() {
   const [active, setActive] = useState("All work");
