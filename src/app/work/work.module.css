@@ -94,6 +94,15 @@
 .sonic .storyChapter .details article { background: var(--sonic-navy); }
 .sonic .details h3, .sonic .storyOverview :global(.kicker), .sonic .storyChapter :global(.kicker) { color: var(--sonic-aqua); }
 .sonic .illustratedChapter figcaption { color: var(--sonic-muted); }
+.listeningPair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; margin-bottom: 28px; }
+.listeningPair > .storyChapter { display: flex; flex-direction: column; min-width: 0; margin-bottom: 0; }
+.listeningPair > .storyChapter > h2 { font-size: clamp(26px, 2.5vw, 36px); text-wrap: balance; }
+.listeningPair .illustratedChapter { display: flex; flex: 1; flex-direction: column; gap: 28px; }
+.listeningPair .illustratedChapter > div { width: 100%; }
+.listeningPair .illustratedChapter p:last-child { margin-bottom: 0; }
+.listeningPair .illustratedChapter figure { width: 100%; margin-top: auto; }
+.listeningPair .chapterImage { aspect-ratio: 1; }
+.listeningPair .chapterImage img { padding: 0; }
 .sonic > :global(.ready) { border-color: var(--sonic-navy); border-top: 4px solid var(--sonic-aqua); background: var(--sonic-navy); color: var(--sonic-text); }
 .sonic :global(.button) { border-color: var(--sonic-aqua); background: var(--sonic-aqua); color: var(--sonic-navy); }
 .sonic :global(.button:hover) { border-color: var(--sonic-muted); background: var(--sonic-muted); }
@@ -102,6 +111,7 @@
 
 @media (max-width: 900px) {
   .chapterPair { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .listeningPair { grid-template-columns: minmax(0, 1fr); }
   .projectOpening { grid-template-columns: minmax(0, 1fr); gap: 24px; }
   .storyOverview, .illustratedChapter { grid-template-columns: minmax(0, 1fr); gap: 20px; }
   .hero { grid-template-columns: minmax(0, 1fr); grid-template-areas: "kicker" "title" "copy"; gap: 12px; }

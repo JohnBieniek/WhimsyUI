@@ -9,6 +9,7 @@ import { ProjectCallToAction, ProjectHeader } from "./project-framing";
 export default function SoftwareProject({ project }: { project: (typeof softwareProjects)[number] }) {
   const story = softwareStories[project.slug];
   const isWarden = project.slug === "whimsy-warden";
+  const isSonic = project.slug === "sonic-shielding";
   const hero = <a className={styles.projectImage} href={project.image} target="_blank" rel="noopener noreferrer" aria-label={`View full screenshot: ${project.alt}`}>
     <Image src={project.image} alt={project.alt} fill priority sizes={isWarden ? "(max-width: 900px) 100vw, 50vw" : "(max-width: 1080px) 100vw, 1000px"} />
   </a>;
@@ -29,7 +30,7 @@ export default function SoftwareProject({ project }: { project: (typeof software
     {chapter.points && <div className={styles.details}>{chapter.points.map(point => <article key={point.title}><h3>{point.title}</h3><p>{point.copy}</p></article>)}</div>}
   </section>);
   return (
-    <main className={`case-page shell ${styles.page} ${project.slug === "sonic-shielding" ? styles.sonic : ""}`}>
+    <main className={`case-page shell ${styles.page} ${isSonic ? styles.sonic : ""}`}>
       <Link className="back-link" href="/work#campaigns">← All work</Link>
       <ProjectHeader title={project.title} description={project.intro}>
         <a className="button" href={project.link}>{project.linkLabel} ↗</a>
@@ -46,6 +47,10 @@ export default function SoftwareProject({ project }: { project: (typeof software
         {chapters?.slice(0, 2)}
         <div className={styles.chapterPair}>{chapters?.slice(2, 4)}</div>
         {chapters?.slice(4)}
+      </> : isSonic ? <>
+        <div className={styles.listeningPair}>{chapters?.[0]}{chapters?.[2]}</div>
+        {chapters?.[1]}
+        {chapters?.slice(3)}
       </> : chapters}
       {project.slug === "multiverse-adventurers-guild" && <section className={styles.storyChapter}>
         <p className="kicker">On a smaller screen</p>
