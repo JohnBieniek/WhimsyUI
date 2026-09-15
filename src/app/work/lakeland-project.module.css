@@ -1,0 +1,69 @@
+.page {
+  --lakeland-navy: #0b3b6f;
+  --lakeland-blue: #5b8fd6;
+  --lakeland-gold: #ffbf00;
+  --lakeland-ink: #0b2f4a;
+  --lakeland-cream: #f7f1d8;
+  --lakeland-pale-blue: #dcecff;
+  color: var(--lakeland-ink);
+}
+
+.page :global(.lakeland-case-header),
+.page :global(.lakeland-card-copy h2),
+.page :global(.kicker),
+.page :global(.back-link) {
+  color: var(--lakeland-navy);
+}
+
+.page :global(.lakeland-project-card) {
+  border-color: var(--lakeland-blue);
+  background: var(--lakeland-cream);
+}
+
+.page :global(.lakeland-logo-layout) {
+  border-color: var(--lakeland-navy);
+  border-top: 4px solid var(--lakeland-gold);
+  background: var(--lakeland-navy);
+  color: #fff;
+}
+
+.page :global(.lakeland-logo-layout .kicker) {
+  color: var(--lakeland-gold);
+}
+
+.page :global(.lakeland-project-card:last-child) {
+  background: var(--lakeland-pale-blue);
+}
+
+.page :global(.lakeland-card-image),
+.page :global(.lakeland-site-card img),
+.page :global(.lakeland-photo-grid) {
+  background: var(--lakeland-navy);
+}
+
+.page > :global(.ready) {
+  border-color: var(--lakeland-navy);
+  border-top: 4px solid var(--lakeland-gold);
+  background: var(--lakeland-navy);
+  color: #fff;
+}
+
+.page :global(.button) {
+  border-color: var(--lakeland-gold);
+  background: var(--lakeland-gold);
+  color: var(--lakeland-ink);
+}
+
+.page :global(.button:hover) {
+  border-color: var(--lakeland-cream);
+  background: var(--lakeland-cream);
+}
+
+.page a:focus-visible {
+  outline: 3px solid var(--lakeland-navy);
+  outline-offset: 5px;
+}
+
+.page :global(.ready) a:focus-visible {
+  outline-color: var(--lakeland-gold);
+}

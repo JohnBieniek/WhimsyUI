@@ -11,6 +11,7 @@ import ArchiveProject from "../archive-project";
 import ValentinesProject from "../valentines-project";
 import HarvestProject from "../harvest-project";
 import styles from "../archive-project.module.css";
+import lakelandStyles from "../lakeland-project.module.css";
 import { ProjectCallToAction } from "../project-framing";
 
 export function generateStaticParams() {
@@ -78,7 +79,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
   const isBackToSchool = study.slug === "back-to-school-bash";
   const facts = study.facts;
 
-  return <main className={isHoliday ? "case-page shell" : `case-page shell ${styles.existing}`}>
+  return <main className={isHoliday ? "case-page shell" : `case-page shell ${styles.existing} ${isLakeland ? lakelandStyles.page : ""}`}>
     <Link className="back-link" href={isHoliday ? "/" : "/work"}>{isHoliday ? "← Home" : "← All work"}</Link>
     <header className={`case-header ${isLakeland ? "lakeland-case-header" : isHoliday ? "holiday-case-header" : isTeamHope ? "team-hope-case-header" : isBackToSchool ? "back-school-case-header" : ""}`.trim()}>
       <h1>{study.title}</h1>
