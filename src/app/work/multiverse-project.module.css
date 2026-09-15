@@ -49,7 +49,7 @@
 .rulebook > div > p:first-child { margin-top: 0; }
 .rulebook > div > p:last-child { margin-bottom: 0; }
 
-.library { padding: 0; border-radius: 12px; background: var(--guild-green); color: #fff; margin-bottom: 36px; }
+.library { padding: 0; border-radius: 12px; background: var(--guild-blue); color: #fff; margin-bottom: 36px; }
 .libraryCopy { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 40px; padding: 36px; }
 .libraryCopy > div > p:first-child { margin-top: 0; }
 .libraryCopy > div > p:last-child { margin-bottom: 0; }

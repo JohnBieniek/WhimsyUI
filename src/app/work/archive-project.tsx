@@ -40,18 +40,23 @@ export default function ArchiveProject({ story, title }: { story: ArchiveStory; 
         <figcaption>Script, direction, and casting: Whimsy. Filming and editing: Media Advantage.</figcaption>
       </figure> : <ArchiveImage item={story.hero} hero />}
     </section>
-    {story.sections.map(section => <section className={styles.chapter} key={Array.isArray(section.title) ? section.title.join(" ") : section.title}>
-      <header className={styles.chapterHeading}>
-        <div className={Array.isArray(section.title) ? styles.headingColumn : undefined}>
-          <p className="kicker">{section.kicker}</p>
-          <ArchiveHeading heading={section.title} />
-        </div>
-        <div>{section.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}</div>
-      </header>
-      {section.images.length > 0 && <div className={section.galleryLayout === "stacked" ? styles.stackedGallery : `${styles.gallery} ${section.images.length === 1 ? styles.single : ""}`}>
+    {story.sections.map(section => {
+      const imageLeft = section.layout === "image-left";
+      const gallery = section.images.length > 0 && <div className={section.galleryLayout === "stacked" ? styles.stackedGallery : `${styles.gallery} ${section.images.length === 1 ? styles.single : ""}`}>
         {section.images.map(item => <ArchiveImage item={item} key={item[0]} />)}
-      </div>}
-    </section>)}
+      </div>;
+      return <section className={`${styles.chapter} ${imageLeft ? styles.imageLeft : ""}`} key={Array.isArray(section.title) ? section.title.join(" ") : section.title}>
+        {imageLeft && gallery}
+        <header className={styles.chapterHeading}>
+          <div className={Array.isArray(section.title) ? styles.headingColumn : undefined}>
+            <p className="kicker">{section.kicker}</p>
+            <ArchiveHeading heading={section.title} />
+          </div>
+          <div>{section.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}</div>
+        </header>
+        {!imageLeft && gallery}
+      </section>;
+    })}
     <ProjectCallToAction />
   </main>;
 }

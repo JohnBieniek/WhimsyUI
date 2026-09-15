@@ -1,5 +1,5 @@
 type StoryHeading = string | [string, string];
-type StorySection = { kicker: string; title: StoryHeading; paragraphs: string[]; images: [string, string][]; galleryLayout?: "stacked" };
+type StorySection = { kicker: string; title: StoryHeading; paragraphs: string[]; images: [string, string][]; galleryLayout?: "stacked"; layout?: "image-left" };
 export type ArchiveStory = { title?: string; summary: string; heading: StoryHeading; introduction: string[]; hero: [string, string]; services: string[]; sections: StorySection[]; video?: string };
 
 export const archiveStories: Record<string, ArchiveStory> = {
@@ -112,7 +112,7 @@ export const archiveStories: Record<string, ArchiveStory> = {
     services: ["Event planning", "Media coordination", "Community promotion"],
     sections: [
       { kicker: "The preparation", title: "Start with what the community can use.", paragraphs: ["The planning post described a day of fun, food, and community resources. Bringing those elements together gives families multiple reasons to visit and lets an event introduce useful local services in a familiar setting.", "The preparation and media visit gave that invitation a starting point. Our role connected behind-the-scenes planning with the public conversation about the upcoming day."], images: [] },
-      { kicker: "Local media", title: "Connect the event with the wider story of the mall.", paragraphs: ["Sean Graney from Channel 6 visited to discuss Jackson Crossing, the new Cascades Humane Society location, and the upcoming Community Day. Those subjects gave the conversation a concrete local focus: new activity in the halls and ways the community could take part.", "Media coordination works best when there is a useful story to tell. Here, the event and the nonprofit's new location offered related reasons to pay attention to what was happening at Jackson Crossing."], images: [["1432439262243687", "Kay at Jackson Crossing during the Channel 6 visit"]] },
+      { kicker: "Local media", title: "Connect the event with the wider story of the mall.", paragraphs: ["Sean Graney from Channel 6 visited to discuss Jackson Crossing, the new Cascades Humane Society location, and the upcoming Community Day. Those subjects gave the conversation a concrete local focus: new activity in the halls and ways the community could take part.", "Media coordination works best when there is a useful story to tell. Here, the event and the nonprofit's new location offered related reasons to pay attention to what was happening at Jackson Crossing."], images: [["1432439262243687", "Kay at Jackson Crossing during the Channel 6 visit"]], layout: "image-left" },
     ],
   },
   "fetch-market-launch": {
