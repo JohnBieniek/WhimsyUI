@@ -1,5 +1,5 @@
 type StoryHeading = string | [string, string];
-type StorySection = { kicker: string; title: StoryHeading; paragraphs: string[]; images: [string, string][]; galleryLayout?: "stacked" | "centered" | "paired"; layout?: "image-left"; card?: "light-purple"; accent?: "activities" | "shopping" | "event" | "value" };
+type StorySection = { kicker: string; title: StoryHeading; paragraphs: string[]; images: [string, string][]; galleryLayout?: "stacked" | "centered" | "paired"; layout?: "image-left"; card?: "light-purple" | "light-mint"; accent?: "activities" | "shopping" | "event" | "value" };
 export type ArchiveStory = { title?: string; summary: string; heading: StoryHeading; introduction: string[]; hero: [string, string]; services: string[]; sections: StorySection[]; video?: string; theme?: "halloween" };
 
 export const archiveStories: Record<string, ArchiveStory> = {
@@ -171,6 +171,7 @@ export const archiveStories: Record<string, ArchiveStory> = {
       {
         kicker: "The value",
         title: ["Give the restaurant more", "reasons to be remembered."],
+        card: "light-mint",
         paragraphs: [
           "For Alpha, the advertising and event feature connect its name with both everyday dining and community gatherings. The work gives the restaurant a story to share with people who may know its location but have not considered it for their next occasion.",
           "For visitors and group organizers, that story makes the choice easier to picture: where to go, what the setting feels like, and how people can spend time together. A local business becomes part of the next plan.",
