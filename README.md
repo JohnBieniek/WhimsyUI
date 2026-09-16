@@ -1,5 +1,9 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Release version
+
+`package.json` is the source of truth for the displayed version. Use `npm version patch --no-git-tag-version` (or `minor`, `major`, or an explicit version) to increment it. The version lifecycle hook synchronizes `src/app/generated-version.ts`; commit that file with `package.json` and `package-lock.json`. Development and production builds also regenerate it, without changing the release number or deriving it from Git history.
+
 ## Getting Started
 
 First, run the development server:

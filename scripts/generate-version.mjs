@@ -1,20 +1,7 @@
-import { execFileSync } from "node:child_process";
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 
 const packageJson = JSON.parse(readFileSync(new URL("../package.json", import.meta.url), "utf8"));
-const [major, minor] = packageJson.version.split(".");
-
-let build = "0";
-try {
-  build = execFileSync("git", ["rev-list", "--count", "HEAD"], {
-    encoding: "utf8",
-    stdio: ["ignore", "pipe", "ignore"],
-  }).trim();
-} catch {
-  console.warn("Could not read the Git commit count; using build 0.");
-}
-
-const version = `${major}.${minor}.${build}`;
+const version = packageJson.version;
 const output = new URL("../src/app/generated-version.ts", import.meta.url);
 
 mkdirSync(new URL("../src/app/", import.meta.url), { recursive: true });
