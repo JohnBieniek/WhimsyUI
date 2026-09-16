@@ -63,7 +63,7 @@
 .mobileIntro > p:not(.kicker) { margin-bottom: 28px; }
 .phone { width: 100%; max-width: 330px; justify-self: center; }
 .phone img { aspect-ratio: 655 / 1411; object-fit: cover; object-position: top; }
-.credit { font-size: 14px; color: var(--guild-ink); margin-block: 28px; }
+.credit { font-size: 14px; color: var(--guild-ink); margin-block: 28px; text-align: center; }
 .credit a { color: var(--guild-blue); font-weight: 800; text-decoration: underline; text-underline-offset: 4px; }
 
 @media (min-width: 1101px) {
