@@ -72,7 +72,7 @@ export default function IngendahlProject({ story, title }: { story: ArchiveStory
     <section className={styles.value} aria-labelledby="ingendahl-value-title">
       <div>
         <p className={styles.kicker}>{value.kicker}</p>
-        <h2 id="ingendahl-value-title">{value.title}</h2>
+        <h2 id="ingendahl-value-title"><MobileHeadingText lines={["Give a small business", "something people can remember."]} size="min(30px, 5cqw)" /></h2>
       </div>
       <div>{value.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}</div>
     </section>
