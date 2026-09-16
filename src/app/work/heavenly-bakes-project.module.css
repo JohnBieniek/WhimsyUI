@@ -48,8 +48,8 @@
 @media (min-width: 1001px) {
   .opening > div { container-type: inline-size; }
   .page .opening h2 { font-size: min(44px, 4.6cqw); text-wrap: nowrap; }
-  .products .cardCopy { container-type: inline-size; }
-  .page .products .cardCopy h2 { font-size: min(38px, 5.2cqw); text-wrap: nowrap; }
+  .creativePair .cardCopy { container-type: inline-size; }
+  .page .creativePair .cardCopy h2 { font-size: min(38px, 5.2cqw); text-wrap: nowrap; }
 }
 
 @media (max-width: 1000px) {
