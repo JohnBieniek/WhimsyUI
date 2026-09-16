@@ -47,7 +47,8 @@ export default function ArchiveProject({ story, title }: { story: ArchiveStory; 
   return <main className={`case-page shell ${styles.page} ${isHalloween ? styles.halloween : ""}`}>
     <Link className="back-link" href="/work">← All work</Link>
     <ProjectHeader title={story.title ?? title} description={story.summary}
-      mobileTitleLines={(story.title ?? title) === "Jackson County Student Art Show" ? ["Jackson County", "Student Art Show"] : undefined}
+      mobileTitleLines={(story.title ?? title) === "Jackson County Student Art Show" ? ["Jackson County", "Student Art Show"]
+        : (story.title ?? title) === "Malloween at Jackson Crossing" ? ["Malloween at", "Jackson Crossing"] : undefined}
       mobileTitleSize="min(50px, 7.5cqw)" />
     <section className={styles.opening}>
       {isHalloween && <HalloweenDecorations variant="intro" />}
