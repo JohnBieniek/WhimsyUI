@@ -93,3 +93,18 @@
 @media (max-width: 700px) {
   .services { justify-content: center; text-align: center; }
 }
+
+/* Compact spacing for phone layouts. */
+@media (max-width: 700px) {
+  .opening { padding-top: 24px; padding-bottom: 24px; }
+  .chapter { padding-top: 24px; padding-bottom: 24px; }
+  .chapterHeading { margin-bottom: 24px; }
+  .chapter:is(.purpleCard, .mintCard) { padding-top: 24px; padding-bottom: 24px; margin-bottom: 24px; }
+  .chapter:is(.purpleCard, .mintCard) { margin-bottom: 24px; }
+  .opening { padding-bottom: 24px; }
+  .chapter { padding-top: 24px; padding-bottom: 24px; }
+  .halloween .opening,
+.halloween .chapter { margin-bottom: 24px; }
+  .halloween .purpleCard { margin-bottom: 24px; }
+  .halloween .purpleCard { margin-bottom: 24px; }
+}

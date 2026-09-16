@@ -4,7 +4,7 @@ import { CreatorCredit } from "../creator-credit";
 import { softwareProjects } from "./software-projects";
 import { softwareStories } from "./software-stories";
 import styles from "./work.module.css";
-import { ProjectCallToAction, ProjectHeader } from "./project-framing";
+import { MobileHeadingText, ProjectCallToAction, ProjectHeader } from "./project-framing";
 
 export default function SoftwareProject({ project }: { project: (typeof softwareProjects)[number] }) {
   const story = softwareStories[project.slug];
@@ -14,12 +14,18 @@ export default function SoftwareProject({ project }: { project: (typeof software
     <Image src={project.image} alt={project.alt} fill priority sizes={isWarden ? "(max-width: 1279px) 100vw, 50vw" : "(max-width: 1080px) 100vw, 1000px"} />
   </a>;
   const overview = story && <section className={styles.storyOverview} aria-labelledby="project-brief-title">
-    <div><p className="kicker">The project</p><h2 id="project-brief-title">{story.title}</h2></div>
+    <div><p className="kicker">The project</p><h2 id="project-brief-title">{isSonic ? <MobileHeadingText lines={["More control over the sound", "coming from a browser."]} size="min(30px, 5cqw)" /> : isWarden ? <MobileHeadingText lines={["Know when an application", "needs attention."]} size="min(30px, 5cqw)" /> : story.title}</h2></div>
     <div>{story.overview.map(paragraph => <p key={paragraph}>{paragraph}</p>)}</div>
   </section>;
   const chapters = story?.chapters.map((chapter, index) => <section className={`${styles.storyChapter} ${isWarden && index === 0 ? styles.mintChapter : ""}`} key={chapter.title} aria-labelledby={`chapter-${index}`}>
-    <p className="kicker">{chapter.kicker}</p>
-    <h2 id={`chapter-${index}`}>{chapter.title}</h2>
+    <p className={`kicker ${chapter.kicker === "Privacy and practical delivery" ? styles.mobileSingleLineKicker : ""}`}>{chapter.kicker}</p>
+    <h2 id={`chapter-${index}`}>{isWarden && index === 0
+      ? <MobileHeadingText lines={["Check several services without", "waiting on the slowest one."]} size="min(30px, 4.5cqw)" />
+      : isWarden && index === 2
+        ? <MobileHeadingText lines={["Read the whole system,", "then focus on a service."]} />
+        : isWarden && index === 3
+          ? <MobileHeadingText lines={["Test changes without duplicating", "production incidents."]} size="min(30px, 4.3cqw)" />
+          : chapter.title}</h2>
     <div className={chapter.image && chapter.image !== project.image ? styles.illustratedChapter : styles.chapterCopy}>
       <div>{chapter.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}</div>
       {chapter.image && chapter.image !== project.image && <figure>

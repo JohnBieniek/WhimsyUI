@@ -382,3 +382,22 @@
     padding: 24px 0 16px;
   }
 }
+
+/* Compact spacing for phone layouts. */
+@media (max-width: 700px) {
+  .hero { padding-block: 10px 24px; }
+  .story { padding-block: 24px 24px; }
+  .team { padding-top: 24px; padding-bottom: 24px; }
+  .services { padding-block: 24px; }
+  .sectionHeader { margin-bottom: 24px; }
+  .serviceGrid article { padding-top: 24px; padding-bottom: 24px; }
+  .community { padding-top: 24px; padding-bottom: 24px; }
+  .communityHeader { margin-bottom: 24px; }
+  .cta { padding-top: 24px; }
+  .hero { padding-block: 0 24px; }
+  .community { padding-top: 24px; padding-bottom: 24px; }
+  .story { padding-block: 24px 24px; }
+  .team,
+  .community { padding-top: 24px; padding-bottom: 24px; }
+  .services { padding-block: 24px; }
+}

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Flower2, Gift, Heart, Mail, Sparkles } from "lucide-react";
 import type { ArchiveStory } from "./archive-stories";
 import dimensions from "./archive-images.json";
-import { ProjectCallToAction, ProjectHeader } from "./project-framing";
+import { MobileHeadingText, ProjectCallToAction, ProjectHeader } from "./project-framing";
 import styles from "./valentines-project.module.css";
 
 function ValentineDecorations({ theme }: { theme: "intro" | "gifts" | "photography" | "takeaway" }) {
@@ -40,7 +40,7 @@ export default function ValentinesProject({ story, title }: { story: ArchiveStor
 
   return <main className={`case-page shell ${styles.page}`}>
     <Link className="back-link" href="/work">← All work</Link>
-    <ProjectHeader title={title} description={story.summary} />
+    <ProjectHeader title={title} description={story.summary} mobileTitleLines={["Valentine’s at", "Jackson Crossing"]} mobileTitleSize="min(50px, 7.5cqw)" />
 
     <section className={styles.introduction}>
       <ValentineDecorations theme="intro" />
@@ -56,7 +56,7 @@ export default function ValentinesProject({ story, title }: { story: ArchiveStor
         <CampaignArtwork item={story.hero} caption="Peggy’s Custom Floral Designs · February 2025" />
       </div>
       <div className={styles.giftCopy}>
-        <h2>{gifts.title}</h2>
+        <h2><MobileHeadingText lines={["Show the gift, then explain", "where to find it."]} size="min(30px, 5cqw)" /></h2>
         <p>{gifts.paragraphs[0]}</p>
         <div className={styles.visitDetails}>
           <h3>A clear plan for a visit</h3>
@@ -86,7 +86,7 @@ export default function ValentinesProject({ story, title }: { story: ArchiveStor
 
     <section className={styles.takeaway}>
       <ValentineDecorations theme="takeaway" />
-      <div><p className={styles.eyebrow}>The common thread</p><h2>A personal reason to visit.</h2></div>
+      <div><p className={styles.eyebrow}>The common thread</p><h2><MobileHeadingText lines={["A personal reason to visit."]} size="min(30px, 5.5cqw)" /></h2></div>
       <div>
         <p>{photography.paragraphs[1]}</p>
         <p>For businesses, that means a clear way to introduce an offer. For visitors, it means knowing what’s available, where to find it, and how to make it part of their day.</p>

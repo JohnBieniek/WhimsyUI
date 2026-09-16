@@ -42,6 +42,9 @@
 .detailImage img { object-fit: contain; padding: 16px; }
 .detailImage figcaption { margin-top: 12px; line-height: 1.5; }
 .credit { font-size: 14px; margin-bottom: 28px; text-align: center; }
+@media (max-width: 700px) {
+  .credit a { display: block; }
+}
 .storyOverview { display: grid; grid-template-columns: 1fr 1.35fr; gap: 40px; padding: 28px; margin-bottom: 36px; background: var(--mint); border-left: 6px solid var(--purple); }
 .storyOverview p:first-child, .storyChapter p:first-child { margin-top: 0; }
 .storyOverview p:last-child { margin-bottom: 0; }
@@ -75,7 +78,9 @@
 .chapterImage img { object-fit: contain; padding: 12px; }
 .illustratedChapter figcaption { font-size: 14px; line-height: 1.5; margin-top: 12px; }
 .storyChapter > .details { margin-top: 24px; }
-.cta { display: flex; align-items: center; flex-wrap: wrap; justify-content: space-between; gap: 24px; padding: 28px; background: var(--mint); border-radius: 10px; margin-bottom: 28px; }
+.cta { display: flex; align-items: center; flex-wrap: wrap; justify-content: space-between; gap: 24px; padding: 28px; background: #eee3f7; border-radius: 10px; margin-bottom: 28px; }
+.cta :global(.button) { background: var(--mint-strong); border-color: var(--mint-strong); color: var(--purple); }
+.cta :global(.button:hover) { background: #8acabc; border-color: #8acabc; }
 .cta h2 { margin-bottom: 0; }
 .cta p { margin: 12px 0 0; }
 .page a:focus-visible { outline: 3px solid var(--purple); outline-offset: 4px; }
@@ -107,6 +112,9 @@
 .sonic .section { border-top-color: var(--sonic-border); }
 .sonic .storyChapter { padding: 32px; margin-bottom: 28px; border: 1px solid var(--sonic-border); border-radius: 12px; background: var(--sonic-panel); color: var(--sonic-text); }
 .sonic .chapterCopy { max-width: none; }
+@media (max-width: 700px) {
+  .sonic .mobileSingleLineKicker { font-size: min(13px, 3.1vw); white-space: nowrap; }
+}
 .sonic .details article { border-top-color: var(--sonic-aqua); background: var(--sonic-raised); color: var(--sonic-text); }
 .sonic .storyChapter .details article { background: var(--sonic-navy); }
 .sonic .details h3, .sonic .storyOverview :global(.kicker), .sonic .storyChapter :global(.kicker) { color: var(--sonic-aqua); }
@@ -156,4 +164,24 @@
   .cardCopy, .cta { padding: 20px; }
   .section { padding-block: 24px 28px; }
   .detailImage > div { aspect-ratio: 4 / 3; }
+}
+
+/* Compact spacing for phone layouts. */
+@media (max-width: 700px) {
+  .hero { padding-bottom: 24px; }
+  .section { padding-block: 24px 24px; }
+  .section > p:not(:global(.kicker)) { margin-bottom: 24px; }
+  .campaignHeader > p.campaignIntro { margin-bottom: 24px; }
+  .credit { margin-bottom: 24px; }
+  .storyOverview { padding-top: 24px; padding-bottom: 24px; margin-bottom: 24px; }
+  .projectOpening { margin-bottom: 24px; }
+  .storyChapter { padding-block: 24px; }
+  .chapterPair { margin-bottom: 24px; }
+  .chapterPair > .storyChapter { padding-top: 24px; padding-bottom: 24px; }
+  .mintChapter { padding-top: 24px; padding-bottom: 24px; margin-bottom: 24px; }
+  .cta { padding-top: 24px; padding-bottom: 24px; margin-bottom: 24px; }
+  .sonic .storyChapter { padding-top: 24px; padding-bottom: 24px; margin-bottom: 24px; }
+  .listeningPair { margin-bottom: 24px; }
+  .campaignHeader { margin-bottom: 24px; }
+  .section { padding-block: 24px 24px; }
 }

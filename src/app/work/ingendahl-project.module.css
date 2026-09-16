@@ -70,3 +70,16 @@
 @media (max-width: 700px) {
   .services { justify-content: center; text-align: center; }
 }
+
+/* Compact spacing for phone layouts. */
+@media (max-width: 700px) {
+  .opening { padding-block: 24px 24px; }
+  .stickers { padding-top: 24px; padding-bottom: 24px; margin-bottom: 24px; }
+  .graphics { margin-bottom: 24px; }
+  .event { margin-bottom: 24px; padding-top: 24px; }
+  .value { padding-top: 24px; padding-bottom: 24px; margin-bottom: 24px; }
+  .stickers, .value { padding-top: 24px; padding-bottom: 24px; }
+  .opening { padding-block: 24px 24px; }
+  .stickers, .graphics { margin-bottom: 24px; }
+  .event { margin-bottom: 24px; }
+}

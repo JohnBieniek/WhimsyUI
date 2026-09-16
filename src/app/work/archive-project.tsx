@@ -35,7 +35,11 @@ function ArchiveHeading({ heading }: { heading: ArchiveStory["heading"] }) {
               ? ["Give the celebration its", "own supporting cast."]
               : heading === "Give the activities their own invitation."
                 ? ["Give the activities", "their own invitation."]
-                : undefined;
+                : heading === "Turn useful conversations into practical next steps."
+                  ? ["Turn useful conversations", "into practical next steps."]
+                  : heading === "Show the journey behind the counter."
+                    ? ["Show the journey", "behind the counter."]
+                    : undefined;
   if (mobileLines) return <h2 className={styles.mobileTwoLineHeading}>
     {mobileLines.map((line, index) => <span key={line}>{index > 0 ? " " : ""}{line}</span>)}
   </h2>;
@@ -50,7 +54,9 @@ export default function ArchiveProject({ story, title }: { story: ArchiveStory; 
     <Link className="back-link" href="/work">← All work</Link>
     <ProjectHeader title={story.title ?? title} description={story.summary}
       mobileTitleLines={(story.title ?? title) === "Jackson County Student Art Show" ? ["Jackson County", "Student Art Show"]
-        : (story.title ?? title) === "Malloween at Jackson Crossing" ? ["Malloween at", "Jackson Crossing"] : undefined}
+        : (story.title ?? title) === "Malloween at Jackson Crossing" ? ["Malloween at", "Jackson Crossing"]
+          : (story.title ?? title) === "Serenity Consulting & Community Support" ? ["Serenity Consulting", "& Community Support"]
+            : (story.title ?? title) === "Sisters Smoothies Feature" ? ["Sisters Smoothies", "Feature"] : undefined}
       mobileTitleSize="min(50px, 7.5cqw)" />
     <section className={styles.opening}>
       {isHalloween && <HalloweenDecorations variant="intro" />}

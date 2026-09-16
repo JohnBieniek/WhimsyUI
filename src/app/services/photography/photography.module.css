@@ -271,3 +271,19 @@
     padding: 32px 20px;
   }
 }
+
+/* Compact spacing for phone layouts. */
+@media (max-width: 700px) {
+  .page { padding-bottom: 24px; }
+  .hero { padding-block: 0 24px; }
+  .coverage { padding-block: 24px 24px; }
+  .coverageGrid article { padding-top: 24px; padding-bottom: 24px; }
+  .planning { padding-block: 16px 24px; }
+  .included { margin-bottom: 24px; }
+  .cta { padding-top: 24px; padding-bottom: 24px; margin-bottom: 24px; }
+  .hero { padding-block: 0 24px; }
+  .coverage { padding-block: 24px 24px; }
+  .planning { padding-block: 0 24px; }
+  .included { margin-bottom: 24px; }
+  .cta { padding-top: 24px; padding-bottom: 24px; }
+}

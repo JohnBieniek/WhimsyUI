@@ -65,6 +65,9 @@
 .phone img { aspect-ratio: 655 / 1411; object-fit: cover; object-position: top; }
 .credit { font-size: 14px; color: var(--guild-ink); margin-block: 28px; text-align: center; }
 .credit a { color: var(--guild-blue); font-weight: 800; text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width: 700px) {
+  .credit a { display: block; }
+}
 
 @media (min-width: 1101px) {
   .heroImage { position: relative; align-self: stretch; }
@@ -100,4 +103,23 @@
   .screenshot figcaption { padding: 10px 12px; }
   .mobileCard { grid-template-columns: minmax(0, 1fr); gap: 28px; }
   .phone { width: min(78%, 280px); }
+}
+
+/* Compact spacing for phone layouts. */
+@media (max-width: 700px) {
+  .overview { margin-bottom: 24px; }
+  .overviewCopy { padding-top: 24px; padding-bottom: 24px; }
+  .capabilities { padding-top: 24px; padding-bottom: 24px; margin-bottom: 24px; }
+  .capabilities > header { margin-bottom: 24px; }
+  .featureCard { padding-top: 24px; padding-bottom: 24px; margin-bottom: 24px; }
+  .commandPoints { margin-top: 24px; }
+  .rulebook { padding-top: 24px; padding-bottom: 24px; margin-bottom: 24px; }
+  .library { margin-bottom: 24px; }
+  .libraryCopy { padding-top: 24px; padding-bottom: 24px; }
+  .mobileCard { padding-top: 24px; padding-bottom: 24px; margin-bottom: 24px; }
+  .mobileIntro > p:not(.kicker) { margin-bottom: 24px; }
+  .credit { margin-block: 24px; }
+  .capabilities, .featureCard, .rulebook, .libraryCopy, .mobileCard { padding-top: 24px; padding-bottom: 24px; }
+  .featureColumn + .featureColumn { padding-top: 24px; }
+  .commandPoints { margin-top: 24px; }
 }

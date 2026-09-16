@@ -182,3 +182,22 @@
   .invitationCopy, .takeaway { container-type: inline-size; }
   .page .invitationCopy h2, .page .takeaway h2 { font-size: min(30px, 6cqw); }
 }
+
+/* Compact spacing for phone layouts. */
+@media (max-width: 700px) {
+  .introduction { padding-top: 24px; }
+  .invitation { padding-top: 24px; padding-bottom: 24px; }
+  .eventFacts { margin-top: 24px; }
+  .music { margin-top: 24px; padding-top: 24px; padding-bottom: 24px; }
+  .sectionHeader { margin-bottom: 24px; }
+  .vendors { margin-top: 24px; padding-top: 24px; padding-bottom: 24px; }
+  .takeaway { margin-top: 24px; margin-bottom: 24px; padding-top: 24px; padding-bottom: 24px; }
+  .introduction { padding-top: 24px; }
+  .invitation { padding-top: 24px; padding-bottom: 24px; }
+  .music, .vendors { padding-top: 24px; padding-bottom: 24px; }
+  .takeaway { padding-top: 24px; padding-bottom: 24px; }
+  .introduction { padding-top: 24px; }
+  .invitation { padding-bottom: 24px; }
+  .music, .vendors { padding-top: 24px; }
+  .takeaway { padding-top: 24px; padding-bottom: 24px; }
+}

@@ -68,3 +68,13 @@
 @media (max-width: 700px) {
   .services { justify-content: center; text-align: center; }
 }
+
+/* Compact spacing for phone layouts. */
+@media (max-width: 700px) {
+  .opening { padding-top: 24px; padding-bottom: 24px; margin-bottom: 24px; }
+  .creativePair { margin-bottom: 24px; }
+  .cardCopy { padding-top: 24px; padding-bottom: 24px; }
+  .holiday { padding-top: 24px; padding-bottom: 24px; margin-bottom: 24px; }
+  .value { padding-block: 24px; }
+  .opening, .creativePair, .holiday { margin-bottom: 24px; }
+}

@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { CreatorCredit } from "../creator-credit";
-import { ProjectCallToAction, ProjectHeader } from "./project-framing";
+import { MobileHeadingText, ProjectCallToAction, ProjectHeader } from "./project-framing";
 import { softwareProjects } from "./software-projects";
 import { softwareStories } from "./software-stories";
 import styles from "./multiverse-project.module.css";
@@ -37,7 +36,7 @@ export default function MultiverseProject({ project }: { project: (typeof softwa
 
   return <main className={`case-page shell ${styles.page}`}>
     <Link className="back-link" href="/work">← All work</Link>
-    <ProjectHeader title={project.title} description={project.intro}>
+    <ProjectHeader title={project.title} description={project.intro} mobileTitleLines={["Multiverse", "Adventurers Guild"]} mobileTitleSize="min(50px, 7cqw)">
       <a className={`button ${styles.visitButton}`} href={project.link} target="_blank" rel="noopener noreferrer">{project.linkLabel} ↗</a>
     </ProjectHeader>
 
@@ -45,7 +44,7 @@ export default function MultiverseProject({ project }: { project: (typeof softwa
       <Screenshot screen={screens.home} alt={project.alt} preload className={styles.heroImage} sizes="(max-width: 1100px) 100vw, 55vw" />
       <div className={styles.overviewCopy}>
         <p className={styles.kicker}>The project</p>
-        <h2 className={styles.heading} id="project-brief-title">{story.title}</h2>
+        <h2 className={styles.heading} id="project-brief-title"><MobileHeadingText lines={["A complete game, with a", "place for every player."]} /></h2>
         {story.overview.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
       </div>
     </section>
@@ -62,7 +61,7 @@ export default function MultiverseProject({ project }: { project: (typeof softwa
         <article className={styles.featureColumn} aria-labelledby="accessible-interaction-title">
           <div className={styles.featureCopy}>
             <p className={styles.kicker}>{accessibility.kicker}</p>
-            <h2 className={styles.heading} id="accessible-interaction-title">{accessibility.title}</h2>
+            <h2 className={styles.heading} id="accessible-interaction-title"><MobileHeadingText lines={["A dependable way to speak,", "listen, and play."]} size="min(30px, 5cqw)" /></h2>
             {accessibility.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
           </div>
           <Screenshot screen={screens.command} alt={accessibility.alt ?? ""} caption={accessibility.caption} />
@@ -71,7 +70,7 @@ export default function MultiverseProject({ project }: { project: (typeof softwa
           <Screenshot screen={screens.character} alt={characters.alt ?? ""} caption={characters.caption} />
           <div className={styles.featureCopy}>
             <p className={styles.kicker}>{characters.kicker}</p>
-            <h2 className={styles.heading} id="character-management-title">{characters.title}</h2>
+            <h2 className={styles.heading} id="character-management-title"><MobileHeadingText lines={["A character sheet that", "does the work with you."]} /></h2>
             {characters.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
           </div>
         </article>
@@ -82,13 +81,13 @@ export default function MultiverseProject({ project }: { project: (typeof softwa
     </section>
 
     <section className={styles.rulebook} aria-labelledby="connected-rulebook-title">
-      <header><p className={styles.kicker}>{rulebook.kicker}</p><h2 className={styles.heading} id="connected-rulebook-title">{rulebook.title}</h2></header>
+      <header><p className={styles.kicker}>{rulebook.kicker}</p><h2 className={styles.heading} id="connected-rulebook-title"><MobileHeadingText lines={["Keep the rulebook connected", "as it grows."]} size="min(30px, 5cqw)" /></h2></header>
       <div>{rulebook.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}</div>
     </section>
 
     <section className={styles.library} aria-labelledby="responsive-delivery-title">
       <header className={styles.libraryCopy}>
-        <div><p className={styles.kicker}>{responsive.kicker}</p><h2 className={styles.heading} id="responsive-delivery-title">{responsive.title}</h2></div>
+        <div><p className={styles.kicker}>{responsive.kicker}</p><h2 className={styles.heading} id="responsive-delivery-title"><MobileHeadingText lines={["Bring the reference and", "the tools to the table."]} /></h2></div>
         <div>{responsive.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}</div>
       </header>
       <Screenshot screen={screens.library} alt={responsive.alt ?? ""} caption={responsive.caption} />
@@ -97,7 +96,7 @@ export default function MultiverseProject({ project }: { project: (typeof softwa
     <section className={styles.mobileCard} aria-labelledby="mobile-play-title">
       <div className={styles.mobileIntro}>
         <p className={styles.kicker}>On a smaller screen</p>
-        <h2 className={styles.heading} id="mobile-play-title">The same game, ready to take to the table.</h2>
+        <h2 className={styles.heading} id="mobile-play-title"><MobileHeadingText lines={["The same game, ready", "to take to the table."]} /></h2>
         <p>Mobile views keep the game reference and character tools close at hand. These screens show how navigation, readable rules, and character details fit into the space a player has on a phone.</p>
         <Screenshot screen={screens.command} alt={accessibility.alt ?? ""} caption="Typed and spoken commands add accessibility." />
       </div>
@@ -106,7 +105,6 @@ export default function MultiverseProject({ project }: { project: (typeof softwa
     </section>
 
     <p className={styles.credit}>Software by John Bieniek. <a href={project.source}>Read the engineering overview ↗</a></p>
-    <CreatorCredit />
     <ProjectCallToAction />
   </main>;
 }

@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { ArchiveStory } from "./archive-stories";
 import dimensions from "./archive-images.json";
-import { ProjectCallToAction, ProjectHeader } from "./project-framing";
+import { MobileHeadingText, ProjectCallToAction, ProjectHeader } from "./project-framing";
 import styles from "./welcome-home-project.module.css";
 
 function ProjectImage({ item, preload = false, sizes = "(max-width: 700px) 100vw, 50vw" }: { item: [string, string]; preload?: boolean; sizes?: string }) {
@@ -23,7 +23,7 @@ export default function WelcomeHomeProject({ story, title }: { story: ArchiveSto
 
   return <main className={`case-page shell ${styles.page}`}>
     <Link className="back-link" href="/work">← All work</Link>
-    <ProjectHeader title={title} description={story.summary} />
+    <ProjectHeader title={title} description={story.summary} mobileTitleLines={["Welcome Home", "Organization"]} />
 
     <section className={styles.opening} aria-labelledby="who-project-title">
       <div>
@@ -55,14 +55,14 @@ export default function WelcomeHomeProject({ story, title }: { story: ArchiveSto
         <ProjectImage item={planning.images[0]} />
         <div className={styles.cardCopy}>
           <p className={styles.kicker}>{planning.kicker}</p>
-          <h2 id="who-planning-title">{planning.title}</h2>
+          <h2 id="who-planning-title"><MobileHeadingText lines={["Start with the people", "behind the mission."]} /></h2>
           {planning.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
         </div>
       </section>
       <section className={styles.community} aria-labelledby="who-community-title">
         <div className={styles.cardCopy}>
           <p className={styles.kicker}>{community.kicker}</p>
-          <h2 id="who-community-title">{community.title}</h2>
+          <h2 id="who-community-title"><MobileHeadingText lines={["Make getting involved", "feel possible."]} /></h2>
           {community.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
         </div>
         <div className={styles.communityImages}>
@@ -85,7 +85,7 @@ export default function WelcomeHomeProject({ story, title }: { story: ArchiveSto
     <section className={styles.value} aria-labelledby="who-value-title">
       <div>
         <p className={styles.kicker}>{value.kicker}</p>
-        <h2 id="who-value-title">{value.title}</h2>
+        <h2 id="who-value-title"><MobileHeadingText lines={["Give good work a clearer", "way to reach people."]} /></h2>
       </div>
       <div>{value.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}</div>
     </section>

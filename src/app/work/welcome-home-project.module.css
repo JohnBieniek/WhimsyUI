@@ -79,3 +79,16 @@
 @media (max-width: 700px) {
   .deliverables { justify-content: center; text-align: center; }
 }
+
+/* Compact spacing for phone layouts. */
+@media (max-width: 700px) {
+  .opening { padding-block: 24px 24px; }
+  .creative { padding-top: 24px; padding-bottom: 24px; margin-bottom: 24px; }
+  .storyPair { margin-bottom: 24px; }
+  .cardCopy { padding-top: 24px; padding-bottom: 24px; }
+  .partners { padding-top: 24px; padding-bottom: 24px; margin-bottom: 24px; }
+  .value { padding-top: 24px; padding-bottom: 24px; }
+  .creative, .partners { padding-top: 24px; padding-bottom: 24px; }
+  .opening { padding-block: 24px 24px; }
+  .creative, .storyPair, .partners { margin-bottom: 24px; }
+}

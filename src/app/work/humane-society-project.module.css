@@ -75,3 +75,17 @@
 @media (max-width: 700px) {
   .services { justify-content: center; text-align: center; }
 }
+
+/* Compact spacing for phone layouts. */
+@media (max-width: 700px) {
+  .introduction { padding-block: 24px 24px; }
+  .advertising { margin-bottom: 24px; }
+  .cardCopy { padding-top: 24px; padding-bottom: 24px; }
+  .celebration { padding-top: 24px; padding-bottom: 24px; margin-bottom: 24px; }
+  .celebrationIntro { margin-bottom: 24px; }
+  .community { margin-bottom: 24px; }
+  .communityHeader { margin-bottom: 24px; }
+  .cardCopy, .celebration { padding-top: 24px; padding-bottom: 24px; }
+  .introduction { padding-block: 24px 24px; }
+  .advertising, .celebration { margin-bottom: 24px; }
+}

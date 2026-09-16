@@ -93,3 +93,19 @@
   .place > div { container-type: inline-size; }
   .page .place h2 { font-size: min(28px, 6cqw); }
 }
+
+/* Compact spacing for phone layouts. */
+@media (max-width: 700px) {
+  .opening { padding-block: 24px 24px; }
+  .place { padding-top: 24px; padding-bottom: 24px; margin-bottom: 24px; }
+  .event { padding-block: 12px 24px; }
+  .savory { padding-top: 24px; padding-bottom: 24px; }
+  .sweets { padding-top: 24px; padding-bottom: 24px; margin-block: 12px 24px; }
+  .launch { padding-block: 24px; }
+  .archiveChapter { padding-block: 24px; }
+  .archiveHeader { margin-bottom: 24px; }
+  .takeaway { padding-top: 24px; padding-bottom: 24px; margin-bottom: 24px; }
+  .place, .sweets, .takeaway { padding-top: 24px; padding-bottom: 24px; }
+  .savory { padding-block: 20px 24px; }
+  .archiveChapter { padding-block: 24px; }
+}
