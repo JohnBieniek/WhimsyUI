@@ -72,3 +72,6 @@
   .advertising, .celebration { margin-bottom: 32px; }
   .crowdGallery, .animalGallery { gap: 28px; }
 }
+@media (max-width: 700px) {
+  .services { justify-content: center; text-align: center; }
+}

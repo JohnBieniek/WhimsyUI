@@ -175,3 +175,6 @@
   .vendorGrid .artwork figcaption { font-size: 16px; }
   .takeaway { grid-template-columns: minmax(0, 1fr); gap: 24px; margin-block: 24px; padding: 28px 20px; border-radius: 14px; }
 }
+@media (max-width: 700px) {
+  .services { justify-content: center; text-align: center; }
+}

@@ -75,3 +75,6 @@
   .community { padding-bottom: 28px; }
   .value > div { gap: 18px; }
 }
+@media (max-width: 700px) {
+  .services { justify-content: center; text-align: center; }
+}

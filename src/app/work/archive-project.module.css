@@ -86,3 +86,6 @@
   .halloween .opening, .halloween .chapter { padding: 24px 20px; border-radius: 12px; }
   .halloween .purpleCard { margin-bottom: 30px; }
 }
+@media (max-width: 700px) {
+  .services { justify-content: center; text-align: center; }
+}

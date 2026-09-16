@@ -76,3 +76,6 @@
   .partnerImages { gap: 14px; }
   .value { gap: 24px; }
 }
+@media (max-width: 700px) {
+  .deliverables { justify-content: center; text-align: center; }
+}
