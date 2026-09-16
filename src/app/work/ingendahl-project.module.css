@@ -83,3 +83,7 @@
   .stickers, .graphics { margin-bottom: 24px; }
   .event { margin-bottom: 24px; }
 }
+
+@media (min-width: 701px) and (max-width: 1000px) {
+  .opening, .stickers, .value { grid-template-columns: minmax(0, 1fr); }
+}

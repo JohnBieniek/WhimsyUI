@@ -185,3 +185,21 @@
   .campaignHeader { margin-bottom: 24px; }
   .section { padding-block: 24px 24px; }
 }
+
+@media (min-width: 1051px) and (max-width: 1600px) {
+  .page :global(.portfolio-grid) { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); }
+}
+@media (min-width: 701px) and (max-width: 1050px) {
+  .page :global(.portfolio-grid) h2 { font-size: 20px; }
+}
+@media (max-width: 479px) {
+  .hero h1 { font-size: clamp(26px, 7.2vw, 32px); }
+  .page :global(.portfolio-grid) h2 { font-size: clamp(18px, 5vw, 22px); }
+}
+
+@media (min-width: 901px) and (max-width: 1600px) {
+  .page[data-project="whimsy-warden"] .storyOverview > div:first-child { container-type: inline-size; }
+  .page[data-project="whimsy-warden"] .storyOverview h2 { font-size: clamp(26px, 5.5cqi, 40px); }
+  .page[data-project="whimsy-warden"] .chapterPair > .storyChapter:first-child { container-type: inline-size; }
+  .page[data-project="whimsy-warden"] .chapterPair > .storyChapter:first-child h2 { font-size: clamp(24px, 5.7cqi, 40px); }
+}

@@ -112,3 +112,12 @@
   .desktopTwoLineHeading { container-type: inline-size; }
   .desktopTwoLineHeading span { display: block; white-space: nowrap; font-size: min(48px, 6.2cqw); }
 }
+
+/* Only published stories opt in; the unlinked archive keeps its layout. */
+@media (min-width: 701px) and (max-width: 1600px) {
+  .page[data-project] .opening > div, .page[data-project] .chapterHeading > div:first-child { container-type: inline-size; min-width: 0; }
+  .page[data-project] :is(.opening, .chapterHeading) h2:not(.twoLineHeading):not(.desktopTwoLineHeading) { font-size: clamp(26px, 5.7cqi, 42px); line-height: 1.12; }
+}
+@media (min-width: 701px) and (max-width: 900px) {
+  .page[data-project] .opening, .page[data-project] .chapterHeading { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+}

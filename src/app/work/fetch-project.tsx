@@ -39,7 +39,7 @@ function FetchPhoto({ item, preload = false, className = "" }: { item: Photo; pr
 }
 
 export default function FetchProject({ story, title }: { story: ArchiveStory; title: string }) {
-  return <main className={`case-page shell ${styles.page}`}>
+  return <main data-project="fetch-market-launch" className={`case-page shell ${styles.page}`}>
     <Link className="back-link" href="/work">← All work</Link>
     <ProjectHeader title={title} description={story.summary} mobileTitleLines={["Fetch Market", "Launch"]} mobileTitleSize="min(64px, 10.5cqw)" />
 

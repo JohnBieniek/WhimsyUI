@@ -34,7 +34,7 @@ export default function MultiverseProject({ project }: { project: (typeof softwa
   const story = softwareStories[project.slug];
   const [accessibility, characters, rulebook, responsive] = story.chapters;
 
-  return <main className={`case-page shell ${styles.page}`}>
+  return <main data-project="multiverse-adventurers-guild" className={`case-page shell ${styles.page}`}>
     <Link className="back-link" href="/work">← All work</Link>
     <ProjectHeader title={project.title} description={project.intro} mobileTitleLines={["Multiverse", "Adventurers Guild"]} mobileTitleSize="min(50px, 7cqw)">
       <a className={`button ${styles.visitButton}`} href={project.link} target="_blank" rel="noopener noreferrer">{project.linkLabel} ↗</a>

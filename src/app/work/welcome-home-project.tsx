@@ -21,7 +21,7 @@ function ProjectImage({ item, preload = false, sizes = "(max-width: 700px) 100vw
 export default function WelcomeHomeProject({ story, title }: { story: ArchiveStory; title: string }) {
   const [creative, planning, community, partners, value] = story.sections;
 
-  return <main className={`case-page shell ${styles.page}`}>
+  return <main data-project="welcome-home-organization" className={`case-page shell ${styles.page}`}>
     <Link className="back-link" href="/work">← All work</Link>
     <ProjectHeader title={title} description={story.summary} mobileTitleLines={["Welcome Home", "Organization"]} />
 

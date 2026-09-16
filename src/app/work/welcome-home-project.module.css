@@ -92,3 +92,11 @@
   .opening { padding-block: 24px 24px; }
   .creative, .storyPair, .partners { margin-bottom: 24px; }
 }
+
+@media (min-width: 701px) and (max-width: 1600px) {
+  .value > div:first-child { container-type: inline-size; }
+  .page .value h2 { font-size: clamp(26px, 5.5cqi, 40px); }
+}
+@media (min-width: 701px) and (max-width: 900px) {
+  .opening, .storyPair, .value { grid-template-columns: minmax(0, 1fr); }
+}

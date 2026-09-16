@@ -109,3 +109,7 @@
   .savory { padding-block: 20px 24px; }
   .archiveChapter { padding-block: 24px; }
 }
+
+@media (min-width: 701px) and (max-width: 900px) {
+  .opening, .place, .takeaway { grid-template-columns: minmax(0, 1fr); }
+}

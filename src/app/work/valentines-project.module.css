@@ -214,3 +214,11 @@
   .gifts { padding-bottom: 24px; }
   .takeaway { padding-top: 24px; padding-bottom: 24px; }
 }
+
+@media (min-width: 701px) and (max-width: 1600px) {
+  .giftCopy { container-type: inline-size; }
+  .giftCopy h2 { font-size: clamp(26px, 6cqi, 40px); }
+}
+@media (min-width: 701px) and (max-width: 900px) {
+  .gifts, .takeaway { grid-template-columns: minmax(0, 1fr); }
+}

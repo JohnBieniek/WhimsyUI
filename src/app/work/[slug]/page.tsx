@@ -21,6 +21,7 @@ import holidayDecorations from "../holiday-decorations.module.css";
 import styles from "../archive-project.module.css";
 import lakelandStyles from "../lakeland-project.module.css";
 import { MobileHeadingText, ProjectCallToAction } from "../project-framing";
+import { selectedCategoryBySlug } from "../portfolio-selection";
 
 export function generateStaticParams() {
   return [...new Set([...caseStudies, ...softwareProjects].map(({ slug }) => slug))].map(slug => ({ slug }));
@@ -85,7 +86,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
   if (slug === "welcome-home-organization" && archiveStory) return <WelcomeHomeProject story={archiveStory} title={study.title} />;
   if (slug === "heavenly-bakes-and-cakes" && archiveStory) return <HeavenlyBakesProject story={archiveStory} title={study.title} />;
   if (slug === "miss-crossroads") return <MissCrossroadsProject title={study.title} description={study.summary} />;
-  if (archiveStory) return <ArchiveProject story={archiveStory} title={study.title} />;
+  if (archiveStory) return <ArchiveProject story={archiveStory} title={study.title} slug={selectedCategoryBySlug[slug] ? slug : undefined} />;
 
   const isLakeland = study.slug === "lakeland-cabaret";
   const isHoliday = study.slug === "holiday-in-the-halls";
@@ -93,7 +94,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
   const isBackToSchool = study.slug === "back-to-school-bash";
   const facts = study.facts;
 
-  return <main className={isHoliday ? "case-page shell" : `case-page shell ${styles.existing} ${isLakeland ? lakelandStyles.page : ""}`}>
+  return <main data-project={isHoliday || isLakeland || isTeamHope || isBackToSchool ? slug : undefined} className={isHoliday ? "case-page shell" : `case-page shell ${styles.existing} ${isLakeland ? lakelandStyles.page : ""}`}>
     <Link className="back-link" href="/work">← All work</Link>
     <header className={`case-header ${isLakeland ? "lakeland-case-header" : isHoliday ? "holiday-case-header" : isTeamHope ? "team-hope-case-header" : isBackToSchool ? "back-school-case-header" : ""}`.trim()}>
       <h1>{study.title}</h1>

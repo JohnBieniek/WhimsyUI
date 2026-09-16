@@ -38,7 +38,7 @@ function CampaignArtwork({ item, caption }: { item: [string, string]; caption: s
 export default function ValentinesProject({ story, title }: { story: ArchiveStory; title: string }) {
   const [gifts, photography] = story.sections;
 
-  return <main className={`case-page shell ${styles.page}`}>
+  return <main data-project="valentines-at-jackson-crossing" className={`case-page shell ${styles.page}`}>
     <Link className="back-link" href="/work">← All work</Link>
     <ProjectHeader title={title} description={story.summary} mobileTitleLines={["Valentine’s at", "Jackson Crossing"]} mobileTitleSize="min(50px, 7.5cqw)" />
 

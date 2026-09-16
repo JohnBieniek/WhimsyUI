@@ -36,7 +36,7 @@ export default function SoftwareProject({ project }: { project: (typeof software
     {chapter.points && <div className={styles.details}>{chapter.points.map(point => <article key={point.title}><h3>{point.title}</h3><p>{point.copy}</p></article>)}</div>}
   </section>);
   return (
-    <main className={`case-page shell ${styles.page} ${isSonic ? styles.sonic : ""}`}>
+    <main data-project={isSonic || isWarden ? project.slug : undefined} className={`case-page shell ${styles.page} ${isSonic ? styles.sonic : ""}`}>
       <Link className="back-link" href="/work#campaigns">← All work</Link>
       <ProjectHeader title={project.title} description={project.intro}>
         <a className="button" href={project.link}>{project.linkLabel} ↗</a>

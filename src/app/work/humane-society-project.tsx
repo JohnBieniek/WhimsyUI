@@ -21,7 +21,7 @@ function HumaneImage({ item, preload = false, sizes = "(max-width: 700px) 100vw,
 export default function HumaneSocietyProject({ story, title }: { story: ArchiveStory; title: string }) {
   const [advertising, opening, community] = story.sections;
 
-  return <main className={`case-page shell ${styles.page}`}>
+  return <main data-project="cascades-ribbon-cutting" className={`case-page shell ${styles.page}`}>
     <Link className="back-link" href="/work">← All work</Link>
     <ProjectHeader title={title} description={story.summary} mobileTitleLines={["Cascades Humane", "Society", "Grand Opening"]} />
 

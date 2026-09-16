@@ -89,3 +89,17 @@
   .introduction { padding-block: 24px 24px; }
   .advertising, .celebration { margin-bottom: 24px; }
 }
+
+/* Keep the copy readable before the phone layout takes over. */
+@media (min-width: 701px) and (max-width: 1600px) {
+  .introduction > div, .celebrationIntro > div, .communityHeader > div:first-child, .cardCopy { container-type: inline-size; }
+  .page :is(.introduction, .celebrationIntro, .communityHeader) h2 { font-size: clamp(26px, 5.25cqi, 40px); }
+  .introduction h2 > span > span { display: block; }
+  .page .cardCopy h3 { font-size: clamp(24px, 4.8cqi, 30px); }
+}
+@media (min-width: 701px) and (max-width: 1000px) {
+  .introduction, .adGrid, .celebrationIntro, .communityHeader { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 479px) {
+  .page .celebration h2 { font-size: 24px; }
+}

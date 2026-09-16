@@ -1,0 +1,393 @@
+/* The published portfolio opts in with data-project. Unlinked drafts retain
+   their existing layouts. The wide desktop composition is unchanged. */
+@media (min-width: 701px) and (max-width: 1600px) {
+  .case-page[data-project] > header h1 {
+    font-size: clamp(34px, 4.3vw, 68px);
+    line-height: 1.06;
+    text-wrap: balance;
+  }
+
+  .case-page[data-project="cascades-ribbon-cutting"] > header h1 > span > span:last-child {
+    display: block;
+  }
+
+  .article-page[data-service="ad-campaign"] .article-hero > div:first-child {
+    container-type: inline-size;
+    min-width: 0;
+  }
+
+  .article-page[data-service="ad-campaign"] .article-hero h1 {
+    font-size: min(68px, 11.5cqi);
+    white-space: nowrap;
+    line-height: 1.06;
+  }
+
+  .article-page[data-service="brand-advertising-plan"] .article-body > article {
+    container-type: inline-size;
+    min-width: 0;
+  }
+
+  .article-page[data-service="brand-advertising-plan"] .useful-work-title {
+    font-size: clamp(28px, 5cqi, 44px);
+    line-height: 1.12;
+  }
+
+  .article-page[data-service="brand-advertising-plan"] .useful-work-title > span {
+    display: block;
+  }
+
+  .services-page .service-cards > article {
+    padding: 24px 20px;
+    container-type: inline-size;
+  }
+
+  .services-page .service-cards h2 {
+    font-size: clamp(16px, 7cqi, 19px);
+    line-height: 1.2;
+    text-wrap: balance;
+    min-height: 2.4em;
+  }
+
+  .services-page .service-cards ul {
+    font-size: 14px;
+    line-height: 1.55;
+    margin-bottom: 20px;
+  }
+
+  .services-page .page-hero > div:first-child,
+  .contact-page .contact-intro {
+    container-type: inline-size;
+  }
+
+  .services-page .page-hero h1 {
+    font-size: clamp(38px, 10cqi, 68px);
+  }
+
+  .contact-page .contact-intro h1 {
+    font-size: clamp(38px, 8.5cqi, 68px);
+    text-wrap: balance;
+  }
+
+  /* Give section labels a full row rather than a narrow third column. */
+  [data-project="holiday-in-the-halls"] .holiday-partners > header,
+  [data-project="holiday-in-the-halls"] .holiday-live-story > header {
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    gap: 16px 32px;
+  }
+
+  [data-project="holiday-in-the-halls"] .holiday-partners > header > .kicker,
+  [data-project="holiday-in-the-halls"] .holiday-live-story > header > .kicker {
+    grid-column: 1 / -1;
+    margin: 0;
+  }
+
+  [data-project="holiday-in-the-halls"] .holiday-live-story > header > h2 {
+    grid-column: 1 / -1;
+  }
+
+  [data-project="holiday-in-the-halls"] .holiday-partners .holiday-two-line-title {
+    font-size: clamp(28px, 2.7vw, 40px);
+    line-height: 1.1;
+  }
+
+  [data-project="holiday-in-the-halls"] .holiday-story-opening,
+  [data-project="holiday-in-the-halls"] .holiday-thanks {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    min-height: 0;
+  }
+
+  [data-project="holiday-in-the-halls"] .holiday-story-hero {
+    min-height: 0;
+  }
+
+  [data-project="holiday-in-the-halls"] .holiday-story-opening {
+    background: var(--mint);
+  }
+
+  [data-project="holiday-in-the-halls"] .holiday-story-hero img {
+    object-fit: contain;
+  }
+
+  [data-project="holiday-in-the-halls"] .holiday-story-intro,
+  [data-project="holiday-in-the-halls"] .holiday-thanks > div,
+  [data-project="holiday-in-the-halls"] .holiday-invitation > header {
+    min-width: 0;
+    container-type: inline-size;
+    padding: clamp(28px, 3vw, 44px);
+  }
+
+  [data-project="holiday-in-the-halls"] .holiday-story-intro .holiday-two-line-title {
+    font-size: clamp(26px, 6.4cqi, 42px);
+    line-height: 1.1;
+  }
+
+  [data-project="holiday-in-the-halls"] .holiday-invitation .holiday-two-line-title {
+    font-size: clamp(26px, 5cqi, 40px);
+    line-height: 1.1;
+  }
+
+  [data-project="holiday-in-the-halls"] .holiday-thanks .holiday-two-line-title {
+    font-size: clamp(24px, 4.5cqi, 30px);
+    line-height: 1.15;
+  }
+
+  [data-project="holiday-in-the-halls"] .holiday-two-line-title span {
+    white-space: normal;
+  }
+
+  [data-project="back-to-school-bash"] .back-school-opening-copy {
+    container-type: inline-size;
+    padding: clamp(24px, 3vw, 44px);
+  }
+
+  [data-project="back-to-school-bash"] .back-school-opening-title {
+    font-size: clamp(24px, 4.7cqi, 30px) !important;
+  }
+
+  [data-project="back-to-school-bash"] .back-school-opening-title span {
+    white-space: normal;
+  }
+
+  [data-project="lakeland-cabaret"] .lakeland-card-copy {
+    padding: 28px;
+  }
+
+  [data-project="lakeland-cabaret"] .lakeland-card-copy h2 {
+    font-size: clamp(26px, 2.3vw, 36px);
+    line-height: 1.12;
+    text-wrap: balance;
+  }
+}
+
+/* These collages also exceeded the viewport just above the 1600px breakpoint. */
+@media (min-width: 701px) and (max-width: 1919px) {
+  .home-page .home-square-collage-desktop {
+    width: calc(100% + 50px);
+  }
+
+  .services-page .offset-square-collage-desktop {
+    left: auto;
+    right: -20px;
+    width: calc(51% + 160px);
+    transform: none;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1150px) {
+  .services-page .service-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1051px) and (max-width: 1600px) {
+  .home-page .home-tagline {
+    font-size: clamp(16px, 1.5vw, 22px);
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1050px) {
+  .home-header .nav-logo {
+    display: block;
+  }
+
+  .home-page .home-logo,
+  .home-page .home-logo-dots {
+    display: none;
+  }
+
+  .home-page .home-copy {
+    padding-top: 20px;
+  }
+}
+
+/* Tablet galleries can keep two images together without a long phone column. */
+@media (min-width: 701px) and (max-width: 800px) {
+  [data-project="back-to-school-bash"] .back-school-ad-grid,
+  [data-project="team-hope-walk"] .team-hope-action-grid,
+  [data-project="team-hope-walk"] .team-hope-education-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  [data-project="team-hope-walk"] .team-hope-education-grid figure:last-child {
+    grid-column: 1 / -1;
+    width: calc((100% - 18px) / 2);
+    justify-self: center;
+  }
+}
+
+@media (min-width: 1151px) and (max-width: 1600px) {
+  .services-page .service-cards {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    grid-auto-rows: auto;
+  }
+}
+
+@media (max-width: 1100px) {
+  .case-page[data-project] > .ready {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-width: 760px;
+    margin-inline: auto;
+    padding: 24px;
+    text-align: center;
+  }
+
+  .case-page[data-project] > .ready h2,
+  .case-page[data-project] > .ready p {
+    margin: 0;
+    white-space: normal;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1100px) {
+  .services-page > .page-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .services-page .page-hero > div:first-child {
+    width: 100%;
+  }
+
+  .services-page .page-hero h1 {
+    font-size: clamp(40px, 5.6vw, 60px);
+  }
+
+  .services-page .services-collage {
+    position: static;
+    width: min(100%, 720px);
+    margin-inline: auto;
+  }
+
+  .services-page .offset-square-collage-desktop {
+    display: none;
+  }
+
+  .services-page .offset-square-collage-mobile {
+    display: block;
+  }
+
+  [data-project="back-to-school-bash"] .back-school-opening {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  [data-project="back-to-school-bash"] .back-school-opening-art {
+    width: min(100%, 640px);
+    justify-self: center;
+  }
+
+  [data-project="back-to-school-bash"] .back-school-opening-copy {
+    padding: 32px;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1200px) {
+  [data-project="holiday-in-the-halls"] .holiday-story-opening,
+  [data-project="holiday-in-the-halls"] .holiday-invitation,
+  [data-project="holiday-in-the-halls"] .holiday-thanks {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  [data-project="holiday-in-the-halls"] .holiday-story-hero {
+    aspect-ratio: 1;
+    width: min(100%, 640px);
+    justify-self: center;
+  }
+
+  [data-project="holiday-in-the-halls"] .holiday-invitation > header {
+    grid-row: auto;
+  }
+
+  [data-project="holiday-in-the-halls"] .holiday-invitation > figure {
+    width: min(100%, 580px);
+    justify-self: center;
+  }
+
+  [data-project="holiday-in-the-halls"] .holiday-thanks figure {
+    width: min(100%, 640px);
+    justify-self: center;
+  }
+
+  [data-project="holiday-in-the-halls"] .holiday-partners > header {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (min-width: 801px) and (max-width: 1000px) {
+  [data-project="lakeland-cabaret"] .lakeland-project-card,
+  [data-project="lakeland-cabaret"] .lakeland-project-card.image-first,
+  [data-project="lakeland-cabaret"] .lakeland-project-card.lakeland-logo-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  [data-project="lakeland-cabaret"] .lakeland-project-card.image-first .lakeland-card-image {
+    order: 2;
+  }
+
+  [data-project="lakeland-cabaret"] .lakeland-logo-card {
+    aspect-ratio: 16 / 9;
+    min-height: 0;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 900px) {
+  [data-project="holiday-in-the-halls"] .holiday-partner-wall {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .contact-page .contact-intro h1 {
+    font-size: clamp(32px, 8.2vw, 46px);
+    text-wrap: balance;
+  }
+
+  [data-project="back-to-school-bash"] > header h1 {
+    font-size: clamp(30px, 8vw, 50px);
+    text-wrap: balance;
+  }
+
+  [data-project="holiday-in-the-halls"] .holiday-thanks .holiday-two-line-title {
+    font-size: clamp(22px, 5.5vw, 28px);
+    line-height: 1.15;
+    text-wrap: balance;
+  }
+
+  [data-project="holiday-in-the-halls"] .holiday-thanks > div {
+    padding: 24px 18px;
+  }
+
+  [data-project="holiday-in-the-halls"] .holiday-thanks .holiday-two-line-title span {
+    display: inline;
+    white-space: normal;
+  }
+
+  [data-project="holiday-in-the-halls"] .holiday-thanks .holiday-two-line-title span + span::before {
+    content: " ";
+  }
+}
+
+@media (max-width: 479px) {
+  .services-page .service-cards {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .services-page .service-cards > article {
+    padding: 24px;
+  }
+
+  .services-page .service-cards h2 {
+    line-height: 1.2;
+    text-wrap: balance;
+  }
+
+  .services-page .service-cards > article ul {
+    font-size: 14px;
+    line-height: 1.55;
+    margin-bottom: 20px;
+  }
+}

@@ -31,7 +31,7 @@ describe("Home", () => {
 
   it("renders work and contact as distinct pages", () => {
     const { unmount } = render(<WorkPage />);
-    expect(screen.getByRole("heading", { name: /campaigns built/i })).toBeVisible();
+    expect(screen.getByRole("heading", { name: /ideas made real/i })).toBeVisible();
     unmount();
 
     render(<ContactPage />);

@@ -123,3 +123,15 @@
   .featureColumn + .featureColumn { padding-top: 24px; }
   .commandPoints { margin-top: 24px; }
 }
+
+@media (min-width: 701px) and (max-width: 1600px) {
+  .libraryCopy > div:first-child, .overviewCopy, .mobileIntro { container-type: inline-size; }
+  .libraryCopy .heading { font-size: clamp(24px, 6cqi, 40px); }
+  .overviewCopy .heading { font-size: clamp(24px, 5.7cqi, 40px); }
+  .mobileIntro .heading { font-size: clamp(24px, 6cqi, 36px); }
+}
+@media (min-width: 701px) and (max-width: 1100px) {
+  .mobileCard { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .mobileIntro { grid-column: 1 / -1; }
+  .phone { width: min(100%, 280px); }
+}

@@ -48,9 +48,9 @@ function ArchiveHeading({ heading }: { heading: ArchiveStory["heading"] }) {
   </h2>;
 }
 
-export default function ArchiveProject({ story, title }: { story: ArchiveStory; title: string }) {
+export default function ArchiveProject({ story, title, slug }: { story: ArchiveStory; title: string; slug?: string }) {
   const isHalloween = story.theme === "halloween";
-  return <main className={`case-page shell ${styles.page} ${isHalloween ? styles.halloween : ""}`}>
+  return <main data-project={slug} className={`case-page shell ${styles.page} ${isHalloween ? styles.halloween : ""}`}>
     <Link className="back-link" href="/work">← All work</Link>
     <ProjectHeader title={story.title ?? title} description={story.summary}
       mobileTitleLines={(story.title ?? title) === "Jackson County Student Art Show" ? ["Jackson County", "Student Art Show"]

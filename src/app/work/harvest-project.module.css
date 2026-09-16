@@ -201,3 +201,10 @@
   .music, .vendors { padding-top: 24px; }
   .takeaway { padding-top: 24px; padding-bottom: 24px; }
 }
+
+@media (min-width: 701px) and (max-width: 1600px) {
+  .invitationCopy h2, .takeaway h2 { font-size: clamp(26px, 2.5vw, 40px); }
+}
+@media (min-width: 701px) and (max-width: 900px) {
+  .invitation, .takeaway { grid-template-columns: minmax(0, 1fr); }
+}

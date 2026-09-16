@@ -36,7 +36,7 @@ const vendorNames = ["Spoons, Rings & Other Bling", "Ashley Sweet Creations", "J
 export default function HarvestProject({ story, title }: { story: ArchiveStory; title: string }) {
   const [entertainment, vendors] = story.sections;
 
-  return <main className={`case-page shell ${styles.page}`}>
+  return <main data-project="happy-harvest" className={`case-page shell ${styles.page}`}>
     <Link className="back-link" href="/work">← All work</Link>
     <ProjectHeader title={title} description={story.summary} />
 

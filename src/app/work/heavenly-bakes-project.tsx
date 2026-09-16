@@ -21,7 +21,7 @@ function ProjectImage({ item, preload = false }: { item: [string, string]; prelo
 export default function HeavenlyBakesProject({ story, title }: { story: ArchiveStory; title: string }) {
   const [identity, products, holiday, value] = story.sections;
 
-  return <main className={`case-page shell ${styles.page}`}>
+  return <main data-project="heavenly-bakes-and-cakes" className={`case-page shell ${styles.page}`}>
     <Link className="back-link" href="/work">← All work</Link>
     <ProjectHeader title={title} description={story.summary} mobileTitleLines={["Heavenly Bakes & Cakes", "Advertising"]} mobileTitleSize="min(44px, 6.2cqw)" />
 

@@ -401,3 +401,7 @@
   .community { padding-top: 24px; padding-bottom: 24px; }
   .services { padding-block: 24px; }
 }
+
+@media (min-width: 701px) and (max-width: 900px) {
+  .team { grid-template-columns: minmax(0, 1fr); }
+}
