@@ -10,8 +10,7 @@
 
 .page :global(.lakeland-case-header),
 .page :global(.lakeland-card-copy h2),
-.page :global(.kicker),
-.page :global(.back-link) {
+.page :global(.kicker) {
   color: var(--lakeland-navy);
 }
 

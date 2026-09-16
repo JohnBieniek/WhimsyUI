@@ -15,7 +15,6 @@
 .page section h2 { font-family: var(--font-display); font-size: clamp(28px, 3.2vw, 44px); line-height: 1.12; text-wrap: balance; margin: 0 0 24px; }
 .page h3 { font-family: var(--font-display); font-size: 25px; line-height: 1.2; margin: 0 0 20px; }
 .kicker { color: var(--rose-red); font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; margin: 0 0 14px; }
-.page :global(.back-link) { color: var(--rose-red); }
 .page a:focus-visible { outline: 3px solid var(--rose-teal); outline-offset: 5px; }
 .poster { width: 100%; margin: 0; }
 .poster a { display: block; border-radius: 12px; }

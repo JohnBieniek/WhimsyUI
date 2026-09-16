@@ -12,7 +12,6 @@
 .page section h2 { font-size: clamp(28px, 3.1vw, 44px); }
 .page h3 { font-size: clamp(24px, 2.3vw, 32px); }
 .kicker { font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; margin: 0 0 14px; }
-.page :global(.back-link) { color: var(--fetch-ink); }
 .page a:focus-visible { outline: 3px solid #765c2c; outline-offset: 5px; }
 
 .photo { margin: 0; }

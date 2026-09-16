@@ -11,7 +11,6 @@
 .page p { line-height: 1.7; }
 .page section h2 { font-family: var(--font-display); font-size: clamp(28px, 3.2vw, 44px); line-height: 1.12; text-wrap: balance; margin: 0 0 24px; }
 .kicker { color: var(--farm-green); font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; margin: 0 0 14px; }
-.page :global(.back-link) { color: var(--farm-green); }
 .page a:focus-visible { outline: 3px solid var(--farm-green); outline-offset: 5px; }
 
 .figure { margin: 0; }
