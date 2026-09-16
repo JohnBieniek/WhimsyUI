@@ -16,8 +16,8 @@ const galleryThumbnails: Partial<Record<string, { image: string; alt: string }>>
     alt: "A fluffy tabby kitten being gently held at Cascades Humane Society.",
   },
   "fetch-market-launch": {
-    image: "/caprese.jpg",
-    alt: "Caprese sandwiches, with Cowboy Club sandwiches behind them.",
+    image: "/ham%20and%20cheddar%20spankies.jpg",
+    alt: "Ham-and-cheddar Spankies pastries at Fetch Market & Deli.",
   },
   "heavenly-bakes-and-cakes": {
     image: "/work/archive/1040973798056904.jpg",
@@ -70,11 +70,13 @@ export default function WorkGallery() {
                   ? { objectPosition: "center 80%" }
                   : item.slug === "malloween"
                     ? { objectPosition: "center 35%" }
-                    : item.slug === "alpha-koney-story" || item.slug === "valentines-at-jackson-crossing"
-                      ? { objectPosition: "center 20%" }
-                      : item.slug === "cascades-ribbon-cutting" || item.slug === "fetch-market-launch" || item.slug === "happy-harvest" || item.slug === "serenity-support" || item.slug === "welcome-home-organization" || item.slug === "jackson-county-rose-parade"
-                        ? { objectPosition: "center top" }
-                        : undefined}
+                    : item.slug === "fetch-market-launch"
+                      ? { objectPosition: "center 65%" }
+                      : item.slug === "alpha-koney-story" || item.slug === "valentines-at-jackson-crossing"
+                        ? { objectPosition: "center 20%" }
+                        : item.slug === "cascades-ribbon-cutting" || item.slug === "happy-harvest" || item.slug === "serenity-support" || item.slug === "welcome-home-organization" || item.slug === "jackson-county-rose-parade"
+                          ? { objectPosition: "center top" }
+                          : undefined}
             />
           </Link>
         </div>
