@@ -21,7 +21,7 @@ export const softwareStories: Record<string, { title: string; overview: string[]
         title: "A dependable way to speak, listen, and play.",
         paragraphs: [
           "The command button stays at the top right throughout the application. It opens a focused window with a consistently positioned Start Listening control. A player does not have to learn a different route into voice interaction every time the page changes.",
-          "The interface announces when speech processing is loading, and distinct sounds mark the beginning and end of listening. The same requests work as typed text or spoken instructions. A player can ask to hear a rule, open the character sheet, inspect equipment, or make a roll without searching through visual controls.",
+          "The interface announces when speech processing is loading, and distinct sounds mark the beginning and end of listening. The same requests work as typed text or spoken instructions. A player can ask to hear a rule, open the character sheet, inspect equipment, or make a roll without searching through visual controls. For the blind and visually impaired players of the game, this feature has enabled much more freedom to explore.",
         ],
         points: [
           { title: "Create a hero", copy: "Set a name, species, archetype, statistics, skills, weapons, traits, and contacts conversationally, then ask to hear those details again." },
