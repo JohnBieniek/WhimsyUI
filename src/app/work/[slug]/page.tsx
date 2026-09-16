@@ -20,7 +20,7 @@ import HolidayDecorations from "../holiday-decorations";
 import holidayDecorations from "../holiday-decorations.module.css";
 import styles from "../archive-project.module.css";
 import lakelandStyles from "../lakeland-project.module.css";
-import { ProjectCallToAction } from "../project-framing";
+import { MobileHeadingText, ProjectCallToAction } from "../project-framing";
 
 export function generateStaticParams() {
   return [...new Set([...caseStudies, ...softwareProjects].map(({ slug }) => slug))].map(slug => ({ slug }));
@@ -113,7 +113,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
         <figure className="lakeland-card-image lakeland-site-card"><Image src="/work/lakeland%20cabaret/site.png" alt="Lakeland Cabaret website homepage" fill sizes="(max-width: 800px) 100vw, 55vw" /></figure>
         <div className="lakeland-card-copy">
           <p className="kicker">The website</p>
-          <h2>A clear path from curiosity to booking.</h2>
+          <h2><MobileHeadingText lines={["A clear path from", "curiosity to booking."]} /></h2>
           <p>Whimsy designed and built a responsive website that organizes the collective’s services, pricing, story, and inquiry flow without losing the energy of the performances.</p>
           <p>The site pairs bold editorial type with real event imagery, helping visitors understand what Lakeland Cabaret offers and confidently plan an event.</p>
           <a className="button" href="https://lakelandcabaret.com/" target="_blank" rel="noopener noreferrer">Explore the live site ↗</a>
