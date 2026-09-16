@@ -21,6 +21,14 @@ function ArchiveImage({ item, hero = false, showEnlarge = false }: { item: [stri
 }
 
 function ArchiveHeading({ heading }: { heading: ArchiveStory["heading"] }) {
+  const mobileLines = heading === "A local favorite, with room for your whole group."
+    ? ["A local favorite, with room", "for your whole group."]
+    : heading === "Connect an everyday visit with a larger gathering."
+      ? ["Connect an everyday visit", "with a larger gathering."]
+      : undefined;
+  if (mobileLines) return <h2 className={styles.mobileTwoLineHeading}>
+    {mobileLines.map((line, index) => <span key={line}>{index > 0 ? " " : ""}{line}</span>)}
+  </h2>;
   return <h2 className={Array.isArray(heading) ? styles.twoLineHeading : undefined}>
     {Array.isArray(heading) ? heading.map((line, index) => <span key={line}>{index > 0 ? " " : ""}{line}</span>) : heading}
   </h2>;

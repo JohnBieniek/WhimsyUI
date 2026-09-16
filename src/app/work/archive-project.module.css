@@ -7,6 +7,10 @@
 .headingColumn { min-width: 0; container-type: inline-size; }
 .page .twoLineHeading { font-size: min(40px, 6.2cqw); line-height: 1.12; }
 .twoLineHeading span { display: block; }
+@media (max-width: 700px) {
+  .page .mobileTwoLineHeading { font-size: min(30px, 5.4vw); line-height: 1.12; }
+  .mobileTwoLineHeading span { display: block; white-space: nowrap; }
+}
 
 .alignedGallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; align-items: start; }
 .alignedPair { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 1000px; margin-inline: auto; }
