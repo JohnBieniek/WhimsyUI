@@ -26,8 +26,8 @@
 
 .advertising { margin-bottom: 40px; }
 .sectionHeader { max-width: 850px; margin: 0 auto 32px; text-align: center; }
-.adGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; align-items: start; }
-.openingAd, .adoptionAd { border: 1px solid var(--chs-line); border-radius: 14px; overflow: hidden; }
+.adGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; align-items: stretch; }
+.openingAd, .adoptionAd { display: flex; flex-direction: column; border: 1px solid var(--chs-line); border-radius: 14px; overflow: hidden; }
 .openingAd { background: var(--chs-cream); }
 .adoptionAd { background: var(--chs-pale); }
 .adGrid .figure a, .adGrid .figure img { border-radius: 0; }
@@ -35,6 +35,9 @@
 .openingAd figcaption { padding-bottom: 24px; }
 .cardCopy { padding: 28px; }
 .cardCopy p:last-child { margin-bottom: 0; }
+.adGrid .cardCopy { display: flex; flex: 1; flex-direction: column; justify-content: center; }
+.adGrid .cardCopy p { margin: 0; }
+.adGrid .cardCopy p + p { margin-top: 16px; }
 
 .celebration { padding: 36px; border-radius: 14px; background: var(--chs-green); color: #fff; margin-bottom: 44px; }
 .celebration .kicker { color: var(--chs-lime); }
