@@ -40,7 +40,7 @@ export default function IngendahlProject({ story, title }: { story: ArchiveStory
       <div className={styles.stickerCopy}>
         <div>
           <p className={styles.kicker}>{stickers.kicker}</p>
-          <h2 id="ingendahl-stickers-title">{stickers.title}</h2>
+          <h2 id="ingendahl-stickers-title"><MobileHeadingText lines={["Small stickers.", "A clear sense of place."]} /></h2>
           {stickers.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
         </div>
         <FarmImage item={stickers.images[1]} />
