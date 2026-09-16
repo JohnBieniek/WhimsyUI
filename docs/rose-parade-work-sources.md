@@ -1,5 +1,7 @@
 # Jackson County Rose Parade advertising case study
 
+Retired from the selected portfolio on 2026-09-16 at the user's request. [Miss Crossroads & Teen](./miss-crossroads-work-sources.md) replaces this page; Rose Parade and earlier Community Day URLs now redirect directly to `/work/miss-crossroads`. The notes below describe the earlier implementation and retain its source history.
+
 Reviewed 2026-09-15 against Whimsy's local Facebook export, the original artwork, and the Jackson County Rose Festival's website.
 
 The user requested Rose Parade work in place of Community Day. The selected Community Events entry now links to `/work/jackson-county-rose-parade`. Community Day's clean, trailing-slash, and `.html` URLs redirect to the replacement through `public/_redirects`; its original source records remain in `work-case-study-sources.md`.

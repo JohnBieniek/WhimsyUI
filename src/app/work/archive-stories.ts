@@ -108,57 +108,6 @@ export const archiveStories: Record<string, ArchiveStory> = {
       { kicker: "The 2024 appreciation day", title: "Give the celebration its own supporting cast.", paragraphs: ["The earlier show included a student and teacher appreciation day, with food trucks and music alongside artwork from more than 25 local schools. Whimsy created focused promotions for Petey's Donuts, F'ing Fantastic Food Truck, and the Two Soups duo.", "The archive also records this campaign artwork appearing during JTV's art show interview. Together, the pieces show how a main event can extend into partner promotions and local media coverage."], images: [["822363509917935", "Petey's Donuts promotion for the 2024 appreciation day"], ["822363549917931", "Food truck promotion for the 2024 appreciation day"], ["822363589917927", "Two Soups live music promotion for the 2024 art show"]] },
     ],
   },
-  "jackson-county-rose-parade": {
-    summary: "Parade poster design and related RoseQueen pageant advertising, combining bold creative, sponsor recognition, and a clear invitation to participate.",
-    heading: "Give a hometown tradition a bold invitation.",
-    introduction: [
-      "Whimsy created the promotional poster for the Jackson County Rose Parade planned for June 2, 2024, in downtown Jackson. The opportunity came through Jackson Crossing and connected our design work with one of the Rose City's longstanding community traditions.",
-      "The poster had several jobs: celebrate the occasion, introduce the people and sponsors involved, and give prospective float participants a clear registration step. A bright street scene, roses, balloons, and a large parade banner brought those jobs together in one invitation.",
-      "When we shared the artwork in March, we announced plans for hundreds of posters around Jackson. The design needed to catch attention at a glance and reward a closer look with the details someone would need to take part.",
-    ],
-    hero: ["802425705245049", "Whimsy's 2024 Jackson County Rose Parade poster with roses, balloons, float registration, and sponsor recognition"],
-    services: ["Poster design", "Event advertising", "Festival promotion"],
-    sections: [
-      {
-        kicker: "The creative work",
-        title: "One poster. Several ways to take part.",
-        paragraphs: [
-          "The red Rose Parade banner leads the composition. Turquoise, gold, balloons, and rose illustrations give the artwork the energy of a street celebration, with Jackson County named directly beneath the headline.",
-          "A central QR code labeled for parade-float registration gives potential participants a specific next step. The planned date, time, and downtown location complete the invitation at the foot of the poster.",
-          "Portraits and names introduce Queen Emilie Burkhart and Grand Marshal Mama Tutu. A separate sponsor area recognizes TRUE Community Credit Union, with Whimsy's design credit and Jackson Crossing identity below.",
-        ],
-        images: [],
-      },
-      {
-        kicker: "The community tradition",
-        title: "A parade with roots in the Rose City.",
-        paragraphs: [
-          "Jackson's Rose Festival began in 1958 with the first Rose Parade. Its history connects the city's rose gardens with a public celebration of local people and organizations. Schools, scouting groups, civic organizations, and businesses have all had a place in that story.",
-          "The festival's mission includes civic pride, attracting visitors, and recreation for the community. Advertising for an occasion like this needs to reach both the people who might watch and the groups whose participation brings the event to life.",
-        ],
-        images: [],
-      },
-      {
-        kicker: "Related festival advertising",
-        title: "Carry the celebration into another invitation.",
-        paragraphs: [
-          "Whimsy also sponsored and created artwork for the Rose Queen Pageant advertised for March 2, 2024, at the Jackson Symphony Orchestra. Our announcement invited people to support local women and celebrated the opportunity to share our design work with the community.",
-          "The pageant poster gives that invitation its own character: a crowned portrait, carousel horses, stars, and a theatrical red-and-gold banner. The date, time, and venue sit together across the lower part of the design, followed by the sponsor identities.",
-          "The two pieces share the spirit of a celebration while making different requests. One invites groups to register a parade float; the other invites an audience to support a local pageant. Each gives its audience an occasion to recognize and a next step to understand.",
-        ],
-        images: [["793024449518508", "Whimsy's Rose Queen Pageant advertisement for March 2, 2024, at the Jackson Symphony Orchestra"]],
-      },
-      {
-        kicker: "The value",
-        title: "Make local participation easier to picture.",
-        paragraphs: [
-          "For organizers and sponsors, the creative brings recognition, event information, and the invitation to participate into a piece they can share. It gives a community occasion a recognizable identity across a printed poster and an online post.",
-          "For residents and local groups, those details help answer practical questions: what the occasion is, who is involved, and where to begin. The value of the design is in bringing that useful information together with a sense of local pride.",
-        ],
-        images: [],
-      },
-    ],
-  },
   "fetch-market-launch": {
     summary: "Consulting, launch messaging, and food photography for Fetch Market & Deli, bringing its sandwiches, savory dishes, desserts, and downtown Brooklyn location into view.",
     heading: "Give people a taste of what’s coming.",

@@ -1,0 +1,75 @@
+.page {
+  --crossroads-ink: #241b25;
+  --crossroads-gold: #b48a35;
+  --crossroads-deep-gold: #76551b;
+  --crossroads-cream: #fff7e6;
+  --crossroads-line: #e4d2ae;
+  --crossroads-lilac: #f3eaf6;
+  color: var(--crossroads-ink);
+}
+
+.page section, .page article, .page figure, .page section > div { min-width: 0; }
+.page p { line-height: 1.7; }
+.page section h2 { font-family: var(--font-display); font-size: clamp(28px, 3.2vw, 44px); line-height: 1.12; text-wrap: balance; margin: 0 0 24px; }
+.page h3 { font-family: var(--font-display); font-size: clamp(25px, 2.3vw, 32px); line-height: 1.2; text-wrap: balance; margin: 0 0 20px; }
+.kicker { color: var(--crossroads-deep-gold); font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; margin: 0 0 14px; }
+.page a:focus-visible { outline: 3px solid var(--crossroads-deep-gold); outline-offset: 5px; }
+.figure { margin: 0; }
+.figure a { display: block; border-radius: 12px; }
+.figure img { display: block; width: 100%; height: auto; border-radius: 12px; }
+.figure figcaption { font-size: 13px; line-height: 1.5; margin-top: 12px; }
+.sectionHeader { max-width: 880px; margin: 0 auto 32px; text-align: center; }
+.sectionHeader > p:last-child { margin-bottom: 0; }
+
+.opening { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 48px; align-items: center; padding-block: 32px 48px; border-top: 1px solid var(--crossroads-line); }
+.opening > .figure { max-width: 520px; margin-inline: auto; }
+.opening > .figure img { border: 1px solid var(--crossroads-gold); }
+.services { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 24px 0; }
+.services li { padding: 8px 12px; border: 1px solid var(--crossroads-line); background: var(--crossroads-cream); border-radius: 6px; font-size: 12px; font-weight: 700; }
+.program { padding: 24px; background: var(--crossroads-ink); border-top: 4px solid var(--crossroads-gold); border-radius: 12px; color: #fff8ec; }
+.program .kicker, .program a { color: #f6d88c; }
+.program h3 { font-size: 25px; }
+.program p { font-size: 15px; }
+.program a { font-size: 14px; font-weight: 700; text-decoration: underline; text-underline-offset: 4px; }
+.program a:focus-visible { outline-color: #f6d88c; }
+
+.campaign { margin-bottom: 48px; }
+.creativePair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; align-items: stretch; }
+.creativePair article { display: flex; flex-direction: column; border: 1px solid var(--crossroads-line); border-radius: 16px; overflow: hidden; }
+.application { background: var(--crossroads-cream); }
+.ambassador { background: var(--crossroads-lilac); }
+.cardCopy { display: flex; flex-direction: column; justify-content: center; flex: 1; padding: 32px; }
+.cardCopy p:last-child { margin-bottom: 0; }
+.creativePair .figure { padding: 0 24px 24px; }
+.ambassador .figure { padding: 24px 24px 0; }
+
+.community { padding-block: 12px 40px; }
+.landscapeGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+.localStops { padding: 36px; background: var(--crossroads-cream); border-top: 4px solid var(--crossroads-gold); border-radius: 16px; margin-bottom: 40px; }
+.portraitGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; max-width: 860px; margin-inline: auto; }
+.value { padding: 36px; margin-bottom: 36px; border: 1px solid #dbc6e3; border-radius: 16px; background: var(--crossroads-lilac); }
+.value > div { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px; }
+.value p { margin: 0; }
+.page > :global(.ready) { border-color: var(--crossroads-gold); }
+.page > :global(.ready) h2 { font-size: 20px; line-height: 1.5; margin: 0; }
+.page :global(.button) { background: var(--crossroads-ink); border-color: var(--crossroads-ink); color: #fff8ec; }
+.page :global(.button:hover) { background: #493443; border-color: #493443; }
+
+@media (max-width: 1100px) {
+  .opening, .creativePair, .landscapeGrid, .portraitGrid { gap: 24px; }
+  .cardCopy { padding: 24px; }
+}
+@media (max-width: 900px) {
+  .opening { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+}
+@media (max-width: 700px) {
+  .opening { padding-block: 24px 32px; }
+  .creativePair, .landscapeGrid, .portraitGrid, .value > div { grid-template-columns: minmax(0, 1fr); }
+  .creativePair, .landscapeGrid, .portraitGrid { gap: 28px; }
+  .cardCopy, .program, .localStops, .value { padding: 24px 18px; }
+  .creativePair .figure { padding: 0 18px 24px; }
+  .ambassador .figure { padding: 24px 18px 0; }
+  .campaign, .localStops { margin-bottom: 28px; }
+  .community { padding-bottom: 28px; }
+  .value > div { gap: 18px; }
+}

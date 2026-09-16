@@ -74,7 +74,7 @@ export default function WorkGallery() {
                       ? { objectPosition: "center 65%" }
                       : item.slug === "alpha-koney-story" || item.slug === "valentines-at-jackson-crossing"
                         ? { objectPosition: "center 20%" }
-                        : item.slug === "cascades-ribbon-cutting" || item.slug === "happy-harvest" || item.slug === "serenity-support" || item.slug === "welcome-home-organization" || item.slug === "jackson-county-rose-parade"
+                        : item.slug === "cascades-ribbon-cutting" || item.slug === "happy-harvest" || item.slug === "serenity-support" || item.slug === "welcome-home-organization" || item.slug === "miss-crossroads"
                           ? { objectPosition: "center top" }
                           : undefined}
             />

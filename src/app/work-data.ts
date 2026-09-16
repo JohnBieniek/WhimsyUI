@@ -4,11 +4,10 @@ const projects: Record<Category, Array<[string,string,string,string,string]>> = 
   "Community events": [
     ["back-to-school-bash","1478820320938914.jpg","Back to School Bash","Jackson Crossing","A fun school-year kickoff with backpacks, photos, library resources, and family activities."],
     ["student-art-show","1385435016944112.jpg","Jackson County Student Art Show","Jackson County Schools","A countywide gallery experience celebrating student work from more than 25 local schools."],
-    ["jackson-county-rose-parade","archive/802425705245049.jpg","Jackson County Rose Parade","Jackson County Rose Festival","Parade poster design and related RoseQueen pageant advertising, combining bold creative, sponsor recognition, and a clear invitation to participate."],
+    ["miss-crossroads","miss-crossroads/community-carousel.jpg","Miss Crossroads & Teen","Miss Crossroads Scholarship Program","Recruitment ads, program explainers, and community photography introducing Miss Crossroads & Teen and the local opportunities behind the crown."],
     ["santa-stories","994558686031749.jpg","Santa Stories","Jackson Crossing","A holiday reading experience created with the Jackson District Library and community partners."],
     ["cascades-ribbon-cutting","archive/cascades-gray-kitten-hero.jpg","Cascades Humane Society Grand Opening","Cascades Humane Society","Advertising, opening-day promotion, and event photography connecting the community with Cascades Humane Society's new Jackson Crossing location."],
     ["grow-jackson-opening","1275042854649996.jpg","Grow Jackson & River Rail Opening","Grow Jackson","Ribbon-cutting storytelling for a community-focused market and local food initiative."],
-    ["miss-crossroads-visit","894475189373433.jpg","Miss Crossroads Community Visit","Jackson Crossing","A joyful public appearance built around connection, visibility, and community support."],
   ],
   "Advertising": [
     ["heavenly-bakes-and-cakes","archive/1021283623359255.jpg","Heavenly Bakes & Cakes Advertising","Heavenly Bakes & Cakes","Custom-cake and strawberry advertisements, a local-business spotlight, and holiday promotion for a Jackson baker."],

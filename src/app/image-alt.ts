@@ -1,5 +1,6 @@
 // Describe the asset itself: some portfolio entries reuse the same image.
 const imageDescriptions: Record<string, string> = {
+  "/work/miss-crossroads/community-carousel.jpg": "Miss Crossroads and Miss Crossroads’ Teen beside the carousel during their Jackson Crossing community visit.",
   "/work/archive/1021283623359255.jpg": "Heavenly Bakes & Cakes advertisement with a blue custom birthday cake, a pink sunburst background, and ordering details.",
   "/work/archive/cascades-kitten-hero.jpg": "A fluffy tabby kitten being gently held at Cascades Humane Society.",
   "/work/archive/cascades-gray-kitten-hero.jpg": "A gray tabby kitten looking toward the camera with its mouth open at Cascades Humane Society.",

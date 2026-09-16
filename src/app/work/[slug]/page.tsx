@@ -15,7 +15,7 @@ import IngendahlProject from "../ingendahl-project";
 import HumaneSocietyProject from "../humane-society-project";
 import WelcomeHomeProject from "../welcome-home-project";
 import HeavenlyBakesProject from "../heavenly-bakes-project";
-import RoseParadeProject from "../rose-parade-project";
+import MissCrossroadsProject from "../miss-crossroads-project";
 import HolidayDecorations from "../holiday-decorations";
 import holidayDecorations from "../holiday-decorations.module.css";
 import styles from "../archive-project.module.css";
@@ -84,7 +84,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
   if (slug === "cascades-ribbon-cutting" && archiveStory) return <HumaneSocietyProject story={archiveStory} title={study.title} />;
   if (slug === "welcome-home-organization" && archiveStory) return <WelcomeHomeProject story={archiveStory} title={study.title} />;
   if (slug === "heavenly-bakes-and-cakes" && archiveStory) return <HeavenlyBakesProject story={archiveStory} title={study.title} />;
-  if (slug === "jackson-county-rose-parade" && archiveStory) return <RoseParadeProject story={archiveStory} title={study.title} />;
+  if (slug === "miss-crossroads") return <MissCrossroadsProject title={study.title} description={study.summary} />;
   if (archiveStory) return <ArchiveProject story={archiveStory} title={study.title} />;
 
   const isLakeland = study.slug === "lakeland-cabaret";
