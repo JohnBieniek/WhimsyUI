@@ -71,7 +71,7 @@ export default function WorkGallery() {
                   : item.slug === "malloween"
                     ? { objectPosition: "center 35%" }
                     : item.slug === "fetch-market-launch"
-                      ? { objectPosition: "center 65%" }
+                      ? { objectPosition: "center 65%", transform: "scale(1.5)", transformOrigin: "center 65%" }
                       : item.slug === "alpha-koney-story" || item.slug === "valentines-at-jackson-crossing"
                         ? { objectPosition: "center 20%" }
                         : item.slug === "cascades-ribbon-cutting" || item.slug === "happy-harvest" || item.slug === "serenity-support" || item.slug === "welcome-home-organization" || item.slug === "miss-crossroads"
