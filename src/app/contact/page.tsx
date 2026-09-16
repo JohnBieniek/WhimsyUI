@@ -10,7 +10,7 @@ export default function ContactPage() {
         <div className="contact-primary">
           <div className="contact-intro">
             <p className="kicker">Contact</p>
-            <h1>Tell us what you are trying to accomplish.</h1>
+            <h1><span>Tell us what you are</span>{" "}<span>trying to accomplish.</span></h1>
             <p className="intro">
               Tell us what you&apos;re working on and where you&apos;d like some
               help. We&apos;ll figure out the next step together.

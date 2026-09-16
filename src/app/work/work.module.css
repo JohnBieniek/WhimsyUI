@@ -17,7 +17,7 @@
 .page :global(.filters) label { flex: 0 1 auto; min-width: 0; }
 .page :global(.filters) label span { padding: 10px 16px; }
 .page :global(.portfolio-grid) h2 { font-size: 22px; line-height: 1.2; text-align: center; }
-.galleryImageLink { display: block; position: relative; height: 100%; }
+.galleryImageLink { display: block; position: relative; height: 100%; overflow: hidden; }
 .lakelandThumbnail { container-type: size; background: #0b3b6f; }
 .lakelandThumbnail img { object-fit: cover; object-position: 25% 25%; }
 @container (max-aspect-ratio: 8 / 5) {

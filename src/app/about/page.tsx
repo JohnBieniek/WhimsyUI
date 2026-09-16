@@ -86,7 +86,7 @@ export default function AboutPage() {
       <section className={styles.hero} aria-labelledby="about-title">
         <div>
           <p className="kicker">About Whimsy</p>
-          <h1 id="about-title">Local talent.<br />Trusted work.</h1>
+          <h1 id="about-title">Local talent.<br /> Trusted work.</h1>
           <p className={styles.intro}>
             We’re Whimsy! We do consulting, media, and marketing work around
             Jackson, Michigan. We’ve made websites, ad campaigns, and creative
@@ -203,7 +203,7 @@ export default function AboutPage() {
         <header className={styles.communityHeader}>
           <div>
             <p className="kicker">Giving back</p>
-            <h2 id="community-title">Part of the community.<br />Happy to lend a hand.</h2>
+            <h2 id="community-title">Part of the community.<br /> Happy to lend a hand.</h2>
           </div>
           <p>
             Jackson County is where we work, build relationships, and volunteer.

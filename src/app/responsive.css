@@ -100,6 +100,12 @@
     min-height: 0;
   }
 
+  [data-project="holiday-in-the-halls"] .holiday-thanks figure {
+    min-width: 0;
+    width: 100%;
+    align-self: center;
+  }
+
   [data-project="holiday-in-the-halls"] .holiday-story-opening {
     background: var(--mint);
   }
@@ -179,9 +185,108 @@
   }
 }
 
+@media (min-width: 1101px) and (max-width: 1919px) {
+  .services-page > .page-hero {
+    display: grid;
+    grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+    gap: 32px;
+    align-items: start;
+  }
+
+  .services-page .page-hero > div:first-child {
+    width: 100%;
+    container-type: inline-size;
+  }
+
+  .services-page .page-hero h1 {
+    font-size: min(68px, 10cqi);
+  }
+
+  .services-page .services-collage {
+    position: static;
+    min-width: 0;
+  }
+
+  .services-page .offset-square-collage-desktop {
+    position: static;
+    width: 100%;
+    transform: none;
+  }
+}
+
 @media (min-width: 1051px) and (max-width: 1600px) {
+  .home-page .home-copy {
+    padding-right: 24px;
+  }
+
   .home-page .home-tagline {
     font-size: clamp(16px, 1.5vw, 22px);
+  }
+
+  .home-page .home-square-collage-desktop {
+    width: calc(100% + 30px);
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1679px) {
+  .home-page .home-logo-dots::after {
+    left: -484px;
+    width: 32px;
+  }
+}
+
+@media (min-width: 1051px) and (max-width: 1279px) {
+  .home-header {
+    height: auto;
+    min-height: 112px;
+    padding-block: 12px;
+  }
+
+  .home-header .nav-logo {
+    display: block;
+  }
+
+  .home-page .home-logo,
+  .home-page .home-logo-dots {
+    display: none;
+  }
+
+  .home-page .home-hero {
+    grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+    gap: 32px;
+  }
+
+  .home-page .home-copy {
+    padding-top: 20px;
+  }
+
+  .home-page .home-copy .actions {
+    flex-wrap: wrap;
+  }
+
+  .home-page .home-square-collage-desktop {
+    width: 100%;
+    transform: none;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 900px) {
+  .site-header:has(+ main:is(.home-page, .inner-page, [data-service], [data-project])) {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .site-header:has(+ main:is(.home-page, .inner-page, [data-service], [data-project])) nav {
+    margin-inline: 0;
+  }
+
+  .site-header:has(+ main:is(.home-page, .inner-page, [data-service], [data-project])) nav a {
+    white-space: nowrap;
+  }
+
+  .site-header:has(+ main:is(.home-page, .inner-page, [data-service], [data-project]))::after {
+    width: 100%;
   }
 }
 
@@ -353,10 +458,58 @@
   }
 }
 
+@media (max-width: 1050px) {
+  .contact-page .contact-page-grid {
+    gap: 16px;
+  }
+
+  .contact-page .contact-primary,
+  .contact-page .contact-sidebar {
+    display: contents;
+  }
+
+  .contact-page .contact-intro { order: 1; }
+  .contact-page .contact-headshot { order: 2; }
+  .contact-page .checklist { order: 3; }
+  .contact-page .contact-form { order: 4; margin-top: 0; }
+  .contact-page .price-list { order: 5; }
+
+  .contact-page > .partners {
+    width: 100%;
+    padding-inline: 0;
+    row-gap: 16px;
+  }
+
+  .contact-page > .partners > h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+
+  .contact-page > .partners > h2 br {
+    display: none;
+  }
+
+  .contact-page > .partners > .partner:first-of-type {
+    border-left: 0;
+  }
+}
+
 @media (max-width: 700px) {
+  .contact-page .contact-intro,
+  .contact-page .contact-form {
+    container-type: inline-size;
+  }
+
   .contact-page .contact-intro h1 {
-    font-size: clamp(32px, 8.2vw, 46px);
-    text-wrap: balance;
+    font-size: min(46px, 8.5cqi);
+  }
+
+  .contact-page .contact-intro h1 > span {
+    display: block;
+  }
+
+  .contact-page .form-heading h3 {
+    font-size: min(25px, 8.5cqi);
   }
 
   [data-project="back-to-school-bash"] > header h1 {

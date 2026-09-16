@@ -74,11 +74,11 @@ test("tablet Home keeps its logo clear of the navigation", async ({ page }) => {
   await expect(logo).toBeVisible();
   const logoBounds = await logo.boundingBox();
   const navBounds = await page.getByRole("navigation", { name: "Main navigation" }).boundingBox();
-  expect(logoBounds!.x + logoBounds!.width).toBeLessThanOrEqual(navBounds!.x);
+  expect(logoBounds!.y + logoBounds!.height).toBeLessThanOrEqual(navBounds!.y);
   await expect(page.locator(".home-copy .home-logo")).toBeHidden();
 });
 
-for (const width of [701, 820, 1050]) {
+for (const width of [701, 820, 900, 901, 960, 1050]) {
   test(`active-page logos fit vertically inside the header at ${width}px`, async ({ page }) => {
     test.setTimeout(120_000);
     await page.setViewportSize({ width, height: 1024 });
@@ -91,7 +91,59 @@ for (const width of [701, 820, 1050]) {
       expect(logo, route).not.toBeNull();
       expect(logo!.y, route).toBeGreaterThanOrEqual(header!.y + 8);
       expect(logo!.y + logo!.height, route).toBeLessThanOrEqual(header!.y + header!.height - 8);
+      const navigation = await page.locator('.site-header nav').boundingBox();
+      const separated = logo!.y + logo!.height <= navigation!.y || logo!.x + logo!.width <= navigation!.x;
+      expect(separated, route).toBe(true);
+      expect(navigation!.x, route).toBeGreaterThanOrEqual(header!.x);
+      expect(navigation!.x + navigation!.width, route).toBeLessThanOrEqual(header!.x + header!.width + 1);
+      const lineCounts = await page.locator('.site-header nav a').evaluateAll(links => links.map(link => {
+        const range = document.createRange();
+        range.selectNodeContents(link);
+        return new Set([...range.getClientRects()].map(rect => Math.round(rect.top))).size;
+      }));
+      expect(lineCounts, route).toEqual([1, 1, 1, 1, 1]);
     }
+  });
+}
+
+for (const width of [1051, 1100, 1201, 1279, 1280, 1440]) {
+  test(`Home's collage clears its logo and copy at ${width}px`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 768 });
+    await page.goto("/");
+    await page.evaluate(() => document.fonts.ready);
+    const overlaps = await page.evaluate(() => {
+      const collage = document.querySelector(".home-square-collage-desktop")!.getBoundingClientRect();
+      const intersects = (a: DOMRect, b: DOMRect) =>
+        a.width > 0 && a.height > 0 && a.left < b.right && a.right > b.left && a.top < b.bottom && a.bottom > b.top;
+      const issues: string[] = [];
+      for (const image of document.querySelectorAll(".home-logo, .nav-logo img")) {
+        const logo = image.getBoundingClientRect();
+        if (intersects(logo, collage)) issues.push("Logo overlaps collage");
+        const navigation = document.querySelector(".site-header nav")!.getBoundingClientRect();
+        if (intersects(logo, navigation)) issues.push("Logo overlaps navigation");
+      }
+      const walker = document.createTreeWalker(document.querySelector(".home-copy")!, NodeFilter.SHOW_TEXT);
+      let node: Node | null;
+      while ((node = walker.nextNode())) {
+        if (!node.textContent?.trim()) continue;
+        const range = document.createRange();
+        range.selectNodeContents(node);
+        if ([...range.getClientRects()].some(rect => intersects(rect, collage))) issues.push("Hero text overlaps collage");
+      }
+      return issues;
+    });
+    expect(overlaps).toEqual([]);
+  });
+}
+
+for (const width of [1101, 1151, 1280, 1440, 1601, 1919]) {
+  test(`Services collage stays beside its text at ${width}px`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 768 });
+    await page.goto('/services');
+    await page.evaluate(() => document.fonts.ready);
+    const copy = await page.locator('.page-hero > div:first-child').boundingBox();
+    const collage = await page.locator('.offset-square-collage-desktop').boundingBox();
+    expect(copy!.x + copy!.width + 24).toBeLessThanOrEqual(collage!.x);
   });
 }
 
