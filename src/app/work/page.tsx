@@ -23,7 +23,7 @@ export default function WorkPage() {
         <header className={styles.campaignHeader}>
           <p className="kicker">Campaigns &amp; community</p>
           <h2 id="campaigns-title">Local stories. Shared experiences.</h2>
-          <p className={styles.campaignIntro}>Explore a small selection of our work to see how we bring ideas to life through advertising, consulting, websites, and software. We share these stories to give you a closer look at what we do and inspire your next endeavor.</p>
+          <p className={styles.campaignIntro}>Check out a selection of our work to see how we bring ideas to life through advertising, consulting, websites, and software. We share these stories to give you a closer look at what we do and inspire your next endeavor.</p>
         </header>
         <WorkGallery />
       </section>
