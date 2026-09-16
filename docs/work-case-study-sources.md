@@ -86,7 +86,7 @@ Original archive caption:
 
 ### 2026-05-13 12:29 PM EDT
 
-Files: `media/1407931211361159.jpg`, `media/1407931354694478.jpg`, `media/1407931418027805.jpg`, `media/1407931501361130.jpg`, `media/1407931568027790.jpg`, `media/1407931661361114.jpg`
+Files: `media/1407931211361159.jpg`, `media/1407931354694478.jpg`, `media/1407931418027805.jpg`, `media/1407931501361130.jpg`, `media/1407931568027790.jpg`, `media/1407931661361114.jpg`, `media/1407931898027757.jpg`
 
 Original archive caption:
 
