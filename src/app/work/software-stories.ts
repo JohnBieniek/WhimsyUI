@@ -48,7 +48,6 @@ export const softwareStories: Record<string, { title: string; overview: string[]
         title: "Keep the rulebook connected as it grows.",
         paragraphs: [
           "Players and Game Masters each have a dedicated section explaining the game's rules. Stable section links let a character-sheet label lead directly to the rule behind a skill, item, weapon, or talent. That makes the publication useful in the middle of a game, when a player needs a specific answer quickly.",
-          "Behind the interface, the game material lives in focused plain-text files. A reusable React guide component turns that material into headings, tables, and readable sections, then connects references across routes. This separates editing the game from designing the page: a rules correction can remain a content change, while navigation and presentation improvements benefit the wider publication.",
         ],
       },
       {
