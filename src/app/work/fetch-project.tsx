@@ -14,7 +14,7 @@ function photo(src: string, caption: string, width = 4000, height = 3000): Photo
 const photos = {
   sandwiches: photo("/caprese.jpg", "Caprese sandwiches, with Cowboy Club sandwiches behind them."),
   outside: photo("/fetch%20outside.jpg", "Fetch Market & Deli’s downtown Brooklyn storefront, with a balloon-framed entrance."),
-  pastries: photo("/spnach%20spankies.jpg", "Five-cheese and spinach pastries, ready to share."),
+  pastries: photo("/ham%20and%20cheddar%20spankies.jpg", "Ham-and-cheddar Spankies pastries, ready to share."),
   vegetables: photo("/veggies.jpg", "Fresh vegetables with roasted garlic and feta-buttermilk dips."),
   esquites: photo("/esquites.jpg", "Esquites corn dip, served with chips and crackers.", 3000, 4000),
   brownies: photo("/brownies.jpg", "Chocolate ganache brownies."),
@@ -80,7 +80,7 @@ export default function FetchProject({ story, title }: { story: ArchiveStory; ti
       <header className={styles.sectionHeader}>
         <p className={styles.kicker}>From the kitchen</p>
         <h2 id="fetch-savory-title">Sandwiches are just the beginning.</h2>
-        <p>The Caprese and Cowboy Club sandwiches introduce the spread. Five-cheese and spinach pastries, colorful vegetables with dips, and esquites corn dip show the variety alongside them. These photographs give each dish room to be noticed.</p>
+        <p>The Caprese and Cowboy Club sandwiches introduce the spread. Ham-and-cheddar Spankies pastries, colorful vegetables with dips, and esquites corn dip show the variety alongside them. These photographs give each dish room to be noticed.</p>
       </header>
       <div className={styles.savoryGrid}>
         <FetchPhoto item={photos.pastries} />

@@ -16,8 +16,8 @@ const galleryThumbnails: Partial<Record<string, { image: string; alt: string }>>
     alt: "A fluffy tabby kitten being gently held at Cascades Humane Society.",
   },
   "fetch-market-launch": {
-    image: "/ham%20and%20cheddar%20spankies.jpg",
-    alt: "Ham-and-cheddar Spankies pastries at Fetch Market & Deli.",
+    image: "/spnach%20spankies.jpg",
+    alt: "Five-cheese and spinach Spankies pastries at Fetch Market & Deli.",
   },
   "heavenly-bakes-and-cakes": {
     image: "/work/archive/1040973798056904.jpg",
