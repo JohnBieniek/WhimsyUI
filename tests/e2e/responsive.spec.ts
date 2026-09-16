@@ -78,6 +78,23 @@ test("tablet Home keeps its logo clear of the navigation", async ({ page }) => {
   await expect(page.locator(".home-copy .home-logo")).toBeHidden();
 });
 
+for (const width of [701, 820, 1050]) {
+  test(`active-page logos fit vertically inside the header at ${width}px`, async ({ page }) => {
+    test.setTimeout(120_000);
+    await page.setViewportSize({ width, height: 1024 });
+    for (const route of routes) {
+      await page.goto(route);
+      await page.locator(".nav-logo img").evaluate((image: HTMLImageElement) => image.decode());
+      const header = await page.locator(".site-header").boundingBox();
+      const logo = await page.locator(".nav-logo img").boundingBox();
+      expect(header, route).not.toBeNull();
+      expect(logo, route).not.toBeNull();
+      expect(logo!.y, route).toBeGreaterThanOrEqual(header!.y + 8);
+      expect(logo!.y + logo!.height, route).toBeLessThanOrEqual(header!.y + header!.height - 8);
+    }
+  });
+}
+
 test("Holiday closing panel contains its image and readable heading on tablets", async ({ page }) => {
   await page.setViewportSize({ width: 1024, height: 768 });
   await page.goto("/work/holiday-in-the-halls");

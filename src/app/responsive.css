@@ -186,6 +186,12 @@
 }
 
 @media (min-width: 701px) and (max-width: 1050px) {
+  .site-header:has(+ main:is(.home-page, .inner-page, [data-service], [data-project])) {
+    height: auto;
+    min-height: 112px;
+    padding-block: 12px;
+  }
+
   .home-header .nav-logo {
     display: block;
   }

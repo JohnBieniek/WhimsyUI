@@ -85,3 +85,9 @@ Regression coverage lives in tests/e2e/responsive.spec.ts. Raw measurements and 
 The screenshot review identified excessive image cropping at `home--700x1024--z100` in commit `8ef5851`. The full-width cards retained fixed 115px image frames (140px for Team Hope). This visual issue passed the automated text/overflow checks.
 
 Home's campaign images now use 16:9 frames at widths up to 1050px, giving the 700px layout approximately 376px of image height. Wider desktop layouts retain their original image heights. Checked all four frames at 320, 390, 480, 700, 701, 768, 960, 1024, 1050, 1051, 1280, 1440, and 1920px, with no page or heading overflow. The original smoke-review document remains an immutable capture of `8ef5851`; updated Home previews are under `reports/home-card-review/`.
+
+## Follow-up: Tablet header logo clipping
+
+The `home--820x1024--z100` capture exposed a shared header problem: a roughly 102px-tall logo was centered in a 90px header, placing its top about 6px above the viewport. At 701–1050px, headers on active routes now size to their content with 12px vertical padding. The selector excludes inactive project routes.
+
+Regression checks verify both vertical logo bounds on all 33 active routes at 701, 820, and 1050px. All three checks and the existing Home navigation test pass. Also checked Home at ten widths from 700 to 1920px, confirmed the 25 inactive headers retain their original height at 820px, and confirmed unchanged Home page heights at 1440/1920px. Production build and focused ESLint checks pass. Updated previews are under `reports/home-logo-review/`.
