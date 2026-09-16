@@ -61,6 +61,8 @@
 .mintChapter .chapterCopy { max-width: none; }
 .mintChapter .chapterCopy p:last-child { margin-bottom: 0; }
 @media (min-width: 901px) {
+  .chapterPair > .storyChapter[aria-labelledby="chapter-3"] { container-type: inline-size; }
+  .chapterPair > .storyChapter[aria-labelledby="chapter-3"] > h2 { font-size: min(40px, 5cqw); text-wrap: balance; }
   .mintChapter { container-type: inline-size; }
   .mintChapter > h2 { max-width: none; font-size: min(40px, 3.1cqw); text-wrap: nowrap; }
 }
