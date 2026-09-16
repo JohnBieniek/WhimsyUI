@@ -6,14 +6,17 @@ import styles from "./archive-project.module.css";
 import { ProjectCallToAction, ProjectHeader } from "./project-framing";
 import HalloweenDecorations from "./halloween-decorations";
 
-function ArchiveImage({ item, hero = false }: { item: [string, string]; hero?: boolean }) {
+function ArchiveImage({ item, hero = false, showEnlarge = false }: { item: [string, string]; hero?: boolean; showEnlarge?: boolean }) {
   const [id, caption] = item;
   const size = dimensions[id as keyof typeof dimensions];
   return <figure className={styles.figure}>
     <a href={`/work/archive/${id}.jpg`} target="_blank" rel="noopener noreferrer" aria-label={`View full image: ${caption}`}>
       <Image src={`/work/archive/${id}.jpg`} alt={caption} width={size.width} height={size.height} preload={hero} sizes="(max-width: 700px) 100vw, (max-width: 1000px) 50vw, 40vw" />
     </a>
-    <figcaption>{caption}</figcaption>
+    <figcaption className={showEnlarge ? styles.captionWithLink : undefined}>
+      <span>{caption}</span>
+      {showEnlarge && <a className={styles.enlargeLink} href={`/work/archive/${id}.jpg`} target="_blank" rel="noopener noreferrer" aria-label={`Enlarge ${caption}`}>Click to enlarge</a>}
+    </figcaption>
   </figure>;
 }
 
@@ -51,7 +54,7 @@ export default function ArchiveProject({ story, title }: { story: ArchiveStory; 
         : section.galleryLayout === "aligned" ? `${styles.alignedGallery} ${section.images.length === 2 ? styles.alignedPair : ""}`
         : `${styles.gallery} ${section.images.length === 1 ? styles.single : ""}`;
       const gallery = section.images.length > 0 && <div className={galleryClass}>
-        {section.images.map(item => <ArchiveImage item={item} key={item[0]} />)}
+        {section.images.map(item => <ArchiveImage item={item} showEnlarge={section.enlargeImages?.includes(item[0])} key={item[0]} />)}
       </div>;
       return <section className={`${styles.chapter} ${imageLeft ? styles.imageLeft : ""} ${section.card === "light-purple" ? styles.purpleCard : section.card === "light-mint" ? styles.mintCard : ""} ${section.galleryLayout === "stacked" ? styles.eventChapter : ""}`} key={Array.isArray(section.title) ? section.title.join(" ") : section.title}>
         {isHalloween && section.accent && <HalloweenDecorations variant={section.accent} />}
