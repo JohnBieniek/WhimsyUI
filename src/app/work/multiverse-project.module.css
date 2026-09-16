@@ -44,7 +44,7 @@
 .commandPoints { margin-top: 36px; background: #ffffff55; }
 .commandPoints article { padding: 24px; background: var(--guild-deep-blue); }
 
-.rulebook { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 40px; padding: 36px; margin-bottom: 36px; border-left: 6px solid var(--guild-red); border-radius: 0 12px 12px 0; background: var(--guild-cream); color: var(--guild-ink); }
+.rulebook { padding: 36px; margin-bottom: 36px; border-left: 6px solid var(--guild-red); border-radius: 0 12px 12px 0; background: var(--guild-cream); color: var(--guild-ink); }
 .rulebook .heading, .rulebook .kicker { color: var(--guild-blue); }
 .rulebook > div > p:first-child { margin-top: 0; }
 .rulebook > div > p:last-child { margin-bottom: 0; }
@@ -77,13 +77,13 @@
   .heroImage, .heroImage img { border-radius: 12px 12px 0 0; }
   .overviewCopy { padding: 24px; }
   .capabilities, .featureCard, .rulebook, .libraryCopy, .mobileCard { padding: 28px; }
-  .featureColumns, .rulebook, .libraryCopy { gap: 28px; }
+  .featureColumns, .libraryCopy { gap: 28px; }
   .capabilityGrid article, .commandPoints article { padding: 20px; }
   .mobileCard { gap: 20px; }
 }
 
 @media (max-width: 900px) {
-  .featureColumns, .rulebook, .libraryCopy { grid-template-columns: minmax(0, 1fr); }
+  .featureColumns, .libraryCopy { grid-template-columns: minmax(0, 1fr); }
   .featureColumn + .featureColumn { border-top: 1px solid #ffffff55; padding-top: 28px; }
   .featureColumn:first-child > .screenshot { margin-top: 0; }
   .capabilityGrid, .commandPoints { grid-template-columns: minmax(0, 1fr); }
