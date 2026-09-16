@@ -15,16 +15,17 @@ const screens = {
   mobileHome: { src: "/services/multiverse/home-page-mobile.png", width: 390, height: 972 },
 };
 
-function Screenshot({ screen, alt, caption, preload = false, className = "" }: {
+function Screenshot({ screen, alt, caption, preload = false, className = "", sizes = "(max-width: 900px) 100vw, 50vw" }: {
   screen: (typeof screens)[keyof typeof screens];
   alt: string;
   caption?: string;
   preload?: boolean;
   className?: string;
+  sizes?: string;
 }) {
   return <figure className={`${styles.screenshot} ${className}`}>
     <a href={screen.src} target="_blank" rel="noopener noreferrer" aria-label={`View full screenshot: ${alt}`}>
-      <Image {...screen} alt={alt} preload={preload} sizes="(max-width: 900px) 100vw, 50vw" />
+      <Image {...screen} alt={alt} preload={preload} sizes={sizes} />
     </a>
     {caption && <figcaption>{caption}</figcaption>}
   </figure>;
@@ -41,7 +42,7 @@ export default function MultiverseProject({ project }: { project: (typeof softwa
     </ProjectHeader>
 
     <section className={styles.overview} aria-labelledby="project-brief-title">
-      <Screenshot screen={screens.home} alt={project.alt} preload className={styles.heroImage} />
+      <Screenshot screen={screens.home} alt={project.alt} preload className={styles.heroImage} sizes="(max-width: 1100px) 100vw, 55vw" />
       <div className={styles.overviewCopy}>
         <p className={styles.kicker}>The project</p>
         <h2 className={styles.heading} id="project-brief-title">{story.title}</h2>
