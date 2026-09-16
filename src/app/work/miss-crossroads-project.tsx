@@ -42,7 +42,7 @@ export default function MissCrossroadsProject({ title, description }: { title: s
         </ul>
         <aside className={styles.program} aria-labelledby="crossroads-program-title">
           <p className={styles.kicker}>The opportunity</p>
-          <h3 id="crossroads-program-title">Scholarship, service, and local representation.</h3>
+          <h3 id="crossroads-program-title"><MobileHeadingText lines={["Scholarship, service,", "and local representation."]} /></h3>
           <p>Miss Crossroads serves Jackson, Ingham, and Hillsdale counties. As a local Miss America affiliate, the program connects educational opportunities with talent, leadership, and community involvement. The advertising makes those possibilities easier for prospective participants and their families to understand.</p>
           <a href="https://jtv.tv/events-of-december-5-6-and-7-2025/" target="_blank" rel="noopener noreferrer">Read JTV’s program background ↗</a>
         </aside>
@@ -69,7 +69,7 @@ export default function MissCrossroadsProject({ title, description }: { title: s
           <ProjectImage item={photos.ambassador} />
           <div className={styles.cardCopy}>
             <p className={styles.kicker}>Explain the role</p>
-            <h3 id="crossroads-ambassador-title">Show what representing a community can mean.</h3>
+            <h3 id="crossroads-ambassador-title"><MobileHeadingText lines={["Show what representing", "a community can mean."]} /></h3>
             <p>The companion ad focuses on being a community ambassador. Local celebrations, school events, business openings, nonprofit fundraisers, and volunteer projects give readers concrete examples of where that role can lead.</p>
             <p>A more relaxed portrait makes the message approachable. The matching gold identity connects it to the recruitment campaign while giving the people and the work beyond the competition their own space.</p>
           </div>
