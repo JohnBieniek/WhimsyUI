@@ -159,7 +159,7 @@ export const softwareStories: Record<string, { title: string; overview: string[]
         title: "Test changes without duplicating production incidents.",
         paragraphs: [
           "Production and beta deploy independently. The beta environment has its own storage namespace and does not run the production alerting schedule. That separation allows changes to be checked without creating a second stream of notifications for the same real-world issue.",
-          "The interface and API are served at the edge with responses configured to avoid stale cached status and with structured logs for observability. Together, those choices make Warden an example of the less visible work behind a useful digital service: checking it, reporting its condition clearly, and supporting it beyond the initial launch.",
+          "The dashboard shows the latest available status instead of an outdated saved copy, while activity logs help the team investigate problems. Together, those choices make Warden an example of the less visible work behind a useful digital service: checking it, reporting its condition clearly, and supporting it beyond the initial launch.",
         ],
       },
     ],
