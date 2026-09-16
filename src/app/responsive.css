@@ -476,20 +476,23 @@
 
   .contact-page > .partners {
     width: 100%;
+  }
+
+  .partners {
     padding-inline: 0;
     row-gap: 16px;
   }
 
-  .contact-page > .partners > h2 {
+  .partners > h2 {
     grid-column: 1 / -1;
     text-align: center;
   }
 
-  .contact-page > .partners > h2 br {
+  .partners > h2 br {
     display: none;
   }
 
-  .contact-page > .partners > .partner:first-of-type {
+  .partners > .partner:first-of-type {
     border-left: 0;
   }
 }

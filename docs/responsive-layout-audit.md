@@ -92,6 +92,12 @@ The `home--820x1024--z100` capture exposed a shared header problem: a roughly 10
 
 Regression checks verify both vertical logo bounds on all 33 active routes at 701, 820, and 1050px. All three checks and the existing Home navigation test pass. Also checked Home at ten widths from 700 to 1920px, confirmed the 25 inactive headers retain their original height at 820px, and confirmed unchanged Home page heights at 1440/1920px. Production build and focused ESLint checks pass. Updated previews are under `reports/home-logo-review/`.
 
+## Follow-up: Shared Featured Partners layout (0.9.0 review)
+
+The first review's partner-heading correction was incorrectly scoped to Contact. The same rule now applies to the shared `.partners` section on both Home and Contact: through 1050px, the heading spans its own centered row, its forced break is hidden, and the first logo's mint divider is removed. Shared horizontal padding is removed to keep the heading on one line at narrow phone widths. Contact retains its page-specific full-width section rule; wider desktop layouts retain their existing arrangement.
+
+Production build passed. Both consumers were verified across the full 38-case viewport/zoom matrix (76 checks), with zero heading wrapping, centering, placement, overflow, or leading-divider failures in the stacked layouts. Visually reviewed Home at 701px. Updated preview: `reports/shared-partners-review/home-partners--701.jpg`. The user requested this batch be finalized with version 0.9.1 and a replacement smoke review at `reports/smoke-review-0.9.1/index.html`; older smoke-review sets are superseded and removed after replacement validation.
+
 ## Review batch approved for develop
 
 The user cleared this batch for pushing to `develop`. Final validation: production build passed, all 34 browser regression tests passed against the production export, all six unit tests passed, focused ESLint passed, and `git diff --check` passed. The follow-up entries below describe work that was held locally during review; this batch includes those changes together. The original smoke-review document remains a reference capture of `8ef5851`, with updated local previews linked in each follow-up.
