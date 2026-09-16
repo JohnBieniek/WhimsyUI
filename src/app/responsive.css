@@ -200,6 +200,14 @@
   }
 }
 
+/* Keep wide phone cards from cropping their images into shallow strips. */
+@media (max-width: 1050px) {
+  .home-page .campaigns .highlight > div {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+}
+
 /* Tablet galleries can keep two images together without a long phone column. */
 @media (min-width: 701px) and (max-width: 800px) {
   [data-project="back-to-school-bash"] .back-school-ad-grid,
