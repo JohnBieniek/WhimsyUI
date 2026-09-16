@@ -2,7 +2,7 @@ export const workCategories = ["Businesses", "Community Events", "Restaurants", 
 
 export const selectedWork = {
   "Seasonal Events": ["holiday-in-the-halls", "malloween", "valentines-at-jackson-crossing", "happy-harvest"],
-  "Community Events": ["back-to-school-bash", "student-art-show", "community-day", "team-hope-walk"],
+  "Community Events": ["back-to-school-bash", "student-art-show", "jackson-county-rose-parade", "team-hope-walk"],
   Software: ["lakeland-website", "multiverse-adventurers-guild", "sonic-shielding", "whimsy-warden"],
   Restaurants: ["fetch-market-launch", "sisters-smoothies-feature", "alpha-koney-story", "heavenly-bakes-and-cakes"],
   Businesses: ["ingendahl-acres-branding", "serenity-support", "cascades-ribbon-cutting", "welcome-home-organization"],

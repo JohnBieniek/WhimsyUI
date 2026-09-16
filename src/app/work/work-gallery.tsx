@@ -72,7 +72,7 @@ export default function WorkGallery() {
                     ? { objectPosition: "center 35%" }
                     : item.slug === "alpha-koney-story" || item.slug === "valentines-at-jackson-crossing"
                       ? { objectPosition: "center 20%" }
-                      : item.slug === "cascades-ribbon-cutting" || item.slug === "fetch-market-launch" || item.slug === "happy-harvest" || item.slug === "serenity-support" || item.slug === "welcome-home-organization"
+                      : item.slug === "cascades-ribbon-cutting" || item.slug === "fetch-market-launch" || item.slug === "happy-harvest" || item.slug === "serenity-support" || item.slug === "welcome-home-organization" || item.slug === "jackson-county-rose-parade"
                         ? { objectPosition: "center top" }
                         : undefined}
             />
