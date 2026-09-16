@@ -48,8 +48,10 @@
 .localStops { padding: 36px; background: var(--crossroads-cream); border-top: 4px solid var(--crossroads-gold); border-radius: 16px; margin-bottom: 40px; }
 .portraitGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; max-width: 860px; margin-inline: auto; }
 .value { padding: 36px; margin-bottom: 36px; border: 1px solid #dbc6e3; border-radius: 16px; background: var(--crossroads-lilac); }
-.value > div { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px; }
+.value > div { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px; align-items: start; }
 .value p { margin: 0; }
+/* Grid gaps provide spacing; override the global adjacent-paragraph margin. */
+.value > div > p { margin-top: 0 !important; }
 .page > :global(.ready) { border-color: var(--crossroads-gold); }
 .page > :global(.ready) h2 { font-size: 20px; line-height: 1.5; margin: 0; }
 .page :global(.button) { background: var(--crossroads-ink); border-color: var(--crossroads-ink); color: #fff8ec; }
