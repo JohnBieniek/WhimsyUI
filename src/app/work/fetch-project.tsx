@@ -20,6 +20,9 @@ const photos = {
   brownies: photo("/brownies.jpg", "Chocolate ganache brownies."),
   coconut: photo("/mouse.jpg", "Toasted coconut and lime mousse."),
   strawberry: photo("/strawberry%20mouse.jpg", "Strawberry cheesecake mousse."),
+  crowdOutside: photo("/crowd%20outside%20fetch.jpg", "Guests gathering outside Fetch’s balloon-framed entrance."),
+  apartmentFood: photo("/fetch%20food%20apartment%202.jpg", "Guests gathering around Fetch’s food spread in an apartment kitchen."),
+  crowdInside: photo("/20260821_161121.jpg", "Guests mingling inside the building during the event."),
 };
 
 function archivePhoto([id, caption]: [string, string]): Photo {
@@ -57,6 +60,19 @@ export default function FetchProject({ story, title }: { story: ArchiveStory; ti
         <h2 id="fetch-place-title">A familiar corner.<br />A new reason to stop.</h2>
         <p>The brick building, Fetch sign, and balloon-framed entrance connect the food to a recognizable downtown Brooklyn location. A photograph of the storefront helps people picture where their next visit could begin.</p>
         <p>Paired with the food photography, it gives the story both a destination and a reason to go: a place to find sandwiches, savory bites, and something sweet.</p>
+      </div>
+    </section>
+
+    <section className={styles.event} aria-labelledby="fetch-event-title">
+      <header className={styles.sectionHeader}>
+        <p className={styles.kicker}>The gathering</p>
+        <h2 id="fetch-event-title">From the sidewalk to the table.</h2>
+        <p>The gathering stretched from the balloon-framed entrance to conversations inside, with Fetch’s food laid out in an apartment kitchen.</p>
+      </header>
+      <div className={styles.eventGrid}>
+        <FetchPhoto item={photos.crowdOutside} />
+        <FetchPhoto item={photos.apartmentFood} />
+        <FetchPhoto item={photos.crowdInside} />
       </div>
     </section>
 
@@ -105,7 +121,7 @@ export default function FetchProject({ story, title }: { story: ArchiveStory; ti
 
     <section className={styles.takeaway} aria-labelledby="fetch-takeaway-title">
       <h2 id="fetch-takeaway-title">Make the business easier to discover.</h2>
-      <p>For Fetch, a connected set of food, storefront, and partnership photographs gives the launch story useful material to share. For future visitors, it answers simple questions: what looks good, where to find it, and who is behind it. The result is a more concrete invitation to get to know a local business.</p>
+      <p>For Fetch, a connected set of food, storefront, event, and partnership photographs gives the launch story useful material to share. For future visitors, it answers simple questions: what looks good, where to find it, and who is behind it. The result is a more concrete invitation to get to know a local business.</p>
     </section>
 
     <ProjectCallToAction />

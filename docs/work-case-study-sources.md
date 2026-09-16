@@ -18,6 +18,10 @@ The selected gallery highlights focused projects across seasonal events, communi
 - Holiday commercial credits Whimsy for script, direction, and casting, and Media Advantage for filming and editing. Poster is a frame from the actual archived video.
 - Software screenshots remain specific to their applications; full-size links improve access to dense interface details.
 
+## Fetch event photographs — 2026-09-16
+
+The Fetch case study adds three user-supplied photographs from `public`: `crowd outside fetch.jpg` (guests outside the balloon-framed entrance), `fetch food apartment 2.jpg` (guests and the food spread in an apartment kitchen), and `20260821_161121.jpg` (the crowd inside). Each original is 4000 × 3000 and appears once in the event gallery, with its full frame visible. These new event photographs are separate from the earlier pre-opening archive material below.
+
 ## Source records
 
 ### 2026-07-31 12:03 PM EDT

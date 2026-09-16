@@ -28,6 +28,8 @@
 .place > div > p:last-child { margin-bottom: 0; }
 .sectionHeader { max-width: 850px; margin: 0 auto 32px; text-align: center; }
 .sectionHeader > p:last-child { margin-bottom: 0; }
+.event { padding-block: 12px 28px; }
+.eventGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
 .savory { padding: 40px 0; }
 .savoryGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; align-items: center; }
 .savoryGrid > .photo:nth-child(1) { grid-area: 1 / 1; }
@@ -68,16 +70,18 @@
   .place, .sweets, .takeaway { padding: 28px; }
   .archiveGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .sweetsGrid { gap: 16px; }
+  .eventGrid { gap: 18px; }
   .savoryGrid { grid-template-columns: minmax(0, .85fr) minmax(0, 1fr); }
 }
 
 @media (max-width: 700px) {
-  .opening, .place, .savoryGrid, .sweetsGrid, .archiveHeader, .archiveGrid, .takeaway { grid-template-columns: minmax(0, 1fr); }
+  .opening, .place, .eventGrid, .savoryGrid, .sweetsGrid, .archiveHeader, .archiveGrid, .takeaway { grid-template-columns: minmax(0, 1fr); }
   .opening { padding-top: 24px; }
   .place, .sweets, .takeaway { padding: 24px 18px; }
   .savoryGrid > .photo:nth-child(n) { grid-area: auto; }
   .savory { padding-block: 20px 32px; }
   .sweetsGrid { gap: 28px; }
+  .eventGrid { gap: 28px; }
   .archiveChapter { padding-block: 28px; }
   .page section h2 { font-size: 28px; }
   .page > :global(.ready) h2 { font-size: 20px; }
