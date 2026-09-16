@@ -104,8 +104,8 @@
 .listeningPair .illustratedChapter > div { width: 100%; }
 .listeningPair .illustratedChapter p:last-child { margin-bottom: 0; }
 .listeningPair .illustratedChapter figure { width: 100%; margin-top: auto; }
-.listeningPair .chapterImage { aspect-ratio: 1; }
-.listeningPair .chapterImage img { padding: 0; }
+.listeningPair .chapterImage { aspect-ratio: 1546 / 1500; }
+.listeningPair .chapterImage img { padding: 0; object-fit: cover; object-position: center top; }
 .sonic > :global(.ready) { border-color: var(--sonic-navy); border-top: 4px solid var(--sonic-aqua); background: var(--sonic-navy); color: var(--sonic-text); }
 .sonic :global(.button) { border-color: var(--sonic-aqua); background: var(--sonic-aqua); color: var(--sonic-navy); }
 .sonic :global(.button:hover) { border-color: var(--sonic-muted); background: var(--sonic-muted); }
@@ -122,6 +122,7 @@
 @media (max-width: 900px) {
   .chapterPair { grid-template-columns: minmax(0, 1fr); gap: 20px; }
   .listeningPair { grid-template-columns: minmax(0, 1fr); }
+  .listeningPair > .storyChapter:last-child .chapterImage { aspect-ratio: 1591 / 1903; }
   .storyOverview, .illustratedChapter { grid-template-columns: minmax(0, 1fr); gap: 20px; }
   .hero { grid-template-columns: minmax(0, 1fr); grid-template-areas: "kicker" "title" "copy"; gap: 12px; }
   .heroCopy { margin-top: 12px; }
