@@ -89,6 +89,8 @@
 
 .sonic :global(.kicker), .sonic :global(.back-link), .sonic .credit a, .sonic :global(.creator-credit a) { color: var(--sonic-link); }
 .sonic .projectImage, .sonic .chapterImage { background: var(--sonic-navy); }
+.sonic .projectImage { aspect-ratio: 5 / 2; }
+.sonic .projectImage img { padding: 0; }
 .sonic .storyOverview { border-left-color: var(--sonic-aqua); background: var(--sonic-panel); color: var(--sonic-text); }
 .sonic .section { border-top-color: var(--sonic-border); }
 .sonic .storyChapter { padding: 32px; margin-bottom: 28px; border: 1px solid var(--sonic-border); border-radius: 12px; background: var(--sonic-panel); color: var(--sonic-text); }

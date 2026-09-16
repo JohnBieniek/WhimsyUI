@@ -42,8 +42,10 @@ export const softwareProjects = [
     title: "Sonic Shielding",
     kind: "Browser extension",
     summary: "Local audio processing and adjustable controls for a more comfortable listening experience in Chrome and Brave.",
-    image: "/work/software/sonic-setup.png",
-    alt: "Sonic Shielding setup interface explaining how to enable protection for browser audio.",
+    image: "/work/software/sonic-advertisement.png",
+    alt: "Sonic Shielding advertisement promoting more comfortable browser audio, with original and protected waveforms.",
+    thumbnail: "/work/software/sonic-advertisement-card.png",
+    thumbnailAlt: "Sonic Shielding advertisement: Softer sound. Smarter browsing. Original and protected waveforms illustrate sound reduction.",
     intro: "Sonic Shielding gives listeners control over harsh browser audio. The extension softens sudden peaks and piercing tones while aiming to keep speech and useful sounds recognizable.",
     sections: [
       { title: "Control each tab", copy: "Listeners choose which tabs to protect. Audio controls make it possible to adjust the response to peaks, tones, and alarms." },

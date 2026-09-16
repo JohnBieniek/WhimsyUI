@@ -36,7 +36,7 @@ const availableProjects = [
     image: galleryThumbnails[item.slug]?.image ?? (archiveStories[item.slug] ? `/work/archive/${archiveStories[item.slug].hero[0]}.jpg` : `/work/${item.file}`),
     alt: galleryThumbnails[item.slug]?.alt ?? archiveStories[item.slug]?.hero[1] ?? getImageAlt(`/work/${item.file}`),
   })),
-  ...softwareProjects.map(item => ({ ...item, image: item.thumbnail ?? item.image, category: "Software", client: item.kind })),
+  ...softwareProjects.map(item => ({ ...item, image: item.thumbnail ?? item.image, alt: item.thumbnailAlt ?? item.alt, category: "Software", client: item.kind })),
 ];
 const projects = workCategories.flatMap(category => selectedWork[category].map(slug => {
   const project = availableProjects.find(item => item.slug === slug);
@@ -65,7 +65,7 @@ export default function WorkGallery() {
               fill
               sizes="(max-width: 700px) 90vw, 25vw"
               style={item.category === "Software" && item.slug !== "lakeland-website"
-                ? { objectFit: "contain", background: "var(--mint)" }
+                ? { objectFit: "contain", background: item.slug === "sonic-shielding" ? "#071b35" : "var(--mint)" }
                 : item.slug === "heavenly-bakes-and-cakes"
                   ? { objectPosition: "center 80%" }
                   : item.slug === "malloween"

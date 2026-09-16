@@ -9,6 +9,10 @@ Reviewed 2026-09-13. The Work page restores the existing campaign collection and
 
 Sonic Shielding and Warden screenshots were downloaded from the corresponding `/assets/projects/` directories on johnbieniek.com, as requested. Other screenshots already existed in this repository. Public-facing copy summarizes the projects for Whimsy visitors rather than reproducing the engineering writeups.
 
+## Sonic Shielding advertisement images — 2026-09-15
+
+The case-study hero uses `sonic_shielding_marquee_promo_tile_v3.png` from the neighboring `SonicShielding` app, copied unchanged to `public/work/software/sonic-advertisement.png` (1400 × 560). The Work gallery uses the separate `sonic_shielding_small_promo_tile_v3.png`, copied unchanged to `public/work/software/sonic-advertisement-card.png` (440 × 280); this is also the promo tile in `AngularDemo/public/assets/projects/sonic-shielding/`. Both original advertisements replace the setup screenshot and retain their complete artwork.
+
 ## Lakeland Work thumbnail refresh — 2026-09-15
 
 `public/work/lakeland cabaret/site-wide.png` is an unaltered 1920 × 960 browser capture of the public homepage at https://lakelandcabaret.com/. It supplies a wider image for the Work gallery, with a cover crop that fills the card. Narrow cards show the complete screenshot against its matching Lakeland blue (#0b3b6f) to keep the headline and performers visible. The project and service pages retain their existing screenshots.
