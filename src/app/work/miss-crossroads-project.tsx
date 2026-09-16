@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ProjectCallToAction, ProjectHeader } from "./project-framing";
+import { MobileHeadingText, ProjectCallToAction, ProjectHeader } from "./project-framing";
 import styles from "./miss-crossroads-project.module.css";
 
 type ProjectPhoto = { file: string; caption: string; width: number; height: number };
@@ -34,7 +34,7 @@ export default function MissCrossroadsProject({ title, description }: { title: s
       <ProjectImage item={photos.recruitment} preload sizes="(max-width: 900px) 90vw, 520px" />
       <div>
         <p className={styles.kicker}>The project</p>
-        <h2 id="crossroads-project-title">Put opportunity in the spotlight.</h2>
+        <h2 id="crossroads-project-title"><MobileHeadingText lines={["Put opportunity in the spotlight."]} size="min(30px, 4.7cqw)" /></h2>
         <p>Whimsy created a recruitment campaign for Miss Crossroads and Miss Crossroads’ Teen: an announcement that catches the eye, an application guide that answers practical questions, and an introduction to the community role behind the title.</p>
         <p>The lead advertisement uses gold light, a dark background, and portraits of crowned titleholders to give the invitation a sense of occasion. The large application headline leads into the deadline, competition date, and a QR code, with Jackson Crossing’s partnership recognized below.</p>
         <ul className={styles.services}>
