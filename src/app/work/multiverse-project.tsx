@@ -101,8 +101,8 @@ export default function MultiverseProject({ project }: { project: (typeof softwa
         <p>Mobile views keep the game reference and character tools close at hand. These screens show how navigation, readable rules, and character details fit into the space a player has on a phone.</p>
         <Screenshot screen={screens.command} alt={accessibility.alt ?? ""} caption="Typed and spoken commands add accessibility." />
       </div>
-      <Screenshot screen={screens.mobileCharacter} alt="Multiverse character sheet with character details and dice controls on mobile" caption="Character tools on mobile." className={styles.phone} />
       <Screenshot screen={screens.mobileHome} alt="Multiverse mobile homepage with navigation and game guides" caption="The game reference on mobile." className={styles.phone} />
+      <Screenshot screen={screens.mobileCharacter} alt="Multiverse character sheet with character details and dice controls on mobile" caption="Character tools on mobile." className={styles.phone} />
     </section>
 
     <p className={styles.credit}>Software by John Bieniek. <a href={project.source}>Read the engineering overview ↗</a></p>
