@@ -104,7 +104,7 @@ export default function MissCrossroadsProject({ title, description }: { title: s
     <section className={styles.value} aria-labelledby="crossroads-value-title">
       <header>
         <p className={styles.kicker}>The value</p>
-        <h2 id="crossroads-value-title">A clearer invitation. A stronger local connection.</h2>
+        <h2 id="crossroads-value-title"><MobileHeadingText lines={["A clearer invitation.", "A stronger local connection."]} size="min(30px, 5cqw)" /></h2>
       </header>
       <div>
         <p>For the program, the campaign provides a coordinated set of materials that introduces the opportunity, explains participation, and shows community involvement in practice. For prospective participants, it makes the purpose and the next step easier to understand.</p>
