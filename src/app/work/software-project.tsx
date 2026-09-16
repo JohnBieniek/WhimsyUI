@@ -66,7 +66,7 @@ export default function SoftwareProject({ project }: { project: (typeof software
         <figcaption>{project.detailCaption}</figcaption>
       </figure>}
       <p className={`${styles.credit} ${isWarden ? styles.centeredCredit : ""}`}>Software by John Bieniek. <a href={project.source}>Read the engineering overview ↗</a></p>
-      <CreatorCredit />
+      {!isSonic && <CreatorCredit />}
       <ProjectCallToAction />
     </main>
   );
