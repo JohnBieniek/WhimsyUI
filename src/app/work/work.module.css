@@ -85,8 +85,11 @@
   --sonic-muted: #bfd8e7;
   --sonic-border: #365676;
   color: var(--sonic-navy);
+  padding-top: 4px;
 }
 
+.sonic > :global(.back-link) { margin-block: 8px; }
+.sonic > header { margin-top: 0; }
 .sonic :global(.kicker), .sonic :global(.back-link), .sonic .credit a, .sonic :global(.creator-credit a) { color: var(--sonic-link); }
 .sonic .projectImage, .sonic .chapterImage { background: var(--sonic-navy); }
 .sonic .projectImage { aspect-ratio: 5 / 2; }
