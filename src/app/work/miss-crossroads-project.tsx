@@ -28,7 +28,7 @@ function ProjectImage({ item, preload = false, sizes = "(max-width: 700px) 90vw,
 export default function MissCrossroadsProject({ title, description }: { title: string; description: string }) {
   return <main className={`case-page shell ${styles.page}`}>
     <Link className="back-link" href="/work">← All work</Link>
-    <ProjectHeader title={title} description={description} />
+    <ProjectHeader title={title} description={description} mobileTitleLines={["Miss Crossroads", "& Teen"]} />
 
     <section className={styles.opening} aria-labelledby="crossroads-project-title">
       <ProjectImage item={photos.recruitment} preload sizes="(max-width: 900px) 90vw, 520px" />
