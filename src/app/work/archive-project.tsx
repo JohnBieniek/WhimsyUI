@@ -29,7 +29,9 @@ function ArchiveHeading({ heading }: { heading: ArchiveStory["heading"] }) {
         ? ["New connections around", "a familiar table."]
         : heading === "Turn the halls into a place to discover young artists."
           ? ["Turn the halls into a place", "to discover young artists."]
-          : undefined;
+          : heading === "Help visitors find their way into the show."
+            ? ["Help visitors find their", "way into the show."]
+            : undefined;
   if (mobileLines) return <h2 className={styles.mobileTwoLineHeading}>
     {mobileLines.map((line, index) => <span key={line}>{index > 0 ? " " : ""}{line}</span>)}
   </h2>;
