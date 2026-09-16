@@ -331,7 +331,7 @@ export const archiveStories: Record<string, ArchiveStory> = {
         ],
         images: [
           ["cascades-ribbon-cutting", "The CHS team and supporters cutting the red Chamber ribbon at the grand opening"],
-          ["cascades-opening-welcome", "Guests gathering beneath the Cascades Humane Society sign and green balloons"],
+          ["cascades-opening-welcome", "Guests gathering beneath the Cascades Humane Society sign."],
           ["1426887109465569", "The grand-opening crowd filling the new Cascades Humane Society space"],
           ["1426887206132226", "Visitors talking and meeting animals during the CHS open house"],
         ],
