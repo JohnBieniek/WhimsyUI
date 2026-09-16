@@ -23,7 +23,7 @@ export default function IngendahlProject({ story, title }: { story: ArchiveStory
 
   return <main className={`case-page shell ${styles.page}`}>
     <Link className="back-link" href="/work">← All work</Link>
-    <ProjectHeader title={title} description={story.summary} />
+    <ProjectHeader title={title} description={story.summary} mobileTitleLines={["Ingendahl Acres", "Branding"]} />
 
     <section className={styles.opening} aria-labelledby="ingendahl-project-title">
       <div>
