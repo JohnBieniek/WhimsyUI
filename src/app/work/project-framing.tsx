@@ -1,10 +1,16 @@
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 import Link from "next/link";
 import styles from "./project-framing.module.css";
 
-export function ProjectHeader({ title, description, children }: { title: string; description: string; children?: ReactNode }) {
+export function MobileHeadingText({ lines, size = "min(30px, 5.4cqw)" }: { lines: string[]; size?: string }) {
+  return <span className={styles.mobileLines} style={{ "--mobile-heading-size": size } as CSSProperties}>
+    {lines.map((line, index) => <span key={line}>{index > 0 ? " " : ""}{line}</span>)}
+  </span>;
+}
+
+export function ProjectHeader({ title, description, children, mobileTitleLines, mobileTitleSize }: { title: string; description: string; children?: ReactNode; mobileTitleLines?: string[]; mobileTitleSize?: string }) {
   return <header className={styles.header}>
-    <h1 className={styles.title}>{title}</h1>
+    <h1 className={styles.title}>{mobileTitleLines ? <MobileHeadingText lines={mobileTitleLines} size={mobileTitleSize ?? "min(50px, 8cqw)"} /> : title}</h1>
     <p className={styles.description}>{description}</p>
     {children}
   </header>;

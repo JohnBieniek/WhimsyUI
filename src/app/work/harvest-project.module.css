@@ -178,3 +178,7 @@
 @media (max-width: 700px) {
   .services { justify-content: center; text-align: center; }
 }
+@media (max-width: 700px) {
+  .invitationCopy, .takeaway { container-type: inline-size; }
+  .page .invitationCopy h2, .page .takeaway h2 { font-size: min(30px, 6cqw); }
+}

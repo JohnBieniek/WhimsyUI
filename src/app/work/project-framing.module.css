@@ -50,3 +50,7 @@
     text-align: center;
   }
 }
+@media (max-width: 700px) {
+  .mobileLines { display: block; container-type: inline-size; }
+  .mobileLines > span { display: block; font-size: var(--mobile-heading-size); line-height: 1.12; white-space: nowrap; }
+}

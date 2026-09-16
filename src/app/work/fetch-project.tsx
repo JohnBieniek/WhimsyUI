@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { ArchiveStory } from "./archive-stories";
 import dimensions from "./archive-images.json";
-import { ProjectCallToAction, ProjectHeader } from "./project-framing";
+import { MobileHeadingText, ProjectCallToAction, ProjectHeader } from "./project-framing";
 import styles from "./fetch-project.module.css";
 
 type Photo = { src: string; caption: string; width: number; height: number };
@@ -41,7 +41,7 @@ function FetchPhoto({ item, preload = false, className = "" }: { item: Photo; pr
 export default function FetchProject({ story, title }: { story: ArchiveStory; title: string }) {
   return <main className={`case-page shell ${styles.page}`}>
     <Link className="back-link" href="/work">← All work</Link>
-    <ProjectHeader title={title} description={story.summary} />
+    <ProjectHeader title={title} description={story.summary} mobileTitleLines={["Fetch Market", "Launch"]} />
 
     <section className={styles.opening} aria-labelledby="fetch-project-title">
       <div className={styles.openingCopy}>
@@ -110,7 +110,7 @@ export default function FetchProject({ story, title }: { story: ArchiveStory; ti
       </header>
       {story.sections.map((section, index) => <section className={styles.archiveChapter} key={section.kicker}>
         <header className={styles.archiveHeader}>
-          <h3>{section.title}</h3>
+          <h3>{index === 0 ? <MobileHeadingText lines={["A historic spot,", "with something new on the way."]} size="min(28px, 5.2cqw)" /> : section.title}</h3>
           <div>{section.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}</div>
         </header>
         <div className={`${styles.archiveGrid} ${index === 1 ? styles.partners : ""}`}>

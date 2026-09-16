@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { ArchiveStory } from "./archive-stories";
 import dimensions from "./archive-images.json";
-import { ProjectCallToAction, ProjectHeader } from "./project-framing";
+import { MobileHeadingText, ProjectCallToAction, ProjectHeader } from "./project-framing";
 import styles from "./humane-society-project.module.css";
 
 function HumaneImage({ item, preload = false, sizes = "(max-width: 700px) 100vw, 50vw" }: { item: [string, string]; preload?: boolean; sizes?: string }) {
@@ -23,12 +23,12 @@ export default function HumaneSocietyProject({ story, title }: { story: ArchiveS
 
   return <main className={`case-page shell ${styles.page}`}>
     <Link className="back-link" href="/work">← All work</Link>
-    <ProjectHeader title={title} description={story.summary} />
+    <ProjectHeader title={title} description={story.summary} mobileTitleLines={["Cascades Humane", "Society", "Grand Opening"]} />
 
     <section className={styles.introduction} aria-labelledby="humane-project-title">
       <div>
         <p className={styles.kicker}>The project</p>
-        <h2 id="humane-project-title">{story.heading}</h2>
+        <h2 id="humane-project-title"><MobileHeadingText lines={["A warm welcome.", "A chance for a new beginning."]} /></h2>
         {story.introduction.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
         <ul className={styles.services}>{story.services.map(service => <li key={service}>{service}</li>)}</ul>
       </div>
@@ -43,7 +43,7 @@ export default function HumaneSocietyProject({ story, title }: { story: ArchiveS
       <div className={styles.adGrid}>
         <article className={styles.openingAd}>
           <div className={styles.cardCopy}>
-            <h3>Promote the grand opening.</h3>
+            <h3><MobileHeadingText lines={["Promote the grand opening."]} size="min(28px, 5.5cqw)" /></h3>
             {advertising.paragraphs.slice(0, 2).map(paragraph => <p key={paragraph}>{paragraph}</p>)}
           </div>
           <HumaneImage item={advertising.images[0]} />
@@ -51,7 +51,7 @@ export default function HumaneSocietyProject({ story, title }: { story: ArchiveS
         <article className={styles.adoptionAd}>
           <HumaneImage item={advertising.images[1]} />
           <div className={styles.cardCopy}>
-            <h3>Keep the invitation open.</h3>
+            <h3><MobileHeadingText lines={["Keep the invitation open."]} size="min(28px, 5.5cqw)" /></h3>
             <p>{advertising.paragraphs[2]}</p>
           </div>
         </article>
@@ -76,7 +76,7 @@ export default function HumaneSocietyProject({ story, title }: { story: ArchiveS
       <header className={styles.communityHeader}>
         <div>
           <p className={styles.kicker}>{community.kicker}</p>
-          <h2 id="humane-community-title">{community.title}</h2>
+          <h2 id="humane-community-title"><MobileHeadingText lines={["Better lives for animals.", "Companionship for people."]} /></h2>
         </div>
         <div>{community.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}</div>
       </header>

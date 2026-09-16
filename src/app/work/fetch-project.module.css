@@ -89,3 +89,7 @@
 @media (max-width: 700px) {
   .services { justify-content: center; text-align: center; }
 }
+@media (max-width: 700px) {
+  .place > div { container-type: inline-size; }
+  .page .place h2 { font-size: min(28px, 6cqw); }
+}

@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { ArchiveStory } from "./archive-stories";
 import dimensions from "./archive-images.json";
-import { ProjectCallToAction, ProjectHeader } from "./project-framing";
+import { MobileHeadingText, ProjectCallToAction, ProjectHeader } from "./project-framing";
 import styles from "./heavenly-bakes-project.module.css";
 
 function ProjectImage({ item, preload = false }: { item: [string, string]; preload?: boolean }) {
@@ -23,13 +23,13 @@ export default function HeavenlyBakesProject({ story, title }: { story: ArchiveS
 
   return <main className={`case-page shell ${styles.page}`}>
     <Link className="back-link" href="/work">← All work</Link>
-    <ProjectHeader title={title} description={story.summary} />
+    <ProjectHeader title={title} description={story.summary} mobileTitleLines={["Heavenly Bakes & Cakes", "Advertising"]} mobileTitleSize="min(44px, 6.2cqw)" />
 
     <section className={styles.opening} aria-labelledby="heavenly-project-title">
       <ProjectImage item={story.hero} preload />
       <div>
         <p className={styles.kicker}>The project</p>
-        <h2 id="heavenly-project-title">{story.heading}</h2>
+        <h2 id="heavenly-project-title"><MobileHeadingText lines={["Put the baker's creativity", "on the menu."]} /></h2>
         {story.introduction.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
         <ul className={styles.services}>{story.services.map(service => <li key={service}>{service}</li>)}</ul>
       </div>
@@ -57,7 +57,7 @@ export default function HeavenlyBakesProject({ story, title }: { story: ArchiveS
     <section className={styles.holiday} aria-labelledby="heavenly-holiday-title">
       <div>
         <p className={styles.kicker}>{holiday.kicker}</p>
-        <h2 id="heavenly-holiday-title">{holiday.title}</h2>
+        <h2 id="heavenly-holiday-title"><MobileHeadingText lines={["Bring a local baker into", "the holiday plans."]} /></h2>
         {holiday.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
       </div>
       <ProjectImage item={holiday.images[0]} />
@@ -66,7 +66,7 @@ export default function HeavenlyBakesProject({ story, title }: { story: ArchiveS
     <section className={styles.value} aria-labelledby="heavenly-value-title">
       <div>
         <p className={styles.kicker}>{value.kicker}</p>
-        <h2 id="heavenly-value-title">{value.title}</h2>
+        <h2 id="heavenly-value-title"><MobileHeadingText lines={["Give the work behind each", "treat a wider audience."]} /></h2>
       </div>
       <div>{value.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}</div>
     </section>
