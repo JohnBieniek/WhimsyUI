@@ -108,3 +108,7 @@
   .halloween .purpleCard { margin-bottom: 24px; }
   .halloween .purpleCard { margin-bottom: 24px; }
 }
+@media (min-width: 701px) {
+  .desktopTwoLineHeading { container-type: inline-size; }
+  .desktopTwoLineHeading span { display: block; white-space: nowrap; font-size: min(48px, 6.2cqw); }
+}

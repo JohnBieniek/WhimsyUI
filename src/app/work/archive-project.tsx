@@ -40,7 +40,7 @@ function ArchiveHeading({ heading }: { heading: ArchiveStory["heading"] }) {
                   : heading === "Show the journey behind the counter."
                     ? ["Show the journey", "behind the counter."]
                     : undefined;
-  if (mobileLines) return <h2 className={styles.mobileTwoLineHeading}>
+  if (mobileLines) return <h2 className={`${styles.mobileTwoLineHeading} ${heading === "Connect an everyday visit with a larger gathering." ? styles.desktopTwoLineHeading : ""}`}>
     {mobileLines.map((line, index) => <span key={line}>{index > 0 ? " " : ""}{line}</span>)}
   </h2>;
   return <h2 className={Array.isArray(heading) ? styles.twoLineHeading : undefined}>
