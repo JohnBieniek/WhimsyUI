@@ -95,6 +95,10 @@
 .sonic .projectImage { aspect-ratio: 5 / 2; }
 .sonic .projectImage img { padding: 0; }
 .sonic .storyOverview { border-left-color: var(--sonic-aqua); background: var(--sonic-panel); color: var(--sonic-text); }
+@media (min-width: 901px) {
+  .sonic .storyOverview > div:first-child { min-width: 0; container-type: inline-size; }
+  .sonic .storyOverview h2 { font-size: min(40px, 6cqw); text-wrap: balance; }
+}
 .sonic .section { border-top-color: var(--sonic-border); }
 .sonic .storyChapter { padding: 32px; margin-bottom: 28px; border: 1px solid var(--sonic-border); border-radius: 12px; background: var(--sonic-panel); color: var(--sonic-text); }
 .sonic .chapterCopy { max-width: none; }
