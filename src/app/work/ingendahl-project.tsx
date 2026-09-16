@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { ArchiveStory } from "./archive-stories";
 import dimensions from "./archive-images.json";
-import { ProjectCallToAction, ProjectHeader } from "./project-framing";
+import { MobileHeadingText, ProjectCallToAction, ProjectHeader } from "./project-framing";
 import styles from "./ingendahl-project.module.css";
 
 function FarmImage({ item, preload = false, sizes = "(max-width: 700px) 100vw, 50vw", showCaption = true, format = "jpg" }: { item: [string, string]; preload?: boolean; sizes?: string; showCaption?: boolean; format?: "jpg" | "png" }) {
@@ -28,7 +28,7 @@ export default function IngendahlProject({ story, title }: { story: ArchiveStory
     <section className={styles.opening} aria-labelledby="ingendahl-project-title">
       <div>
         <p className={styles.kicker}>The project</p>
-        <h2 id="ingendahl-project-title">{story.heading}</h2>
+        <h2 id="ingendahl-project-title"><MobileHeadingText lines={["A farm identity with character."]} size="min(30px, 5cqw)" /></h2>
         {story.introduction.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
         <ul className={styles.services}>{story.services.map(service => <li key={service}>{service}</li>)}</ul>
       </div>
