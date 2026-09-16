@@ -92,7 +92,7 @@ export default function MissCrossroadsProject({ title, description }: { title: s
     <section className={styles.localStops} aria-labelledby="crossroads-local-title">
       <header className={styles.sectionHeader}>
         <p className={styles.kicker}>Local connections</p>
-        <h2 id="crossroads-local-title">Make room for the businesses and causes along the way.</h2>
+        <h2 id="crossroads-local-title"><MobileHeadingText lines={["Make room for the businesses", "and causes along the way."]} size="min(30px, 4.8cqw)" /></h2>
         <p>The visit also included Sisters Smoothies and the humane society. Sharing these moments gives the surrounding businesses and organizations a place in the story, connecting the titleholders’ visibility with the people, products, and causes in their community.</p>
       </header>
       <div className={styles.portraitGrid}>
