@@ -1,9 +1,11 @@
 import type { CSSProperties, ReactNode } from "react";
 import Link from "next/link";
 import styles from "./project-framing.module.css";
+import { mobileHeadingSizes } from "./mobile-heading-sizes";
 
 export function MobileHeadingText({ lines, size = "min(30px, 5.4cqw)" }: { lines: string[]; size?: string }) {
-  return <span className={styles.mobileLines} style={{ "--mobile-heading-size": size } as CSSProperties}>
+  const fittedSize = size === "22px" ? size : mobileHeadingSizes[lines.join("|")] ?? size;
+  return <span className={styles.mobileLines} style={{ "--mobile-heading-size": fittedSize } as CSSProperties}>
     {lines.map((line, index) => <span key={line}>{index > 0 ? " " : ""}{line}</span>)}
   </span>;
 }

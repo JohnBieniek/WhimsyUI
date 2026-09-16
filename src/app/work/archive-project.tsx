@@ -56,7 +56,8 @@ export default function ArchiveProject({ story, title }: { story: ArchiveStory; 
       mobileTitleLines={(story.title ?? title) === "Jackson County Student Art Show" ? ["Jackson County", "Student Art Show"]
         : (story.title ?? title) === "Malloween at Jackson Crossing" ? ["Malloween at", "Jackson Crossing"]
           : (story.title ?? title) === "Serenity Consulting & Community Support" ? ["Serenity Consulting", "& Community Support"]
-            : (story.title ?? title) === "Sisters Smoothies Feature" ? ["Sisters Smoothies", "Feature"] : undefined}
+            : (story.title ?? title) === "Sisters Smoothies Feature" ? ["Sisters Smoothies", "Feature"]
+              : (story.title ?? title) === "Alpha Koney Islands Story" ? ["Alpha Koney", "Islands Story"] : undefined}
       mobileTitleSize="min(50px, 7.5cqw)" />
     <section className={styles.opening}>
       {isHalloween && <HalloweenDecorations variant="intro" />}

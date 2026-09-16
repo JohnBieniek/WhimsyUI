@@ -41,7 +41,7 @@ function FetchPhoto({ item, preload = false, className = "" }: { item: Photo; pr
 export default function FetchProject({ story, title }: { story: ArchiveStory; title: string }) {
   return <main className={`case-page shell ${styles.page}`}>
     <Link className="back-link" href="/work">← All work</Link>
-    <ProjectHeader title={title} description={story.summary} mobileTitleLines={["Fetch Market", "Launch"]} />
+    <ProjectHeader title={title} description={story.summary} mobileTitleLines={["Fetch Market", "Launch"]} mobileTitleSize="min(64px, 10.5cqw)" />
 
     <section className={styles.opening} aria-labelledby="fetch-project-title">
       <div className={styles.openingCopy}>
@@ -92,7 +92,7 @@ export default function FetchProject({ story, title }: { story: ArchiveStory; ti
     <section className={styles.sweets} aria-labelledby="fetch-sweets-title">
       <header className={styles.sectionHeader}>
         <p className={styles.kicker}>Something sweet</p>
-        <h2 id="fetch-sweets-title">Finish with something worth remembering.</h2>
+        <h2 id="fetch-sweets-title"><MobileHeadingText lines={["Finish with something", "worth remembering."]} /></h2>
         <p>Chocolate ganache brownies, toasted coconut and lime mousse, and strawberry cheesecake mousse complete the picture. Close-up photographs make the textures, colors, and presentation part of the invitation.</p>
       </header>
       <div className={styles.sweetsGrid}>

@@ -8,6 +8,7 @@ import { softwareProjects } from "./software-projects";
 import { selectedWork, workCategories } from "./portfolio-selection";
 import { archiveStories } from "./archive-stories";
 import styles from "./work.module.css";
+import { MobileHeadingText } from "./project-framing";
 
 const categories = ["All work", ...workCategories];
 const galleryThumbnails: Partial<Record<string, { image: string; alt: string }>> = {
@@ -81,7 +82,7 @@ export default function WorkGallery() {
           </Link>
         </div>
         <p className="tag">{item.category}</p>
-        <h2>{item.title}</h2>
+        <h2>{item.slug === "alpha-koney-story" ? <MobileHeadingText lines={["Alpha Koney", "Islands Story"]} size="22px" /> : item.title}</h2>
         <strong>{item.client}</strong>
         <p>{item.summary}</p>
         <Link href={item.href}>View case study →</Link>
