@@ -226,6 +226,15 @@
 }
 
 @media (max-width: 700px) {
+  .hero > div {
+    container-type: inline-size;
+  }
+
+  .hero :global(.kicker) {
+    font-size: min(18px, 5.6cqi);
+    white-space: nowrap;
+  }
+
   .cta h2 {
     font-size: clamp(15px, 4.5vw, 28px);
   }
@@ -243,11 +252,18 @@
   }
 
   .hero .lead {
-    font-size: 21px;
+    font-size: min(21px, 6.1cqi);
+    white-space: nowrap;
   }
 
   .coverage {
     padding-block: 32px 36px;
+    container-type: inline-size;
+  }
+
+  .coverage h2 {
+    font-size: min(28px, 7.3cqi);
+    text-wrap: balance;
   }
 
   .coverageGrid {
@@ -259,8 +275,26 @@
     padding: 24px;
   }
 
+  .coverageGrid article > div {
+    container-type: inline-size;
+  }
+
+  .coverageGrid .businessTitle {
+    font-size: min(21px, 8cqi);
+    white-space: nowrap;
+  }
+
   .planning {
     padding-block: 0 36px;
+  }
+
+  .planning > div {
+    container-type: inline-size;
+  }
+
+  .planning :global(.kicker) {
+    font-size: min(18px, 5.4cqi);
+    white-space: nowrap;
   }
 
   .included {

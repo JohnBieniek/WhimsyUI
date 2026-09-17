@@ -33,7 +33,7 @@ export default function ServicesPage() {
       <section className="page-hero compact">
         <div>
           <p className="kicker">Services &amp; Pricing</p>
-          <h1>Professional work.<br />Clear cost.</h1>
+          <h1>Professional work.<br /> Clear cost.</h1>
           <p className="intro">
             Whimsy offers everything you need to elevate your brand. Whether
             you&apos;re just starting your journey or you&apos;re striving for

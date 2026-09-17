@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { StandardPrice } from "../../standard-price";
 import { getImageAlt } from "../../image-alt";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -26,7 +27,7 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
 
   return <main data-service={slug} className={`article-page${isLakeland ? " single-page-service" : ""}${isMultiverse ? " multiverse-service" : ""}${slug === "website-support" ? " website-support-service" : ""}`}>
     <header className="article-hero shell">
-      <div><Link className="back-link" href="/services">← All services</Link><p className="kicker">STANDARD PRICE · {service.price}</p><h1 className={slug === "website-transfer" ? "website-transfer-title" : slug === "business-consulting-session" ? "strategy-session-title" : slug === "brand-advertising-plan" ? "brand-advertising-title" : undefined}>{service.name}</h1>{service.intro.split("\n\n").map((paragraph) => <p className="intro" key={paragraph}>{paragraph}</p>)}{slug === "website-support" && <WebsiteSupportCapabilities />}</div>
+      <div><Link className="back-link" href="/services">← All services</Link><StandardPrice price={service.price} /><h1 className={slug === "website-transfer" ? "website-transfer-title" : slug === "business-consulting-session" ? "strategy-session-title" : slug === "brand-advertising-plan" ? "brand-advertising-title" : undefined}>{service.name}</h1>{service.intro.split("\n\n").map((paragraph) => <p className="intro" key={paragraph}>{paragraph}</p>)}{slug === "website-support" && <WebsiteSupportCapabilities />}</div>
       {slug === "ad-campaign" ? <figure className="ad-campaign-gallery">
         {adCampaignImages.map((ad) => <Image key={ad.src} src={ad.src} alt={ad.alt} width={1080} height={1080} priority sizes="(max-width: 1050px) calc((100vw - 68px) / 2), (max-width: 1536px) calc((100vw - 135px) / 4), 350px" />)}
         <figcaption>Sisters Smoothies &middot; Four ads from one campaign</figcaption>

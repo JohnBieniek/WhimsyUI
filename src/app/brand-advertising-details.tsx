@@ -9,9 +9,9 @@ export function BrandAdvertisingOverview() {
 export function BrandAdvertisingDetails() {
   return <>
     <section className="brand-plan-section" aria-labelledby="brand-guides-title">
-      <header><p className="kicker">Brand and style guidance</p><h2 id="brand-guides-title">A clear identity. A consistent presentation.</h2><p>Your brand guide sets the direction for how people recognize and understand your company. The visual style guide is the practical part of that guidance: the design choices your team can apply every time it creates something.</p></header>
+      <header><p className="kicker">Brand <span className="brand-guidance-and">and</span><span className="brand-guidance-amp">&amp;</span> style guidance</p><h2 id="brand-guides-title"><span>A clear identity.</span>{" "}<span>A consistent presentation.</span></h2><p>Your brand guide sets the direction for how people recognize and understand your company. The visual style guide is the practical part of that guidance: the design choices your team can apply every time it creates something.</p></header>
       <div className="brand-guide-grid">
-        <article><h3>Brand guide: who you are and how you sound</h3><ul>
+        <article><h3 className="brand-guide-title">Brand guide: who you are and how you sound</h3><ul>
           <li><strong>Purpose and positioning:</strong> what you stand for, who you serve, and what makes your offer different.</li>
           <li><strong>Audience and promise:</strong> your priority customer profiles and the value you want them to remember.</li>
           <li><strong>Logo and identity:</strong> approved logo versions, appropriate uses, and how your business name appears.</li>
@@ -30,13 +30,13 @@ export function BrandAdvertisingDetails() {
     </section>
 
     <section className="brand-plan-section" aria-labelledby="brand-channels-title">
-      <header><p className="kicker">Your channel mix</p><h2 id="brand-channels-title">Know where to show up, and what to say.</h2><p>We help you choose channels based on your audience, goals, budget, and the time your team can give them. For each selected channel, your plan explains its purpose, content themes, recommended formats, posting rhythm, and where to send interested people.</p></header>
+      <header><p className="kicker">Your channel mix</p><h2 id="brand-channels-title"><span>Know where to show up,</span>{" "}<span>and what to say.</span></h2><p>We help you choose channels based on your audience, goals, budget, and the time your team can give them. For each selected channel, your plan explains its purpose, content themes, recommended formats, posting rhythm, and where to send interested people.</p></header>
       <div className="brand-channel-grid">
         <article><h3>Facebook</h3><p>Plan local updates, offers, events, and customer stories. We discuss how to use your business Page, participate appropriately in relevant communities, and combine useful posts with campaign ads.</p></article>
         <article><h3>LinkedIn</h3><p>Connect your expertise to professional audiences through company updates, project examples, practical advice, and partnership stories. We help decide what belongs on your company Page and what your team could share in its own voice.</p></article>
         <article><h3>Instagram</h3><p>Give your products, people, and work a recognizable visual style. We discuss feed posts, Stories, and short video ideas, with captions and next steps that support the same campaign message.</p></article>
-        <article><h3>Google Business Profile</h3><p>For eligible local businesses, plan relevant updates, offers, and events for people finding you on Search and Maps. Keep the details consistent with your website and campaign.</p></article>
-        <article><h3>Your website and email</h3><p>Connect ads to a useful destination with matching offer details and a clear way to inquire or buy. Plan email topics for subscribers so they hear a consistent story and have a reason to return.</p></article>
+        <article className="brand-google-channel"><h3>Google Business Profile</h3><p>For eligible local businesses, plan relevant updates, offers, and events for people finding you on Search and Maps. Keep the details consistent with your website and campaign.</p></article>
+        <article className="brand-website-channel"><h3>Your website <span className="brand-website-and">and</span><span className="brand-website-amp">&amp;</span> email</h3><p>Connect ads to a useful destination with matching offer details and a clear way to inquire or buy. Plan email topics for subscribers so they hear a consistent story and have a reason to return.</p></article>
         <article><h3>Other channels<span className="brand-channel-heading-detail"> worth considering</span></h3><p>We can discuss TikTok or YouTube for demonstrations and storytelling, plus local publications, radio, community partners, and print. We weigh audience fit and production effort before recommending where to spend your time and budget.</p></article>
       </div>
       <p className="brand-plan-note">You leave with guidance your team can use to publish and respond on the chosen channels. We agree on any additional account management, video production, or media buying separately; paid platform and publisher ad spend is separate from this package.</p>

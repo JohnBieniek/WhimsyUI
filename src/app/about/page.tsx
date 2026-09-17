@@ -112,7 +112,7 @@ export default function AboutPage() {
       <section className={styles.story} aria-labelledby="our-story-title">
         <div>
           <p className="kicker">Our story</p>
-          <h2 id="our-story-title">Founded by Kay Pickett. Rooted in Jackson.</h2>
+          <h2 id="our-story-title"><span>Founded by Kay Pickett.</span>{" "}<span>Rooted in Jackson.</span></h2>
           <p>
             Kay Pickett founded Whimsy with a background in community relations,
             advertising, and the arts. She brings those experiences to the
@@ -143,7 +143,7 @@ export default function AboutPage() {
       <section className={styles.team} aria-labelledby="team-title">
         <div className={styles.teamIntro}>
           <p className="kicker">Our team</p>
-          <h2 id="team-title">Different skills.<br />One shared purpose.</h2>
+          <h2 id="team-title">Different skills. One shared purpose.</h2>
           <p>
             Our team brings together the planning, creative, and technical work
             that helps your organization move forward. We start by listening to

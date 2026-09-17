@@ -92,6 +92,236 @@ The `home--820x1024--z100` capture exposed a shared header problem: a roughly 10
 
 Regression checks verify both vertical logo bounds on all 33 active routes at 701, 820, and 1050px. All three checks and the existing Home navigation test pass. Also checked Home at ten widths from 700 to 1920px, confirmed the 25 inactive headers retain their original height at 820px, and confirmed unchanged Home page heights at 1440/1920px. Production build and focused ESLint checks pass. Updated previews are under `reports/home-logo-review/`.
 
+## Follow-up: Home intro width (0.9.1 review)
+
+Removed the Home intro paragraph's inherited 500/600px maximum width through 1050px, where the collage is below the copy. At 901px it now fills the 821px content column. Verified twelve stacked-layout widths from 320 to 1050px plus desktop controls at 1051, 1280, and 1920px: no overlap or page overflow, with desktop paragraph caps retained. Production build passed. Updated preview: `reports/home-intro-review/home--901x1024--z100.jpg`. Queued locally for the current review batch.
+
+## Follow-up: Home dots at 125% zoom (0.9.1 review)
+
+The `home--1440x1050--z125` capture has a 1152x840 CSS viewport, where the compact desktop header rule hid the dot accents along with the hero logo. Restored both accents from 1051 through 1279px: two purple columns in the left gutter beside the introduction and mint dots above the collage. The header retains its existing logo. Production build passed. Checked fifteen widths from 390 to 1920px and the exact 1440x1050/125% browser-zoom case; the affected range has no accent clipping or intersections with text or images. The unchanged 1280px layout still has the previously existing mint/collage bounding-box intersection, recorded separately. Updated preview and measurements: `reports/home-dots-review/`. Queued locally; the original smoke-review capture is unchanged.
+
+## Follow-up: Home dots at 150% zoom (0.9.1 review)
+
+The `home--1440x1050--z150` capture has a 960x700 CSS viewport and exposed the equivalent dot-hiding rule in the stacked tablet layout. Extended the shared accent styles down to 701px. In the 701-1050px layout, purple dots sit beside the introduction, and two mint rows fit in the existing gap between the buttons and collage. Production build passed. Checked 22 viewport widths plus actual 125%, 150%, and 200% browser zoom at 1440x1050 (25 checks); the restored accents have no clipping or intersections with text or images. Visually reviewed the exact 150% capture. Updated full-page preview: `reports/home-dots-review/home--1440x1050--z150.jpg`; viewport detail and measurements are in the same folder. Queued locally with the earlier review fixes.
+
+## Follow-up: Full Home purple dot pattern at 1536px (0.9.1 review)
+
+The `home--1536x800--z100` capture showed only two purple columns because the gutter correction applied across the entire 1280-1679px range. The compact pattern now applies only where the full accent would extend beyond the viewport, accounting for the shell's width change above 1600px. The 1536px capture now shows the original four columns and six rows, fully inside the left gutter. Production build and 32 viewport/zoom checks passed, including both sides of the new transitions and the earlier 125%/150%/200% cases. Visually reviewed `reports/home-dots-review/home--1536x800--z100.jpg`. Queued locally with the earlier review fixes.
+
+The subsequent `home--1600x800--z100` review is covered by the same fix. Verified the exact 1600x800 viewport: all four purple columns and six rows render without clipping, text/image intersections, or page overflow. Saved and visually reviewed `reports/home-dots-review/home--1600x800--z100.jpg`; its measurements are in the adjacent JSON file. No additional layout change was needed.
+
+## Follow-up: Home purple dots above 1600px (0.9.1 review)
+
+The `home--1601x800--z100` review exposed the next gutter transition: the content shell widens above 1600px, and the compact accent still dropped two columns. Between 1600px and 1644px, the accent now preserves all four columns and six rows using 12px horizontal spacing in a 48px frame. Production build and 34 viewport/zoom checks passed, including 1599, 1600, 1601, 1602, 1643, and 1644px. Verified the exact 1601x800 capture with no purple-dot clipping or text/image intersections. Updated preview: `reports/home-dots-review/home--1601x800--z100.jpg`. Queued locally with the earlier review fixes.
+
+## Follow-up: Complete Home dot pattern in compact gutters (0.9.1 review)
+
+The `home--1920x1080--z150` capture has a 1280x720 CSS viewport. Its 32px purple accent still showed only two columns at the original 16px spacing. The remaining compact accent rules now use 8px horizontal spacing, preserving all four columns and six rows throughout the visible tablet and desktop layouts. This also updates the earlier 125% and 150% tablet fixes so they retain the full pattern. Production build and 35 viewport/zoom checks passed, including actual 1920x1080/150% browser zoom. Visually reviewed the exact capture; purple dots fit within the gutter without text/image intersections or clipping. Updated preview: `reports/home-dots-review/home--1920x1080--z150.jpg`. Queued locally with the earlier review fixes.
+
+## Follow-up: About story heading on phones (0.9.1 review)
+
+The `about--360x844--z100` review requested exactly two mobile lines for the story heading. Wrapped the two sentences in spans and, only through 700px, placed each sentence on its own unbroken line with type sized to the available width. Tablet and desktop retain one line. Production build passed; verified 14 widths from 320 to 1920px, with two lines on phones, one above 700px, and no heading or page overflow. Updated preview: `reports/about-story-review/about--360x844--z100.jpg`; heading detail and measurements are in the same folder. Queued locally with the earlier review fixes.
+
+## Follow-up: About hero heading in stacked layouts (0.9.1 review)
+
+The `about--701x1024--z100` review requested a single line for “Local talent. Trusted work.” whenever the collage sits below the copy. Extended the phone heading treatment through the stacked-layout breakpoint at 1050px, sizing the heading against its text column and hiding the explicit line break. Wider layouts retain two lines beside the collage. Production build passed; verified 16 widths from 320 to 1920px with the expected line counts, collage placement, and no heading or page overflow. Updated preview: `reports/about-hero-review/about--701x1024--z100.jpg`; heading detail and measurements are in the same folder. Queued locally with the earlier review fixes.
+
+## Follow-up: About team heading natural wrapping (0.9.1 review)
+
+The `about--900x1024--z100` review requested “Different skills. One shared purpose.” on one line wherever it fits without reducing the font size. Removed its forced line break, allowing natural wrapping at the existing type size. Production build passed; checked 13 widths from 320 to 1920px, comparing the unwrapped text width with the available column. Every layout with sufficient space uses one line, narrower columns wrap, and no heading or page overflow occurs. At 900px the heading fits on one line at the unchanged 28px size. Updated preview: `reports/about-team-review/about--900x1024--z100.jpg`. Queued locally with the earlier review fixes.
+
+## Follow-up: Giving Back card title alignment (0.9.1 review)
+
+The `about--1440x1050--z150` review requested centered titles across all three Giving Back cards whenever the longer titles wrap. Added a named container query on the equal-width card text areas: below 269px of text width, all three headings center together at their existing 19px size. This covers narrow phone cards as well as tablet columns, while wider cards retain their existing alignment. Production build and 22 viewport/zoom checks passed, including the exact 960x700 CSS viewport at actual 150% browser zoom. Serenity and Grow Jackson occupy two centered lines, and Jackson County Airport centers on one line; no heading or page overflow occurs. Updated full-page preview: `reports/about-giving-back-review/about--1440x1050--z150.jpg`; section details and measurements are in the same folder. Queued locally with the earlier review fixes.
+
+## Follow-up: Narrow phone navigation labels (0.9.1 review)
+
+The `contact--320x844--z100` review showed Contact wrapping onto its own row and leaving the Services divider behind. Navigation already uses 12px text on phones, retained as the minimum for this fix. The full labels need approximately 303px inside the header; at viewport widths through 330px, the shared Services link now hides only its “ & Pricing” suffix. At 331px and wider, “Services & Pricing” remains visible. All five links fit on one row at 320px without reducing text size. Production build, focused ESLint, and 45 checks across the five core routes and nine widths passed, with no clipped links or navigation overflow. Updated preview: `reports/narrow-navigation-review/contact--320x844--z100.jpg`; header details at 320/331px and measurements are in the same folder. Queued locally with the earlier review fixes.
+
+## Follow-up: Center Contact photo in stacked layouts (0.9.1 review)
+
+The `contact--701x1024--z100` review requested Kay's photo centered whenever it occupies its own row. Set the photo's grid alignment to center through the stacked-layout breakpoint at 1050px. Production build passed; checked 12 widths from 320 to 1920px, confirming exact horizontal centering in every stacked layout, no overflow, and the existing sidebar alignment above 1050px. Updated preview: `reports/contact-photo-review/contact--701x1024--z100.jpg`. Queued locally with the earlier review fixes.
+
+## Follow-up: Services intro uses the stacked column width (0.9.1 review)
+
+The review requested the full column width for “Professional work. Clear cost.” and the “Whimsy offers everything you need…” paragraph whenever the collage is below the copy. Through 1100px, removed the intro width cap and heading's forced line break, allowing natural wrapping at the existing font sizes. Production build passed; checked 13 widths from 320 to 1920px. Both text blocks fill the available column in stacked layouts without overflow; wider layouts retain the split composition and explicit heading break. Updated preview: `reports/services-intro-review/services--960x1024--z100.jpg`; intro detail and measurements are in the same folder. Queued locally with the earlier review fixes.
+
+## Follow-up: Services collage vertical alignment (0.9.1 review)
+
+The `services--1201x768--z100` review requested vertical centering when the collage occupies the second column beside taller text. Centered the collage within its grid row at 1101-1919px. Production build and 12 viewport checks passed: the collage aligns with the text's vertical center in the affected layouts without intersections or page overflow, and the stacked layout through 1100px is retained. At 1201px the 264px collage centers alongside the 464px text column. Updated preview: `reports/services-collage-centering-review/services--1201x768--z100.jpg`; hero detail and measurements are in the same folder. Queued locally with the earlier review fixes.
+
+## Follow-up: Services collage clearance below navigation (0.9.1 review)
+
+The `services--1601x800--z100` review requested that the collage never touch the navigation. The queued vertical-centering fix already creates a 32px header gap at that width. The remaining wide layout, from 1920px, still placed the collage against the header divider; added a 24px top margin to its hero. Production build and 15 width checks from 320 to 2560px passed, confirming at least 24px clearance below the header, no collage/pricing-card intersection, and no page overflow. Visually reviewed updated 1601px and 1920px previews under `reports/services-nav-gap-review/`. Queued locally with the earlier review fixes.
+
+## Follow-up: Pricing-card clearance beneath the wide Services collage (0.9.1 review)
+
+The `services--1920x1080--z80` review authorized extra spacing above the pricing boxes. Added 24px top padding to the pricing grid from 1920px upward, where the wide collage previously finished less than 2px above the cards. Production build and eight viewport/zoom checks passed. At actual 80% browser zoom (2400x1350 CSS pixels), the collage has approximately 24px clearance below the header and 26px above the pricing boxes, without page overflow. Updated preview: `reports/services-pricing-gap-review/services--1920x1080--z80.jpg`. Queued locally with the earlier review fixes.
+
+## Follow-up: Ad Campaign intro fills its stacked column (0.9.1 review)
+
+The `services--ad-campaign--1024x768--z100` review requested full-width intro paragraphs whenever the images sit below the copy. Removed the inherited 680px intro cap only for Ad Campaign through its 1050px stacking breakpoint. At 1024px, all three intro paragraphs now fill the 944px content column. Production build and 12 width checks passed, with no copy/image overlap or page overflow; the desktop intro cap remains in place. Updated preview: `reports/ad-campaign-intro-review/services--ad-campaign--1024x768--z100.jpg`; intro detail and measurements are in the same folder. Queued locally with the earlier review fixes.
+
+## Follow-up: Ad Campaign included heading (0.9.1 review)
+
+When the included-section introduction stacks above its four items (up to 1050 CSS pixels), its heading now wraps naturally instead of forcing a break between its two spans. Font sizing is unchanged. At 1024x768, “Four coordinated ads, ready to share.” fits on one line at 32px; narrower layouts wrap as needed, and the side-by-side desktop layout keeps its existing heading arrangement. Production build and 11 browser width checks (320–1600px) passed with no horizontal overflow. Preview and measurements: `reports/ad-campaign-included-review/`. Queued locally with earlier review fixes.
+
+## Follow-up: Ad Campaign message heading at 1100px (0.9.1 review)
+
+Extended the Ad Campaign article body's single-column layout through 1100 CSS pixels, giving “Four ads. One clear message.” enough room to fit on one line at its unchanged 44px font size at 1100x768. The accompanying requirements content stacks below the article at these widths. Production build and 10 browser width checks (360–1600px) passed without horizontal overflow. Preview and measurements: `reports/ad-campaign-message-review/`. Queued locally with earlier review fixes.
+
+## Follow-up: Ad Campaign message heading at 1101px (0.9.1 review)
+
+Extended the preceding stacked article-body adjustment through 1200 CSS pixels to include the 1101x768 capture and nearby tablet widths. The heading fits on one line at its unchanged 44.04px size at 1101px. Production build and nine browser width checks (360–1440px, including both sides of the 1200px boundary) passed without horizontal overflow. The desktop two-column layout resumes above 1200px. Preview: `reports/ad-campaign-message-review/message--1101x768.png`; measurements: `checks-1101.json` in the same directory. Queued locally.
+
+## Follow-up: Ad Campaign message heading at 1201px and wider (0.9.1 review)
+
+Supersedes the preceding 1100px and 1200px cutoffs: the Ad Campaign article body now retains one column at all widths, with requirements below the overview. This lets “Four ads. One clear message.” use the full row without changing its font sizing or reintroducing the wrap at the next desktop breakpoint. Production build and 12 browser checks from 320 through 2400 CSS pixels passed: heading on one line and no horizontal overflow in each. Exact preview: `reports/ad-campaign-message-review/message--1201x768.png`; measurements: `checks-wide.json` in the same folder. Queued locally.
+
+## Follow-up: Ad Campaign consultation heading (0.9.1 review)
+
+The Ad Campaign CTA heading now uses its natural text width as its flex basis, moving the consultation button below when necessary instead of compressing the heading beside it. Font sizing is unchanged; narrower headings can still wrap naturally. Verified at actual 1920x1080 / 200% zoom (960x540 CSS): one line at 42px with no horizontal overflow. Production build and ten browser checks spanning 320–1920 CSS pixels passed. Preview and measurements: `reports/ad-campaign-cta-review/`. Queued locally.
+
+## Follow-up: Brand guidance headings at 320px (0.9.1 review)
+
+The identity heading uses one sentence per line on mobile, scaling from approximately 20px at 320px to its existing 26px size when space permits. The section label uses “BRAND & STYLE GUIDANCE” in containers up to 330px wide, preserving its 18px font size; wider containers retain “and”. Production build, component lint, and eleven browser width checks (320–1440px) passed with no horizontal overflow. Preview and measurements: `reports/brand-guidance-review/`. Queued locally.
+
+## Follow-up: Brand guide card heading at 320px (0.9.1 review)
+
+The first brand-guide card heading uses balanced wrapping and mobile container-based font sizing, capped at its existing 20px. At 320x844 it is approximately 19px and fits on two lines. Production build, component lint, and eight browser width checks (320–1440px) passed with no horizontal overflow. Preview and measurements: `reports/brand-guide-card-review/`. Queued locally.
+
+## Follow-up: Channel mix heading at 320px (0.9.1 review)
+
+“Know where to show up, and what to say.” now breaks after the comma on mobile, with container-based sizing capped at the existing 26px. At 320x844 it fits on two lines at approximately 21.3px. Wider desktop headings retain natural wrapping. Production build, component lint, and seven browser width checks (320–1440px) passed with no horizontal overflow. Preview and measurements: `reports/brand-channels-heading-review/`. Queued locally.
+
+## Follow-up: Google Business Profile heading at 320px (0.9.1 review)
+
+The Google Business Profile card heading now scales with its mobile card width, capped at the existing 20px size. At 320x844 it fits on one line at approximately 18.5px. Production build, component lint, and eight browser width checks (320–1440px) passed with no horizontal overflow. Preview and measurements: `reports/brand-google-heading-review/`. Queued locally.
+
+## Follow-up: Website and email heading at 320px (0.9.1 review)
+
+The website/email card uses “Your website & email” when its content container is at most 256px wide, retaining “and” when it fits. At 320x844 the shorter heading fits on one line at the unchanged 20px font size; container-based sizing allows further adjustment in narrower cards. Production build, component lint, and ten browser width checks (320–1440px) passed with one-line headings and no horizontal overflow. Preview and measurements: `reports/brand-website-heading-review/`. Queued locally.
+
+## Follow-up: Brand & Advertising Plan mobile title (0.9.1 review)
+
+The main Brand & Advertising Plan heading now scales with its text column on mobile (up to 700px), capped at 48px, and stays on one line. At 360x844 it is approximately 23.6px; at 320px it is approximately 20.7px. Production build and nine browser width checks (320–1440px) passed with no horizontal overflow. Preview and measurements: `reports/brand-mobile-title-review/`. Queued locally.
+
+## Follow-up: Brand plan consultation heading at 820px (0.9.1 review)
+
+Applied natural-width flex sizing to the Brand & Advertising Plan CTA heading so the consultation button moves below when necessary. At 820x1024, “Let’s make the next step clear.” fits on one line at the unchanged 42px font size. Production build and nine browser width checks (320–1440px) passed without horizontal overflow. Preview and measurements: `reports/brand-cta-review/`. Queued locally.
+
+## Follow-up: Brand plan stacked introduction width (0.9.1 review)
+
+Removed the introductory paragraph width cap on Brand & Advertising Plan when the hero stacks (up to 1050 CSS pixels). All three paragraphs now fill their text column; the side-by-side layout keeps its existing cap. Production build and eleven browser width checks (320–1440px), including the 1050/1051 boundary, passed with no horizontal overflow. Exact 901x1024 preview and measurements: `reports/brand-intro-width-review/`. Queued locally.
+
+## Follow-up: Brand plan included heading at 901px (0.9.1 review)
+
+Removed the forced span break when the included introduction stacks above its four cards (up to 1050px). At stacked tablet widths (701–1050px), container-based sizing capped at 32px keeps the heading on one line; at 901x1024 it is approximately 28px. Phone text wraps naturally, and the side-by-side desktop arrangement retains its existing styling. Production build and ten browser width checks (320–1440px) passed without horizontal overflow. Preview and measurements: `reports/brand-included-heading-review/`. Queued locally.
+
+## Follow-up: Consulting stacked introduction width (0.9.1 review)
+
+Removed the introductory paragraph width cap on Business Consulting Session when the hero stacks (up to 1050 CSS pixels). Paragraphs now fill the column, including its 944px width at 1024x768. The side-by-side layout retains its existing cap. Production build and ten browser width checks (320–1440px), including both sides of the stacking breakpoint, passed without horizontal overflow. Preview and measurements: `reports/consulting-intro-width-review/`. Queued locally.
+
+## Follow-up: Consulting consultation heading stays on one line (0.9.1 review)
+
+The consulting CTA heading uses natural-width flex sizing, with the button moving below when necessary. Above the phone breakpoint its font scales with the column up to the existing 42px, and nowrap keeps the title on one line. Existing mobile sizing is preserved. Production build and eleven browser checks passed with one-line headings, no button overlap, and no horizontal overflow, including actual 1440x1050 at 150% zoom (960x700 CSS). Preview at equivalent CSS dimensions and measurements: `reports/consulting-cta-review/`. Queued locally.
+
+## Follow-up: Five-page website updates label at 320px (0.9.1 review)
+
+The five-page website's “Easy updates, included” label scales with its mobile header container, capped at the existing 18px, to fit one line. At 320x844 it is approximately 15.7px; at 360px it returns to 18px. Production build and seven browser width checks (320–1440px) passed with one-line labels and no horizontal overflow. Preview and measurements: `reports/five-page-updates-review/`. Queued locally.
+
+## Follow-up: Five-page website publish heading at 320px (0.9.1 review)
+
+On mobile, the publish step switches to “Publish when you're ready” when its content width is at most 254px and scales down only as needed. At 320x844 it fits one line at approximately 18.1px; at 360px the original wording fits at 21px. Desktop styling is preserved. Production build, component lint, and eight browser width checks passed with no horizontal overflow. Preview and measurements: `reports/five-page-publish-review/`. Queued locally.
+
+## Follow-up: Five-page website real-use label at 320px (0.9.1 review)
+
+The “Built for real use” label scales with its mobile text column, capped at the existing 18px. At 320x844 it fits one line at approximately 17.3px and returns to 18px at 360px. Production build and seven browser width checks (320–1440px) passed without horizontal overflow. Preview and measurements: `reports/five-page-real-use-review/`. Queued locally.
+
+## Follow-up: Five-page website CMS heading on mobile (0.9.1 review)
+
+“We build it. You can keep it up to date.” now uses balanced wrapping and container-based mobile sizing capped at 28px. It fits two lines at 320px (approximately 22.4px) and 360x844 (approximately 26px), and naturally uses one line when space permits. Production build and nine browser width checks (320–1440px) passed, with at most two lines on mobile and no horizontal overflow. Preview and measurements: `reports/five-page-cms-title-review/`. Queued locally.
+
+## Follow-up: Five-page website mobile screenshot order (0.9.1 review)
+
+On mobile (up to 700px), the Multiverse homepage screenshot now appears above the character-sheet screenshot in the responsive demonstration. Desktop ordering is unchanged. Production build and seven browser width checks (320–1024px) passed, verifying image order and no horizontal overflow. Exact 479x844 preview and measurements: `reports/five-page-mobile-image-order-review/`. Queued locally.
+
+## Follow-up: Five-page website real-use label at 820px (0.9.1 review)
+
+Extended the existing container-based “Built for real use” sizing beyond mobile to the side-by-side layout. At 820x1024 the label fits one line at approximately 17.2px, returning to its 18px cap when space permits. Production build and nine browser width checks (320–1440px) passed with one-line labels and no horizontal overflow. Preview: `reports/five-page-real-use-review/real-use--820x1024.png`; measurements: `checks-wide.json` in the same directory. Queued locally.
+
+## Follow-up: Five-page website consultation heading at 900px (0.9.1 review)
+
+The CTA heading now uses its natural width as its flex basis, moving the button below when needed. At 900x1024, “Let’s make the next step clear.” fits one line at the unchanged 42px font size. Production build and eight browser width checks (320–1440px) passed without horizontal overflow. Preview and measurements: `reports/five-page-cta-review/`. Queued locally.
+
+## Follow-up: Photography price label at 320px (0.9.1 review)
+
+The Photography · $100/hour hero label now scales with its mobile column, capped at the existing 18px, and stays on one line. Production build and eight browser width checks (320–1440px) passed without horizontal overflow. Exact 320x844 preview and measurements: `reports/photography-price-heading-review/`. Queued locally.
+
+## Follow-up: Photography mobile tagline at 320px (0.9.1 review)
+
+“Your people. Your work. Your story.” now scales with its mobile hero column, capped at the existing 21px, and stays on one line. At 320x844 it is approximately 17.8px. Production build and eight browser width checks (320–1440px) passed without horizontal overflow. Preview and measurements: `reports/photography-tagline-review/`. Queued locally.
+
+## Follow-up: Photography coverage heading on mobile (0.9.1 review)
+
+“People, places, and the things you create.” uses balanced wrapping and mobile container-based sizing capped at 28px. At 320x844 it fits two lines at approximately 21.3px and naturally uses one line when space permits. Production build and eight browser width checks (320–1024px) passed with at most two lines on mobile and no horizontal overflow. Preview and measurements: `reports/photography-coverage-heading-review/`. Queued locally.
+
+## Follow-up: Photography business card heading at 320px (0.9.1 review)
+
+“Business & brand photos” now scales with its mobile card column, capped at the existing 21px. It fits one line at 320x844 at approximately 19.4px and returns to 21px at 360px. Production build, page lint, and eight browser width checks (320–1440px) passed without horizontal overflow. Preview and measurements: `reports/photography-business-heading-review/`. Queued locally.
+
+## Follow-up: Photography shoot label at 320px (0.9.1 review)
+
+“A shoot shaped around you” now scales with its mobile planning column, capped at the existing 18px, and stays on one line. Production build and eight browser width checks (320–1440px) passed without horizontal overflow. Exact 320x844 preview and measurements: `reports/photography-shoot-heading-review/`. Queued locally.
+
+## Follow-up: Single-page website publish heading at 320px (0.9.1 review)
+
+Extended the existing mobile publish-step treatment to Single-page Website. At 320x844, “Publish when you're ready” fits one line at approximately 18.1px; wider mobile cards retain the full wording and 21px size when they fit. Production build and seven browser width checks (320–1440px) passed without horizontal overflow. Preview and measurements: `reports/single-page-publish-review/`. Queued locally.
+
+## Follow-up: Standard service prices stay on one line (0.9.1 review)
+
+All seven standard service pages now use a shared StandardPrice component. It measures the actual label and price after fonts load and when the column resizes, reducing the inherited font size only when necessary. The complete label remains on one line without separate rules for each price. Website Support at 320x844 uses approximately 16.6px; labels with sufficient space retain 18px. Production build, component/page lint, and 35 browser checks across all seven prices at five widths (320–1440px), including live resizing, passed with no overflow. Preview and measurements: `reports/standard-price-review/`. Queued locally.
+
+## Follow-up: Shared stacked text-column widths (0.9.1 review)
+
+Replaced the three service-specific introduction overrides with a shared rule for every standard service hero at its 1050px stacking breakpoint. This also fixes Website Support, Website Transfer, Single-page Website, and Five-page Website. Removed the stacked About hero's 700px text-column cap and the Contact and generic case-header introduction caps at the same breakpoint. Website Support at 1050x768 now uses the full 970px text column. Audited core routes and exported portfolio pages for constrained text; standalone editorial sections and image sizing retain their intended widths. Production build passed. Browser checks covered 78 route/width combinations plus five explicit About column checks. The older unlinked `/work/back-to-school-ads` page has a pre-existing 6px overflow at 320px, confirmed unchanged after restoring its original text cap; affected core routes had no overflow. Preview and measurements: `reports/stacked-text-width-review/`. Queued locally.
+
+## Follow-up: Shared stacked service heading widths (0.9.1 review)
+
+All shared deliverables/introduction headings now use inline spans and natural wrapping when their cards stack below (up to 1050px), replacing the earlier two-service exception. This covers Support, Transfer, Single-page, Five-page, Consulting, Brand Plan, Ad Campaign, and the shared Photography section. Also removed forced span breaks and width limits on service overview headings at stacked tablet widths (701–1050px); dedicated phone heading treatments remain. “The work you need, with a clear handoff.” fits one line at 1050x768 without a font-size change. Production build and 56 route/width checks across eight services (320–1440px) passed with no horizontal overflow. Preview and measurements: `reports/stacked-heading-width-review/`. Queued locally.
+
+## Follow-up: Website Transfer mobile CMS headings (0.9.1 review)
+
+Applied the existing responsive CMS heading treatment to Website Transfer. “Easy updates, included” fits one line and “We build it. You can keep it up to date.” stays within two lines on mobile, including 320x844. Production build and eight browser width checks (320–1440px) passed without horizontal overflow. Preview and measurements: `reports/transfer-cms-headings-review/`. Queued locally.
+
+## Follow-up: Website Transfer remaining-cost heading at 320px (0.9.1 review)
+
+“What might you still pay for?” now scales with its mobile text column, capped at the existing 21px. At 320x844 it fits one line at approximately 19.7px. Production build, component lint, and seven browser width checks (320–1440px) passed without horizontal overflow. Preview and measurements: `reports/transfer-cost-heading-review/`. Queued locally.
+
+## Follow-up: Website Transfer handoff heading on mobile (0.9.1 review)
+
+“Your website, with access and answers.” now uses balanced wrapping and container-based mobile sizing capped at 30px. At 320x844 it fits two lines at approximately 21.9px. Production build and eight browser width checks (320–1440px) passed with at most two lines on mobile and no horizontal overflow. Preview and measurements: `reports/transfer-handoff-heading-review/`. Queued locally.
+
+## Follow-up: Website Transfer hero image uncropped (0.9.1 review)
+
+The transfer hero now follows the source image's 3:2 aspect ratio with automatic height and object-fit contain. Removed the rounded clipping mask so the entire artwork, including top and bottom text, remains visible at every breakpoint. Production build and twelve browser checks passed across 320–2400 CSS pixels, including actual 1920x1080 at 200% zoom (960x540 CSS). Checks confirmed matching aspect ratios, contain sizing, no rounded clipping, and no horizontal overflow. Preview and measurements: `reports/transfer-hero-image-review/`. Queued locally.
+
+## Follow-up: Work campaign label at 320px (0.9.1 review)
+
+“Campaigns & community” now scales with its mobile header column, capped at the existing 18px, to stay on one line. At 320x844 it is approximately 15.5px. Production build and seven browser width checks (320–1440px) passed without horizontal overflow. Preview and measurements: `reports/work-campaign-label-review/`. Queued locally.
+
+## Follow-up: Work filter chips centered on smaller screens (0.9.1 review)
+
+The Work filter row now uses centered flex alignment up to 900px, centering each wrapped row of chips independently. Production build and nine browser width checks (320–1440px), including both sides of the breakpoint, passed without horizontal overflow; each smaller-screen row was centered within one pixel. Exact 320x844 preview and measurements: `reports/work-filter-alignment-review/`. Queued locally.
+
+## Follow-up: Work titles use available row width (0.9.1 review)
+
+Removed the forced hero line break when the Work hero stacks (up to 900px), retaining a space between its sentences. Removed the Alpha Koney gallery title's mobile-only forced split so it wraps naturally at every width. At 700x1024 both titles fit one line at their unchanged font sizes. Production build, page/gallery lint, and ten browser width checks (320–1440px) passed without horizontal overflow. Previews and measurements: `reports/work-natural-heading-review/`. Queued locally.
+
+## Follow-up: Work gallery cards show complete images (0.9.1 review)
+
+All Work gallery card images now use object-fit contain with centered placement at every breakpoint. Removed custom crop positions, the Fetch image's 1.5x zoom, and the conditional Lakeland cover treatment. The full source artwork remains visible inside each card frame, with unused space around images whose proportions differ from the frame. Production build and gallery lint passed. Browser checks verified 20 images at ten widths (320–2400px): all loaded, contained within their frames, with no transforms or page overflow. Full 700x1024 page preview, first-card detail, and measurements: `reports/work-card-image-review/`. Queued locally.
+
 ## Follow-up: Shared Featured Partners layout (0.9.0 review)
 
 The first review's partner-heading correction was incorrectly scoped to Contact. The same rule now applies to the shared `.partners` section on both Home and Contact: through 1050px, the heading spans its own centered row, its forced break is hidden, and the first logo's mint divider is removed. Shared horizontal padding is removed to keep the heading on one line at narrow phone widths. Contact retains its page-specific full-width section rule; wider desktop layouts retain their existing arrangement.

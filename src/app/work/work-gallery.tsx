@@ -8,7 +8,6 @@ import { softwareProjects } from "./software-projects";
 import { selectedWork, workCategories } from "./portfolio-selection";
 import { archiveStories } from "./archive-stories";
 import styles from "./work.module.css";
-import { MobileHeadingText } from "./project-framing";
 
 const categories = ["All work", ...workCategories];
 const galleryThumbnails: Partial<Record<string, { image: string; alt: string }>> = {
@@ -66,23 +65,13 @@ export default function WorkGallery() {
               fill
               sizes="(max-width: 700px) 90vw, 25vw"
               style={item.category === "Software" && item.slug !== "lakeland-website"
-                ? { objectFit: "contain", background: item.slug === "sonic-shielding" ? "#071b35" : "var(--mint)" }
-                : item.slug === "heavenly-bakes-and-cakes"
-                  ? { objectPosition: "center 80%" }
-                  : item.slug === "malloween"
-                    ? { objectPosition: "center 35%" }
-                    : item.slug === "fetch-market-launch"
-                      ? { objectPosition: "center 65%", transform: "scale(1.5)", transformOrigin: "center 65%" }
-                      : item.slug === "alpha-koney-story" || item.slug === "valentines-at-jackson-crossing"
-                        ? { objectPosition: "center 20%" }
-                        : item.slug === "cascades-ribbon-cutting" || item.slug === "happy-harvest" || item.slug === "serenity-support" || item.slug === "welcome-home-organization" || item.slug === "miss-crossroads"
-                          ? { objectPosition: "center top" }
-                          : undefined}
+                ? { background: item.slug === "sonic-shielding" ? "#071b35" : "var(--mint)" }
+                : undefined}
             />
           </Link>
         </div>
         <p className="tag">{item.category}</p>
-        <h2>{item.slug === "alpha-koney-story" ? <MobileHeadingText lines={["Alpha Koney", "Islands Story"]} size="22px" /> : item.title}</h2>
+        <h2>{item.title}</h2>
         <strong>{item.client}</strong>
         <p>{item.summary}</p>
         <Link href={item.href}>View case study →</Link>

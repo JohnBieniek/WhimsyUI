@@ -8,7 +8,7 @@ import { appVersion } from "./generated-version";
 
 const links = [["/", "Home"], ["/about", "About"], ["/work", "Work"], ["/services", "Services & Pricing"], ["/contact", "Contact"]];
 
-export function SiteHeader(){const path=usePathname();return <header className={`site-header shell${path==="/"?" home-header":""}`}><Link href="/" className="nav-logo"><Image src="/logo%20tight.png" alt="Whimsy home" width={4744} height={2198} priority/></Link><nav aria-label="Main navigation">{links.map(([href,label])=><Link key={href} href={href} className={path===href?"active":""}>{label}</Link>)}</nav></header>}
+export function SiteHeader(){const path=usePathname();return <header className={`site-header shell${path==="/"?" home-header":""}`}><Link href="/" className="nav-logo"><Image src="/logo%20tight.png" alt="Whimsy home" width={4744} height={2198} priority/></Link><nav aria-label="Main navigation">{links.map(([href,label])=><Link key={href} href={href} className={path===href?"active":""}>{href==="/services"?<>Services<span className="nav-services-detail"> &amp; Pricing</span></>:label}</Link>)}</nav></header>}
 
 export function SiteFooter() {
   const [pressed, setPressed] = useState(false);

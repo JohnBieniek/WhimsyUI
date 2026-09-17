@@ -18,11 +18,8 @@
 .page :global(.filters) label span { padding: 10px 16px; }
 .page :global(.portfolio-grid) h2 { font-size: 22px; line-height: 1.2; text-align: center; }
 .galleryImageLink { display: block; position: relative; height: 100%; overflow: hidden; }
-.lakelandThumbnail { container-type: size; background: #0b3b6f; }
-.lakelandThumbnail img { object-fit: cover; object-position: 25% 25%; }
-@container (max-aspect-ratio: 8 / 5) {
-  .lakelandThumbnail img { object-fit: contain; }
-}
+.page .galleryImageLink img { object-fit: contain; object-position: center; }
+.lakelandThumbnail { background: #0b3b6f; }
 .page .galleryImageLink:focus-visible { outline-offset: -4px; }
 .softwareGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
 .softwareGrid > article { display: flex; flex-direction: column; border: 1px solid #b9ded6; border-radius: 10px; overflow: hidden; }
@@ -142,6 +139,8 @@
   .projectOpening { grid-template-columns: minmax(0, 1fr); gap: 24px; }
 }
 @media (max-width: 900px) {
+  .hero h1 br { display: none; }
+  .page :global(.filters) { justify-content: center; }
   .chapterPair { grid-template-columns: minmax(0, 1fr); gap: 20px; }
   .listeningPair { grid-template-columns: minmax(0, 1fr); }
   .listeningPair > .storyChapter:last-child .chapterImage { aspect-ratio: 1591 / 1903; }
@@ -152,7 +151,7 @@
 }
 @media (max-width: 700px) {
   .campaignHeader { container-type: inline-size; padding: 24px 16px; margin-bottom: 28px; border: 1px solid #dacde1; border-radius: 12px; background: #eee3f7; }
-  .campaignHeader > :global(.kicker) { margin-top: 0; }
+  .campaignHeader > :global(.kicker) { margin-top: 0; font-size: min(18px, 6cqi); white-space: nowrap; }
   .campaignHeader > h2 { font-size: min(26px, 5.35cqw); text-wrap: nowrap; }
   .campaignHeader > p.campaignIntro { margin-bottom: 0; }
   .mintChapter { padding: 24px 18px; }

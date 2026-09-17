@@ -101,7 +101,7 @@ export default function PhotographyPage() {
             <article key={title}>
               <span className={styles.icon}><Icon aria-hidden="true" size={25} /></span>
               <div>
-                <h3>{title}</h3>
+                <h3 className={title === "Business & brand photos" ? styles.businessTitle : undefined}>{title}</h3>
                 <p>{copy}</p>
                 <p className={styles.uses}><strong>Useful for:</strong> {uses}</p>
               </div>

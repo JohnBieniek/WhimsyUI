@@ -272,11 +272,20 @@
 }
 
 .communityCopy {
+  container: giving-back-card / inline-size;
   padding: 24px;
 }
 
 .communityCopy h3 {
   font-size: 19px;
+}
+
+/* The longest card title needs about 269px at its existing 19px size.
+   Equal-width cards switch alignment together when the titles need to wrap. */
+@container giving-back-card (width < 269px) {
+  .communityCopy h3 {
+    text-align: center;
+  }
 }
 
 .communityCopy p {
@@ -304,7 +313,17 @@
   }
 
   .hero > div {
-    max-width: 700px;
+    max-width: none;
+    container-type: inline-size;
+  }
+
+  .hero h1 {
+    font-size: min(48px, 7cqi);
+    white-space: nowrap;
+  }
+
+  .hero h1 br {
+    display: none;
   }
 
   .collage {
@@ -346,20 +365,8 @@
 }
 
 @media (max-width: 700px) {
-  .hero {
-    container-type: inline-size;
-  }
-
   .communityHeader h2 {
     font-size: clamp(18px, 5.5vw, 28px);
-  }
-
-  .hero h1 {
-    font-size: min(48px, 7cqi);
-  }
-
-  .hero h1 br {
-    display: none;
   }
 
   .hero .intro {
@@ -374,8 +381,18 @@
   }
 
   .story {
+    container-type: inline-size;
     padding-block: 32px 40px;
     gap: 32px;
+  }
+
+  .story h2 {
+    font-size: min(28px, 7.7cqi);
+  }
+
+  .story h2 span {
+    display: block;
+    white-space: nowrap;
   }
 
   .team,

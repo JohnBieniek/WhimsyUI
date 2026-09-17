@@ -23,7 +23,7 @@ export function PagesCmsCard() {
     <ol className="pages-cms-steps">
       <li><h3>Sign in</h3><p>Open the editor link we give you in your web browser. We help you get access and show you around before handing over the site.</p></li>
       <li><h3>Edit and test on beta</h3><p>Select your beta copy, choose a section, then type into the labeled boxes or upload a photo. Save to publish to the beta site first. Open its link to check your changes and make any adjustments. You do not need to install software or write code.</p></li>
-      <li><h3>Publish when you are ready</h3><p>Once everything looks good on beta, follow the steps we show you to promote your changes to the live site. Give it a moment to update, then open your usual website address to check the finished result.</p></li>
+      <li className="pages-cms-publish"><h3>Publish when <span className="pages-cms-publish-long">you are</span><span className="pages-cms-publish-short">you&apos;re</span> ready</h3><p>Once everything looks good on beta, follow the steps we show you to promote your changes to the live site. Give it a moment to update, then open your usual website address to check the finished result.</p></li>
     </ol>
     <p className="pages-cms-note"><strong>Your everyday edits are free.</strong> There is no monthly Pages CMS subscription and no need to pay us each time you change your content. We include a walkthrough and follow-up email support. Want a new layout or extra features later? We can help with those separately.</p>
   </section>;

@@ -1,3 +1,199 @@
+.pages-cms-publish-short {
+  display: none;
+}
+
+.article-page[data-service="website-transfer"] .article-image {
+  height: auto;
+  aspect-ratio: 3 / 2;
+  border-radius: 0;
+}
+
+.article-page[data-service="website-transfer"] .article-image img {
+  object-fit: contain;
+}
+
+.article-page[data-service="five-page-website"] .mag-responsive .kicker {
+  font-size: min(18px, 8.1cqi);
+  white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+  .transfer-handoff > header {
+    container-type: inline-size;
+  }
+
+  .transfer-handoff #transfer-handoff-title {
+    font-size: min(30px, 7.5cqi);
+    text-wrap: balance;
+  }
+
+  .transfer-remaining-costs {
+    container-type: inline-size;
+  }
+
+  .transfer-costs .transfer-remaining-costs h3 {
+    font-size: min(21px, 8cqi);
+    white-space: nowrap;
+  }
+
+  .article-page[data-service="five-page-website"] .mag-responsive > img:last-child {
+    order: 1;
+  }
+
+  .article-page[data-service="five-page-website"] .mag-responsive > img:nth-child(2) {
+    order: 2;
+  }
+
+  .article-page[data-service="five-page-website"] .mag-responsive > div {
+    container-type: inline-size;
+  }
+
+  .article-page[data-service="five-page-website"] .pages-cms-publish,
+  .article-page[data-service="single-page-website"] .pages-cms-publish {
+    container: cms-publish / inline-size;
+  }
+}
+
+@container cms-publish (max-width: 254px) {
+  .pages-cms-publish-long { display: none; }
+  .pages-cms-publish-short { display: inline; }
+  .pages-cms-publish h3 {
+    font-size: min(21px, 8.4cqi);
+    white-space: nowrap;
+  }
+}
+
+.brand-website-channel {
+  container: brand-website / inline-size;
+}
+
+.brand-website-amp {
+  display: none;
+}
+
+@container brand-website (max-width: 256px) {
+  .brand-website-and { display: none; }
+  .brand-website-amp { display: inline; }
+  .brand-website-channel h3 {
+    font-size: min(20px, 8.5cqi);
+    white-space: nowrap;
+  }
+}
+
+.brand-plan-section[aria-labelledby="brand-guides-title"] > header {
+  container: brand-guidance / inline-size;
+}
+
+.brand-plan-section .kicker .brand-guidance-and,
+.brand-plan-section .kicker .brand-guidance-amp {
+  margin: 0;
+  color: inherit;
+}
+
+.brand-guidance-amp {
+  display: none;
+}
+
+@container brand-guidance (max-width: 330px) {
+  .brand-guidance-and { display: none; }
+  .brand-guidance-amp { display: inline; }
+}
+
+@media (max-width: 700px) {
+  .article-page[data-service="five-page-website"] .pages-cms-card > header,
+  .article-page[data-service="website-transfer"] .pages-cms-card > header {
+    container-type: inline-size;
+  }
+
+  .article-page[data-service="five-page-website"] .pages-cms-card #pages-cms-title,
+  .article-page[data-service="website-transfer"] .pages-cms-card #pages-cms-title {
+    font-size: min(28px, 9.1cqi);
+    text-wrap: balance;
+  }
+
+  .article-page[data-service="five-page-website"] .pages-cms-card .kicker,
+  .article-page[data-service="website-transfer"] .pages-cms-card .kicker {
+    font-size: min(18px, 6.4cqi);
+    white-space: nowrap;
+  }
+
+  .article-page[data-service="brand-advertising-plan"] .article-hero > div:first-child {
+    container-type: inline-size;
+    min-width: 0;
+  }
+
+  .article-page[data-service="brand-advertising-plan"] .article-hero h1 {
+    font-size: min(48px, 7.1cqi);
+    white-space: nowrap;
+  }
+
+  .brand-google-channel {
+    container-type: inline-size;
+  }
+
+  .brand-google-channel h3 {
+    font-size: min(20px, 7.6cqi);
+    white-space: nowrap;
+  }
+
+  .brand-plan-section[aria-labelledby="brand-channels-title"] > header {
+    container-type: inline-size;
+  }
+
+  .brand-plan-section #brand-channels-title {
+    font-size: min(26px, 7.3cqi);
+  }
+
+  #brand-channels-title > span {
+    display: block;
+    white-space: nowrap;
+  }
+
+  .brand-guide-grid > article:first-child {
+    container-type: inline-size;
+  }
+
+  .brand-guide-grid .brand-guide-title {
+    font-size: min(20px, 7.8cqi);
+    text-wrap: balance;
+  }
+
+  .brand-plan-section #brand-guides-title {
+    font-size: min(26px, 6.8cqi);
+  }
+
+  #brand-guides-title > span {
+    display: block;
+    white-space: nowrap;
+  }
+}
+
+.article-page[data-service="ad-campaign"] > .article-body {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.article-page[data-service="ad-campaign"] .article-cta h2,
+.article-page[data-service="brand-advertising-plan"] .article-cta h2,
+.article-page[data-service="business-consulting-session"] .article-cta h2,
+.article-page[data-service="five-page-website"] .article-cta h2 {
+  flex-basis: max-content;
+  min-width: 0;
+}
+
+.article-page[data-service="business-consulting-session"] .article-cta .shell {
+  container-type: inline-size;
+}
+
+.article-page[data-service="business-consulting-session"] .article-cta h2 {
+  white-space: nowrap;
+}
+
+@media (min-width: 701px) {
+  .article-page[data-service="business-consulting-session"] .article-cta h2 {
+    font-size: min(42px, 5.8cqi);
+  }
+}
+
 /* The published portfolio opts in with data-project. Unlinked drafts retain
    their existing layouts. The wide desktop composition is unchanged. */
 @media (min-width: 701px) and (max-width: 1600px) {
@@ -185,6 +381,17 @@
   }
 }
 
+/* The wide collage is positioned at the hero's top edge. */
+@media (min-width: 1920px) {
+  .services-page > .page-hero {
+    margin-top: 24px;
+  }
+
+  .services-page > .service-cards {
+    padding-top: 24px;
+  }
+}
+
 @media (min-width: 1101px) and (max-width: 1919px) {
   .services-page > .page-hero {
     display: grid;
@@ -205,6 +412,7 @@
   .services-page .services-collage {
     position: static;
     min-width: 0;
+    align-self: center;
   }
 
   .services-page .offset-square-collage-desktop {
@@ -229,10 +437,50 @@
   }
 }
 
-@media (min-width: 1280px) and (max-width: 1679px) {
+/* Tighten spacing in narrow gutters while preserving all four columns. */
+@media (1280px <= width < 1484px) {
   .home-page .home-logo-dots::after {
     left: -484px;
     width: 32px;
+    background-size: 8px 16px;
+  }
+}
+
+/* Preserve four columns when the shell widens from 1320px to 1480px. */
+@media (1600px < width < 1644px) {
+  .home-page .home-logo-dots::after {
+    left: -500px;
+    width: 48px;
+    background-size: 12px 16px;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1279px) {
+  /* Keep the accents beside the copy and above the collage in this layout. */
+  .home-page .home-logo-dots {
+    inset: 0;
+    width: auto;
+    height: auto;
+    background: none;
+    pointer-events: none;
+  }
+
+  .home-page .home-logo-dots::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -6px;
+    width: 68px;
+    height: 68px;
+    background-image: radial-gradient(circle, #72bfae 3px, transparent 4px);
+    background-size: 16px 16px;
+  }
+
+  .home-page .home-logo-dots::after {
+    left: -34px;
+    top: 35px;
+    width: 32px;
+    background-size: 8px 16px;
   }
 }
 
@@ -247,8 +495,7 @@
     display: block;
   }
 
-  .home-page .home-logo,
-  .home-page .home-logo-dots {
+  .home-page .home-logo {
     display: none;
   }
 
@@ -268,6 +515,13 @@
   .home-page .home-square-collage-desktop {
     width: 100%;
     transform: none;
+  }
+}
+
+/* Keep the 12px phone navigation readable and on one row in narrow gutters. */
+@media (max-width: 330px) {
+  .site-header .nav-services-detail {
+    display: none;
   }
 }
 
@@ -301,18 +555,62 @@
     display: block;
   }
 
-  .home-page .home-logo,
-  .home-page .home-logo-dots {
+  .home-page .home-logo {
     display: none;
   }
 
   .home-page .home-copy {
+    position: relative;
     padding-top: 20px;
+  }
+
+  .home-page .home-logo-dots::before {
+    left: auto;
+    right: 0;
+    top: calc(100% + 14px);
+    width: 64px;
+    height: 32px;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1050px) {
+  .article-page .article-body > article .useful-work-title,
+  .article-page .article-body > article .useful-work-title > span {
+    max-width: none;
+    white-space: normal;
+  }
+
+  .article-page .article-body > article .useful-work-title > span {
+    display: inline;
+  }
+
+  .article-page[data-service="brand-advertising-plan"] .website-deliverables-intro h2 {
+    font-size: min(32px, 3.65cqi);
   }
 }
 
 /* Keep wide phone cards from cropping their images into shallow strips. */
 @media (max-width: 1050px) {
+  .article-page .article-hero .intro,
+  .contact-page .contact-intro .intro,
+  .case-page .case-header .intro {
+    max-width: none;
+  }
+
+  .website-deliverables .website-deliverables-intro h2 {
+    max-width: none;
+    white-space: normal;
+  }
+
+  .website-deliverables .website-deliverables-intro h2 span {
+    display: inline;
+    white-space: normal;
+  }
+
+  .home-page .home-copy > p {
+    max-width: none;
+  }
+
   .home-page .campaigns .highlight > div {
     height: auto;
     aspect-ratio: 16 / 9;
@@ -357,6 +655,25 @@
   .case-page[data-project] > .ready p {
     margin: 0;
     white-space: normal;
+  }
+}
+
+@media (max-width: 1100px) {
+  .services-page .page-hero > div:first-child {
+    width: 100%;
+  }
+
+  .services-page .page-hero h1,
+  .services-page .page-hero .intro {
+    max-width: none;
+  }
+
+  .services-page .page-hero h1 {
+    white-space: normal;
+  }
+
+  .services-page .page-hero h1 br {
+    display: none;
   }
 }
 
@@ -469,7 +786,7 @@
   }
 
   .contact-page .contact-intro { order: 1; }
-  .contact-page .contact-headshot { order: 2; }
+  .contact-page .contact-headshot { order: 2; justify-self: center; }
   .contact-page .checklist { order: 3; }
   .contact-page .contact-form { order: 4; margin-top: 0; }
   .contact-page .price-list { order: 5; }
