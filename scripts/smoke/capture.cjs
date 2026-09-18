@@ -3,17 +3,24 @@ const path = require('path');
 const { chromium } = require('playwright');
 const sharp = require('sharp');
 const measure = require('./measure.cjs');
-const routes = JSON.parse(fs.readFileSync(path.join(__dirname, 'routes.json')));
+const routes = ['/work', ...new Set([...fs.readFileSync('out/work.html', 'utf8').matchAll(/href="(\/work\/[^"?#]+)"/g)].map(match => match[1]))];
 const widths = [320,360,390,430,479,480,700,701,768,820,900,901,960,1001,1024,1050,1100,1101,1151,1201,1280,1366,1440,1536,1600,1601,1680,1800,1920,2560];
 const height = w => w >= 1920 ? (w === 2560 ? 1440 : 1080) : w === 1440 ? 1050 : w >= 1280 ? 800 : w >= 960 ? 768 : w >= 700 ? 1024 : 844;
-const root = path.resolve(process.env.SMOKE_REVIEW_ROOT || 'reports/smoke-review');
+const root = path.resolve(process.env.SMOKE_REVIEW_ROOT || 'reports/smoke-review-work');
 fs.mkdirSync(path.join(root, 'images'), {recursive:true});
 const commit = require('child_process').execFileSync('git', ['rev-parse','HEAD'], {encoding:'utf8'}).trim();
-const sourceTree = require('node:crypto').createHash('sha256').update(require('child_process').execFileSync('git', ['ls-tree','-r','HEAD','--','src','public','next.config.ts','package-lock.json'])).digest('hex');
+const hash = require('node:crypto').createHash('sha256');
+for (const file of fs.readdirSync('out', {recursive:true}).filter(file => /\.(html|css|js)$/.test(file)).sort()) {
+  hash.update(file); hash.update(fs.readFileSync(path.join('out', file)));
+}
+const sourceTree = hash.digest('hex');
+const localChanges = require('child_process').execFileSync('git', ['diff','HEAD','--','src','public','next.config.ts','package.json','package-lock.json'], {encoding:'utf8'}).length > 0;
 const manifestFile = path.join(root, 'manifest.json');
 const manifest = fs.existsSync(manifestFile) ? JSON.parse(fs.readFileSync(manifestFile)) : {commit, startedAt:new Date().toISOString(), browser:'Chromium', routes, captures:[]};
-if (manifest.commit !== commit && manifest.sourceTree !== sourceTree) throw Error('Existing review belongs to different site source; use a new review folder');
+if (manifest.sourceTree && manifest.sourceTree !== sourceTree) throw Error('Existing review belongs to a different build; use a new review folder');
+if (JSON.stringify(manifest.routes) !== JSON.stringify(routes)) throw Error('Existing review has different routes; use a new review folder');
 manifest.sourceTree = sourceTree;
+manifest.localChanges = localChanges;
 const captured = new Set(manifest.captures.map(c=>c.id));
 manifest.version = JSON.parse(fs.readFileSync('package.json')).version;
 const base = process.env.SMOKE_BASE_URL || 'http://127.0.0.1:8766';
@@ -50,7 +57,7 @@ async function capture(page, route, width, height, zoom) {
   manifest.captures.push({id,route,width,height,zoom:Math.round(zoom*100),cssWidth:measured.width,cssHeight:measured.height,dpr:measured.dpr,pageHeight:measured.pageHeight,imageWidth:metadata.width,imageHeight:metadata.height,file,issues,capturedAt:new Date().toISOString()});
   captured.add(id);
   fs.writeFileSync(manifestFile,JSON.stringify(manifest,null,2));
-  if(manifest.captures.length%50===0)console.log('Captured '+manifest.captures.length+'/1254');
+  if(manifest.captures.length%50===0)console.log('Captured '+manifest.captures.length+'/'+(routes.length*38));
 }
 async function normal(){
   const browser=await chromium.launch({headless:true});manifest.browserVersion=browser.version();

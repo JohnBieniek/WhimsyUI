@@ -322,6 +322,154 @@ Removed the forced hero line break when the Work hero stacks (up to 900px), reta
 
 All Work gallery card images now use object-fit contain with centered placement at every breakpoint. Removed custom crop positions, the Fetch image's 1.5x zoom, and the conditional Lakeland cover treatment. The full source artwork remains visible inside each card frame, with unused space around images whose proportions differ from the frame. Production build and gallery lint passed. Browser checks verified 20 images at ten widths (320–2400px): all loaded, contained within their frames, with no transforms or page overflow. Full 700x1024 page preview, first-card detail, and measurements: `reports/work-card-image-review/`. Queued locally.
 
+## Correction: Work card image height follows the desktop crop (0.9.2 review)
+
+Supersedes the earlier “show complete images” change: the goal is to fill the card horizontally and preserve at least the visible vertical fraction of the original 1920x1080 composition, not letterbox the full image. Restored the original cover/crop settings, including existing software screenshot exceptions. Frames use the desktop 353:180 ratio with a 180px minimum height. At 700px the first frame is 670x341.64 instead of 670x180; its visible vertical fraction matches the 353x180 desktop reference. Production build and gallery lint passed. Verified all 20 cards across 14 widths (280 checks), plus actual 80%, 100%, 125%, 150%, and 200% browser zoom, with no horizontal overflow. Previews and measurements: `reports/work-card-crop-correction/`. This correction is local; the existing 0.9.2 smoke dashboard still records the previously captured release until a new capture run.
+
+## Follow-up: Included introduction mobile padding (0.9.2 review)
+
+Restored 20px right padding to the shared deliverables introduction at widths up to 700px, matching its left padding. The Ad Campaign “What’s included” text now stays inside the colored panel on 320px screens; other service introductions receive the same correction.
+
+Validation: production build passed. Browser checks covered all eight service routes at 320, 360, 700, 701, 1050, and 1920px (48 panels), with no text overflow and the expected right clearance. Preview: `reports/included-padding-review/ad-campaign--320.png`; measurements: `reports/included-padding-review/checks.json`. This correction remains local; the release dashboard has not been recaptured.
+
+## Follow-up: About team heading on mobile (0.9.2 review)
+
+Split the mobile team heading into “Different skills.” and “One shared purpose.” on separate lines. Size it against the available text column, capped at the existing 28px mobile size, to keep both phrases intact at 320px. Wider layouts retain natural wrapping.
+
+Validation: production build and About page lint passed. Browser checks at 320, 360, 390, 479, 700, 701, 820, 900, 901, and 1920px found no heading overflow; phone layouts have exactly two lines and the stacked 701–900px layouts retain one line. Preview and measurements are in `reports/about-team-heading-review/`. Changes remain local.
+
+## Follow-up: About consulting role heading (0.9.2 review)
+
+Keep “Consulting & business strategy” on one line on mobile by sizing this heading against its available column width, up to its existing 18px size. At 320px it uses 15.12px while retaining the panel padding.
+
+Validation: production build and About page lint passed. Browser checks at 320, 360, 390, 479, 700, 701, 900, and 1920px confirmed one line with no heading overflow. Preview and measurements: `reports/about-consulting-heading-review/`. Changes remain local.
+
+## Follow-up: About offerings heading on mobile (0.9.2 review)
+
+Set the mobile offerings heading to two lines: “From the first idea” and “to the everyday details.” Size it against the section width, capped at 28px, while retaining natural wrapping above 700px.
+
+Validation: production build and About page lint passed. Browser checks at 320, 360, 390, 479, 700, 701, 900, 1050, and 1920px confirmed two mobile lines without overflow and one line at the tested larger widths. Preview and measurements: `reports/about-offerings-heading-review/`. Changes remain local.
+
+## Follow-up: About advertising heading on mobile (0.9.2 review)
+
+Keep “Advertising & campaigns” on one line through the mobile breakpoint, sizing this title against the card heading width up to its existing 20px size. At 320px it uses 17.908px with the card padding preserved.
+
+Validation: production build and About page lint passed. Browser checks at 320, 360, 390, 479, 700, 701, 900, and 1920px found no heading overflow and confirmed one line on mobile. Preview and measurements: `reports/about-advertising-heading-review/`. Changes remain local.
+
+## Follow-up: About website care heading (0.9.2 review)
+
+Renamed the offering to “Website care & transfer” and applied the mobile single-line heading treatment shared with Advertising & campaigns, preserving card padding.
+
+Validation: production build and About page lint passed. Browser checks of both headings at 320, 360, 390, 479, 700, 701, 900, and 1920px confirmed no overflow and one line on mobile. Preview and measurements: `reports/about-website-care-review/`. Changes remain local.
+
+## Follow-up: Fetch opening heading on mobile (0.9.2 Work review)
+
+Size “Give people a taste of what’s coming.” against its mobile text column, capped at 28px, retaining balanced natural wrapping. At 320px the heading now occupies two lines at 23.36px.
+
+Validation: production build passed. Browser checks at 320, 360, 390, 479, 700, 701, 900, and 1920px found no heading overflow and no more than two mobile lines. Preview and measurements: `reports/fetch-opening-heading-review/`. Changes remain local; the existing Work smoke captures retain their original build.
+
+## Follow-up: Fetch launch heading on mobile (0.9.2 Work review)
+
+Size “Build familiarity before the first visit.” against its mobile heading column, capped at 28px, so it occupies no more than two lines. At 320px it uses 23.36px with balanced wrapping.
+
+Validation: production build passed. Browser checks at 320, 360, 390, 479, 700, 701, 900, and 1920px found no heading overflow and no more than two mobile lines. Preview and measurements: `reports/fetch-launch-heading-review/`. Changes remain local; the existing Work smoke captures retain their original build.
+
+## Follow-up: Fetch archive heading spacing (0.9.2 Work review)
+
+Removed the duplicate bottom margin from mobile archive headings and used a single 24px grid gap. The space below “A historic spot, with something new on the way.” is now 24px rather than 52px; both stacked archive chapters use this spacing.
+
+Validation: production build passed. Browser measurements at 320, 360, 479, and 700px confirmed the 24px gap; 701 and 1920px retain the existing desktop styles. Preview and measurements: `reports/fetch-archive-spacing-review/`. Changes remain local; smoke captures have not been refreshed.
+
+## Follow-up: Fetch takeaway heading on mobile (0.9.2 Work review)
+
+Size “Make the business easier to discover.” against the takeaway panel's available mobile content width, capped at 28px. The heading fits two lines at 320px while retaining the panel padding.
+
+Validation: production build passed. Browser checks at 320, 360, 390, 479, 700, 701, 900, and 1920px found no heading overflow and no more than two mobile lines. Preview and measurements: `reports/fetch-takeaway-heading-review/`. Changes remain local; smoke captures have not been refreshed.
+
+## Follow-up: Heavenly Bakes next-step heading (0.9.2 Work review)
+
+Size “Make the next step easy to find.” against its mobile card content width, capped at 28px, to fit within two lines while retaining padding.
+
+Validation: production build passed. Browser checks at 320, 360, 390, 479, 700, 701, 1001, and 1920px found no heading overflow and no more than two mobile lines. Preview and measurements: `reports/heavenly-identity-heading-review/`. Changes remain local; smoke captures have not been refreshed.
+
+## Follow-up: Heavenly Bakes product heading (0.9.2 Work review)
+
+Apply the same mobile card-heading sizing to “Let the treats make the invitation.” as the adjacent next-step heading. Both fit within two lines while retaining card padding.
+
+Validation: production build passed. Both headings were checked at 320, 360, 390, 479, 700, 701, 1001, and 1920px with no overflow and no more than two mobile lines. Preview and measurements: `reports/heavenly-products-heading-review/`. Changes remain local; smoke captures have not been refreshed.
+
+## Follow-up: Student art show appreciation label (0.9.2 Work review)
+
+Keep “The 2024 appreciation day” on one mobile line with column-relative sizing capped at its existing 18px size. At 320px it uses 16.936px.
+
+Validation: production build and archive component lint passed. Browser checks at 320, 360, 390, 479, 700, 701, and 1920px confirmed one line without overflow. Preview and measurements: `reports/student-appreciation-heading-review/`. Changes remain local; smoke captures have not been refreshed.
+
+## Follow-up: Lakeland performer gallery (0.9.2 Work review)
+
+Stack the three bottom performance photographs when the enclosing card is at most 900px wide. Each stacked frame uses its image's natural aspect ratio, filling the available width without cropping the performers. Wider cards retain the asymmetric collage, with focal positions corrected to keep both DJs visible. Updated image sizes for the wider stacked frames.
+
+Validation: production build and route component lint passed. Browser checks at 320, 360, 700, 800, 801, 900, 960, 1000, 1050, 1280, 1920, and 2400px found no horizontal overflow. Mobile and desktop gallery screenshots were visually inspected; both DJs and the fire performer are visible. Preview and measurements: `reports/lakeland-performers-review/`. Changes remain local; smoke captures have not been refreshed.
+
+## Follow-up: Malloween music heading (0.9.2 Work review)
+
+Size “Music, games, and reasons to stay.” against its mobile text column, capped at 30px, to fit within two lines with the panel padding preserved.
+
+Validation: production build and archive component lint passed. Browser checks at 320, 360, 390, 479, 700, 701, and 1920px found no overflow and no more than two mobile lines. Preview and measurements: `reports/malloween-music-heading-review/`. Changes remain local; smoke captures have not been refreshed.
+
+## Follow-up: Miss Crossroads mobile heading lengths (0.9.2 Work review)
+
+Size “Help someone picture themselves applying.” against its mobile card content width, capped at 25px, so it fits two lines at 320px with padding preserved. Audited the other section headings on this page of the same length or shorter; they already fit within two mobile lines.
+
+Validation: production build passed. All nine section headings were measured at 320, 360, 390, 479, 700, 701, 900, and 1920px. Every heading of 41 characters or fewer fits at most two lines without overflow at the mobile widths through 700px. Preview and measurements: `reports/crossroads-heading-review/`. Changes remain local; smoke captures have not been refreshed.
+
+## Follow-up: Serenity community support heading (0.9.2 Work review)
+
+Use the existing mobile two-line heading treatment for “Support also means” / “showing up to help.” Desktop retains natural wrapping.
+
+Validation: production build and archive component lint passed. Browser checks at 320, 360, 390, 479, 700, 701, and 1920px confirmed two lines without overflow. Preview and measurements: `reports/serenity-support-heading-review/`. Changes remain local; smoke captures have not been refreshed.
+
+## Follow-up: Sisters Smoothies journey heading (0.9.2 Work review)
+
+Removed the forced mobile break from “Show the journey behind the counter.” Size the heading to its available column with a minimum of 21.33px, four typographic points above the 16px body copy, and allow natural wrapping when it cannot fit at that minimum.
+
+Validation: production build and archive component lint passed. Checked 12 widths from 320 to 1920px: one line at 600, 700, 701, 900, 1280, 1600, and 1920px; two lines in the narrower text columns. No overflow or font size below the minimum. Preview and measurements: `reports/sisters-journey-heading-review/`. Changes remain local; smoke captures have not been refreshed.
+
+## Follow-up: Sisters Smoothies flavor heading (0.9.2 Work review)
+
+Size “Make each flavor easy to recognize.” against its mobile text column, capped at 30px, to fit within two lines.
+
+Validation: production build and archive component lint passed. Browser checks at 320, 360, 390, 479, 700, 701, and 1920px found no overflow and no more than two mobile lines. Preview and measurements: `reports/sisters-flavor-heading-review/`. Changes remain local; smoke captures have not been refreshed.
+
+## Follow-up: Sonic listening headings (0.9.2 Work review)
+
+Fit “Choose a tab, then shape the response.” within two mobile lines and “The listening experience” on one line using their card's available content width, preserving padding.
+
+Validation: production build passed. Both labels were checked at 320, 360, 390, 479, 700, 701, and 1920px without overflow and with the requested mobile line limits. Preview and measurements: `reports/sonic-listening-headings-review/`. Changes remain local; smoke captures have not been refreshed.
+
+## Follow-up: Sonic profile and audio engine headings (0.9.2 Work review)
+
+Fit “Personal preferences” on one mobile line and both “A listening profile the user can fine-tune.” and “Different sounds need different treatment.” within two lines using the available card widths, preserving padding.
+
+Validation: production build passed. All three labels were checked at 320, 360, 390, 479, 700, 701, and 1920px without overflow and with the requested mobile line limits. Preview and measurements: `reports/sonic-profile-headings-review/`. Changes remain local; smoke captures have not been refreshed.
+
+## Follow-up: Work-wide vertical spacing audit (0.9.2 Work review)
+
+Audited all 21 Work routes across the 38 smoke-test CSS viewport configurations. Corrected Team Hope's excess label/heading gaps and cramped tablet closing layout, removed duplicate margin-plus-grid spacing in shared archive stories, Fetch, Cascades, Multiverse, and Sonic, and stopped Fetch headings stretching to match adjacent text.
+
+Validation: production build passed; 798 final layout measurements have no remaining heading-spacing flags above the 32px review threshold. All 80 actual browser-zoom checks on affected pages passed. See `docs/work-spacing-audit.md` for scope and findings, and `reports/vertical-spacing-audit/` for measurements and previews. Changes remain local; smoke captures have not been refreshed.
+
+## Follow-up: Warden detail headings (0.9.2 Work review)
+
+Fit “Keep the current picture” and “Notify when it matters” on one mobile line using their card content widths, capped at the existing 20px size with padding preserved.
+
+Validation: production build and software component lint passed. Both headings were checked at 320, 360, 390, 479, 700, 701, and 1920px without overflow and with one line on mobile. Previews and measurements: `reports/warden-detail-headings-review/`. Changes remain local; smoke captures have not been refreshed.
+
+## Follow-up: Warden production label (0.9.2 Work review)
+
+Keep “Production and beta” where its label column exceeds 250px; use “Production & beta” in narrower columns with slight font fitting when needed. Reset inherited decorative span margins so both variants align with the label and stay on one line.
+
+Validation: production build and software component lint passed. Checked 320, 348, 349, 360, 390, 700, 701, 900, 1280, and 1920px, including both sides of the wording switch, with one line and no overflow. Preview and measurements: `reports/warden-production-heading-review/`. Changes remain local; smoke captures have not been refreshed.
+
 ## Follow-up: Shared Featured Partners layout (0.9.0 review)
 
 The first review's partner-heading correction was incorrectly scoped to Contact. The same rule now applies to the shared `.partners` section on both Home and Contact: through 1050px, the heading spans its own centered row, its forced break is hidden, and the first logo's mint divider is removed. Shared horizontal padding is removed to keep the heading on one line at narrow phone widths. Contact retains its page-specific full-width section rule; wider desktop layouts retain their existing arrangement.

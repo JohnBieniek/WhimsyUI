@@ -1,91 +1,46 @@
 /* global REVIEW */
-(() => {
-  const $ = id => document.getElementById(id);
-  const data = REVIEW;
-  const statuses = ['pending', 'fixed', 'approved'];
-  const key = `whimsy-review-${data.version}-${data.commit}`;
-  let state = {captures: {}, issues: {}};
-  try { const saved = JSON.parse(localStorage.getItem(key)); if (saved?.captures && saved?.issues) state = saved; } catch { /* A fresh review still works without storage. */ }
-  let issue = null, selected = null, visible = [];
-  const tell = text => { $('notice').textContent = text; };
-  function save() { try { localStorage.setItem(key, JSON.stringify(state)); } catch { tell('Browser storage unavailable. Export notes before closing this page.'); } }
-  const captureState = id => state.captures[id] || {status: 'pending', note: ''};
-  const issueStatus = i => state.issues[i.id] || i.status;
-  function option(select, value, text) { const o = document.createElement('option'); o.value = value; o.textContent = text; select.append(o); }
-  function queue() {
-    $('queue').replaceChildren();
-    for (const i of data.issues) {
-      const status = issueStatus(i);
-      if ($('queue-status').value && $('queue-status').value !== status) continue;
-      const button = document.createElement('button'); button.className = `issue${issue?.id === i.id ? ' active' : ''}`;
-      const title = document.createElement('strong'); title.textContent = i.title;
-      const detail = document.createElement('small'); detail.textContent = `${i.category} · ${i.routes.length} pages`;
-      const badge = document.createElement('span'); badge.className = `badge ${status}`; badge.textContent = status;
-      button.append(title, detail, badge); button.onclick = () => selectIssue(i); $('queue').append(button);
-    }
-  }
-  function routes() {
-    $('route').replaceChildren(); option($('route'), '', 'All relevant pages');
-    for (const r of issue ? issue.routes : data.routes) option($('route'), r, r);
-  }
-  function selectIssue(i) {
-    issue = i; selected = null;
-    $('issue-title').textContent = i ? i.title : 'All captures';
-    $('issue-detail').textContent = i ? i.detail : 'Choose a page and size. Each capture has its own decision and note.';
-    $('issue-decision-label').hidden = !i;
-    if (i) $('issue-decision').value = issueStatus(i);
-    routes(); queue(); filter();
-  }
-  function filter() {
-    visible = data.captures.filter(c => (!issue || issue.routes.includes(c.route)) && (!$('route').value || c.route === $('route').value) && (!$('width').value || c.width === Number($('width').value)) && (!$('zoom').value || c.zoom === Number($('zoom').value)) && (!$('capture-status').value || captureState(c.id).status === $('capture-status').value));
-    $('capture').replaceChildren();
-    for (const c of visible) option($('capture'), c.id, `${c.route} · ${c.width}×${c.height} · ${c.zoom}%`);
-    if (!visible.some(c => c.id === selected)) selected = visible[0]?.id || null;
-    if (selected) $('capture').value = selected;
-    render();
-  }
-  const reference = c => `WHIMSY-SMOKE | ${data.commit.slice(0,7)} | ${c.route} | viewport=${c.width}x${c.height} | zoom=${c.zoom}% | css=${c.cssWidth}x${c.cssHeight} | capture=${c.id} | version=${data.version}`;
-  function mode() {
-    const value = $('mode').value, c = data.captures.find(c => c.id === selected);
-    document.querySelector('.comparison').className = `comparison ${value}`;
-    $('before-pane').hidden = value !== 'side' || !c?.before;
-    $('current-pane').hidden = value === 'difference';
-    $('diff-pane').hidden = value !== 'difference' || !c?.before;
-    if (value === 'difference' && !c?.before) tell('No baseline image for this capture. Choose Current only.');
-  }
-  function render() {
-    const c = visible.find(c => c.id === selected), index = visible.indexOf(c);
-    $('count').textContent = c ? `${index + 1} / ${visible.length} matching captures` : 'No matching captures';
-    $('previous').disabled = index <= 0; $('next').disabled = index < 0 || index >= visible.length - 1;
-    for (const id of ['decision', 'note', 'copy']) $(id).disabled = !c;
-    document.querySelector('.comparison').hidden = !c;
-    $('full').hidden = !c; $('reference').textContent = c ? reference(c) : '';
-    $('warnings').textContent = c?.issues.length ? `Automated warnings: ${c.issues.join(' · ')}` : c ? 'Automated capture checks passed. Visual approval is still pending unless you mark it approved.' : '';
-    if (!c) { $('note').value = ''; return; }
-    $('decision').value = captureState(c.id).status; $('note').value = captureState(c.id).note;
-    $('current').src = $('diff-current').src = c.file;
-    if (c.before) $('before').src = $('diff-before').src = c.before;
-    else { $('before').removeAttribute('src'); $('diff-before').removeAttribute('src'); }
-    $('full').href = c.file;
-    $('before-label').textContent = `Before · v${data.baselineVersion} · ${c.width}×${c.height} at ${c.zoom}%`;
-    $('current-label').textContent = `Current · v${data.version} · CSS ${c.cssWidth}×${c.cssHeight}`;
-    $('before-scroll').scrollTop = $('current-scroll').scrollTop = 0; mode();
-  }
-  function move(delta) { const index = visible.findIndex(c => c.id === selected), next = visible[index + delta]; if (next) { selected = next.id; $('capture').value = selected; render(); } }
-  $('build').textContent = `v${data.version} · source ${data.commit.slice(0,7)} · ${data.captures.length.toLocaleString()} captures · ${data.routes.length} pages · ${data.completedAt}`;
-  for (const id of ['width', 'zoom']) { option($(id), '', id === 'width' ? 'All widths' : 'All zooms'); for (const n of [...new Set(data.captures.map(c => c[id]))].sort((a,b)=>a-b)) option($(id), String(n), id === 'zoom' ? `${n}%` : `${n}px`); }
-  ['route', 'width', 'zoom', 'capture-status'].forEach(id => { $(id).onchange = filter; });
-  $('queue-status').onchange = queue; $('all').onclick = () => selectIssue(null);
-  $('capture').onchange = () => { selected = $('capture').value; render(); };
-  $('previous').onclick = () => move(-1); $('next').onclick = () => move(1); $('mode').onchange = mode;
-  $('decision').onchange = () => { state.captures[selected] = {...captureState(selected), status: $('decision').value}; save(); filter(); };
-  $('note').oninput = () => { if (selected) { state.captures[selected] = {...captureState(selected), note: $('note').value}; save(); } };
-  $('issue-decision').onchange = () => { if (issue) { state.issues[issue.id] = $('issue-decision').value; save(); queue(); tell('Issue decision saved. Individual captures keep their own decisions.'); } };
-  $('copy').onclick = async () => { const c = data.captures.find(c => c.id === selected); if (!c) return; const text = reference(c) + (captureState(c.id).note ? '\n' + captureState(c.id).note : ''); try { await navigator.clipboard.writeText(text); tell('Reference and note copied.'); } catch { const input = document.createElement('textarea'); input.value = text; document.body.append(input); input.select(); const ok = document.execCommand('copy'); input.remove(); tell(ok ? 'Reference and note copied.' : 'Clipboard unavailable. Select and copy the reference shown above.'); } };
-  let syncing = false;
-  for (const [a,b] of [['before-scroll','current-scroll'],['current-scroll','before-scroll']]) $(a).onscroll = () => { if (syncing || !$('sync').checked) return; syncing = true; const ratio = $(a).scrollTop / Math.max(1, $(a).scrollHeight - $(a).clientHeight); $(b).scrollTop = ratio * ($(b).scrollHeight - $(b).clientHeight); requestAnimationFrame(() => { syncing = false; }); };
-  $('export').onclick = () => { const url = URL.createObjectURL(new Blob([JSON.stringify({schema:1,version:data.version,commit:data.commit,exportedAt:new Date().toISOString(),...state},null,2)],{type:'application/json'})); const a = document.createElement('a'); a.href = url; a.download = `whimsy-review-${data.version}-notes.json`; a.click(); setTimeout(()=>URL.revokeObjectURL(url),1000); };
-  $('import').onchange = async () => { try { const input = JSON.parse(await $('import').files[0].text()); if (input.schema !== 1 || input.version !== data.version || input.commit !== data.commit || !input.captures || !input.issues) throw Error('Notes must belong to this version and source commit.'); const next = {captures:{},issues:{}}; for (const [id,value] of Object.entries(input.captures)) { if (!data.captures.some(c=>c.id===id) || !statuses.includes(value.status) || typeof value.note !== 'string') throw Error('Invalid capture note.'); next.captures[id] = {status:value.status,note:value.note}; } for (const [id,value] of Object.entries(input.issues)) { if (!data.issues.some(i=>i.id===id) || !statuses.includes(value)) throw Error('Invalid issue decision.'); next.issues[id] = value; } state = next; save(); queue(); filter(); if (issue) $('issue-decision').value = issueStatus(issue); tell('Review notes imported.'); } catch (e) { tell(`Import failed: ${e.message}`); } $('import').value = ''; };
-  document.addEventListener('keydown', e => { if (e.altKey && ['ArrowLeft','ArrowRight'].includes(e.key)) { e.preventDefault(); move(e.key === 'ArrowRight' ? 1 : -1); } });
-  selectIssue(null);
+(()=>{
+const $=id=>document.getElementById(id),data=REVIEW,statuses=['pending','flagged','approved'];
+const key='whimsy-work-review-'+data.sourceTree;let saved={captures:{},selected:null};
+try{const s=JSON.parse(localStorage.getItem(key));if(s?.captures)saved=s;}catch{}
+let selected=saved.selected&&data.captures.find(c=>c.id===saved.selected)||data.captures[0],route=selected.route,visible=[];
+const title=r=>r==='/work'?'Work overview':r.split('/').pop().split('-').map(w=>w[0].toUpperCase()+w.slice(1)).join(' ');
+const status=c=>saved.captures[c.id]?.status||'pending';
+const note=c=>saved.captures[c.id]?.note||'';
+const tell=s=>$('notice').textContent=s;
+function save(){saved.selected=selected?.id;try{localStorage.setItem(key,JSON.stringify(saved));}catch{tell('Storage unavailable. Export notes before closing.');}}
+function pages(){$('pages').replaceChildren();for(const r of data.routes){if(!title(r).toLowerCase().includes($('search').value.toLowerCase()))continue;const cs=data.captures.filter(c=>c.route===r),button=document.createElement('button');button.className=r===route?'active':'';button.setAttribute('aria-pressed',String(r===route));const name=document.createElement('span'),small=document.createElement('small');name.textContent=title(r);small.textContent=cs.filter(c=>status(c)==='approved').length+'/'+cs.length+' approved; '+cs.filter(c=>status(c)==='flagged').length+' flagged';button.append(name,small);button.onclick=()=>changePage(r);$('pages').append(button);}$('progress').textContent=data.captures.filter(c=>status(c)==='approved').length+'/'+data.captures.length+' approved';}
+const matches=c=>{const g=$('group').value;return(g==='all'||g==='zoom'&&c.zoom!==100||g==='phone'&&c.zoom===100&&c.width<700||g==='tablet'&&c.zoom===100&&c.width>=700&&c.width<=1100||g==='desktop'&&c.zoom===100&&c.width>1100)&&(!$('filter').value||status(c)===$('filter').value);};
+function refresh(){visible=data.captures.filter(c=>c.route===route&&matches(c));if(!visible.some(c=>c.id===selected?.id))selected=visible[0]||null;pages();render(false);}
+function changePage(r){const prior=selected;route=r;selected=data.captures.find(c=>c.route===r&&c.width===prior?.width&&c.zoom===prior?.zoom)||null;refresh();$('viewer').scrollTop=0;}
+function reference(c){return 'WHIMSY-SMOKE | '+data.commit.slice(0,7)+(data.localChanges?'+local':'')+' | '+c.route+' | viewport='+c.width+'x'+c.height+' | zoom='+c.zoom+'% | css='+c.cssWidth+'x'+c.cssHeight+' | capture='+c.id+' | version='+data.version+' | build='+data.sourceTree.slice(0,12);}
+function render(keep=true){const viewer=$('viewer'),ratio=keep&&$('keep-scroll').checked?viewer.scrollTop/Math.max(1,viewer.scrollHeight-viewer.clientHeight):0;
+$('page-title').textContent=title(route);$('previous-page').disabled=data.routes.indexOf(route)===0;$('next-page').disabled=data.routes.indexOf(route)===data.routes.length-1;
+$('sizes').replaceChildren();for(const c of visible){const b=document.createElement('button');b.className=status(c)+(c===selected?' active':'');b.textContent=c.width+' x '+c.height+(c.zoom===100?'':' / '+c.zoom+'%');b.title='CSS '+c.cssWidth+' x '+c.cssHeight+'; '+status(c);b.setAttribute('aria-pressed',String(c===selected));b.onclick=()=>{selected=c;render();};$('sizes').append(b);}
+const i=visible.indexOf(selected);$('count').textContent=selected?(i+1)+' / '+visible.length:'No matching captures';$('previous').disabled=i<=0;$('next').disabled=i<0||i===visible.length-1;
+for(const id of ['approve','flag','decision','note','copy'])$(id).disabled=!selected;
+viewer.hidden=!selected;$('full').hidden=!selected;
+if(!selected){$('reference').textContent='';$('note').value='';$('warnings').textContent='';return;}
+const c=selected;$('decision').value=status(c);$('note').value=note(c);$('reference').textContent=reference(c);$('full').href=c.file;$('warnings').textContent=c.issues.length?'Capture warnings: '+c.issues.join('; '):'';
+$('current').alt=title(route)+' at '+c.width+' pixels and '+c.zoom+'% zoom';
+$('current').onload=()=>{viewer.scrollTop=ratio*(viewer.scrollHeight-viewer.clientHeight);};
+$('current').src=c.file;save();
+$('sizes .active')?.scrollIntoView({block:'nearest',inline:'nearest'});
+}
+function move(delta){const next=visible[visible.indexOf(selected)+delta];if(next){selected=next;render();}}
+function decision(value){if(!selected)return;saved.captures[selected.id]={status:value,note:note(selected)};save();pages();}
+$('previous').onclick=()=>move(-1);$('next').onclick=()=>move(1);
+$('previous-page').onclick=()=>changePage(data.routes[data.routes.indexOf(route)-1]);$('next-page').onclick=()=>changePage(data.routes[data.routes.indexOf(route)+1]);
+$('group').onchange=refresh;$('filter').onchange=refresh;$('search').oninput=pages;
+$('scale').onchange=()=>$('viewer').classList.toggle('actual',$('scale').value==='actual');
+$('decision').onchange=()=>{decision($('decision').value);refresh();};
+$('approve').onclick=()=>{const next=visible[visible.indexOf(selected)+1];decision('approved');if(next){selected=next;refresh();}else{refresh();tell('Last matching size on this page reviewed. Choose the next page.');}};
+$('flag').onclick=()=>{decision('flagged');render();$('notes').open=true;$('note').focus();};
+$('note').oninput=()=>{if(selected){saved.captures[selected.id]={status:status(selected),note:$('note').value};save();}};
+$('copy').onclick=async()=>{if(!selected)return;const text=reference(selected)+(note(selected)?'\n'+note(selected):'');try{await navigator.clipboard.writeText(text);tell('Reference and note copied.');}catch{const input=document.createElement('textarea');input.value=text;document.body.append(input);input.select();const ok=document.execCommand('copy');input.remove();tell(ok?'Reference and note copied.':'Copy the reference and note shown above.');}};
+$('export').onclick=()=>{const url=URL.createObjectURL(new Blob([JSON.stringify({schema:2,sourceTree:data.sourceTree,version:data.version,captures:saved.captures},null,2)],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download='whimsy-work-review-notes.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
+$('import').onchange=async()=>{try{const input=JSON.parse(await $('import').files[0].text());if(input.schema!==2||input.sourceTree!==data.sourceTree||!input.captures)throw Error('Notes must match this captured build.');const next={};for(const[id,value]of Object.entries(input.captures)){if(!data.captures.some(c=>c.id===id)||!statuses.includes(value.status)||typeof value.note!=='string')throw Error('Invalid capture note.');next[id]={status:value.status,note:value.note};}saved.captures=next;save();refresh();tell('Review notes imported.');}catch(e){tell('Import failed: '+e.message);}$('import').value='';};
+document.addEventListener('keydown',e=>{if(!e.altKey)return;if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();move(e.key==='ArrowRight'?1:-1);}if(e.key==='ArrowUp'||e.key==='ArrowDown'){e.preventDefault();const r=data.routes[data.routes.indexOf(route)+(e.key==='ArrowDown'?1:-1)];if(r)changePage(r);}});
+$('build').textContent='v'+data.version+' | '+data.commit.slice(0,7)+(data.localChanges?' + local changes':'')+' | build '+data.sourceTree.slice(0,12)+' | '+data.routes.length+' pages / '+data.captures.length+' captures';
+refresh();
 })();

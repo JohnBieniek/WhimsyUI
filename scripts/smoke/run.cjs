@@ -3,7 +3,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const {spawn} = require('node:child_process');
 const root = path.resolve('out');
-const output = path.resolve(process.env.SMOKE_REVIEW_ROOT || `reports/smoke-review-${require('../../package.json').version}`);
+const output = path.resolve(process.env.SMOKE_REVIEW_ROOT || 'reports/smoke-review-work');
 const types = {'.html':'text/html','.css':'text/css','.js':'application/javascript','.json':'application/json','.woff2':'font/woff2','.jpg':'image/jpeg','.png':'image/png','.webp':'image/webp','.svg':'image/svg+xml','.ico':'image/x-icon','.txt':'text/plain','.mp4':'video/mp4'};
 if (!fs.existsSync(path.join(root,'index.html'))) throw Error('Run npm run build before the smoke test.');
 const server = http.createServer((req,res)=>{

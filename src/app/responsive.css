@@ -589,6 +589,31 @@
   }
 }
 
+/* Keep labels and headings together instead of distributing spare grid height. */
+[data-project="team-hope-walk"] .team-hope-action > header,
+[data-project="team-hope-walk"] .team-hope-education > header {
+  align-items: start;
+}
+[data-project="team-hope-walk"] .team-hope-close {
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, .8fr);
+  grid-template-rows: min-content 1fr;
+  row-gap: 12px;
+}
+[data-project="team-hope-walk"] .team-hope-close h2 { white-space: normal; }
+[data-project="team-hope-walk"] .team-hope-close > .kicker {
+  margin-bottom: 0;
+}
+@media (max-width: 1050px) {
+  [data-project="team-hope-walk"] .team-hope-close {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto;
+    padding-block: 24px;
+  }
+  [data-project="team-hope-walk"] .team-hope-close > .kicker,
+  [data-project="team-hope-walk"] .team-hope-close > h2,
+  [data-project="team-hope-walk"] .team-hope-close > p:last-child { grid-column: auto; grid-row: auto; }
+}
+
 /* Keep wide phone cards from cropping their images into shallow strips. */
 @media (max-width: 1050px) {
   .article-page .article-hero .intro,

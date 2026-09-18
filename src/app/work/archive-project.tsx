@@ -21,7 +21,9 @@ function ArchiveImage({ item, hero = false, showEnlarge = false }: { item: [stri
 }
 
 function ArchiveHeading({ heading }: { heading: ArchiveStory["heading"] }) {
-  const mobileLines = heading === "A local favorite, with room for your whole group."
+  const mobileLines = heading === "Support also means showing up to help."
+    ? ["Support also means", "showing up to help."]
+    : heading === "A local favorite, with room for your whole group."
     ? ["A local favorite, with room", "for your whole group."]
     : heading === "Connect an everyday visit with a larger gathering."
       ? ["Connect an everyday visit", "with a larger gathering."]
@@ -37,13 +39,11 @@ function ArchiveHeading({ heading }: { heading: ArchiveStory["heading"] }) {
                 ? ["Give the activities", "their own invitation."]
                 : heading === "Turn useful conversations into practical next steps."
                   ? ["Turn useful conversations", "into practical next steps."]
-                  : heading === "Show the journey behind the counter."
-                    ? ["Show the journey", "behind the counter."]
-                    : undefined;
+                  : undefined;
   if (mobileLines) return <h2 className={`${styles.mobileTwoLineHeading} ${heading === "Connect an everyday visit with a larger gathering." ? styles.desktopTwoLineHeading : ""}`}>
     {mobileLines.map((line, index) => <span key={line}>{index > 0 ? " " : ""}{line}</span>)}
   </h2>;
-  return <h2 className={Array.isArray(heading) ? styles.twoLineHeading : undefined}>
+  return <h2 className={Array.isArray(heading) ? styles.twoLineHeading : heading === "Music, games, and reasons to stay." ? styles.musicHeading : heading === "Show the journey behind the counter." ? styles.journeyHeading : heading === "Make each flavor easy to recognize." ? styles.flavorHeading : undefined}>
     {Array.isArray(heading) ? heading.map((line, index) => <span key={line}>{index > 0 ? " " : ""}{line}</span>) : heading}
   </h2>;
 }
@@ -89,7 +89,7 @@ export default function ArchiveProject({ story, title, slug }: { story: ArchiveS
         {imageLeft && gallery}
         <header className={styles.chapterHeading}>
           <div className={Array.isArray(section.title) ? styles.headingColumn : undefined}>
-            <p className="kicker">{section.kicker}</p>
+            <p className={`kicker ${section.kicker === "The 2024 appreciation day" ? styles.appreciationKicker : ""}`}>{section.kicker}</p>
             <ArchiveHeading heading={section.title} />
           </div>
           <div>{section.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}</div>

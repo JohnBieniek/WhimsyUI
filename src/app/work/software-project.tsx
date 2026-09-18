@@ -18,7 +18,9 @@ export default function SoftwareProject({ project }: { project: (typeof software
     <div>{story.overview.map(paragraph => <p key={paragraph}>{paragraph}</p>)}</div>
   </section>;
   const chapters = story?.chapters.map((chapter, index) => <section className={`${styles.storyChapter} ${isWarden && index === 0 ? styles.mintChapter : ""}`} key={chapter.title} aria-labelledby={`chapter-${index}`}>
-    <p className={`kicker ${chapter.kicker === "Privacy and practical delivery" ? styles.mobileSingleLineKicker : ""}`}>{chapter.kicker}</p>
+    <p className={`kicker ${chapter.kicker === "Privacy and practical delivery" ? styles.mobileSingleLineKicker : ""} ${isWarden && chapter.kicker === "Production and beta" ? styles.productionKicker : ""}`}>
+      {isWarden && chapter.kicker === "Production and beta" ? <><span className={styles.productionLong}>Production and beta</span><span className={styles.productionShort}>Production &amp; beta</span></> : chapter.kicker}
+    </p>
     <h2 id={`chapter-${index}`}>{isWarden && index === 0
       ? <MobileHeadingText lines={["Check several services without", "waiting on the slowest one."]} size="min(30px, 4.5cqw)" />
       : isWarden && index === 2
@@ -33,7 +35,7 @@ export default function SoftwareProject({ project }: { project: (typeof software
         <figcaption>{chapter.caption}</figcaption>
       </figure>}
     </div>
-    {chapter.points && <div className={styles.details}>{chapter.points.map(point => <article key={point.title}><h3>{point.title}</h3><p>{point.copy}</p></article>)}</div>}
+    {chapter.points && <div className={styles.details}>{chapter.points.map(point => <article key={point.title}><h3 className={isWarden && ["Keep the current picture", "Notify when it matters"].includes(point.title) ? styles.singleLineDetailTitle : undefined}>{point.title}</h3><p>{point.copy}</p></article>)}</div>}
   </section>);
   return (
     <main data-project={isSonic || isWarden ? project.slug : undefined} className={`case-page shell ${styles.page} ${isSonic ? styles.sonic : ""}`}>

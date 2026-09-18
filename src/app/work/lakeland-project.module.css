@@ -32,6 +32,23 @@
 
 .page :global(.lakeland-project-card:last-child) {
   background: var(--lakeland-pale-blue);
+  container: lakeland-performers / inline-size;
+}
+
+.page :global(.lakeland-photo-grid figure:first-child img) { object-position: 38% center; }
+.page :global(.lakeland-photo-grid figure:nth-child(2) img) { object-position: 55% center; }
+
+@container lakeland-performers (max-width: 900px) {
+  .page :global(.lakeland-photo-grid) {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: none;
+    min-height: 0;
+    align-self: start;
+  }
+  .page :global(.lakeland-photo-grid figure) { grid-row: auto; min-height: 0; }
+  .page :global(.lakeland-photo-grid figure:first-child) { aspect-ratio: 1796 / 1259; }
+  .page :global(.lakeland-photo-grid figure:nth-child(2)) { aspect-ratio: 4 / 3; }
+  .page :global(.lakeland-photo-grid figure:nth-child(3)) { aspect-ratio: 1278 / 812; }
 }
 
 .page :global(.lakeland-card-image),

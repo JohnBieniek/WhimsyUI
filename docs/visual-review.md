@@ -1,24 +1,17 @@
-# Local visual review
+# Work visual review
 
-Run `npm run smoke` to build the site, capture the full review matrix, generate the dashboard, and validate it. Requires the Playwright Chromium browser (`npx playwright install chromium` on a new machine).
+Run `npm run smoke` to build the current site, capture Work and every project linked from its gallery, and generate and validate the review. Requires Playwright Chromium.
 
-The review lives at `reports/smoke-review-<version>/index.html`. Open it directly in Chrome or Edge. Generated screenshots stay local and are excluded from Git; the repeatable capture and dashboard tooling is committed under `scripts/smoke/`.
+Open `reports/smoke-review-work/index.html` in Chrome or Edge. No server is required. Keep the adjacent `images/` directory. The dashboard shows one capture at a time with no baseline or comparison.
 
-The matrix covers 33 active routes, 30 viewport widths, and actual 80%, 125%, 150%, and 200% browser zoom at 1440×1050 and 1920×1080: 1,254 captures. Capture records include source commit, app version, browser version, viewport, CSS size, image dimensions, timestamp, and automated warnings. Use a committed, freshly built source tree for an authoritative review. Interrupted captures resume for the same site source fingerprint, allowing later documentation/tooling-only commits while retaining the original capture commit.
+Choose a project from the searchable left sidebar. Switch screen sizes using the size buttons or Alt+Left/Right. Alt+Up/Down switches pages while retaining the selected size when available. Filter to phones, tablets, desktops, or browser zoom. Fit width displays narrow captures without enlarging them; Actual pixels allows horizontal scrolling for wide screenshots. Keep position preserves relative page depth when switching sizes.
 
-To compare with an earlier review in PowerShell:
+Use **Approve & next**, or **Flag & add note**. Each capture starts unreviewed. Review status filters and per-page counts track progress. Open Notes and capture reference to copy a report. Notes and decisions save in browser storage; export JSON to back them up or share them. Import validates the exact captured build.
 
-```powershell
-$env:SMOKE_BASELINE_ROOT = 'reports/smoke-review-0.9.1'
-npm.cmd run smoke
-```
+The matrix uses 30 viewport widths and actual browser zoom at 80%, 125%, 150%, and 200% for 1440x1050 and 1920x1080: 38 captures per page. The current gallery has 20 projects plus Work, totaling 798 captures. Routes are discovered from the freshly built Work page, so other site sections and unlinked project pages are excluded.
 
-The builder retains baseline images inside the new review using hard links when possible, falling back to copies. Deleting the old review folder afterward does not remove those baseline images. It never deletes an old review automatically.
+Captures identify the base Git commit, whether there are local source changes, and a fingerprint of the built HTML/CSS/JS. Local fixes are included without falsely labeling the build as the clean base commit. Interrupted runs resume only for a matching built source and route list. For a changed build, use a fresh output folder with `SMOKE_REVIEW_ROOT`, or remove the prior review after exporting any notes you want to retain.
 
-The issue queue groups related fixes across pages and sizes. **Fixed** means implemented and ready for human review; it does not mean visually approved. Each issue and each capture has a separate pending/fixed/approved decision. Notes are per capture. Filter by page, width, zoom, or capture status; use Alt+Left/Right to move through captures. Copy reference includes the capture note.
+To regenerate only the dashboard, run `node scripts/smoke/build-dashboard.cjs`. Validate with `node scripts/smoke/check.cjs`. Both default to the Work review folder and accept `SMOKE_REVIEW_ROOT`.
 
-Before/current comparison has optional synchronized scrolling. Difference view blends images aligned at the page top; changed heights, layout reflow, and rendering differences also appear. It is a visual aid, not a pixel-perfect acceptance test.
-
-Decisions and notes stay in browser storage. **Export review notes** backs them up as JSON; imports validate the version and source commit. Export before changing browsers or deleting a review. Nothing is sent to an external service.
-
-To rebuild the dashboard without recapturing, set `SMOKE_REVIEW_ROOT` and run `node scripts/smoke/build-dashboard.cjs`. Set `SMOKE_BASELINE_ROOT` only when importing an earlier baseline. To validate an existing review, run `node scripts/smoke/check.cjs` with the same `SMOKE_REVIEW_ROOT`.
+Automated checks cover full-page image dimensions, actual zoom, page and heading overflow, broken images, and dashboard interactions. Capture warnings appear beside the screenshot; visual review remains necessary. Generated reviews stay local and are excluded from Git.

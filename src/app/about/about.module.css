@@ -395,13 +395,45 @@
     white-space: nowrap;
   }
 
+  .teamIntro {
+    container-type: inline-size;
+  }
+
+  .teamIntro h2 {
+    font-size: min(28px, 8.5cqi);
+  }
+
+  .teamIntro h2 span {
+    display: block;
+    white-space: nowrap;
+  }
+
+  .roles {
+    container-type: inline-size;
+  }
+
+  .roles .consultingRoleTitle {
+    font-size: min(18px, 6cqi);
+    white-space: nowrap;
+  }
+
   .team,
   .community {
     padding: 26px 20px;
   }
 
   .services {
+    container-type: inline-size;
     padding-block: 44px;
+  }
+
+  .sectionHeader h2 {
+    font-size: min(28px, 8cqi);
+  }
+
+  .sectionHeader h2 span {
+    display: block;
+    white-space: nowrap;
   }
 
   .serviceGrid article {
@@ -409,8 +441,14 @@
   }
 
   .serviceHeading {
+    container-type: inline-size;
     flex-direction: column;
     align-items: start;
+  }
+
+  .serviceHeading .singleLineServiceTitle {
+    font-size: min(20px, 7.4cqi);
+    white-space: nowrap;
   }
 
   .communityGrid {

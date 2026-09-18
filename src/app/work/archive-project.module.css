@@ -89,6 +89,8 @@
 @media (max-width: 700px) {
   .halloween .opening, .halloween .chapter { padding: 24px 20px; border-radius: 12px; }
   .halloween .purpleCard { margin-bottom: 30px; }
+  .halloween .chapterHeading > div:first-child { container-type: inline-size; }
+  .page .musicHeading { font-size: min(30px, 8.5cqi); }
 }
 @media (max-width: 700px) {
   .services { justify-content: center; text-align: center; }
@@ -114,10 +116,30 @@
 }
 
 /* Only published stories opt in; the unlinked archive keeps its layout. */
+@media (max-width: 900px) {
+  .page[data-project] .chapter:not(.imageLeft) .chapterHeading h2 { margin-bottom: 0; }
+}
+@media (max-width: 700px) {
+  .page[data-project="student-art-show"] .chapterHeading > div:first-child { container-type: inline-size; }
+  .page .appreciationKicker { font-size: min(18px, 5.8cqi); white-space: nowrap; }
+}
+
 @media (min-width: 701px) and (max-width: 1600px) {
   .page[data-project] .opening > div, .page[data-project] .chapterHeading > div:first-child { container-type: inline-size; min-width: 0; }
   .page[data-project] :is(.opening, .chapterHeading) h2:not(.twoLineHeading):not(.desktopTwoLineHeading) { font-size: clamp(26px, 5.7cqi, 42px); line-height: 1.12; }
 }
 @media (min-width: 701px) and (max-width: 900px) {
   .page[data-project] .opening, .page[data-project] .chapterHeading { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+}
+
+.chapterHeading > div:has(> .journeyHeading) { container-type: inline-size; }
+.page[data-project] .chapterHeading h2.journeyHeading.journeyHeading {
+  /* Body copy is 1rem; retain at least four typographic points of contrast. */
+  font-size: clamp(calc(1rem + 4pt), 4.6cqi, 48px);
+  white-space: normal;
+}
+@media (max-width: 700px) {
+  .page[data-project] .chapterHeading h2.journeyHeading.journeyHeading { font-size: clamp(calc(1rem + 4pt), 4.6cqi, 30px); }
+  .chapterHeading > div:has(> .flavorHeading) { container-type: inline-size; }
+  .page .flavorHeading { font-size: min(30px, 8.5cqi); }
 }

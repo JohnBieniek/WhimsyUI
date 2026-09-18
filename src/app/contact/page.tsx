@@ -22,10 +22,10 @@ export default function ContactPage() {
         <aside className="contact-sidebar">
           <Image
             className="contact-headshot"
-            src="/headshot-tight.png"
-            alt="A smiling Whimsy consultant with shoulder-length blond hair against a pale blue background."
-            width={778}
-            height={508}
+            src="/kay-and-kora-facing-camera.png"
+            alt="Kay and her service dog Kora facing the camera outdoors."
+            width={1024}
+            height={645}
             priority
             sizes="(max-width: 1050px) 100vw, 40vw"
           />

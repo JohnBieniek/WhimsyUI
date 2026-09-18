@@ -18,8 +18,19 @@
 .page :global(.filters) label span { padding: 10px 16px; }
 .page :global(.portfolio-grid) h2 { font-size: 22px; line-height: 1.2; text-align: center; }
 .galleryImageLink { display: block; position: relative; height: 100%; overflow: hidden; }
-.page .galleryImageLink img { object-fit: contain; object-position: center; }
-.lakelandThumbnail { background: #0b3b6f; }
+/* At 1920px the original frame is 353px wide by 180px high.
+   Wider cards need more height to retain that vertical crop. */
+.page :global(.portfolio-grid) article > div {
+  height: auto;
+  min-height: 180px;
+  aspect-ratio: 353 / 180;
+  flex-shrink: 0;
+}
+.lakelandThumbnail { container-type: size; background: #0b3b6f; }
+.lakelandThumbnail img { object-fit: cover; object-position: 25% 25%; }
+@container (max-aspect-ratio: 8 / 5) {
+  .lakelandThumbnail img { object-fit: contain; }
+}
 .page .galleryImageLink:focus-visible { outline-offset: -4px; }
 .softwareGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
 .softwareGrid > article { display: flex; flex-direction: column; border: 1px solid #b9ded6; border-radius: 10px; overflow: hidden; }
@@ -33,7 +44,18 @@
 .details { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
 .details article { background: #eee3f7; padding: 24px; border-top: 4px solid var(--purple); }
 .details h3 { color: var(--purple); font-size: 20px; }
+@media (max-width: 700px) {
+  .details article:has(> .singleLineDetailTitle) { container-type: inline-size; }
+  .details h3.singleLineDetailTitle { font-size: min(20px, 7.2cqi); white-space: nowrap; }
+}
 .details p { margin: 0; }
+.productionKicker { container: production-label / inline-size; }
+.page .productionKicker > span { white-space: nowrap; margin: 0; color: inherit; }
+.productionShort { display: none; }
+@container production-label (max-width: 250px) {
+  .productionLong { display: none; }
+  .productionShort { display: inline; font-size: min(18px, 8cqi); }
+}
 .detailImage { margin: 0 0 28px; }
 .detailImage > div { position: relative; aspect-ratio: 16 / 9; background: var(--mint); border-radius: 10px; overflow: hidden; }
 .detailImage img { object-fit: contain; padding: 16px; }
@@ -111,6 +133,14 @@
 .sonic .chapterCopy { max-width: none; }
 @media (max-width: 700px) {
   .sonic .mobileSingleLineKicker { font-size: min(13px, 3.1vw); white-space: nowrap; }
+  .sonic .listeningPair > .storyChapter:first-child { container-type: inline-size; }
+  .sonic .listeningPair > .storyChapter:first-child > h2 { font-size: min(26px, 8cqi); }
+  .sonic .listeningPair > .storyChapter:first-child > :global(.kicker) { font-size: min(18px, 5.8cqi); white-space: nowrap; }
+  .sonic .listeningPair > .storyChapter:last-child,
+  .sonic .storyChapter:global([aria-labelledby="chapter-1"]) { container-type: inline-size; }
+  .sonic .listeningPair > .storyChapter:last-child > h2,
+  .sonic .storyChapter:global([aria-labelledby="chapter-1"]) > h2 { font-size: min(26px, 7.8cqi); text-wrap: balance; }
+  .sonic .listeningPair > .storyChapter:last-child > :global(.kicker) { font-size: min(18px, 6.5cqi); white-space: nowrap; }
 }
 .sonic .details article { border-top-color: var(--sonic-aqua); background: var(--sonic-raised); color: var(--sonic-text); }
 .sonic .storyChapter .details article { background: var(--sonic-navy); }
@@ -139,6 +169,7 @@
   .projectOpening { grid-template-columns: minmax(0, 1fr); gap: 24px; }
 }
 @media (max-width: 900px) {
+  .sonic .storyOverview h2 { margin-bottom: 0; }
   .hero h1 br { display: none; }
   .page :global(.filters) { justify-content: center; }
   .chapterPair { grid-template-columns: minmax(0, 1fr); gap: 20px; }

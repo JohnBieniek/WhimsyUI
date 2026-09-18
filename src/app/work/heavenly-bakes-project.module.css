@@ -64,6 +64,8 @@
   .creativePair .figure { padding: 0 18px 24px; }
   .products .figure { padding: 24px 18px 0; }
   .value { gap: 24px; }
+  .creativePair .cardCopy { container-type: inline-size; }
+  .page .creativePair .cardCopy h2 { font-size: min(28px, 9cqi); }
 }
 @media (max-width: 700px) {
   .services { justify-content: center; text-align: center; }

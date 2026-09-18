@@ -74,6 +74,8 @@
   .campaign, .localStops { margin-bottom: 28px; }
   .community { padding-bottom: 28px; }
   .value > div { gap: 18px; }
+  .application .cardCopy { container-type: inline-size; }
+  .page .application h3 { font-size: min(25px, 8cqi); }
 }
 @media (max-width: 700px) {
   .services { justify-content: center; text-align: center; }

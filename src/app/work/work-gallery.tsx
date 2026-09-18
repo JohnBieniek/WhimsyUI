@@ -65,8 +65,18 @@ export default function WorkGallery() {
               fill
               sizes="(max-width: 700px) 90vw, 25vw"
               style={item.category === "Software" && item.slug !== "lakeland-website"
-                ? { background: item.slug === "sonic-shielding" ? "#071b35" : "var(--mint)" }
-                : undefined}
+                ? { objectFit: "contain", background: item.slug === "sonic-shielding" ? "#071b35" : "var(--mint)" }
+                : item.slug === "heavenly-bakes-and-cakes"
+                  ? { objectPosition: "center 80%" }
+                  : item.slug === "malloween"
+                    ? { objectPosition: "center 35%" }
+                    : item.slug === "fetch-market-launch"
+                      ? { objectPosition: "center 65%", transform: "scale(1.5)", transformOrigin: "center 65%" }
+                      : item.slug === "alpha-koney-story" || item.slug === "valentines-at-jackson-crossing"
+                        ? { objectPosition: "center 20%" }
+                        : item.slug === "cascades-ribbon-cutting" || item.slug === "happy-harvest" || item.slug === "serenity-support" || item.slug === "welcome-home-organization" || item.slug === "miss-crossroads"
+                          ? { objectPosition: "center top" }
+                          : undefined}
             />
           </Link>
         </div>

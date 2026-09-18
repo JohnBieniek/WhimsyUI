@@ -37,7 +37,7 @@ const offerings = [
     links: [{ label: "Photo & video services", href: "/services/photography" }],
   },
   {
-    title: "Website care & transfers",
+    title: "Website care & transfer",
     Icon: Wrench,
     copy: "Content updates, technical fixes, accessibility improvements, and new features. We also move websites and domains and help your team manage the content after launch.",
     links: [
@@ -143,7 +143,7 @@ export default function AboutPage() {
       <section className={styles.team} aria-labelledby="team-title">
         <div className={styles.teamIntro}>
           <p className="kicker">Our team</p>
-          <h2 id="team-title">Different skills. One shared purpose.</h2>
+          <h2 id="team-title"><span>Different skills.</span>{" "}<span>One shared purpose.</span></h2>
           <p>
             Our team brings together the planning, creative, and technical work
             that helps your organization move forward. We start by listening to
@@ -155,7 +155,7 @@ export default function AboutPage() {
         </div>
         <div className={styles.roles}>
           <article>
-            <h3>Consulting &amp; business strategy</h3>
+            <h3 className={styles.consultingRoleTitle}>Consulting &amp; business strategy</h3>
             <p>Assessing your business, setting priorities, and turning your goals into practical action plans with clear next steps for growth and stronger operations.</p>
           </article>
           <article>
@@ -173,7 +173,7 @@ export default function AboutPage() {
         <header className={styles.sectionHeader}>
           <div>
             <p className="kicker">What we do</p>
-            <h2 id="offerings-title">From the first idea to the everyday details.</h2>
+            <h2 id="offerings-title"><span>From the first idea</span>{" "}<span>to the everyday details.</span></h2>
           </div>
           <Link className={styles.textLink} href="/services">
             Services &amp; pricing <ArrowRight aria-hidden="true" size={17} />
@@ -184,7 +184,7 @@ export default function AboutPage() {
             <article key={title}>
               <div className={styles.serviceHeading}>
                 <span className={styles.icon}><Icon aria-hidden="true" size={25} /></span>
-                <h3>{title}</h3>
+                <h3 className={title === "Advertising & campaigns" || title === "Website care & transfer" ? styles.singleLineServiceTitle : undefined}>{title}</h3>
               </div>
               <p>{copy}</p>
               <div className={styles.serviceLinks}>

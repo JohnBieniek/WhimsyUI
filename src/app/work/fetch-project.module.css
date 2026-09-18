@@ -51,7 +51,8 @@
 .partners .photo:first-child img { aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; }
 
 .takeaway { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 40px; align-items: center; padding: 36px; border-left: 5px solid var(--fetch-gold); background: var(--fetch-cream); margin-bottom: 36px; }
-.takeaway h2, .takeaway p { margin: 0; }
+.page .takeaway h2, .takeaway p { margin: 0; }
+.archiveHeader { align-items: start; }
 .page > :global(.ready) { border-color: var(--fetch-ink); border-top: 4px solid var(--fetch-gold); background: var(--fetch-ink); color: var(--fetch-cream); }
 .page > :global(.ready) h2 { font-size: 20px; line-height: 1.5; margin: 0; }
 .page :global(.button) { border-color: var(--fetch-gold); background: var(--fetch-gold); color: var(--fetch-ink); }
@@ -83,7 +84,15 @@
   .sweetsGrid { gap: 28px; }
   .eventGrid { gap: 28px; }
   .archiveChapter { padding-block: 28px; }
+  .archiveHeader { row-gap: 24px; }
+  .page .archiveHeader h3 { margin-bottom: 0; }
   .page section h2 { font-size: 28px; }
+  .openingCopy { container-type: inline-size; }
+  .page .openingCopy h2 { font-size: min(28px, 8cqi); }
+  .launch > .sectionHeader { container-type: inline-size; }
+  .page .launch > .sectionHeader h2 { font-size: min(28px, 8cqi); }
+  .takeaway { container-type: inline-size; }
+  .page .takeaway h2 { font-size: min(28px, 8cqi); }
   .page > :global(.ready) h2 { font-size: 20px; }
 }
 @media (max-width: 700px) {

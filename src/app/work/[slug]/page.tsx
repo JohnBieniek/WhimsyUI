@@ -128,7 +128,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
           <p>Our work with Lakeland Cabaret is representative of the broad spectrum of help we provide at Whimsy. The holistic elevation of a brand with logo work, website design, marketing, and photography can take any company’s offerings to the next level. We’d love a chance to work with you on any or all of these things. Reach out for a free consultation to find out how you can take the next step of your journey today!</p>
         </div>
         <div className="lakeland-photo-grid">
-          {study.images.slice(1).map((file) => <figure className={file.endsWith("performer.webp") ? "lakeland-dj-photo" : undefined} key={file}><Image src={`/work/${file}`} alt={getImageAlt(`/work/${file}`)} fill sizes="(max-width: 800px) 50vw, 25vw" /></figure>)}
+          {study.images.slice(1).map((file) => <figure className={file.endsWith("performer.webp") ? "lakeland-dj-photo" : undefined} key={file}><Image src={`/work/${file}`} alt={getImageAlt(`/work/${file}`)} fill sizes="(max-width: 800px) 100vw, (max-width: 960px) 60vw, 30vw" /></figure>)}
         </div>
       </article>
     </section> : isHoliday ? <section className="holiday-story">

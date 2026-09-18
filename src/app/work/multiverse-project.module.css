@@ -86,6 +86,7 @@
 }
 
 @media (max-width: 900px) {
+  .libraryCopy .heading { margin-bottom: 0; }
   .featureColumns, .libraryCopy { grid-template-columns: minmax(0, 1fr); }
   .featureColumn + .featureColumn { border-top: 1px solid #ffffff55; padding-top: 28px; }
   .featureColumn:first-child > .screenshot { margin-top: 0; }
