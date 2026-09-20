@@ -31,9 +31,9 @@ function archivePhoto([id, caption]: [string, string]): Photo {
 
 function FetchPhoto({ item, preload = false, className = "" }: { item: Photo; preload?: boolean; className?: string }) {
   return <figure className={`${styles.photo} ${className}`}>
-    <a href={item.src} target="_blank" rel="noopener noreferrer" aria-label={`View full photo: ${item.caption}`}>
+    <div className={styles.photoFrame}>
       <Image src={item.src} alt={item.caption} width={item.width} height={item.height} preload={preload} sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 660px" />
-    </a>
+    </div>
     <figcaption>{item.caption}</figcaption>
   </figure>;
 }

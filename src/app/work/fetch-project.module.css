@@ -15,7 +15,7 @@
 .page a:focus-visible { outline: 3px solid #765c2c; outline-offset: 5px; }
 
 .photo { margin: 0; }
-.photo a { display: block; border-radius: 10px; }
+.photoFrame { display: block; border-radius: 10px; }
 .photo img { display: block; width: 100%; height: auto; border-radius: 10px; }
 .photo figcaption { font-size: 13px; line-height: 1.5; margin-top: 12px; }
 
@@ -39,7 +39,6 @@
 .sweets { padding: 40px 32px; border-top: 5px solid var(--fetch-gold); border-radius: 14px; background: var(--fetch-ink); color: var(--fetch-cream); margin-block: 12px 48px; }
 .sweets .kicker { color: var(--fetch-gold); }
 .sweetsGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
-.sweets a:focus-visible { outline-color: var(--fetch-gold); }
 
 .launch { padding-block: 28px; }
 .archiveChapter { padding-block: 32px; border-top: 1px solid var(--fetch-line); }
@@ -62,7 +61,7 @@
 @media (min-width: 701px) {
   .savoryGrid { grid-template-rows: minmax(0, 1fr) auto; align-items: stretch; }
   .savoryGrid > .photo:first-child { display: flex; flex-direction: column; min-height: 0; }
-  .savoryGrid > .photo:first-child a { position: relative; flex: 1; min-height: 0; }
+  .savoryGrid > .photo:first-child .photoFrame { position: relative; flex: 1; min-height: 0; }
   .savoryGrid > .photo:first-child img { position: absolute; inset: 0; height: 100%; object-fit: cover; object-position: center bottom; }
 }
 
