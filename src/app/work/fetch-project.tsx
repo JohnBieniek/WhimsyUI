@@ -23,6 +23,17 @@ const photos = {
   crowdOutside: photo("/crowd%20outside%20fetch.jpg", "Guests gathering outside Fetch’s balloon-framed entrance."),
   apartmentFood: photo("/fetch%20food%20apartment%202.jpg", "Guests gathering around Fetch’s food spread in an apartment kitchen."),
   crowdInside: photo("/20260821_161121.jpg", "Guests mingling inside the building during the event."),
+  crew: photo("/work/fetch/crew.webp", "The Fetch crew sharing a smile behind the counter.", 1080, 647),
+  crowd: photo("/work/fetch/crowd.webp", "Guests filling the room for the Fetch gathering.", 1080, 810),
+  samples: photo("/work/fetch/samples-and-crowd.webp", "Guests chatting and sampling food around the kitchen island.", 1080, 810),
+  apartmentGathering: photo("/work/fetch/food-in-apartment.webp", "Food and conversation in the apartment kitchen.", 1600, 1200),
+  cowboyClub: photo("/work/fetch/cowboy-club.webp", "Cowboy Club sandwiches stacked on a serving stand.", 1200, 1600),
+  cheeseAndFruit: photo("/work/fetch/cheese-and-fruit.webp", "Cheese, berries, crackers, and folded meats ready to share.", 1200, 1600),
+  cheesePlatter: photo("/work/fetch/cheese-platter.webp", "A colorful platter of cheeses, meats, crackers, fruit, and pickles.", 982, 1600),
+  fruits: photo("/work/fetch/fruits.webp", "Fruit and grazing platters arranged alongside fresh flowers.", 1365, 768),
+  meats: photo("/work/fetch/meats.webp", "Sliced meats and accompaniments on the grazing table.", 1372, 780),
+  olives: photo("/work/fetch/olives.webp", "A close-up of mixed olives beside strawberries and sliced meats.", 1388, 781),
+  platter: photo("/work/fetch/platter.webp", "Olives, berries, cheese, and crackers fill a generous grazing platter.", 1200, 1600),
 };
 
 function archivePhoto([id, caption]: [string, string]): Photo {
@@ -70,9 +81,15 @@ export default function FetchProject({ story, title }: { story: ArchiveStory; ti
         <p>The gathering stretched from the balloon-framed entrance to conversations inside, with Fetch’s food laid out in an apartment kitchen.</p>
       </header>
       <div className={styles.eventGrid}>
+        <FetchPhoto item={photos.crew} />
+        <FetchPhoto item={photos.crowd} />
+        <FetchPhoto item={photos.samples} />
         <FetchPhoto item={photos.crowdOutside} />
         <FetchPhoto item={photos.apartmentFood} />
         <FetchPhoto item={photos.crowdInside} />
+      </div>
+      <div className={styles.gatheringFeature}>
+        <FetchPhoto item={photos.apartmentGathering} />
       </div>
     </section>
 
@@ -86,6 +103,20 @@ export default function FetchProject({ story, title }: { story: ArchiveStory; ti
         <FetchPhoto item={photos.pastries} />
         <FetchPhoto item={photos.vegetables} />
         <FetchPhoto item={photos.esquites} className={styles.portrait} />
+      </div>
+    </section>
+
+    <section className={styles.spread} aria-labelledby="fetch-spread-title">
+      <header className={styles.sectionHeader}>
+        <p className={styles.kicker}>Made to share</p>
+        <h2 id="fetch-spread-title">A closer look at the spread.</h2>
+        <p>Stacked Cowboy Club sandwiches, generous grazing platters, and fresh fruit bring the table into focus. From a bowl of olives to the full arrangement, the details give guests plenty to explore.</p>
+      </header>
+      <div className={styles.platterGrid}>
+        {[photos.cowboyClub, photos.cheeseAndFruit, photos.cheesePlatter, photos.platter].map(item => <FetchPhoto key={item.src} item={item} />)}
+      </div>
+      <div className={styles.detailGrid}>
+        {[photos.fruits, photos.meats, photos.olives].map(item => <FetchPhoto key={item.src} item={item} />)}
       </div>
     </section>
 
