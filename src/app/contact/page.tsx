@@ -22,11 +22,11 @@ export default function ContactPage() {
         <aside className="contact-sidebar">
           <Image
             className="contact-headshot"
-            src="/kay-and-kora-facing-camera.png"
-            alt="Kay and her service dog Kora facing the camera outdoors."
-            width={1024}
-            height={645}
-            priority
+            src="/contact headshot.png"
+            alt="Kay smiling outdoors."
+            width={460}
+            height={507}
+            preload
             sizes="(max-width: 1050px) 100vw, 40vw"
           />
           <div className="panel checklist">
