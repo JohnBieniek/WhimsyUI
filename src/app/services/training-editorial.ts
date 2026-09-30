@@ -69,7 +69,7 @@ export const trainingEditorial = {
     projectCaption: "From Whimsy’s design work: a seasonal offer for Heavenly Bakes & Cakes. Your session builds an advertisement for your business.",
     faqs: [
       { question: "Do I need design experience?", answer: "No. We start with navigation and the tools you need, then explain the design choices as we make them. The session is built around practice with your own business materials." },
-      { question: "Do I need Canva Pro?", answer: "We can work with the account you already have and discuss which features are available to you. Some tools and assets have plan or usage limits, so we’ll use suitable alternatives where needed. A Canva subscription is separate from training." },
+      { question: "Do I need Canva Pro?", answer: "Yes. Please have an active Canva Pro subscription for this training so you can make the most of our time together and use the tools we cover. Your Canva Pro subscription is separate from the training cost." },
       { question: "What kind of advertisement will we make?", answer: "Bring a specific offer, event, product, or service to promote. We’ll agree on one finished design and its intended use, such as a social graphic or a flyer, so the session has a clear outcome." },
       { question: "Can I keep editing the design afterward?", answer: "Yes. We work in your Canva account so you can revisit the design, change details, and use what you learned for your next piece of marketing." },
     ],
