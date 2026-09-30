@@ -29,7 +29,7 @@ export function TrainingPage({ training }: { training: Training }) {
     </header>
     <section className={styles.workflow} aria-labelledby="training-workflow-title">
       <header><p className="kicker">How we work</p><h2 id="training-workflow-title">Learn it.<br />{" "}Put it to work.</h2></header>
-      <ol>{content.steps.map((step, index) => <li key={step.title}><span className={styles.stepNumber}>{index + 1}</span><h3>{step.title}</h3><p>{step.copy}</p></li>)}</ol>
+      <ol>{content.steps.map((step, index) => <li key={step.title}><h3><span className={styles.stepNumber}>{index + 1}</span>{step.title}</h3><p>{step.copy}</p></li>)}</ol>
     </section>
     <section className={styles.overview} aria-labelledby="training-overview-title">
       <article><p className="kicker">Training shaped around you</p><h2 id="training-overview-title">{content.overviewTitle}</h2>{content.overview.map(paragraph => <p key={paragraph}>{paragraph}</p>)}</article>

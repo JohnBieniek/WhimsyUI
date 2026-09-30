@@ -25,8 +25,8 @@
 .workflow { display: grid; grid-template-columns: .75fr 2.5fr; gap: 36px; padding: 36px 0; border-block: 1px solid #d9d1df; }
 .workflow h2 { font-size: 30px; margin: 0; }
 .workflow ol { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; list-style: none; padding: 0; margin: 0; }
-.stepNumber { display: block; color: var(--training-accent); font-size: 14px; font-weight: 800; margin-bottom: 16px; }
-.workflow h3 { font-size: 19px; }
+.stepNumber { flex-shrink: 0; color: var(--training-accent); font-size: 19px; font-weight: 800; }
+.workflow h3 { display: flex; align-items: baseline; gap: 10px; font-size: 19px; }
 .workflow p { margin: 0; font-size: 15px; }
 .overview { display: grid; grid-template-columns: 1.15fr .85fr; gap: 60px; align-items: start; padding-block: 64px; }
 .overview article > p:last-child { margin-bottom: 0; }
@@ -102,7 +102,6 @@
   .workflow { padding-block: 28px; }
   .workflow ol { grid-template-columns: 1fr; gap: 24px; }
   .workflow li { border-top: 1px solid #d9d1df; padding-top: 20px; }
-  .stepNumber { margin-bottom: 10px; }
   .overview, .project, .faq { padding-block: 32px; }
   .preparation, .skills, .bundle { padding: 26px 20px; }
   .projectImage { padding: 16px; transform: none; }
