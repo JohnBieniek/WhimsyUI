@@ -47,6 +47,7 @@ export const trainingEditorial = {
     overview: [
       "A template is a starting point. Choosing the right photograph, giving the headline room, and knowing what to leave out are what make the design work for your business. We practice those choices using your own materials.",
       "Together, we bring your logos, photos, colors, and existing graphics into a more useful setup. Then we turn an actual message into an advertisement, building a workflow you can return to for your next promotion.",
+      "We highly recommend that you have a Canva Pro subscription for this training, as it will allow you to make the most of our time together.",
     ],
     steps: [
       { title: "Gather your brand", copy: "Find and organize the logos, photographs, and visual details you want to use consistently." },
