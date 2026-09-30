@@ -42,12 +42,6 @@ export default function WelcomeHomeProject({ story, title }: { story: ArchiveSto
         <ul className={styles.deliverables}>{story.services.map(service => <li key={service}>{service}</li>)}</ul>
         <a className={styles.websiteLink} href="https://www.whovision.org/" target="_blank" rel="noopener noreferrer">Visit Welcome Home Organization →</a>
       </div>
-      <figure className={styles.figure}>
-        <a href="/work/archive/welcome-home-site.png" target="_blank" rel="noopener noreferrer" aria-label="View the full Welcome Home Organization website screenshot">
-          <Image src="/work/archive/welcome-home-site.png" alt="Welcome Home Organization's public homepage, with its identity, program navigation, and community mission." width={1440} height={1000} sizes="(max-width: 900px) 100vw, 55vw" />
-        </a>
-        <figcaption>The organization’s public homepage, bringing its identity, programs, and mission together.</figcaption>
-      </figure>
     </section>
 
     <div className={styles.storyPair}>

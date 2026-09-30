@@ -12,10 +12,13 @@ import {
   Megaphone,
   MessagesSquare,
   MonitorCog,
+  PanelsTopLeft,
+  Palette,
 } from "lucide-react";
 import { services } from "../content";
 import { CreatorCredit } from "../creator-credit";
 import styles from "./services.module.css";
+import { trainingServices } from "./training-data";
 
 const serviceIcons = {
   "ad-campaign": Megaphone,
@@ -101,6 +104,18 @@ export default function ServicesPage() {
                 </ul>
                 <Link href={`/services/${service.slug}`}>Learn more →</Link>
               </article>
+              {service.slug === "business-consulting-session" && trainingServices.map((training, index) => {
+                const TrainingIcon = index === 0 ? PanelsTopLeft : Palette;
+                return <article key={training.slug}>
+                  <span className="service-icon" aria-hidden="true"><TrainingIcon /></span>
+                  <h2>{training.name}</h2>
+                  <strong>$100/hour</strong>
+                  <p className={styles.trainingRate}>Recommended: {training.hours} hours (${training.hours * 100})</p>
+                  <ul>{training.deliverables.map(point => <li key={point}>{point}</li>)}</ul>
+                  <p className={styles.trainingRate}>Combine both trainings: $450 total, saving 10%.</p>
+                  <Link href={`/services/${training.slug}`}>Learn more →</Link>
+                </article>;
+              })}
             </Fragment>
           );
         })}

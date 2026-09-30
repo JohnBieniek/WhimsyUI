@@ -49,6 +49,9 @@ export default function ContactPage() {
             <p className="kicker">Fixed-price services</p>
             <p>Ad Campaign <b>$300</b></p>
             <p>Buisness consulting session <b>$300</b></p>
+            <p>Facebook &amp; Meta Basics Training <b>$100/hour · 2 hours recommended</b></p>
+            <p>Canva Basics Training <b>$100/hour · 3 hours recommended</b></p>
+            <p>Combined training package <b>$450 · Save 10%</b></p>
             <p>Brand &amp; Advertising Plan <b>$1,000</b></p>
             <p>Photography <b>$100/hour</b></p>
             <p>Website Support <b>$100/hour</b></p>

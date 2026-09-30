@@ -6,6 +6,36 @@
 
 .page section { min-width: 0; }
 
+.overview, .giftFeature, .music { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(28px, 5vw, 64px); align-items: center; padding: 48px; color: var(--berry); }
+.overview { background: var(--cream); border-radius: 0 0 20px 20px; }
+.giftFeature { margin-top: 36px; background: var(--blush); border-radius: 20px; }
+.music { background: var(--cream); border-radius: 20px; }
+.chapterCopy h2, .chapterHeader h2, .archiveIntro h2 { font-family: var(--font-display); font-size: clamp(28px, 3.1vw, 44px); line-height: 1.12; text-wrap: balance; margin: 0 0 24px; }
+.chapterCopy p, .chapterHeader p, .offerGrid p, .archiveIntro p { line-height: 1.7; }
+.chapterCopy > p:last-child { margin-bottom: 0; }
+.treats { padding-block: 48px; color: var(--berry); }
+.chapterHeader { max-width: 800px; margin: 0 auto 32px; text-align: center; }
+.offerGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+.offerGrid article { min-width: 0; }
+.offerGrid h3 { font-family: var(--font-display); font-size: 25px; line-height: 1.2; margin: 24px 0 12px; }
+.offerGrid p { margin: 0; }
+.archiveIntro { max-width: 800px; margin: 56px auto 32px; text-align: center; color: var(--berry); }
+.archiveIntro + .gifts { border-radius: 20px; }
+
+@media (max-width: 1000px) {
+  .overview, .giftFeature, .music { padding: 32px 28px; gap: 28px; }
+  .offerGrid { gap: 20px; }
+}
+@media (max-width: 700px) {
+  .overview, .giftFeature, .music, .offerGrid { grid-template-columns: minmax(0, 1fr); }
+  .overview, .giftFeature, .music { padding: 24px 16px; }
+  .giftFeature { margin-top: 24px; }
+  .giftFeature .chapterCopy { grid-row: 1; }
+  .treats { padding-block: 32px; }
+  .offerGrid { gap: 36px; }
+  .archiveIntro { margin-top: 36px; }
+}
+
 .introduction, .gifts, .photography, .takeaway { position: relative; isolation: isolate; }
 .decorations { --accent-scale: 1; --accent-fade: 1; position: absolute; inset: 0; z-index: -1; overflow: hidden; border-radius: inherit; pointer-events: none; color: #b94b64; }
 .decorations svg { position: absolute; width: calc(var(--size, 150px) * var(--accent-scale)); height: auto; opacity: calc(var(--opacity, .15) * var(--accent-fade)); }

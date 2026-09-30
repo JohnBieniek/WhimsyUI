@@ -35,6 +35,16 @@ function CampaignArtwork({ item, caption }: { item: [string, string]; caption: s
   </figure>;
 }
 
+function ValentineArtwork({ name, alt, caption, height = 1080, preload = false }: { name: string; alt: string; caption: string; height?: number; preload?: boolean }) {
+  const src = `/work/valentines/${name}.webp`;
+  return <figure className={styles.artwork}>
+    <a href={src} target="_blank" rel="noopener noreferrer" aria-label={`View full image: ${alt}`}>
+      <Image src={src} alt={alt} width={1080} height={height} preload={preload} sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 600px" />
+    </a>
+    <figcaption>{caption}</figcaption>
+  </figure>;
+}
+
 export default function ValentinesProject({ story, title }: { story: ArchiveStory; title: string }) {
   const [gifts, photography] = story.sections;
 
@@ -46,9 +56,70 @@ export default function ValentinesProject({ story, title }: { story: ArchiveStor
       <ValentineDecorations theme="intro" />
       <p className={styles.eyebrow}>The idea</p>
       <div className={styles.headlineContainer}><CampaignHeading text={story.heading} /></div>
-      <p className={styles.introCopy}>Thoughtful gifts and a reason to spend time together. Whimsy connected local businesses with the Valentine’s season through floral promotions and photography-led creative at Jackson Crossing.</p>
+      <p className={styles.introCopy}>Pick out flowers, stop for something sweet, and stay for a song. Whimsy’s Valentine’s creative brings Jackson Crossing’s local businesses together, giving visitors a collection of thoughtful ways to spend time and celebrate.</p>
       <ul className={styles.services}>{story.services.map(service => <li key={service}>{service}</li>)}</ul>
     </section>
+
+    <section className={styles.overview} aria-labelledby="valentine-overview-title">
+      <div className={styles.chapterCopy}>
+        <p className={styles.eyebrow}>The invitation</p>
+        <h2 id="valentine-overview-title">One destination.<br />A day of possibilities.</h2>
+        <p>The shared Valentine’s guide brings flowers, live music, treats, photography, drinks, and dinner into one invitation. Visitors can see what catches their eye, then explore each business’s offer.</p>
+        <p>Individual promotions carry the details, while the Jackson Crossing name ties the whole collection together.</p>
+      </div>
+      <ValentineArtwork name="crossing-valentines-day" alt="Jackson Crossing Valentine’s Day guide featuring Peggy’s flowers, Kay Harper live music, Heavenly Bakes & Cakes, Studio One Photography, Sipster, and Alpha’s dinner special." caption="The shared guide brings the participating businesses together." height={1375} preload />
+    </section>
+
+    <section className={styles.giftFeature} aria-labelledby="valentine-flowers-title">
+      <ValentineArtwork name="flowers-valentines" alt="Peggy’s Custom Floral Designs Valentine’s Day silk flowers promotion for February 13 and 14." caption="Peggy’s Custom Floral Designs · Silk flowers for Valentine’s Day" />
+      <div className={styles.chapterCopy}>
+        <p className={styles.eyebrow}>Start with something thoughtful</p>
+        <h2 id="valentine-flowers-title">A gift that lasts beyond the day.</h2>
+        <p>Peggy’s silk floral designs offer a lasting way to mark the occasion. A frame of red roses sets the mood, while the message puts handcrafted arrangements and the February 13–14 dates in view.</p>
+        <p>It gives the wider event a personal starting point: something to choose for someone else, or to take home yourself.</p>
+      </div>
+    </section>
+
+    <section className={styles.treats} aria-labelledby="valentine-treats-title">
+      <header className={styles.chapterHeader}>
+        <p className={styles.eyebrow}>Make a day of it</p>
+        <h2 id="valentine-treats-title">A sweet stop. A drink. Dinner for two.</h2>
+        <p>Each business adds its own reason to visit. The creative moves from small gifts and refreshments to a meal together, keeping every offer distinct within the same celebration.</p>
+      </header>
+      <div className={styles.offerGrid}>
+        <article>
+          <ValentineArtwork name="bakes-and-cakes-valentines" alt="Heavenly Bakes & Cakes Valentine’s sweets promotion, February 12–15 from noon to 5 PM, featuring chocolate strawberry boxes, chocolate bouquets, heart tins, and treat boxes." caption="Heavenly Bakes & Cakes · February 12–15, noon–5 PM" />
+          <h3>Something sweet to share</h3>
+          <p>Chocolate strawberries, bouquets, and heart-shaped tins make the bakery’s selection easy to picture as a gift or a treat.</p>
+        </article>
+        <article>
+          <ValentineArtwork name="sipster-valentines" alt="Sipster Valentine’s Day refreshments promotion for February 14 at Jackson Crossing, across from the vintage carousel." caption="Sipster · February 14, across from the vintage carousel" />
+          <h3>A pause between stops</h3>
+          <p>A drink photograph and a recognizable meeting point invite visitors to stop for refreshments while exploring the mall.</p>
+        </article>
+        <article>
+          <ValentineArtwork name="alpha-valentines" alt="Alpha Koney Island Valentine’s Day dinner for two: two New York strips with a choice of potato, rice, soup, or salad, and one free slice of cake." caption="Alpha Koney Island · Valentine’s Day dinner for two" />
+          <h3>Finish with dinner together</h3>
+          <p>Alpha’s dinner-for-two promotion makes the meal the focus, with the steak special, side choices, and a slice of cake spelled out.</p>
+        </article>
+      </div>
+    </section>
+
+    <section className={styles.music} aria-labelledby="valentine-music-title">
+      <div className={styles.chapterCopy}>
+        <p className={styles.eyebrow}>Stay for a song</p>
+        <h2 id="valentine-music-title">Give the gathering a soundtrack.</h2>
+        <p>Kay Harper’s live music adds a shared experience to the shopping and dining offers. Her portrait with a guitar makes the performance the centerpiece of the invitation.</p>
+        <p>The artwork points visitors to the vintage carousel on February 14, from 11 AM to 2 PM—a place and time to pause and enjoy the day.</p>
+      </div>
+      <ValentineArtwork name="live-valentines-music" alt="Kay Harper live music at Jackson Crossing on Valentine’s Day, February 14 from 11 AM to 2 PM, next to the vintage carousel." caption="Kay Harper · Live music next to the vintage carousel" />
+    </section>
+
+    <header className={styles.archiveIntro}>
+      <p className={styles.eyebrow}>Earlier Valentine’s campaigns</p>
+      <h2>More ways to mark the occasion.</h2>
+      <p>The collection builds on earlier floral and photography promotions. These pieces retain their original dates and offers.</p>
+    </header>
 
     <section className={styles.gifts}>
       <ValentineDecorations theme="gifts" />
@@ -88,7 +159,7 @@ export default function ValentinesProject({ story, title }: { story: ArchiveStor
       <ValentineDecorations theme="takeaway" />
       <div><p className={styles.eyebrow}>The common thread</p><h2><MobileHeadingText lines={["A personal reason to visit."]} size="min(30px, 5.5cqw)" /></h2></div>
       <div>
-        <p>{photography.paragraphs[1]}</p>
+        <p>A shared guide helps visitors discover the celebration. Individual promotions give each business room to show its offer, from a floral gift to dinner or a live performance.</p>
         <p>For businesses, that means a clear way to introduce an offer. For visitors, it means knowing what’s available, where to find it, and how to make it part of their day.</p>
       </div>
     </section>

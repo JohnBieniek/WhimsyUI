@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { trainingServices } from "../training-data";
+import { TrainingPage } from "../training-page";
 import { StandardPrice } from "../../standard-price";
 import { getImageAlt } from "../../image-alt";
 import Link from "next/link";
@@ -11,11 +13,13 @@ import { WebsiteSupportCapabilities, WebsiteSupportOverview } from "../../websit
 import { BrandAdvertisingDetails, BrandAdvertisingOverview } from "../../brand-advertising-details";
 
 export function generateStaticParams() {
-  return services.map(({ slug }) => ({ slug }));
+  return [...services, ...trainingServices].map(({ slug }) => ({ slug }));
 }
 
 export default async function ServiceDetail({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+  const training = trainingServices.find(item => item.slug === slug);
+  if (training) return <TrainingPage training={training} />;
   const service = services.find((item) => item.slug === slug);
   if (!service) notFound();
   const included = serviceInclusions[slug];

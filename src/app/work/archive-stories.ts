@@ -42,7 +42,7 @@ export const archiveStories: Record<string, ArchiveStory> = {
     ],
   },
   "valentines-at-jackson-crossing": {
-    summary: "Valentine's promotions connecting gifts, photography, and local businesses with seasonal visits to Jackson Crossing.",
+    summary: "Valentine’s promotions bringing flowers, sweets, dining, live music, and photography together at Jackson Crossing.",
     heading: ["Make the occasion personal.", "Make the details clear."],
     introduction: ["Valentine's Day gives local businesses a chance to offer something thoughtful: a gift, a photograph, or time spent together. Whimsy's Jackson Crossing work includes a floral gift promotion and photography-led creative connected to Cupid's Corner.", "These pieces come from separate Valentine's campaigns. Each keeps its own offer and dates, showing how the occasion can support different businesses while giving customers a clear next step."],
     hero: ["1040973861390231", "Peggy's Custom Floral Designs Valentine's promotion for February 13 and 14, 2025"],
@@ -171,21 +171,21 @@ export const archiveStories: Record<string, ArchiveStory> = {
   },
   "welcome-home-organization": {
     title: "Welcome Home Organization",
-    summary: "A shared rebranding, website, and marketing project through Leadership Jackson, supported by community promotion and local partnerships.",
-    heading: "A clearer identity for a community mission.",
+    summary: "Promotion, advertising, and photography supporting Welcome Home Organization's community programs and local outreach.",
+    heading: "Helping a community mission reach more people.",
     introduction: [
       "The Welcome Home Organization works with communities in Jackson and Albion through youth initiatives, urban agriculture, and transitional support. Explaining that range of work means helping people understand both the larger mission and the practical ways they can take part.",
-      "Through Leadership Jackson with the Jackson County Chamber of Commerce, Whimsy's Kay Pickett worked alongside a team supporting WHO. The project brought together a full rebrand, website updates, and a complete marketing package, with the team's work celebrated in April 2026.",
+      "Through Leadership Jackson with the Jackson County Chamber of Commerce, Whimsy's Kay Pickett built a relationship with WHO. Whimsy's support has focused on promotion, advertising, and photography that introduce the organization's work and invite community participation.",
     ],
     hero: ["1390509449770002", "The Leadership Jackson team and Welcome Home Organization at the project presentation"],
-    services: ["Rebranding", "Website updates", "Marketing materials"],
+    services: ["Promotion", "Advertising", "Photography"],
     sections: [
       {
-        kicker: "The creative work",
-        title: "One mission, carried across the work.",
+        kicker: "Our role",
+        title: "Promotion, advertising, and photography.",
         paragraphs: [
-          "The rebrand, website updates, and marketing package were parts of the same team project. Together, they addressed how WHO presents itself, explains its work, and introduces its mission to people who may want to get involved.",
-          "Each part serves a different purpose: an identity people can recognize, a website where they can learn more, and materials that support outreach. Connecting those pieces gives an organization a more consistent starting point for conversations with its community.",
+          "Whimsy helps WHO share its mission through promotion, ads, and photography. The work brings attention to community programs, events, and opportunities to take part.",
+          "Photography documents the people and activities behind the mission. Promotion and advertising help bring those stories to neighbors, volunteers, and potential partners.",
         ],
         images: [],
       },
@@ -220,7 +220,7 @@ export const archiveStories: Record<string, ArchiveStory> = {
         kicker: "The value",
         title: "Give good work a clearer way to reach people.",
         paragraphs: [
-          "For WHO, the team project combined its public identity, website, and marketing materials in support of one mission. The surrounding community work gave that mission specific stories to tell, from a playground taking shape to a coat drive reaching its destination.",
+          "For WHO, Whimsy's promotion, advertising, and photography give community work specific stories to share, from a playground taking shape to a coat drive reaching its destination.",
           "For neighbors and potential partners, those stories make participation easier to picture. They show the people involved, the work underway, and the different ways a local business or individual can contribute.",
         ],
         images: [],

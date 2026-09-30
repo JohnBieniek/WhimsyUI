@@ -1,3 +1,12 @@
+.trainingRate { font-size: 13px; line-height: 1.5; text-align: center; margin: 12px 0 0; }
+
+@media (min-width: 1051px) {
+  :global(.services-page) > :global(.service-cards).pricingCards {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
+
 .pricingCards > .photographyCard {
   container-type: inline-size;
 }

@@ -34,7 +34,7 @@ const projects: Record<Category, Array<[string,string,string,string,string]>> = 
     ["event-recap-series","974588071362144.jpg","Event Recap Series","Community partners","Timely recap content that thanks attendees, documents results, and carries momentum forward."],
   ],
   "Brand support": [
-    ["welcome-home-organization","archive/1390509449770002.jpg","Welcome Home Organization","The Welcome Home Organization","A shared rebranding, website, and marketing project through Leadership Jackson, supported by community promotion and local partnerships."],
+    ["welcome-home-organization","archive/1390509449770002.jpg","Welcome Home Organization","The Welcome Home Organization","Promotion, advertising, and photography supporting Welcome Home Organization's community programs and local outreach."],
     ["ingendahl-acres-branding","archive/708070294680591.jpg","Ingendahl Acres Branding","Ingendahl Acres","Logo designs, stickers, and social graphics bringing a Maine farm's animals and personality into its visual identity."],
     ["serenity-support","957428889744729.jpg","Serenity Brand Support","Serenity Sober Living House","Clear, compassionate brand materials centered on dignity, recovery, and community."],
     ["fetch-market-launch","957426256411659.jpg","Fetch Market Launch","Fetch Market & Deli","Early-stage messaging and media support for a new downtown Brooklyn market concept."],

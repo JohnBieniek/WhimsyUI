@@ -127,7 +127,7 @@ export default function AboutPage() {
           </p>
           <p>
             You likely know many of the companies we work with. From Jackson
-            Crossing, to Mens Warehouse, to JTV we help everyone reach their
+            Crossing, to Mens Warehouse, to The Rose Parade we help everyone reach their
             audience and goals. Our support has helped Fetch Market &amp; Deli,
             Sisters Smoothies, Serenity Sober Living House, The Welcome Home
             Organization as well as many others. Big or small, we have the skills

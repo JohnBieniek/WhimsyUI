@@ -1,0 +1,30 @@
+.page { color: var(--ink); }
+.hero { max-width: 950px; padding-block: 32px 48px; }
+.hero h1 { font-size: clamp(34px, 4.5vw, 64px); line-height: 1.08; text-wrap: balance; }
+.intro { font-size: 19px; line-height: 1.7; }
+.price { display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px 24px; margin: 28px 0; }
+.price strong { font-size: 30px; color: var(--purple); }
+.page h2 { font-family: var(--font-display); font-size: clamp(28px, 3vw, 40px); line-height: 1.15; }
+.page p, .page li { line-height: 1.7; }
+.outcomes > header { max-width: 780px; margin-bottom: 28px; }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.grid article { border: 1px solid #d9c8e5; border-radius: 14px; padding: 28px; }
+.grid article:last-child { grid-column: 1 / -1; background: #f5eef9; }
+.grid h3 { font-family: var(--font-display); font-size: 25px; line-height: 1.25; margin: 16px 0; }
+.grid p:last-child { margin-bottom: 0; }
+.grid ul { list-style: disc; padding-left: 22px; margin-top: 12px; }
+.grid li::marker { color: var(--purple); }
+.number { color: var(--purple); font-weight: 800; }
+.goal { max-width: 900px; padding-block: 40px; }
+.bundle { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 36px; align-items: center; background: #f5eef9; border-radius: 16px; padding: 36px; margin-bottom: 36px; }
+.bundle h2 { margin-top: 0; }
+.bundle a:not(:global(.button)) { text-decoration: underline; text-underline-offset: 4px; }
+.bundlePrice strong { font-size: 36px; color: var(--purple); }
+.bundlePrice :global(.button) { white-space: normal; }
+@media (max-width: 700px) {
+  .hero { padding-block: 24px; }
+  .intro { font-size: 17px; }
+  .grid, .bundle { grid-template-columns: minmax(0, 1fr); }
+  .grid article, .bundle { padding: 24px 20px; }
+  .goal { padding-block: 24px; }
+}
