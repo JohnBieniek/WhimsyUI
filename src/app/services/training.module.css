@@ -16,10 +16,12 @@
 .heroCopy > p:not(.lead) { font-size: 16px; }
 .sessionLength { color: var(--training-dark); font-weight: 800; margin: 24px 0 18px; }
 .sessionLength span { padding-inline: 8px; }
-.heroVisual { position: relative; padding-bottom: 32px; }
+.heroVisual { position: relative; }
 .heroVisual > img { display: block; width: 100%; height: auto; border-radius: 20px; clip-path: polygon(13% 0, 87% 0, 100% 13%, 100% 87%, 87% 100%, 13% 100%, 0 87%, 0 13%); }
-.heroCaption { position: absolute; bottom: 0; left: 8%; right: 8%; display: flex; gap: 16px; align-items: center; padding: 20px 24px; border-radius: 12px; background: var(--training-dark); color: white; box-shadow: 0 12px 28px #16234418; font-size: 15px; line-height: 1.5; }
-.heroCaption > svg { flex-shrink: 0; color: #b6e7df; }
+@media (min-width: 901px) {
+  .page .heroVisual { align-self: stretch; min-height: 0; }
+  .page .heroVisual > img { position: absolute; top: 50%; left: 50%; width: auto; height: 100%; max-width: 100%; object-fit: contain; transform: translate(-50%, -50%); }
+}
 .workflow { display: grid; grid-template-columns: .75fr 2.5fr; gap: 36px; padding: 36px 0; border-block: 1px solid #d9d1df; }
 .workflow h2 { font-size: 30px; margin: 0; }
 .workflow ol { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; list-style: none; padding: 0; margin: 0; }
@@ -97,7 +99,6 @@
   .hero { padding-bottom: 32px; gap: 28px; }
   .hero h1 { font-size: clamp(30px, 8.5vw, 42px); }
   .hero .lead { font-size: 20px; }
-  .heroCaption { left: 4%; right: 4%; padding: 16px; font-size: 13px; }
   .workflow { padding-block: 28px; }
   .workflow ol { grid-template-columns: 1fr; gap: 24px; }
   .workflow li { border-top: 1px solid #d9d1df; padding-top: 20px; }
