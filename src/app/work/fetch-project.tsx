@@ -60,6 +60,7 @@ export default function FetchProject({ story, title }: { story: ArchiveStory; ti
         <h2 id="fetch-project-title">{Array.isArray(story.heading) ? story.heading.join(" ") : story.heading}</h2>
         {story.introduction.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
         <ul className={styles.services}>{story.services.map(service => <li key={service}>{service}</li>)}</ul>
+        <p><a className="button" href="https://www.facebook.com/profile.php?id=61582852973420" target="_blank" rel="noopener noreferrer" aria-label="Visit Fetch on Facebook (opens in a new tab)">Visit Fetch on Facebook ↗</a></p>
       </div>
       <FetchPhoto item={photos.sandwiches} preload />
     </section>

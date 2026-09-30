@@ -1,0 +1,13 @@
+Generated with the built-in image_gen tool. Final optimized assets:
+public/services/training/facebook-hero.webp
+public/services/training/canva-hero.webp
+
+Facebook prompt:
+Create a polished editorial 3D hero illustration for a small business Facebook training page, square image. A large crisp recognizable white Facebook f on a rich blue rounded square tile, standing upright on a soft lavender studio surface. Around it: a tasteful floating white social post card with a botanical shop photo, a small calendar tile, a message bubble and a tiny heart reaction. Refined tactile materials, soft shadows, sculptural composition, modern premium design. Palette Facebook blue, white, deep plum with small mint accents. Main Facebook tile centered upper middle, full objects within frame, generous breathing room. No people, no tiny illegible UI text, no additional words, no claims of official certification. Professional teaching-service visual, not a screenshot. 1024x1024.
+
+Canva prompt:
+Create a polished editorial 3D hero illustration for a small business Canva design training page, square image. A large crisp Canva wordmark in white handwritten script on an upright round gradient teal-to-purple disc. Around it: elegantly layered sample design boards in lavender and cream, a botanical photo, typography tile with a single uppercase A, tasteful color swatch chips, and a small cursor arrow. Refined tactile materials, soft studio shadows, sculptural composition, premium design. Palette teal, aqua, purple, soft lavender with deep plum details. Main Canva disc centered upper middle, full objects within frame and generous breathing room. No people, no tiny illegible UI text, no other words, no claims of official certification. Professional teaching-service visual, not a screenshot. 1024x1024.
+
+Product reference for feature availability:
+https://www.canva.com/features/background-remover/
+https://play.google.com/store/apps/details?id=com.facebook.pages.app
