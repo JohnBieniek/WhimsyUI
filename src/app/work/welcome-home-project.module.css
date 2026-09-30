@@ -21,7 +21,7 @@
 .opening { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; align-items: center; padding-block: 30px 48px; border-top: 1px solid var(--who-line); }
 .opening p:last-child { margin-bottom: 0; }
 .creative { padding: 36px; margin-bottom: 40px; border-radius: 14px; background: var(--who-burgundy); color: #fff; }
-.creativeCopy { max-width: 850px; margin-inline: auto; }
+.creativeCopy { width: 100%; }
 .creative .kicker { color: var(--who-gold); }
 .creative a:focus-visible { outline-color: var(--who-gold); }
 .deliverables { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 24px 0; }
