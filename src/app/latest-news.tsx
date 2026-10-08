@@ -14,8 +14,8 @@ const articles: NewsArticle[] = [{
   date: "2026-10-08",
   dateLabel: "October 8, 2026",
   body: <>
-    <p>Had a great morning speaking with the <a href="https://www.linkedin.com/company/jackson-county-chamber-of-commerce-mi-/" target="_blank" rel="noopener noreferrer"><strong>Jackson County Chamber of Commerce</strong></a> at &quot;Wake Up Jackson&quot; on behalf of The Jackson Crossing Mall and our non-profit highlight <a href="https://www.linkedin.com/company/cascadeshumanesociety/" target="_blank" rel="noopener noreferrer"><strong>Cascades Humane Society</strong></a>!</p>
-    <p>So proud to share the amazing things we’ve accomplished in these halls over the years. Thank you to our community and our wonderful hosts this morning!</p>
+    <p>Had a great morning speaking with the <a href="https://www.linkedin.com/company/jackson-county-chamber-of-commerce-mi-/" target="_blank" rel="noopener noreferrer"><strong>Jackson County Chamber of Commerce</strong></a> at &quot;Wake Up Jackson&quot; on behalf of The Jackson Crossing Mall and our non-profit highlight <a href="https://www.linkedin.com/company/cascadeshumanesociety/" target="_blank" rel="noopener noreferrer"><strong>Cascades Humane Society</strong></a>! We got to discuss our work creating an event space at the Cross Mall, hosting the Jackson County Student Art show, and more!</p>
+    <p>We&apos;re so proud to share the amazing things we’ve accomplished in these halls over the years. Thank you to our community and our wonderful hosts this morning!</p>
   </>,
   media: [
     { kind: "video", src: "/work/Wake%20Up%20Jackson%20video.mp4", alt: "Speaking at Wake Up Jackson", poster: "/work/Wake%20Up%20Jackson%201.jpg" },
