@@ -11,12 +11,12 @@ test("latest news plays muted video, supports sound, and keeps manual media sele
   const news = page.getByRole("region", { name: "The Latest from Whimsy" });
   await news.scrollIntoViewIfNeeded();
   const video = news.locator("video");
-  await expect.poll(() => video.evaluate(element => element.currentTime)).toBeGreaterThan(0);
+  await expect.poll(() => video.evaluate((element: HTMLVideoElement) => element.currentTime)).toBeGreaterThan(0);
   await expect(video).toHaveJSProperty("muted", true);
   await expect(video).toHaveJSProperty("controls", true);
-  await video.evaluate(element => { element.muted = false; });
+  await video.evaluate((element: HTMLVideoElement) => { element.muted = false; });
   await expect(video).toHaveJSProperty("muted", false);
-  await video.evaluate(element => { element.currentTime = element.duration - 0.3; });
+  await video.evaluate((element: HTMLVideoElement) => { element.currentTime = element.duration - 0.3; });
   await expect(news.getByAltText(/photo 1/)).toBeVisible({ timeout: 10000 });
   await page.clock.install();
   await news.getByRole("button", { name: "Next image or video" }).click();
