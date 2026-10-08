@@ -2,6 +2,7 @@
 .header { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; border-bottom: 2px solid var(--mint-strong); padding-bottom: 16px; margin-bottom: 24px; }
 .header h2 { margin: 0; color: var(--purple); font-family: var(--font-display); font-size: 18px; line-height: 1.15; text-align: left; }
 .header time { flex-shrink: 0; text-align: right; font-size: 15px; }
+.shortDate { display: none; }
 .content { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 4vw, 56px); align-items: start; }
 .media, .copy { min-width: 0; }
 .frame { position: relative; aspect-ratio: 16 / 9; border-radius: 8px; overflow: hidden; }
@@ -20,8 +21,14 @@
 .section button:focus-visible, .copy a:focus-visible { outline: 3px solid var(--purple); outline-offset: 4px; }
 @media (max-width: 760px) {
   .section { margin-block: 28px 36px; }
-  .header { flex-wrap: wrap; gap: 12px; }
-  .header time { margin-left: auto; }
+  .header { flex-wrap: nowrap; gap: 8px; }
+  .header h2 { white-space: nowrap; font-size: clamp(13px, 4.6vw, 18px); }
+  .header time { margin-left: auto; white-space: nowrap; font-size: clamp(11px, 3.2vw, 13px); }
+  .fullDate { display: none; }
+  .shortDate { display: inline; }
   .content { grid-template-columns: 1fr; gap: 20px; }
   .articleNav button { font-size: 13px; }
+}
+@media (max-width: 700px) {
+  .section { order: 1; }
 }

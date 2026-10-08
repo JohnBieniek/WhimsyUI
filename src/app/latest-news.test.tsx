@@ -59,7 +59,7 @@ describe("Latest news", () => {
     expect(screen.getByRole("button", { name: "More recent article" })).toBeDisabled();
     fireEvent.click(screen.getByRole("button", { name: "Previous article" }));
     expect(screen.getByText("Older article")).toBeVisible();
-    expect(screen.getByText("October 7, 2026")).toHaveAttribute("datetime", "2026-10-07");
+    expect(screen.getByLabelText("October 7, 2026")).toHaveAttribute("datetime", "2026-10-07");
     expect(screen.getByRole("button", { name: "Previous article" })).toBeDisabled();
     fireEvent.click(screen.getByRole("button", { name: "More recent article" }));
     expect(screen.getByText("New article")).toBeVisible();

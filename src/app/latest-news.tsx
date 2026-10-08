@@ -71,7 +71,10 @@ export function LatestNews({ items = articles }: { items?: NewsArticle[] }) {
   return <section className={`${styles.section} shell`} aria-labelledby="latest-news-heading">
     <header className={styles.header}>
       <h2 id="latest-news-heading">The Latest from Whimsy</h2>
-      <time dateTime={article.date}>{article.dateLabel}</time>
+      <time dateTime={article.date} aria-label={article.dateLabel}>
+        <span className={styles.fullDate}>{article.dateLabel}</span>
+        <span className={styles.shortDate}>{new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" }).formatToParts(new Date(`${article.date}T00:00:00Z`)).map(part => part.type === "month" ? `${part.value}.` : part.value).join("")}</span>
+      </time>
     </header>
     <div className={styles.content}>
       <ArticleMedia key={article.id} media={article.media} paused={rotationPaused} onManualChange={() => setRotationPaused(true)} />
