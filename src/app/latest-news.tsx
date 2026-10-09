@@ -25,37 +25,58 @@ const articles: NewsArticle[] = [{
 
 function ArticleMedia({ media, paused, onManualChange }: { media: NewsArticle["media"]; paused: boolean; onManualChange: () => void }) {
   const [index, setIndex] = useState(0);
+  const [previousIndex, setPreviousIndex] = useState<number | null>(null);
+  const [ready, setReady] = useState<Set<number>>(() => new Set([0]));
   const [hasAdvanced, setHasAdvanced] = useState(false);
   const current = media[index];
+  const currentReady = ready.has(index);
+
+  function changeMedia(next: number) {
+    setPreviousIndex(index);
+    setIndex(next);
+  }
 
   useEffect(() => {
-    if (paused || media.length < 2 || current.kind === "video") return;
+    if (paused || media.length < 2 || current.kind === "video" || !currentReady) return;
     const timer = window.setTimeout(() => {
       setHasAdvanced(true);
-      setIndex(previous => (previous + 1) % media.length);
+      setPreviousIndex(index);
+      setIndex((index + 1) % media.length);
     }, hasAdvanced ? 8000 : 5000);
     return () => window.clearTimeout(timer);
-  }, [current.kind, index, hasAdvanced, media.length, paused]);
+  }, [current.kind, index, hasAdvanced, media.length, paused, currentReady]);
 
   function advanceVideo() {
     if (paused || media.length < 2) return;
     setHasAdvanced(true);
-    setIndex(previous => (previous + 1) % media.length);
+    changeMedia((index + 1) % media.length);
   }
 
   function navigate(direction: number) {
     onManualChange();
-    setIndex(previous => (previous + direction + media.length) % media.length);
+    changeMedia((index + direction + media.length) % media.length);
   }
 
   return <div className={styles.media} role="group" aria-label="Article photos and video">
     <div className={styles.frame}>
-      {current.kind === "video"
-        ? <video key={current.src} src={current.src} poster={current.poster} aria-label={current.alt} autoPlay muted playsInline controls preload="metadata" onEnded={advanceVideo} />
-        : <Image key={current.src} src={current.src} alt={current.alt} fill sizes="(max-width: 760px) calc(100vw - 56px), 50vw" />}
+      {media.map((item, slideIndex) => {
+        const active = slideIndex === index;
+        const outgoing = slideIndex === previousIndex;
+        const entering = active && previousIndex !== null;
+        return <div key={item.src} hidden={!active && !outgoing} aria-hidden={!active} inert={!active}
+          className={`${styles.slide} ${outgoing ? styles.outgoing : ""} ${entering ? ready.has(index) ? styles.entering : styles.waiting : ""}`}
+          onAnimationEnd={() => { if (active) setPreviousIndex(null); }}>
+          {item.kind === "video"
+            ? (active || outgoing) && <video src={item.src} poster={item.poster} aria-label={item.alt} autoPlay={active} muted playsInline controls={active} preload="auto"
+                ref={element => { if (element && !active) element.pause(); }}
+                onLoadedData={() => setReady(values => new Set(values).add(slideIndex))} onEnded={active ? advanceVideo : undefined} />
+            : <Image src={item.src} alt={item.alt} fill loading="eager" sizes="(max-width: 760px) calc(100vw - 56px), 50vw"
+                onLoad={() => setReady(values => new Set(values).add(slideIndex))} />}
+        </div>;
+      })}
       {media.length > 1 && <>
-        <button type="button" className={`${styles.mediaArrow} ${styles.previous}`} aria-label="Previous image or video" onClick={() => navigate(-1)}><ChevronLeft aria-hidden="true" /></button>
-        <button type="button" className={`${styles.mediaArrow} ${styles.next}`} aria-label="Next image or video" onClick={() => navigate(1)}><ChevronRight aria-hidden="true" /></button>
+        <button type="button" disabled={previousIndex !== null} className={`${styles.mediaArrow} ${styles.previous}`} aria-label="Previous image or video" onClick={() => navigate(-1)}><ChevronLeft aria-hidden="true" /></button>
+        <button type="button" disabled={previousIndex !== null} className={`${styles.mediaArrow} ${styles.next}`} aria-label="Next image or video" onClick={() => navigate(1)}><ChevronRight aria-hidden="true" /></button>
       </>}
     </div>
     {media.length > 1 && <p className={styles.mediaCount}>{index + 1} / {media.length}</p>}
