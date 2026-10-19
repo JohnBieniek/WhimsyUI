@@ -10,6 +10,7 @@ test("latest news plays muted video, supports sound, and keeps manual media sele
   await page.goto("/");
   const news = page.getByRole("region", { name: "The Latest from Whimsy" });
   await news.scrollIntoViewIfNeeded();
+  await news.getByRole("button", { name: "Previous article" }).click();
   const video = news.locator("video");
   await expect.poll(() => video.evaluate((element: HTMLVideoElement) => element.currentTime)).toBeGreaterThan(0);
   await expect(video).toHaveJSProperty("muted", true);
@@ -23,6 +24,7 @@ test("latest news plays muted video, supports sound, and keeps manual media sele
   await page.clock.fastForward(30000);
   await expect(news.getByAltText(/photo 2/)).toBeVisible();
   await page.reload();
+  await news.getByRole("button", { name: "Previous article" }).click();
   await expect(news.locator("video")).toBeVisible();
 });
 
@@ -34,8 +36,8 @@ for (const width of [390, 768, 1440]) {
     await news.scrollIntoViewIfNeeded();
     const heading = await news.getByRole("heading").boundingBox();
     const date = await news.locator("time").boundingBox();
-    const video = await news.locator("video").boundingBox();
-    const copy = await news.getByText(/Had a great morning/).boundingBox();
+    const video = await news.getByAltText("Kay Pickett and Jane Flores at the Jackson Crossing carousel").boundingBox();
+    const copy = await news.getByText(/just dropped a feature/).boundingBox();
     const section = await news.boundingBox();
     expect(heading!.x).toBeLessThan(date!.x);
     expect(date!.x + date!.width).toBeCloseTo(section!.x + section!.width, 0);

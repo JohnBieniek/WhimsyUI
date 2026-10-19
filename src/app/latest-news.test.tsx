@@ -52,6 +52,8 @@ describe("Latest news", () => {
   it("waits for a muted autoplay video to end before advancing and gives photos eight seconds", () => {
     vi.useFakeTimers();
     renderNews(<LatestNews />);
+    fireEvent.click(screen.getByRole("button", { name: "Previous article" }));
+    document.querySelectorAll("img").forEach(image => fireEvent.load(image));
     const video = screen.getByLabelText("Speaking at Wake Up Jackson") as HTMLVideoElement;
     expect(video.autoplay).toBe(true);
     expect(video.muted).toBe(true);
@@ -64,7 +66,7 @@ describe("Latest news", () => {
     expect(screen.getByAltText(/photo 1/)).toBeVisible();
     tick(1);
     expect(screen.getByAltText(/photo 2/)).toBeVisible();
-    expect(screen.queryByRole("navigation", { name: "Latest articles" })).not.toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Previous article" })).toBeDisabled();
   });
 
   it.each(["Previous", "Next"])("stops rotation after the %s media arrow, even across article navigation", direction => {
@@ -91,6 +93,7 @@ describe("Latest news", () => {
 
   it("does not advance a manually selected video when it ends", () => {
     renderNews(<LatestNews />);
+    fireEvent.click(screen.getByRole("button", { name: "Previous article" }));
     fireEvent.click(screen.getByRole("button", { name: "Next image or video" }));
     finishSlide();
     fireEvent.click(screen.getByRole("button", { name: "Previous image or video" }));

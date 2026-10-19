@@ -20,7 +20,8 @@
 .mediaCount { margin: 8px 0 0; text-align: center; font-size: 13px; color: var(--purple); }
 .copy p { font-size: clamp(17px, 1.45vw, 21px); line-height: 1.75; margin: 0 0 20px; }
 .copy p:last-child { margin-bottom: 0; }
-.copy a { color: var(--purple); text-decoration: underline; text-underline-offset: 3px; }
+.copy a { color: var(--purple); text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.quote { margin: 0 0 20px; }
 .articleNav { display: flex; justify-content: space-between; gap: 16px; margin-top: 24px; }
 .articleNav button { display: inline-flex; gap: 8px; align-items: center; min-height: 44px; padding: 8px 12px; border: 1px solid var(--purple); border-radius: 4px; background: white; color: var(--purple); font: inherit; cursor: pointer; }
 .articleNav button:disabled { opacity: .4; cursor: default; }

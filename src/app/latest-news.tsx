@@ -10,6 +10,25 @@ export type NewsArticle = { id: string; date: string; dateLabel: string; body: R
 
 // Keep articles newest first. Add media in its intended playback order.
 const articles: NewsArticle[] = [{
+  id: "experience-jackson-2026-10-19",
+  date: "2026-10-19",
+  dateLabel: "October 19, 2026",
+  body: <>
+    <p><a href="https://www.linkedin.com/company/experience-jacksonmi/" target="_blank" rel="noopener noreferrer"><strong>Experience Jackson</strong></a> just dropped a feature on what we&apos;ve accomplished over the years at The Jackson Crossing Mall! I love all of the opportunities this place has given me to be so involved in our wonderful community.</p>
+    <blockquote className={styles.quote}>
+      <p>“I’m originally from Toledo, and I spent a good handful of years bed-bound and house-bound because of a handful of diagnoses. Around COVID time, I got a bit of my health back, got an RV, traveled the East Coast with my service dog and learned to live again. I ended up back here, met the love of my life and decided Michigan was where I was going to stay.</p>
+      <p>I ended up connecting with Jane Flores at Jackson Crossing. It was a perfect match. Her and I work really well together, and we have a lot of fun. After all that downtime, I wanted something I could pour myself into and really get involved in, and she&apos;s given me every opportunity here to do that. It&apos;s been wonderful.</p>
+      <p>To her, rebuilding the carousel was more than just restoring something that was old. She really saw it as a focal point for the mall: she wanted to incorporate it in branding, create a space for events and for people to gather. We&apos;ve hosted everything from book fairs and student art shows here, and we always tell everyone, ‘meet us at the carousel’. It helps give the mall identity and a sense of who and what we are. We really like to pay homage to the community, even with the horse names, Jubilee and Symphony, because community is at the center of what we do. I mean, right behind us is a local business, Gilbert Chocolates. They&apos;re a local staple. We&apos;ve got Heavenly Bakes and Cakes. We&apos;ve got Popcorn Depot, Sisters Smoothie. All of these wonderful people that are in the community, being active, participating, and have an awesome product. We also have nonprofits here: the Kiwanis Club, Relay for Life, and the Humane Society. We&apos;ve got these awesome people sharing their message and doubling down on what we&apos;re doing.</p>
+      <p>We have live music. We often have the most gorgeous saxophone music, played by Kevin Krieger. You can catch him locally at grand openings, ribbon cuttings, these wonderful things, and he absolutely enjoys it. You can hear it down each of the hallways, and he&apos;s just phenomenal.</p>
+      <p>We have fairs and food trucks and popup events. One of my favorite things in the mall during the holidays. We actually do something called Holiday in the Halls, and that&apos;s when we have the most vendors. I think we had over 60 vendors last year, and that feeling of mall nostalgia is incredible during the winter.</p>
+      <p>We hope all the work says, ‘We&apos;re here for you’ and that Jackson Crossing is here for the betterment of the community.</p>
+      <p>We love what we do.”</p>
+    </blockquote>
+    <p>—Kay Pickett, Media, Marketing and Events, Jackson Crossing</p>
+    <p>See the full article here: <a href="https://www.experiencejackson.com/jackson-crossing/" target="_blank" rel="noopener noreferrer">https://www.experiencejackson.com/jackson-crossing/</a></p>
+  </>,
+  media: [{ kind: "image", src: "/experience%20jackson%20photo.jpg", alt: "Kay Pickett and Jane Flores at the Jackson Crossing carousel" }],
+}, {
   id: "wake-up-jackson-2026-10-08",
   date: "2026-10-08",
   dateLabel: "October 8, 2026",
