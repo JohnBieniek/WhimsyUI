@@ -10,6 +10,18 @@ export type NewsArticle = { id: string; date: string; dateLabel: string; body: R
 
 // Keep articles newest first. Add media in its intended playback order.
 const articles: NewsArticle[] = [{
+  id: "off-the-clock-lomar-2026-10-28",
+  date: "2026-10-28",
+  dateLabel: "October 28, 2026",
+  body: <>
+    <p>Whimsy had a wonderful evening attending Off the Clock with the Jackson County Chamber of Commerce at Lomar Machine &amp; Tool! It was a great opportunity to connect with our community and learn more about an incredible local business.</p>
+    <p>The Lomar team was so welcoming, the facility tour was both informative and impressive, and we even had the pleasure of meeting their founder, Jim! Thank you for being such a wonderful host. We loved getting to see the amazing work happening right here in Jackson County!</p>
+  </>,
+  media: [
+    { kind: "image", src: "/Lomar%20jackson.jpg", alt: "Community members connecting at Off the Clock inside Lomar Machine & Tool" },
+    { kind: "image", src: "/lomar%20jackson%202.jpg", alt: "Guests gathered around tables at the Lomar Machine & Tool Off the Clock event" },
+  ],
+}, {
   id: "experience-jackson-2026-10-19",
   date: "2026-10-19",
   dateLabel: "October 19, 2026",

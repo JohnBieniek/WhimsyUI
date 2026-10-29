@@ -53,6 +53,7 @@ describe("Latest news", () => {
     vi.useFakeTimers();
     renderNews(<LatestNews />);
     fireEvent.click(screen.getByRole("button", { name: "Previous article" }));
+    fireEvent.click(screen.getByRole("button", { name: "Previous article" }));
     document.querySelectorAll("img").forEach(image => fireEvent.load(image));
     const video = screen.getByLabelText("Speaking at Wake Up Jackson") as HTMLVideoElement;
     expect(video.autoplay).toBe(true);
@@ -93,6 +94,7 @@ describe("Latest news", () => {
 
   it("does not advance a manually selected video when it ends", () => {
     renderNews(<LatestNews />);
+    fireEvent.click(screen.getByRole("button", { name: "Previous article" }));
     fireEvent.click(screen.getByRole("button", { name: "Previous article" }));
     fireEvent.click(screen.getByRole("button", { name: "Next image or video" }));
     finishSlide();
