@@ -903,3 +903,12 @@
     margin-bottom: 20px;
   }
 }
+
+.contact-page .price-list > p:not(.kicker) {
+  gap: 12px;
+}
+
+.contact-page .price-list > p > b {
+  text-align: right;
+}
+
